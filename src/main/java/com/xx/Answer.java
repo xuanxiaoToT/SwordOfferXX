@@ -1,5 +1,6 @@
 package com.xx;
 
+
 public interface Answer {
 
     /**
@@ -7,4 +8,8 @@ public interface Answer {
      */
     public void answerOne();
 
+    /**
+     * 输出数据
+     */
+    public Object initData();
 }
