@@ -7,6 +7,7 @@ import java.util.Arrays;
 /**
  * @author 玄霄
  * @CreateDate 2022/12/14
+ * 同leetcode 494
  * 加减的目标值
  *
  * 给定一个非空的正整数数组和一个目标值S，如果为每个
