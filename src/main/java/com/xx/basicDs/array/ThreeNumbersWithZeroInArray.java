@@ -22,11 +22,16 @@ public class ThreeNumbersWithZeroInArray implements Answer {
     /**
      * 先排序，然后转变为 求两个数的值等于指定值的那个题。
      * 即：TwoNumbersOfS
-     * <p>
-     * 还有个问题是如何避免重复？
      */
     @Override
     public void answerOne() {
+
+    }
+
+    /**
+     * 采用Map，然后O(N2)的遍历
+     */
+    private void answerThree() {
 
     }
 

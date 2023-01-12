@@ -22,14 +22,13 @@ public class RotateArrayFindMin {
         System.out.println(result);
     }
 
-    //二分法
+    /**
+     * 二分法
+     */
     private int answerOne() {
         int[] dataArray = getTestData();
         int left = 0;
         int right = dataArray.length - 1;
-        // if (dataArray[left] <= dataArray[right]) {
-        //     return dataArray[left];
-        // }
         while (left < right - 1) {
             int mid = (left + right) / 2;
             // 交叉点在右半部分

@@ -2,10 +2,7 @@ package com.xx.basicDs.array;
 
 import com.xx.Answer;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.IntStream;
 
 /**
@@ -19,14 +16,18 @@ public class MinimumNumberOfK implements Answer {
 
     public static void main(String[] args) {
         MinimumNumberOfK minimumNumberOfK = new MinimumNumberOfK();
-        minimumNumberOfK.answerOne();
+        minimumNumberOfK.answerThree();
     }
 
+    /**
+     * 最简单的：循环K遍
+     * 时间复杂度：k*O(N)
+     */
     @Override
     public void answerOne() {
         int k = 4;
         List<Integer> list = initData();
-        //方法1：循环K遍
+
         Map<Integer, Integer> map = new HashMap<>(k);
         IntStream.range(0, k).forEach(num -> {
             Integer min = null;
@@ -50,8 +51,11 @@ public class MinimumNumberOfK implements Answer {
         System.out.println(map);
     }
 
-    public int[] anserTwo(int[] arr, int k) {
-        //方法二，采用快排序，当左侧个数小于等于k个时即可停止。
+    /**
+     * 方法二，采用快排序，当左侧个数小于等于k个时即可停止。
+     */
+    private int[] answerTwo(int[] arr, int k) {
+
         if (k == 0 || arr.length == 0) {
             return new int[0];
         }
@@ -59,9 +63,24 @@ public class MinimumNumberOfK implements Answer {
         return quickSort(arr, 0, arr.length - 1, k - 1);
     }
 
-    // 函数传入待排序数组 nums
-    // 排序区间的左端点 left
-    // 排序区间的右端点 right
+
+    /**
+     * 方法三：使用最大堆
+     */
+    private void answerThree() {
+        List<Integer> data = initData();
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        data.forEach(num -> {
+            heapAdd(maxHeap, num, 4);
+        });
+        System.out.println(maxHeap);
+    }
+
+    /**
+     * 函数传入待排序数组 nums
+     * 排序区间的左端点 left
+     * 排序区间的右端点 right
+     */
     private int[] quickSort(int[] nums, int left, int right, int index) {
         // 调用函数 partition，将 left 和 right 之间的元素划分为左右两部分
         int mid = partition(nums, left, right);
@@ -77,7 +96,6 @@ public class MinimumNumberOfK implements Answer {
             // 对 mid 右侧的元素进行快速排序
             return quickSort(nums, mid + 1, right, index);
         }
-
     }
 
     private int partition(int[] nums, int left, int right) {
@@ -113,6 +131,17 @@ public class MinimumNumberOfK implements Answer {
         nums[left] = pivot;
         // 返回 left
         return left;
+    }
+
+    private void heapAdd(PriorityQueue<Integer> heap, Integer value, int maxSize) {
+        if (heap.size() < maxSize) {
+            heap.add(value);
+        } else {
+            if (value < heap.peek()) {
+                heap.poll();
+                heap.add(value);
+            }
+        }
     }
 
     @Override

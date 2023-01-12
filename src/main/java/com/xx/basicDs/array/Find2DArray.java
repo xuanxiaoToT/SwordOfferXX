@@ -37,6 +37,9 @@ public class Find2DArray {
         System.out.println("AAA");
     }
 
+    /**
+     * 分别对行列进行二分查找
+     */
     private void answerOne(int targetData) {
         int[][] dataArray = initTestDate();
         int left = 0;

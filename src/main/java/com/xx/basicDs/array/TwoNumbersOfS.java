@@ -21,9 +21,11 @@ public class TwoNumbersOfS implements Answer {
         new TwoNumbersOfS().answerTwo();
     }
 
+    /**
+     * 最简单的 无脑遍历
+     */
     @Override
     public void answerOne() {
-        // 无脑遍历
         int[] nums = initData();
         int target = 40;
         for (int num : nums) {
@@ -41,7 +43,11 @@ public class TwoNumbersOfS implements Answer {
         }
     }
 
-    //双指针法
+
+    /**
+     * 注意题目交代了是"递增"序列
+     * 故采用双指针法
+     */
     private void answerTwo() {
         int[] nums = initData();
         int target = 40;
@@ -60,6 +66,13 @@ public class TwoNumbersOfS implements Answer {
                 left++;
             }
         }
+    }
+
+    /**
+     * 采用额外的map来存储，本质是判断是否存在 Sum-num[i] 这个值。
+     */
+    private void answerThree() {
+
     }
 
     @Override

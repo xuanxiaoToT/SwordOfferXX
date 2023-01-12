@@ -14,5 +14,4 @@ public class NumberUtil {
         int result = (1 << (n - 1)) | value;
         return result;
     }
-
 }

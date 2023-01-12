@@ -14,7 +14,9 @@ public class OddPreEven {
         oddPreEven.answerOne();
     }
 
-    //快排的变种
+    /**
+     * 快排的变种
+     */
     private void answerOne() {
         int[] dataArray = initTestData();
         int left = 0;

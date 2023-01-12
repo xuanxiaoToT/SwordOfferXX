@@ -38,12 +38,22 @@ public class ShunZiInPlayingCards implements Answer {
      */
     @Override
     public void answerOne() {
-
-
+        int[] data = initData();
+        int min = Integer.MAX_VALUE;
+        int max = 0;
+        int n = 5;
+        for (int datum : data) {
+            if (datum != 0) {
+                min = Math.min(min, datum);
+                max = Math.max(max, datum);
+            }
+        }
+        System.out.println((max - min) < 5);
     }
 
     @Override
     public int[] initData() {
-        return new int[]{1, 2, 3, 4, 5};
+//        return new int[]{1, 2, 3, 4, 5};
+        return new int[]{0, 0, 1, 2, 5};
     }
 }

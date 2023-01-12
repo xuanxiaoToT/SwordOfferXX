@@ -29,9 +29,11 @@ public class MissingNumberInN implements Answer {
         new MissingNumberInN().answerOne();
     }
 
+    /**
+     * 采用桶排序的思想
+     */
     @Override
     public void answerOne() {
-        //采用桶排序的思想
         int[] nums = initData();
         for (int i = 0; i < nums.length; i++) {
             while (i != nums[i] && nums[i] < nums.length) {
