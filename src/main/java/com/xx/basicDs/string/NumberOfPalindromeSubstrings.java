@@ -13,6 +13,10 @@ import com.xx.Answer;
  * 为"a"、"b"和"c"；
  * 而字符串"aaa"有6个回文子字符串，分别
  * 为"a"、"a"、"a"、"aa"、"aa"和"aaa"。
+ * <p>
+ * 举一反三：
+ * LeetCode 005 《最长回文子串》
+ * 同样可以用这个办法
  */
 public class NumberOfPalindromeSubstrings implements Answer {
 
