@@ -33,11 +33,11 @@ public class LongestSubstrWithoutDuplicateChar implements Answer {
     }
 
     /**
-     * 使用滑动窗口
+     * 使用双指针 滑动窗口 法
      */
     @Override
     public void answerOne() {
-        String oriStr = "babcdefgcbaa";
+        String oriStr = initData();
         int left = 0;
         int right = 0;
         Map<Character, Integer> map = new HashMap<>(26);
@@ -55,6 +55,9 @@ public class LongestSubstrWithoutDuplicateChar implements Answer {
                 mapPut(map, oriStr, right);
             } else {
                 map.put(oriStr.charAt(left), map.get(oriStr.charAt(left)) - 1);
+                if (map.get(oriStr.charAt(left)) == 0) {
+                    map.remove(oriStr.charAt(left));
+                }
                 left++;
             }
         }
@@ -86,7 +89,7 @@ public class LongestSubstrWithoutDuplicateChar implements Answer {
      * something
      */
     @Override
-    public Object initData() {
-        return null;
+    public String initData() {
+        return "babcdefgcbaa";
     }
 }

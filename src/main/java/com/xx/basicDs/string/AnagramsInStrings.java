@@ -74,9 +74,8 @@ public class AnagramsInStrings implements Answer {
              */
             if (whetherAnagrams(map)) {
                 System.out.println(true);
-                // return;
             }
-            // else {
+
             //  滑动窗口开始移动，将涉及到的-1
             map.put(str2.charAt(left), map.get(str2.charAt(left)) + 1);
             map.put(str2.charAt(right), map.get(str2.charAt(right)) + 1);
@@ -94,7 +93,6 @@ public class AnagramsInStrings implements Answer {
                     map.put(str2.charAt(right), -1);
                 }
             }
-            // }
         }
 
     }

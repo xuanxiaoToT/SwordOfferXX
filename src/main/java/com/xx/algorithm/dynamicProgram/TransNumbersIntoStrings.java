@@ -1,4 +1,4 @@
-package com.xx.basicDs.string;
+package com.xx.algorithm.dynamicProgram;
 
 import com.xx.Answer;
 
@@ -24,12 +24,9 @@ public class TransNumbersIntoStrings implements Answer {
     private int result = 0;
 
     public static void main(String[] args) {
-        new TransNumbersIntoStrings().answerOne();
+        new TransNumbersIntoStrings().answerTwo();
     }
 
-    /**
-     * 回溯法递归
-     */
     @Override
     public void answerOne() {
         String ori = initData();
@@ -40,7 +37,6 @@ public class TransNumbersIntoStrings implements Answer {
     }
 
     private void find(String ori, int point) {
-        // 递归的退出条件
         if (point == (stringSize - 1)) {
             result = result + 1;
             return;
@@ -103,6 +99,6 @@ public class TransNumbersIntoStrings implements Answer {
 
     @Override
     public String initData() {
-        return "12258";
+        return "12223";
     }
 }

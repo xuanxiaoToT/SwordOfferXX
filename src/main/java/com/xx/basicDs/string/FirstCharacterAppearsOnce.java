@@ -6,7 +6,8 @@ import com.xx.Answer;
  * @author XuanXiao
  * @CreateDate 2022/7/13
  * 第一个只出现一次的字符
- * 在字符串 s 中找出 第一个 只出现一次 的字符。如果没有，返回一个单空格。 s 只包含小写字母。
+ * 在字符串 s 中找出 第一个 只出现一次 的字符。如果没有，返回一个单空格。
+ * s只包含小写字母。
  * <p>
  * 示例 1:
  * 输入：s = "abaccdeff"
@@ -22,6 +23,10 @@ public class FirstCharacterAppearsOnce implements Answer {
         new FirstCharacterAppearsOnce().answerOne();
     }
 
+    /**
+     * 转换为一个dto，包含出现次数和起始index。
+     * 另外：由于只有26各字母，不需要使用Map
+     */
     @Override
     public void answerOne() {
         //复杂度O(2N)

@@ -7,9 +7,11 @@ import com.xx.Answer;
  * @CreateDate 2022/8/10
  * 回文子字符串的个数
  * <p>
- * 给定一个字符串，请问该字符串中有多少个回文连续子
- * 字符串？例如，字符串"abc"有3个回文子字符串，分别
- * 为"a"、"b"和"c"；而字符串"aaa"有6个回文子字符串，分别
+ * 给定一个字符串，请问该字符串中有多少个回文连续子字符串？
+ * <p>
+ * 例如，字符串"abc"有3个回文子字符串，分别
+ * 为"a"、"b"和"c"；
+ * 而字符串"aaa"有6个回文子字符串，分别
  * 为"a"、"a"、"a"、"aa"、"aa"和"aaa"。
  */
 public class NumberOfPalindromeSubstrings implements Answer {
@@ -21,17 +23,24 @@ public class NumberOfPalindromeSubstrings implements Answer {
     }
 
     /**
-     * 笨方法：滑动窗口。从2开始，逐步增加。然后每个窗口单独判断是否为回文
-     * 复杂度N2
+     * 笨方法：直接双层遍历，
+     * 复杂度N3
      */
     @Override
     public void answerOne() {
-        // 解法省略
+
+        String oriStr = initData();
+        for (int i = 0; i < oriStr.length(); i++) {
+            for (int j = i + 1; j < oriStr.length(); j++) {
+                // 判断i和j是否为回文，解法略。
+            }
+        }
     }
 
     /**
-     * 遍历每个字母，以每个字母为中心点向左右遍历。
+     * 遍历每个字母，以每个字母为中心点向左右遍历。这样就将找回文和遍历结合在一起了。
      * 双数位的情况，则以其+1位的为主。
+     * 也是O(N2)
      */
     public void answerTwo() {
         String oriStr = initData();
