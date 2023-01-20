@@ -5,7 +5,7 @@ import com.xx.domain.ListNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/24
  * 回文链表
  * 如何判断一个链表是不是回文？要求解法的时间复杂度

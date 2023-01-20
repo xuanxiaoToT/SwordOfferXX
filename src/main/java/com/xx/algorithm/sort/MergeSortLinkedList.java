@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/25
  * 合并排序链表
  * 输入k个排序的链表，请将它们合并成一个排序的链表。

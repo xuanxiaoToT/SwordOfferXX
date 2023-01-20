@@ -3,7 +3,7 @@ package com.xx.basicDs.string;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/10
  * 回文子字符串的个数
  * <p>

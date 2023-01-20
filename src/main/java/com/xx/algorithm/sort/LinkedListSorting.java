@@ -5,7 +5,7 @@ import com.xx.domain.ListNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/25
  * 链表排序
  * 输入一个链表的头节点，请将该链表排序。例如，输入

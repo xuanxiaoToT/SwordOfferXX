@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/27
  * <p>
  * 允许重复选择元素的组合

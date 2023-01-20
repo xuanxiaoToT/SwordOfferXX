@@ -5,7 +5,7 @@ import com.xx.domain.TreeNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/29
  * 二叉搜索树中两个节点的值之和
  * <p>

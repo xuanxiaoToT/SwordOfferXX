@@ -1,7 +1,7 @@
 package com.xx.algorithm.sort;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/6/30
  * 常见的排序算法
  */

@@ -4,7 +4,7 @@ import com.xx.Answer;
 import com.xx.domain.BiChildLinkNode;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/30
  * 展平多级双向链表
  * 在一个多级双向链表中，节点除了有两个指针分别指向

@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/6
  * 小行星碰撞
  * 输入一个表示小行星的数组，数组中每个数字的绝对值

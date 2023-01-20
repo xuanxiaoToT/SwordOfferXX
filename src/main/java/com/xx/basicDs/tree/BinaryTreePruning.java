@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/22
  * 二叉树剪枝
  * 一棵二叉树的所有节点的值要么是0要么是1，请剪除该

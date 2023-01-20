@@ -7,7 +7,7 @@ import com.xx.util.DataFactory;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/27
  * 展平二叉搜索树
  * 给定一棵二叉搜索树，请调整节点的指针使每个节点都

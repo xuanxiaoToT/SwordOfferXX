@@ -3,7 +3,7 @@ package com.xx.basicDs.linked;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/30
  * 对循环链表进行排序
  * 在一个循环链表中节点的值递增排序，请设计一个算法

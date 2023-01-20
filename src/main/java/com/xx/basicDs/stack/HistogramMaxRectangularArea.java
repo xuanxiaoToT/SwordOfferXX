@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/7
  * 直方图最大矩形面积
  * 直方图是由排列在同一基线上的相邻柱子组成的图形。

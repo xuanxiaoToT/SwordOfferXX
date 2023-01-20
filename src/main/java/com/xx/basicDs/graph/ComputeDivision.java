@@ -3,7 +3,7 @@ package com.xx.basicDs.graph;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/26
  * 计算除法
  * 输入两个数组equations和values，其中，数组

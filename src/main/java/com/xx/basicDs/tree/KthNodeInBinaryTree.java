@@ -5,7 +5,7 @@ import com.xx.domain.TreeNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/19
  * 给定一棵 二叉搜索树，请找出其中第 k 大的节点。
  */

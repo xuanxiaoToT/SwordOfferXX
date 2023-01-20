@@ -6,7 +6,7 @@ import com.xx.util.ArrayUtil;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/18
  * 0～n-1中缺失的数字
  * 一个长度为 n - 1 的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围 0 ～ n - 1 之内。

@@ -3,7 +3,7 @@ package com.xx.basicDs.heap;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/8
  * <p>
  * 给定两个递增排序的整数数组，从两个数组中各取一个

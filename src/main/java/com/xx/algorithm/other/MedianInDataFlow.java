@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/1
  * 数据流中的中位数
  * <p>

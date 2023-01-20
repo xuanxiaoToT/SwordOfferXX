@@ -7,7 +7,7 @@ import com.xx.util.DataFactory;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/28
  * 所有大于或等于节点的值之和
  * <p>

@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/6
  * 后缀表达式
  * 后缀表达式是一种算术表达式，它的操作符在操作数的

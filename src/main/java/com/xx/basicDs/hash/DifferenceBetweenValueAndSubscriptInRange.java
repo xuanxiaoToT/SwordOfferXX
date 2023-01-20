@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.TreeSet;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/29
  * <p>
  * 值和下标之差都在给定的范围内

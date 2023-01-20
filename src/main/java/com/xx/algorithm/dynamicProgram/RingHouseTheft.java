@@ -6,7 +6,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/1
  * 环形房屋盗窃
  * 一条环形街道上有若干房屋。输入一个数组表示该条街道上的房屋内财产的数量。

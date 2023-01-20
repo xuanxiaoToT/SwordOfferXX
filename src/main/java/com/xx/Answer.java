@@ -2,7 +2,7 @@ package com.xx;
 
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  */
 public interface Answer {
 

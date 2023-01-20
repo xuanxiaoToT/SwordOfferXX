@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/6/30
  * 最小的k个数
  * 输入整数数组 arr ，找出其中最小的 k 个数。

@@ -3,7 +3,7 @@ package com.xx.algorithm.search;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/14
  * 在排序数组中查找数字
  * <p>

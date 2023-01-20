@@ -3,7 +3,7 @@ package com.xx.algorithm.search;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/18
  * 查找插入位置
  * 输入一个排序的整数数组nums和一个目标值t，如果数组

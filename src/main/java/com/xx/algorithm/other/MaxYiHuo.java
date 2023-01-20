@@ -3,7 +3,7 @@ package com.xx.algorithm.other;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/18
  * 最大的异或
  * <p>

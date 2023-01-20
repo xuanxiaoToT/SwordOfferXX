@@ -3,7 +3,7 @@ package com.xx.basicDs.array;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/26
  * 扑克牌中的顺子
  * 从若干副扑克牌中随机抽 5 张牌，判断是不是一个顺子，即这 5 张牌是不是连续的。

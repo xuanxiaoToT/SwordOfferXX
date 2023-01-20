@@ -3,7 +3,7 @@ package com.xx.basicDs.hash;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/31
  * 有效的变位词
  * 给定两个字符串s和t，请判断它们是不是一组变位词。

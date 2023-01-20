@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/20
  * 二叉树中每层的最大值
  * <p>

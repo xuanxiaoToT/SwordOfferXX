@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.PriorityQueue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/8
  * 数据流的第k大数字
  * 请设计一个类型KthLargest，它每次从一个数据流中读

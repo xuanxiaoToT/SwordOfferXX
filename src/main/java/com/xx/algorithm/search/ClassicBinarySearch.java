@@ -1,7 +1,7 @@
 package com.xx.algorithm.search;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/18
  * 经典二分查找
  */

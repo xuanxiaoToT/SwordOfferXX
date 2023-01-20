@@ -5,7 +5,7 @@ import com.xx.domain.ListNode;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/6/16
  */
 public class ReverseOutList {

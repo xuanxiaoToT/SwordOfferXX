@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/31
  * 插入、删除和随机访问都是O（1）的容器
  * 设计一个数据结构，使如下3个操作的时间复杂度都是O(1)。

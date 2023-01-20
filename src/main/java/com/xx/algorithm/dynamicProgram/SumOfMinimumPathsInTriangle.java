@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/13
  * 三角形中最小路径之和
  * 在一个由数字组成的三角形中，第1行有1个数字，第2行

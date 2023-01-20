@@ -3,7 +3,7 @@ package com.xx.basicDs.tree;
 import com.xx.domain.TrieNode;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/12
  * <p>
  * 请设计实现一棵前缀树Trie，它有如下操作。

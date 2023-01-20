@@ -5,7 +5,7 @@ import com.xx.domain.ListNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/14
  * 编写一个程序，找到两个单链表相交的起始节点。
  */

@@ -5,7 +5,7 @@ import com.xx.domain.TreeNode;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/29
  * 二叉搜索树迭代器
  * 请实现二叉搜索树的迭代器BSTIterator，它主要有如下3个函数。

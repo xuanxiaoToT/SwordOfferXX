@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/31
  * <p>
  * 包含重复元素集合的组合

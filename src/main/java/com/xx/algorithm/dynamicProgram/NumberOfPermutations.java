@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/15
  * 排列的数目
  * 给定一个非空的正整数数组nums和一个目标值t，数组中

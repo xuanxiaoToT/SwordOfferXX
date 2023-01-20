@@ -5,7 +5,7 @@ import com.xx.domain.ListNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/22
  * 反转链表
  * 定义一个函数，输入一个链表的头节点，反转该链表并

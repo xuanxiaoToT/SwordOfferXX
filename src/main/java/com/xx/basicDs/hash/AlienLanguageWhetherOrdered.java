@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/5
  * 外星语言是否排序
  * 有一门外星语言，它的字母表刚好包含所有的英文小写

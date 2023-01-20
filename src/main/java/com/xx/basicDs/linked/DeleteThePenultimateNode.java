@@ -5,7 +5,7 @@ import com.xx.domain.ListNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/16
  * Penultimate：倒数第二的
  * 删除倒数第k个节点

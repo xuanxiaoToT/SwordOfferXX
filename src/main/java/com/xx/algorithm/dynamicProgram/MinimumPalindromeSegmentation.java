@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/7
  * 最少回文分割
  * 输入一个字符串，请问至少需要分割几次才可以使分割

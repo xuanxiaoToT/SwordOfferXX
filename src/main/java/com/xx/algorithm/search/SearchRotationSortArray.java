@@ -3,7 +3,7 @@ package com.xx.algorithm.search;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/1/9
  * LeetCode 33
  * <p>

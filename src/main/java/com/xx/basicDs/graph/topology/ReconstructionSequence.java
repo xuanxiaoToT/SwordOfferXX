@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.*;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/27
  * 重建序列
  * 长度为n的数组org是数字1～n的一个排列，seqs是若干

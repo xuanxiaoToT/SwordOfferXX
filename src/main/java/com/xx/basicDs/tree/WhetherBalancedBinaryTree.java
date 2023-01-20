@@ -5,7 +5,7 @@ import com.xx.domain.TreeNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/19
  * 给定一个二叉树，判断它是否是高度平衡的二叉树。
  * <p>

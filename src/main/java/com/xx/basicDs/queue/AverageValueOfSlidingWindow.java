@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/20
  * <p>
  * 请实现如下类型MovingAverage，计算滑动窗口中所有数

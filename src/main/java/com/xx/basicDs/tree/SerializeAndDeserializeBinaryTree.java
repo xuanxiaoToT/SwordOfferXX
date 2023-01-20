@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/22
  * 序列化和反序列化二叉树
  * 请设计一个算法将二叉树序列化成一个字符串，并能将

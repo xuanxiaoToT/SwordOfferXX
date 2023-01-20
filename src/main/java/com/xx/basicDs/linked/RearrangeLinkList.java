@@ -6,7 +6,7 @@ import com.xx.util.ArrayUtil;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/24
  * 重排链表
  * <p>

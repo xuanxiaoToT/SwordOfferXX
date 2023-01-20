@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/4
  * <p>
  * 和为k的子数组

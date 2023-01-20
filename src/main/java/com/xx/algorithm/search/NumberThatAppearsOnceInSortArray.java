@@ -3,7 +3,7 @@ package com.xx.algorithm.search;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/20
  * <p>
  * 排序数组中只出现一次的数字

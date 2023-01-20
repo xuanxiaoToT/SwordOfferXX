@@ -7,7 +7,7 @@ import com.xx.util.DataFactory;
 import java.util.Stack;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/27
  * 二叉搜索树的下一个节点
  * 给定一棵二叉搜索树和它的一个节点p，请找出按中序遍

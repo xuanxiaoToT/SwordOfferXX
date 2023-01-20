@@ -3,7 +3,7 @@ package com.xx.basicDs.graph;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/20
  * 二分图
  * 如果能将一个图中的节点分成A、B两个部分，使任意一

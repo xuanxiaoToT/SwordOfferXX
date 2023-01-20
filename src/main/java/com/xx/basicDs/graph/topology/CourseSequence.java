@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.*;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/27
  * 课程顺序
  * n门课程的编号为0～n-1。输入一个数组

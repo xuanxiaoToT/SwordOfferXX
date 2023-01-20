@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/12
  * <p>
  * 请实现有如下两个操作的神奇字典。

@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/7
  * 每日温度
  * 输入一个数组，它的每个数字是某天的温度。请计算每

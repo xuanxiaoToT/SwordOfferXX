@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/15
  * 最大的岛屿
  * 海洋岛屿地图可以用由0、1组成的二维数组表示，水平

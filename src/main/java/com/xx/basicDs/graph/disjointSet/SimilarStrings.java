@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/1/3
  * 相似的字符串
  * 如果交换字符串X中的两个字符就能得到字符串Y，那么

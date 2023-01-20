@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/22
  * 开密码锁
  * 一个密码锁由4个环形转轮组成，每个转轮由0～9这10个

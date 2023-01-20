@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/20
  * 矩阵中的距离
  * 输入一个由0、1组成的矩阵M，请输出一个大小相同的矩

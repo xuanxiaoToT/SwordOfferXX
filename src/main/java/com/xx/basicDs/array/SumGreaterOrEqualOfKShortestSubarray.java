@@ -3,7 +3,7 @@ package com.xx.basicDs.array;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/3
  * 和大于或等于k的最短子数组输入一个正整数组成的数组和一个正整数k，
  * 请问数组中和大于或等于k的连续子数组的最短长度是多少？

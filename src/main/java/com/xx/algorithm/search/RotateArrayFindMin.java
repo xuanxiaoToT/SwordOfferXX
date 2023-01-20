@@ -1,4 +1,4 @@
-package com.xx.basicDs.array;
+package com.xx.algorithm.search;
 
 /**
  * @author XuanXiao

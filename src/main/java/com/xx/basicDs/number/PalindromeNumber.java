@@ -3,7 +3,7 @@ package com.xx.basicDs.number;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/1/12
  * 回文数
  * LeetCode 09

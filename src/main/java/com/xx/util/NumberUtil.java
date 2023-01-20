@@ -1,7 +1,7 @@
 package com.xx.util;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/2
  */
 public class NumberUtil {

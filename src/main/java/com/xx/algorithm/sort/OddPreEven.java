@@ -3,7 +3,7 @@ package com.xx.algorithm.sort;
 import java.util.Collections;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/6/22
  * 调整数组顺序使奇数位于偶数前面
  */

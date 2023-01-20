@@ -3,7 +3,7 @@ package com.xx.algorithm.search;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/19
  * 山峰数组的顶部
  * <p>

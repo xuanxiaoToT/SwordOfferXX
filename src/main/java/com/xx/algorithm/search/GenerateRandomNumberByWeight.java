@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Random;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/20
  * 按权重生成随机数
  * 输入一个正整数数组w，数组中的每个数字w[i]表示下标

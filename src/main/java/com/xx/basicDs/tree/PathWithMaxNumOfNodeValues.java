@@ -4,7 +4,7 @@ import com.xx.Answer;
 import com.xx.domain.TreeNode;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/26
  * 节点值之和最大的路径
  * <p>

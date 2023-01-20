@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/1
  * 粉刷房子
  * 一排n幢房子要粉刷成红色、绿色和蓝色，不同房子被粉

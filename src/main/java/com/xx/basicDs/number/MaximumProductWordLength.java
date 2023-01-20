@@ -4,7 +4,7 @@ import com.xx.Answer;
 import com.xx.util.NumberUtil;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/2
  * <p>
  * 单词长度的最大乘积

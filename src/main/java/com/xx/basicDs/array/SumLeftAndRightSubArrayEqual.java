@@ -3,7 +3,7 @@ package com.xx.basicDs.array;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/4
  * 左右两边子数组的和相等
  * <p>

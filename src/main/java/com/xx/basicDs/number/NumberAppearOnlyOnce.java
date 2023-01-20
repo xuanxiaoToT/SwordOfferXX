@@ -3,7 +3,7 @@ package com.xx.basicDs.number;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/2
  * 只出现一次的数字
  * 输入一个整数数组，数组中只有一个数字出现了一次，

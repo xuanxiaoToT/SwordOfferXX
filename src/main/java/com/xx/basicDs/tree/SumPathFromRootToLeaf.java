@@ -5,7 +5,7 @@ import com.xx.domain.TreeNode;
 import com.xx.util.DataFactory;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/23
  * 根节点到叶节点的路径数字之和
  */

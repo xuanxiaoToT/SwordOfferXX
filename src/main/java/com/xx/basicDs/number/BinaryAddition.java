@@ -3,7 +3,7 @@ package com.xx.basicDs.number;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/1
  * <p>
  * 输入两个表示二进制的字符串，请计算它们的和，并以

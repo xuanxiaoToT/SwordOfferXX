@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/20
  * <p>
  * 请实现如下类型RecentCounter，它是统计过去3000ms内

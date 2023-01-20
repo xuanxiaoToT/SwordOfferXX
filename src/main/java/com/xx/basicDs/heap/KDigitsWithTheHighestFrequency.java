@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/8
  * 出现频率最高的k个数字
  */

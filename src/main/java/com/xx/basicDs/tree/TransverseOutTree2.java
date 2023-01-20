@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/6/27
  * 从上到下，从左到右  "之"字型打印二叉树
  */

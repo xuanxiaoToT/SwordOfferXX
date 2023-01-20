@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/7
  * 最长公共子序列
  * 输入两个字符串，请求出它们的最长公共子序列的长度。

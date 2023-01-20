@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/26
  * 所有子集
  * 输入一个不含重复数字的数据集合，请找出它的所有子集。

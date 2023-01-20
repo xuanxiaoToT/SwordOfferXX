@@ -3,7 +3,7 @@ package com.xx.algorithm.dynamicProgram;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/12/8
  * 字符串交织
  * 输入3个字符串s1、s2和s3，请判断字符串s3能不能由字

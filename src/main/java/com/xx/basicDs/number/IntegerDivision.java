@@ -3,7 +3,7 @@ package com.xx.basicDs.number;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/8/1
  * <p>
  * 输入2个int型整数，它们进行除法计算并返回商，要求

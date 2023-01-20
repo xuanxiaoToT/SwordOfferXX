@@ -4,7 +4,7 @@ package com.xx.util;
 import com.xx.domain.ListNode;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/7/18
  */
 public class ArrayUtil {

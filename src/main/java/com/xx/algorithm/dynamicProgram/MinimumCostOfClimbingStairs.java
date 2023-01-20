@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/11/30
  * 爬楼梯的最少成本
  * 一个数组cost的所有数字都是正数，它的第i个数字表示

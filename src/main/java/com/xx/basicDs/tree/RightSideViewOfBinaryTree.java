@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/9/21
  * 给定一棵二叉树，如果站在该二叉树的右侧，那么从上
  * 到下看到的节点构成二叉树的右侧视图。

@@ -4,7 +4,7 @@ import com.xx.Answer;
 import com.xx.basicDs.tree.TrieDemo;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/13
  * 最短的单词编码
  * 输入一个包含n个单词的数组，可以把它们编码成一个字

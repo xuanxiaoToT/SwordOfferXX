@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/10/24
  * 合并区间
  * 输入一个区间的集合，请将重叠的区间合并。每个区间

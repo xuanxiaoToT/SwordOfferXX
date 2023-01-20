@@ -1,7 +1,7 @@
-package com.xx.basicDs.array;
+package com.xx.algorithm.search;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2022/6/14
  * 二维数组中的查找
  * 在一个 n * m 的二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
