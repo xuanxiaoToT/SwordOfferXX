@@ -8,7 +8,9 @@ import com.xx.Answer;
  * 最小时间差
  * <p>
  * 给定一组范围在00：00至23：59的时间，求任意两个时
- * 间之间的最小时间差。例如，输入时间数组["23：50"，"23：59"，"00：00"]，
+ * 间之间的最小时间差。
+ * <p>
+ * 例如，输入时间数组["23：50"，"23：59"，"00：00"]，
  * "23：59"和"00：00"之间只有1分钟的间隔，是最小的时间差。
  */
 public class MinimumTimeDifference implements Answer {
@@ -31,7 +33,7 @@ public class MinimumTimeDifference implements Answer {
                 System.out.println(0);
                 return;
             }
-            if (minSum==0){
+            if (minSum == 0) {
                 dict[1440] = time;
             }
             dict[minSum] = time;

@@ -7,10 +7,10 @@ import com.xx.util.DataFactory;
 /**
  * @author XuanXiao
  * @CreateDate 2022/8/16
- * 链表中 环的入口节点
+ * 链表中环的入口节点
  * <p>
- * 如果一个链表中包含环，那么应该如何找出环的入口节
- * 点？从链表的头节点开始顺着next指针方向进入环的第1个节点为环
+ * 如果一个链表中包含环，那么应该如何找出环的入口节点？
+ * 从链表的头节点开始顺着next指针方向进入环的第1个节点为环
  * 的入口节点。
  */
 public class EntryNodeInLinkedList implements Answer {

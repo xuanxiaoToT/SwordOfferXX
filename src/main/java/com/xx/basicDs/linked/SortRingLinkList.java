@@ -19,7 +19,7 @@ public class SortRingLinkList implements Answer {
      */
     @Override
     public void answerOne() {
-
+        // 解法略
     }
 
     /**

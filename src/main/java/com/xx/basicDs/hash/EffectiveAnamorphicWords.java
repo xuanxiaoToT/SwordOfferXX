@@ -22,6 +22,8 @@ public class EffectiveAnamorphicWords implements Answer {
      * 对的上 则就是一组变位词
      * <p>
      * 如果用列表实现，则在是第一组加，第二个字符串处减。
+     * <p>
+     * 解法直接参考《变位词组》该题
      */
     @Override
     public void answerOne() {

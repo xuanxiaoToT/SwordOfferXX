@@ -10,8 +10,8 @@ import com.xx.util.DataFactory;
  * Penultimate：倒数第二的
  * 删除倒数第k个节点
  * <p>
- * 如果给定一个链表，请问如何删除链表中的倒数第k个节
- * 点？假设链表中节点的总数为n，那么1≤k≤n。要求只能遍历链表
+ * 如果给定一个链表，请问如何删除链表中的倒数第k个节点？
+ * 假设链表中节点的总数为n，那么1≤k≤n。要求只能遍历链表
  * 一次。
  */
 public class DeleteThePenultimateNode implements Answer {
@@ -21,7 +21,7 @@ public class DeleteThePenultimateNode implements Answer {
 
     /**
      * 用哨兵机制，可以避免判空等复杂操作。
-     *
+     * <p>
      * 双指针：第一个先走K步，第二个再开始走。
      */
     @Override
@@ -37,6 +37,7 @@ public class DeleteThePenultimateNode implements Answer {
         for (int i = 0; i < k; i++) {
             if (right == null) {
                 System.out.println("不存在倒数第K个节点");
+                return;
             }
             right = right.next;
         }

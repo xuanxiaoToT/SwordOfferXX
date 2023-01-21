@@ -7,6 +7,7 @@ import com.xx.util.DataFactory;
 /**
  * @author XuanXiao
  * @CreateDate 2022/7/14
+ * 链表的相交节点
  * 编写一个程序，找到两个单链表相交的起始节点。
  */
 public class FirstNodeOfTwoLinked implements Answer {
@@ -30,7 +31,7 @@ public class FirstNodeOfTwoLinked implements Answer {
         //     int p = 0;
         //     ListNode r2 = root2;
         //     int n = len2 - len1;
-        //     //  先走n步，最后一起。
+        //     //  先走n步，最后一起。略
         // }
 
     }

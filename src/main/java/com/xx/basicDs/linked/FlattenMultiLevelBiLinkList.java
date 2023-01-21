@@ -17,10 +17,13 @@ import com.xx.domain.BiChildLinkNode;
  */
 public class FlattenMultiLevelBiLinkList implements Answer {
 
+    public static void main(String[] args) {
+        new FlattenMultiLevelBiLinkList().answerOne();
+    }
+
     /**
      * 由于子链的节点还可能拥有子链，因此需要递归的进行
      * 时间复杂度为O(n)，空间为O(k)，即层数
-     *
      */
     @Override
     public void answerOne() {
@@ -28,6 +31,9 @@ public class FlattenMultiLevelBiLinkList implements Answer {
         flattenNode(head);
     }
 
+    /**
+     * 关注子链的头尾节点即可。
+     */
     private FlattenNodeResult flattenNode(BiChildLinkNode head) {
         BiChildLinkNode point = head;
         BiChildLinkNode tail = head;

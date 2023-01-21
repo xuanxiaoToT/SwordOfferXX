@@ -18,7 +18,7 @@ public class ReverseLinkList implements Answer {
     }
 
     /**
-     * something
+     * 反转链表
      */
     @Override
     public void answerOne() {

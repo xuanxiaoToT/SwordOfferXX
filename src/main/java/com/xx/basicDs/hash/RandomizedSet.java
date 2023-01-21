@@ -7,6 +7,7 @@ import java.util.List;
  * @author XuanXiao
  * @CreateDate 2022/8/31
  * 插入、删除和随机访问都是O（1）的容器
+ * <p>
  * 设计一个数据结构，使如下3个操作的时间复杂度都是O(1)。
  * ● insert（value）：如果数据集中不包含一个数值，则把它添加到数据集中。
  * ● remove（value）：如果数据集中包含一个数值，则把它删除。
@@ -15,14 +16,26 @@ import java.util.List;
  */
 public class RandomizedSet {
 
-    public RandomizedSet(){
+    public RandomizedSet() {
 
     }
 
-    //利用list和map
-    //list负责存放数据以及随机读取,map存放数组下标,
+
+    /**
+     * 利用list和map
+     * list负责存放数据以及随机读取,map存放数组下标,
+     */
     private HashMap<Integer, Integer> map;
     private List<Integer> list;
+
+    public boolean insert(int value) {
+        if (map.containsKey(value)) {
+            return false;
+        }
+        list.add(value);
+        map.put(value, list.size() - 1);
+        return true;
+    }
 
     /**
      * insert和random暂时不用
@@ -31,7 +44,7 @@ public class RandomizedSet {
         if (!map.containsKey(value)) {
             return false;
         }
-        // 跟最后一个值的位置互换
+        // 跟最后一个值的位置互换.将删除的元素放列表最后
         int index = map.get(value);
         map.remove(value);
         map.put(map.get(list.size() - 1), index);

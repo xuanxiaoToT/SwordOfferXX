@@ -14,10 +14,6 @@ import java.util.TreeMap;
  */
 public class MyCalendar {
 
-    public static void main(String[] args) {
-
-    }
-
     public MyCalendar() {
 
     }

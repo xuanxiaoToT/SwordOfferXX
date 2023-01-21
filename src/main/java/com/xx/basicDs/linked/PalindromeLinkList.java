@@ -19,7 +19,7 @@ public class PalindromeLinkList implements Answer {
     }
 
     /**
-     * 思路：将后半段连表逆置。然后比较。一共O(3n)也是O(n)
+     * 思路：将后半段(或前半段)连表逆置。然后比较。一共O(3n)也是O(n)
      */
     @Override
     public void answerOne() {

@@ -26,6 +26,7 @@ public class LeastRecentlyUsedCache {
     /**
      * 使用map+双向链表
      * 删除时，删除头部元素即可
+     * 插入或使用时，将该元素放置在链表尾部。
      */
     public LeastRecentlyUsedCache() {
 

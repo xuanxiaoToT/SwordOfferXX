@@ -9,9 +9,12 @@ import java.util.Map;
  * @author XuanXiao
  * @CreateDate 2022/9/5
  * 外星语言是否排序
+ * <p>
  * 有一门外星语言，它的字母表刚好包含所有的英文小写
  * 字母，只是字母表的顺序不同。给定一组单词和字母表顺序，请判
- * 断这些单词是否按照字母表的顺序排序。例如，输入一组单词
+ * 断这些单词是否按照字母表的顺序排序。
+ * <p>
+ * 例如，输入一组单词
  * ["offer"，"is"，"coming"]，以及字母表顺
  * 序"zyxwvutsrqponmlkjihgfedcba"，由于字母'o'在字母表中位
  * 于'i'的前面，因此单词"offer"排在"is"的前面；同样，由于字
@@ -19,6 +22,7 @@ import java.util.Map;
  * 面。因此，这一组单词是按照字母表顺序排序的，应该输出true。
  */
 public class AlienLanguageWhetherOrdered implements Answer {
+
     private String alphabet = "zyxwvutsrqponmlkjihgfedcba";
 
     public static void main(String[] args) {
@@ -26,7 +30,7 @@ public class AlienLanguageWhetherOrdered implements Answer {
     }
 
     /**
-     * something
+     * 就正常按照字母序列验证即可。
      */
     @Override
     public void answerOne() {
@@ -34,7 +38,7 @@ public class AlienLanguageWhetherOrdered implements Answer {
         Map<Character, Integer> dict = generateDict(alphabet);
         for (int i = 0; i < strings.length; i++) {
             for (int j = i + 1; j < strings.length; j++) {
-                if (compare(strings[i], strings[j],dict) > 0) {
+                if (compare(strings[i], strings[j], dict) > 0) {
                     System.out.println(false);
                 }
             }
