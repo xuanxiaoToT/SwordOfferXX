@@ -31,8 +31,8 @@ public class TheKLargestNumberOfDataStreams implements Answer {
         int k = 5;
         PriorityQueue<Integer> heap = new PriorityQueue<>(k);
 
-        for (int i = 0; i < nums.length; i++) {
-            add(heap, nums[i], k);
+        for (int num : nums) {
+            add(heap, num, k);
         }
 
         System.out.println(heap.peek());

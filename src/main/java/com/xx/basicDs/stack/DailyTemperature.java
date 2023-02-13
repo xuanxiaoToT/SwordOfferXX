@@ -3,6 +3,7 @@ package com.xx.basicDs.stack;
 import com.xx.Answer;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /**
  * @author XuanXiao
@@ -16,12 +17,14 @@ import java.util.Arrays;
  * 以此类推。
  */
 public class DailyTemperature implements Answer {
+
     public static void main(String[] args) {
-        new DailyTemperature().answerThree();
+        new DailyTemperature().answerTwo();
     }
 
     /**
      * 方法一：遍历O(N2)
+     * 解法略
      */
     @Override
     public void answerOne() {
@@ -38,11 +41,21 @@ public class DailyTemperature implements Answer {
      * 标入栈。
      */
     public void answerTwo() {
-
+        int[] testDate = initData();
+        int[] result = new int[testDate.length];
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < testDate.length; i++) {
+            while (!stack.isEmpty() && testDate[i] > testDate[stack.peek()]) {
+                int pre = stack.pop();
+                result[pre] = i - pre;
+            }
+            stack.push(i);
+        }
+        System.out.println(stack);
     }
 
     /**
-     * 好像不用到栈，每次跟左侧的比较即可。
+     * 方法三，每次跟左侧的比较。
      */
     public void answerThree() {
         int[] testDate = initData();

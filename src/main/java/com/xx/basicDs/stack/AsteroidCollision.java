@@ -18,6 +18,7 @@ import java.util.Stack;
  * 向），它们相撞之后最终剩下3颗小行星[-6，4，8]。
  */
 public class AsteroidCollision implements Answer {
+
     public static void main(String[] args) {
         new AsteroidCollision().answerOne();
     }
