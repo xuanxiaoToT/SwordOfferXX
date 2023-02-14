@@ -23,7 +23,8 @@ public class TheKLargestNumberOfDataStreams implements Answer {
     }
 
     /**
-     * something
+     * 求第K大，用最小堆。
+     * 求第K小，用最大堆。
      */
     @Override
     public void answerOne() {

@@ -17,6 +17,9 @@ public class KthNodeInBinaryTree implements Answer {
         new KthNodeInBinaryTree().answerOne();
     }
 
+    /**
+     * 第K大，即 右中左 遍历，第K个便是.
+     */
     @Override
     public void answerOne() {
         k = 3;

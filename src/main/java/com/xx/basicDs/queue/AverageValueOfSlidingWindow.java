@@ -6,6 +6,7 @@ import java.util.Queue;
 /**
  * @author XuanXiao
  * @CreateDate 2022/9/20
+ * 滑动窗口的平均值
  * <p>
  * 请实现如下类型MovingAverage，计算滑动窗口中所有数
  * 字的平均值，该类型构造函数的参数确定滑动窗口的大小，每次调

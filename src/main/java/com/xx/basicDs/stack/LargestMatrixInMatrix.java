@@ -25,24 +25,10 @@ public class LargestMatrixInMatrix implements Answer {
      */
     @Override
     public void answerOne() {
-        int[][] input = initData();
-        int max = 0;
-        for (int i = 0; i < input.length; i++) {
-            for (int j = 0; j < input[0].length; j++) {
-                if (input[i][j] == 1) {
-                    int maxTemp = computeMatrix(i, j, input);
-                    max = Math.max(max, maxTemp);
-                }
-            }
-        }
-        System.out.println(max);
+
     }
 
-    private int computeMatrix(int rowNum, int colNum, int[][] input) {
 
-        //完了，递归了。递归终止条件是？
-        return 0;
-    }
 
     /**
      * 按每一行为标准进行遍历，而对应的列则可以视为柱状图，则将问题转换为了<直方图最大矩形面积>的解法。

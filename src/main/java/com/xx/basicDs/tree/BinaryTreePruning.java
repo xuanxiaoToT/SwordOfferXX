@@ -15,6 +15,7 @@ import java.util.Stack;
  * 二叉树中所有节点的值全都是0的子树
  */
 public class BinaryTreePruning implements Answer {
+
     public static void main(String[] args) {
         BinaryTreePruning binaryTreePruning = new BinaryTreePruning();
         TreeNode treeNode = binaryTreePruning.initData();
@@ -24,6 +25,7 @@ public class BinaryTreePruning implements Answer {
 
     /**
      * 递归
+     * 更简单
      */
     public TreeNode answerZero(TreeNode node) {
         if (node == null) {
@@ -39,6 +41,7 @@ public class BinaryTreePruning implements Answer {
 
     /**
      * 方式一，使用递归来解决。
+     * 自己第一遍的时候想的
      */
     @Override
     public void answerOne() {

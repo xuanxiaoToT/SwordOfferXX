@@ -28,7 +28,7 @@ public class AddingNodesToFullBinaryTree implements Answer {
     }
 
     /**
-     * something
+     * 直接层序遍历到最后一层，然后添加即可。
      */
     @Override
     public void answerOne() {
@@ -39,7 +39,10 @@ public class AddingNodesToFullBinaryTree implements Answer {
         System.out.println(treeNode);
     }
 
-    // 优化，不要每次都从根节点开始
+
+    /**
+     * 优化：不用每次都从根节点开始
+     */
     private void insert(TreeNode root, TreeNode node) {
         // 层序遍历，第一个遇到的子节点为null的即可进行添加。
         Queue<TreeNode> outQueue = new LinkedList<TreeNode>();

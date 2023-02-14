@@ -8,17 +8,18 @@ import java.util.*;
 /**
  * @author XuanXiao
  * @CreateDate 2022/6/28
- * 树的常见遍历方法
+ * 树的遍历
+ * 树的常见非递归遍历方法
  */
-public class TraversalOfTree {
+public class AATraversalOfTree {
 
     public static void main(String[] args) {
-        TraversalOfTree traversalOfTree = new TraversalOfTree();
+        AATraversalOfTree AATraversalOfTree = new AATraversalOfTree();
         TreeNode treeNode = DataFactory.generateTreeNode();
-        System.out.println(traversalOfTree.preOrderTraversal(treeNode));
-        System.out.println(traversalOfTree.midOrderTraversal(treeNode));
-        System.out.println(traversalOfTree.postOrderTraversal(treeNode));
-        System.out.println(traversalOfTree.levelOrderTraversal(treeNode));
+        System.out.println(AATraversalOfTree.preOrderTraversal(treeNode));
+        System.out.println(AATraversalOfTree.midOrderTraversal(treeNode));
+        System.out.println(AATraversalOfTree.postOrderTraversal(treeNode));
+        System.out.println(AATraversalOfTree.levelOrderTraversal(treeNode));
     }
 
     /**

@@ -33,6 +33,7 @@ public class LeftmostValueLowestLevelOfBinTree implements Answer {
         }
         int result = 0;
         while (!outQueue.isEmpty()) {
+            // 求每层的XX时，此处多增一层for循环。
             int size = outQueue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode temp = outQueue.poll();

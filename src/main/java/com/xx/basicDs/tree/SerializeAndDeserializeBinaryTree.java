@@ -13,6 +13,7 @@ import java.util.Queue;
  * @author XuanXiao
  * @CreateDate 2022/9/22
  * 序列化和反序列化二叉树
+ * <p>
  * 请设计一个算法将二叉树序列化成一个字符串，并能将
  * 该字符串反序列化出原来二叉树的算法。
  */
@@ -23,7 +24,7 @@ public class SerializeAndDeserializeBinaryTree implements Answer {
     }
 
     /**
-     * something
+     * 注意一定要按照完全二叉树来进行序列化和反序列化，null值用特殊的字符串，如'#'替代。
      */
     @Override
     public void answerOne() {

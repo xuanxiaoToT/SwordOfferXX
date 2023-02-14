@@ -1,6 +1,6 @@
 package com.xx.domain;
 
-import com.xx.basicDs.tree.TraversalOfTree;
+import com.xx.basicDs.tree.AATraversalOfTree;
 import lombok.Data;
 
 import java.util.List;
@@ -33,7 +33,7 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        List<Integer> list = new TraversalOfTree().levelOrderTraversal(this);
+        List<Integer> list = new AATraversalOfTree().levelOrderTraversal(this);
         return list.toString();
     }
 }

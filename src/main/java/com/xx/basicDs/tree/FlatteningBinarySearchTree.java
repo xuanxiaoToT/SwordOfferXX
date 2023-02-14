@@ -47,7 +47,7 @@ public class FlatteningBinarySearchTree implements Answer {
         diGuiTree(node.right);
     }
 
-    // 非递归，用栈来做
+    // 非递归，用栈来做，把取值的那块改为组装链表
     public void answerTwo() {
         TreeNode treeNode = initData();
         TreeNode cur = treeNode;

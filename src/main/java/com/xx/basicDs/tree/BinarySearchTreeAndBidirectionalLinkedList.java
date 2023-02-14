@@ -12,7 +12,9 @@ import java.util.Stack;
  * @author XuanXiao
  * @CreateDate 2022/6/29
  * 二叉搜索树与双向链表
- * 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的循环双向链表。要求不能创建任何新的节点，只能调整树中节点指针的指向。
+ * <p>
+ * 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的循环双向链表。
+ * 要求不能创建任何新的节点，只能调整树中节点指针的指向。
  * 其中右指针表示向下，左指针表示向后
  */
 public class BinarySearchTreeAndBidirectionalLinkedList implements Answer {
@@ -22,6 +24,9 @@ public class BinarySearchTreeAndBidirectionalLinkedList implements Answer {
         aaa.answerOne();
     }
 
+    /**
+     * 使用中序遍历
+     */
     @Override
     public void answerOne() {
         TreeNode root = initData();
@@ -56,8 +61,12 @@ public class BinarySearchTreeAndBidirectionalLinkedList implements Answer {
         System.out.println("Done");
     }
 
+    /**
+     * 也可以用递归的方式来做
+     * 或者先用列表将节点存起来，在对列表进行链表组装
+     */
     public void answerTwo() {
-        //  也可以用递归的方式来做
+
     }
 
     //  将其转换为双端循环列表

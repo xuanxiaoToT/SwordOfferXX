@@ -27,7 +27,7 @@ public class SumOfDownwardPathBodeValue implements Answer {
     }
 
     /**
-     * 因为不一定从根节点开始，也不一定到叶节点结束，故任何一段都有可能，所以需要一个双重循环、
+     * 笨方法：因为不一定从根节点开始，也不一定到叶节点结束，故任何一段都有可能，所以需要一个双重循环、
      * 遍历树，然后每个树又作为一个新树去判断。
      */
     @Override

@@ -6,6 +6,7 @@ import java.util.Queue;
 /**
  * @author XuanXiao
  * @CreateDate 2022/9/20
+ * 最近请求次数
  * <p>
  * 请实现如下类型RecentCounter，它是统计过去3000ms内
  * 的请求次数的计数器。该类型的构造函数RecentCounter初始化计数

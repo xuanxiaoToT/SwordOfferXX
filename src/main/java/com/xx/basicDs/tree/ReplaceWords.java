@@ -24,7 +24,7 @@ public class ReplaceWords implements Answer {
     }
 
     /**
-     * 1.用前缀树
+     * 1.用前缀树，参考 @{TrieDemo}
      * 2.用set直接替代，感觉比这快。
      */
     @Override

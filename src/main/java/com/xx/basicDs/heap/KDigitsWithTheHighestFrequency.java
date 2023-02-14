@@ -11,6 +11,8 @@ import java.util.PriorityQueue;
  * @author XuanXiao
  * @CreateDate 2022/10/8
  * 出现频率最高的k个数字
+ * <p>
+ * 堆的最典型的用法
  */
 public class KDigitsWithTheHighestFrequency implements Answer {
 

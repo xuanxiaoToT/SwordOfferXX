@@ -9,14 +9,16 @@ import java.util.Stack;
  * @CreateDate 2022/9/7
  * 直方图最大矩形面积
  * 同LeetCode11  《盛最多水的容器》
+ * <p>
  * 直方图是由排列在同一基线上的相邻柱子组成的图形。
  * 输入一个由非负数组成的数组，数组中的数字是直方图中柱子的
  * 高。求直方图中最大矩形面积。假设直方图中柱子的宽都为1。
- * 例
- * 如，输入数组[3，2，5，4，6，1，4，2]，其对应的直方图如图6.3
+ * <p>
+ * 例如，输入数组[3，2，5，4，6，1，4，2]，其对应的直方图如图6.3
  * 所示，该直方图中最大矩形面积为12，如阴影部分所示。
  */
 public class HistogramMaxRectangularArea implements Answer {
+
     public static void main(String[] args) {
         new HistogramMaxRectangularArea().answerTwo();
     }
@@ -79,7 +81,7 @@ public class HistogramMaxRectangularArea implements Answer {
 
     /**
      * 方法三：不利用栈的结构，利用方法二的原理，每次以当前为中心进行计算，左右寻找比自己小的，然后计算。
-     * 这样也可以
+     * 这样也可以。时间复杂度会高一些，但是容易想到。
      */
     private void answerThree() {
         //    略

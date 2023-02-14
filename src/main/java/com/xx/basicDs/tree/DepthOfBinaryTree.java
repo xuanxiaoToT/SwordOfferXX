@@ -25,16 +25,11 @@ public class DepthOfBinaryTree implements Answer {
         System.out.println(maxDepth);
     }
 
-
     private void answerTwo() {
         // 树的深度 等于 它的左子树的深度 与 它的右子树的深度 中的 最大值 +1 。
         TreeNode treeNode = initData();
         int depth = maxDepth(treeNode);
         System.out.println(depth);
-    }
-
-    private void answerThree() {
-        // 如何用层序遍历来做?
     }
 
     private void traversalTree(TreeNode root, int deep) {
