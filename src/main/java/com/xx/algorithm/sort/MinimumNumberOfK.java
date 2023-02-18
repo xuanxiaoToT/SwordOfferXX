@@ -12,7 +12,9 @@ import java.util.stream.IntStream;
  * @author XuanXiao
  * @CreateDate 2022/6/30
  * 最小的k个数
- * 输入整数数组 arr ，找出其中最小的 k 个数。例如，输入 4、5、1、6、2、7、3、8 这 8 个数字，则最小的 4 个数字是 1、2、3、4 。
+ * 输入整数数组 arr ，找出其中最小的 k 个数。
+ * <p>
+ * 例如，输入 4、5、1、6、2、7、3、8 这 8 个数字，则最小的 4 个数字是 1、2、3、4 。
  */
 public class MinimumNumberOfK implements Answer {
 
@@ -58,7 +60,7 @@ public class MinimumNumberOfK implements Answer {
         // 略
     }
 
-    public int[] anserTwo(int[] arr, int k) {
+    public int[] answerTwo(int[] arr, int k) {
         //方法二，采用快排序，当左侧个数小于等于k个时即可停止。
         if (k == 0 || arr.length == 0) {
             return new int[0];

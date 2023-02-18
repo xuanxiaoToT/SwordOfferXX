@@ -13,7 +13,9 @@ import java.util.*;
  * 都唯一，并且都是数组arr1中的数字。请将数组arr1中的数字按照
  * 数组arr2中的数字的相对顺序排序。如果数组arr1中的数字在数组
  * arr2中没有出现，那么将这些数字按递增的顺序排在后面。假设数
- * 组中的所有数字都在0到1000的范围内。例如，输入的数组arr1和
+ * 组中的所有数字都在0到1000的范围内。
+ * <p>
+ * 例如，输入的数组arr1和
  * arr2分别是[2，3，3，7，3，9，2，1，7，2]和[3，2，1]，则数组
  * arr1排序之后为[3，3，3，2，2，2，1，7，7，9]。
  */
@@ -24,7 +26,7 @@ public class RelativeSortingOfArrays implements Answer {
     }
 
     /**
-     * something
+     * 按照arr2的规则来码放，再吧剩余的排序放回去即可。
      */
     @Override
     public void answerOne() {

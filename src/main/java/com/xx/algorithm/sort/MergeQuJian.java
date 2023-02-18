@@ -11,9 +11,11 @@ import java.util.List;
  * @author XuanXiao
  * @CreateDate 2022/10/24
  * 合并区间
+ * <p>
  * 输入一个区间的集合，请将重叠的区间合并。每个区间
- * 用两个数字比较，分别表示区间的起始位置和结束位置。例如，输
- * 入区间[[1，3]，[4，5]，[8，10]，[2，6]，[9，12]，[15，
+ * 用两个数字比较，分别表示区间的起始位置和结束位置。
+ * <p>
+ * 例如，输入区间[[1，3]，[4，5]，[8，10]，[2，6]，[9，12]，[15，
  * 18]]，合并重叠的区间之后得到[[1，6]，[8，12]，[15，18]]。
  */
 public class MergeQuJian implements Answer {
@@ -35,6 +37,7 @@ public class MergeQuJian implements Answer {
         int[] last = ints[0];
         int[] point = ints[1];
         int i = 1;
+        // 防止重复添加
         boolean newFlag = false;
 
         while (i < ints.length) {

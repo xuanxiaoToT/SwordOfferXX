@@ -8,8 +8,11 @@ import com.xx.util.DataFactory;
  * @author XuanXiao
  * @CreateDate 2022/10/25
  * 链表排序
- * 输入一个链表的头节点，请将该链表排序。例如，输入
- * 图12.4（a）中的链表，该链表排序后如图12.4（b）所示。
+ * <p>
+ * 输入一个链表的头节点，请将该链表排序。
+ * <p>
+ * 例如，输入图12.4（a）中的链表，
+ * 该链表排序后如图12.4（b）所示。
  */
 public class LinkedListSorting implements Answer {
 
