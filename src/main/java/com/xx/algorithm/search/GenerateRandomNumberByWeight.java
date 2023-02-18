@@ -8,9 +8,12 @@ import java.util.Random;
  * @author XuanXiao
  * @CreateDate 2022/10/20
  * 按权重生成随机数
+ * <p>
  * 输入一个正整数数组w，数组中的每个数字w[i]表示下标
  * i的权重，请实现一个函数pickIndex根据权重比例随机选择一个下
- * 标。例如，如果权重数组w为[1，2，3，4]，那么函数pickIndex将
+ * 标。
+ * <p>
+ * 例如，如果权重数组w为[1，2，3，4]，那么函数pickIndex将
  * 有10%的概率选择0、20%的概率选择1、30%的概率选择2、40%的概率
  * 选择3。
  */
@@ -21,7 +24,8 @@ public class GenerateRandomNumberByWeight implements Answer {
     }
 
     /**
-     * something
+     * 题目的关键是如何实现按照概率选择数字。
+     * 产生一个100内的随机整数：需要10%的概率，就判断此数字是否在1-10期间。
      */
     @Override
     public void answerOne() {

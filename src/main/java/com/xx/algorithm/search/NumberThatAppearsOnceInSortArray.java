@@ -9,16 +9,18 @@ import com.xx.Answer;
  * 排序数组中只出现一次的数字
  * <p>
  * 在一个排序的数组中，除一个数字只出现一次之外，其
- * 他数字都出现了两次，请找出这个唯一只出现一次的数字。例如，
- * 在数组[1，1，2，2，3，4，4，5，5]中，数字3只出现了一次
+ * 他数字都出现了两次，请找出这个唯一只出现一次的数字。
+ * <p>
+ * 例如，在数组[1，1，2，2，3，4，4，5，5]中，数字3只出现了一次
  */
 public class NumberThatAppearsOnceInSortArray implements Answer {
+
     public static void main(String[] args) {
         new NumberThatAppearsOnceInSortArray().answerOne();
     }
 
     /**
-     * 1.利用异或。
+     * 1.利用异或。解题略
      * 2.利用二分
      */
     @Override

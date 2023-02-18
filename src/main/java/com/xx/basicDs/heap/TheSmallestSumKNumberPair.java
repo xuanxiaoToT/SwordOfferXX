@@ -20,7 +20,7 @@ public class TheSmallestSumKNumberPair implements Answer {
 
     /**
      * 1.最笨的，就是全部遍历，然后吧数据放入最大堆
-     * 2.因为是递增，可以按顺序判断。
+     * 没有用到递增的特性
      */
     @Override
     public void answerOne() {

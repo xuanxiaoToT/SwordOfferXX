@@ -16,13 +16,14 @@ public class ClassicBinarySearch {
     public int binarySearch(int[] nums, int target) {
         int start = 0;
         int end = nums.length;
-
+        // 此处是小于等于
         while (start <= end) {
             int mid = (start + end) / 2;
             if (nums[mid] == target) {
                 return mid;
             }
             if (nums[mid] > target) {
+                // 此处是等于-1，而不是等于mid
                 end = mid - 1;
             }
             if (nums[mid] < target) {

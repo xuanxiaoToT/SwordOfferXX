@@ -5,9 +5,9 @@ import com.xx.Answer;
 /**
  * @author XuanXiao
  * @CreateDate 2023/1/9
- * LeetCode 33
  * <p>
  * 搜索旋转排序数组
+ * LeetCode 33
  * <p>
  * 整数数组 nums 按升序排列，数组中的值互不相同 。
  * 在传递给函数之前，nums在预先未知的某个下标 k（0 <= k < nums.length）上进行了旋转，
@@ -60,7 +60,6 @@ public class SearchRotationSortArray implements Answer {
                     //只能从左边找
                     right = mid - 1;
                 }
-
             }
             mid = left + (right - left) / 2;
         }

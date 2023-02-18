@@ -50,6 +50,9 @@ public class PathInMatrix {
         return new int[rowCount][colCount];
     }
 
+    /**
+     * 递归
+     */
     private boolean findPath(int[][] lastPath, int rowId, int colId, String[][] matrix, String target) {
         //越界
         if (rowId >= this.maxRow || colId >= this.maxCol || rowId < 0 || colId < 0) {
