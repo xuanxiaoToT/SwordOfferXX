@@ -7,13 +7,13 @@ import java.util.Arrays;
 /**
  * @author XuanXiao
  * @CreateDate 2022/12/14
- * 同leetcode 494
  * 加减的目标值
- *
+ * leetcode 494
+ * <p>
  * 给定一个非空的正整数数组和一个目标值S，如果为每个
  * 数字添加“+”或“-”运算符，请计算有多少种方法可以使这些整
  * 数的计算结果为S。
- *
+ * <p>
  * 例如，如果输入数组[2，2，2]并且S等于2，有3
  * 种添加“+”或“-”的方法使结果为2，它们分别是2+2-2=2、2-
  * 2+2=2及-2+2+2=2
@@ -31,6 +31,7 @@ public class TargetValueOfAdditionAndSubtraction implements Answer {
      * 求，p-q=S。如果累加数字中的所有数字，就能得到整个数组的数字之
      * 和，记为sum，即p+q=sum。将这两个等式的左右两边分别相加，就可
      * 以得到2p=S+sum，即p=（S+sum）/2。
+     * 即能否选择N个值，使得其和为P
      * 经数学运算换算后，即可转换为0-1背包问题
      * 则其解法同《DividingEqualSumSubsets》
      */
