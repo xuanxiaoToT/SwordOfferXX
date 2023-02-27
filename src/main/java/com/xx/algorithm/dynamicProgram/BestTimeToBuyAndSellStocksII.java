@@ -41,11 +41,13 @@ public class BestTimeToBuyAndSellStocksII implements Answer {
     /**
      * 解1：用动态规划来做。
      * 回溯法请参考backTracking里的解法。
+     * 每个点都有两个状态，
      */
     @Override
     public void answerOne() {
         int[] prices = initData();
-        // todo
+        int[][] dp = new int[prices.length][2];
+
     }
 
 
