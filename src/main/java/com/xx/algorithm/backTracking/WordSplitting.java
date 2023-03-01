@@ -50,6 +50,14 @@ public class WordSplitting implements Answer {
         answerOneDiGui(dic, inputData, 0);
     }
 
+    /**
+     * 尝试使用动态规划来解决试试
+     * todo fixme
+     */
+    public void answerTwo() {
+
+    }
+
     private void answerOneDiGui(Set<String> dic, String inputData, int start) {
         if (start >= inputData.length()) {
             System.out.println(true);
