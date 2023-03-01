@@ -6,10 +6,13 @@ import com.xx.Answer;
  * @author XuanXiao
  * @CreateDate 2022/12/8
  * 字符串交织
+ * <p>
  * 输入3个字符串s1、s2和s3，请判断字符串s3能不能由字
  * 符串s1和s2交织而成，即字符串s3的所有字符都是字符串s1或s2中
  * 的字符，字符串s1和s2中的字符都将出现在字符串s3中且相对位置
- * 不变。例如，字符串"aadbbcbcac"可以由字符
+ * 不变。
+ * <p>
+ * 例如，字符串"aadbbcbcac"可以由字符
  * 串"aabcc"和"dbbca"交织而成。
  */
 public class StringInterleaving implements Answer {

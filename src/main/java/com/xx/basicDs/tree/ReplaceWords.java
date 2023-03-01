@@ -12,7 +12,9 @@ import com.xx.domain.TrieNode;
  * 上"other"就能得到另一个单词"another"。现在给定一个由词根组
  * 成的字典和一个英语句子，如果句子中的单词在字典中有它的词
  * 根，则用它的词根替换该单词；如果单词没有词根，则保留该单
- * 词。请输出替换后的句子。例如，如果词根字典包含字符串
+ * 词。请输出替换后的句子。
+ *
+ * 例如，如果词根字典包含字符串
  * ["cat"，"bat"，"rat"]，英语句子为"the cattle was rattled by
  * the battery"，则替换之后的句子是"the cat was rat by the
  * bat"。
