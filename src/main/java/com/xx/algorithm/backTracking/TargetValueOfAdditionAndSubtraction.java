@@ -1,4 +1,4 @@
-package com.xx.algorithm.dynamicProgram;
+package com.xx.algorithm.backTracking;
 
 import com.xx.Answer;
 
