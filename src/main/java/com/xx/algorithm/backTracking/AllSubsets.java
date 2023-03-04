@@ -11,7 +11,10 @@ import java.util.Set;
  * @author XuanXiao
  * @CreateDate 2022/10/26
  * 所有子集
+ * LeetCode 78. 子集
+ * <p>
  * 输入一个不含重复数字的数据集合，请找出它的所有子集。
+ * <p>
  * 例如，数据集合[1，2]有4个子集，分别是[]、[1]、[2]和[1，2]。
  */
 public class AllSubsets implements Answer {
