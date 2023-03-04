@@ -33,7 +33,7 @@ public class JumpGame implements Answer {
     }
 
     /**
-     * 解1：
+     * 解1：普通遍历法来做
      */
     @Override
     public void answerOne() {
@@ -48,6 +48,13 @@ public class JumpGame implements Answer {
             }
         }
         System.out.println(Arrays.toString(dp));
+    }
+
+    /**
+     * 动态规划
+     */
+    public void answerTwo() {
+
     }
 
     private void fillJumpPoints(int[] dp, int start, int maxDis) {
