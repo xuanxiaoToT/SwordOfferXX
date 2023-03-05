@@ -14,6 +14,7 @@ import com.xx.Answer;
  * 示例 2:
  * 输入: nums = [5,7,7,8,8,10], target = 6
  * 输出: 0
+ *
  */
 public class NumberOfTimesInOrderedArray implements Answer {
 
