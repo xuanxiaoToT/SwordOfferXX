@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author 80296347/高登峰
+ * @author xuanxiao
  * @CreateDate 2023/1/4
  * <p>
  * 最长连续序列
