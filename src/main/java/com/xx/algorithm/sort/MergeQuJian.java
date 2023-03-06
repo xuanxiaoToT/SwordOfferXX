@@ -11,6 +11,7 @@ import java.util.List;
  * @author XuanXiao
  * @CreateDate 2022/10/24
  * 合并区间
+ * LeetCode 56
  * <p>
  * 输入一个区间的集合，请将重叠的区间合并。每个区间
  * 用两个数字比较，分别表示区间的起始位置和结束位置。

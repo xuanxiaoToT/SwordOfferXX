@@ -4,14 +4,14 @@ package com.xx.algorithm.search;
  * @author XuanXiao
  * @CreateDate 2022/6/17
  * 矩阵中的路径
+ * LeetCode 79 单词搜索
+ * <p>
  * 请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。路径可以从矩阵中的任意一格开始，
  * 每一步可以在矩阵中向左、右、上、下移动一格。
+ * 如果一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。
  * <p>
- * 如果一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（
- * 路径中的字母用加粗标出）。
- * <p>
+ * 例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。
  * [["a","b","c","e"], ["s","f","c","s"], ["a","d","e","e"]]
- * <p>
  * 但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
  */
 public class PathInMatrix {
@@ -52,6 +52,7 @@ public class PathInMatrix {
 
     /**
      * 递归
+     * 优化：lastPath可以重复利用，使得只需要初始化一次即可
      */
     private boolean findPath(int[][] lastPath, int rowId, int colId, String[][] matrix, String target) {
         //越界
@@ -73,8 +74,11 @@ public class PathInMatrix {
                 boolean right = findPath(lastPath, rowId, colId + 1, matrix, otherTarget);
                 boolean up = findPath(lastPath, rowId + 1, colId, matrix, otherTarget);
                 boolean down = findPath(lastPath, rowId - 1, colId, matrix, otherTarget);
+                lastPath[rowId][colId] = 0;
                 return left || right || up || down;
             } else {
+                //优化：lastPath可以重复利用，使得只需要初始化一次即可
+                lastPath[rowId][colId] = 0;
                 return false;
             }
         }
