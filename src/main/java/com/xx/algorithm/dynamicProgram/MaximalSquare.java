@@ -52,7 +52,7 @@ public class MaximalSquare implements Answer {
                     max = Math.max(1, max);
                 }
                 if (i > 0 && j > 0 && data[i][j] == 1 && data[i - 1][j] == 1 && data[i][j - 1] == 1) {
-                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                    dp[i][j] = Math.min(Math.min(dp[i][j - 1], dp[i - 1][j]), dp[i - 1][j - 1]) + 1;
                     max = Math.max(dp[i][j] * dp[i][j], max);
                 }
             }
@@ -69,6 +69,7 @@ public class MaximalSquare implements Answer {
     public int[][] initData() {
         //return new int[][]{{1, 0, 1, 0, 0}, {1, 0, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 0, 0, 1, 0}};
         //return new int[][]{{0, 1}, {1, 0}};
-        return new int[][]{{0}};
+        //return new int[][]{{0}};
+        return new int[][]{{1, 1, 1, 1, 0}, {1, 1, 1, 1, 0}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {0, 0, 1, 1, 1}};
     }
 }
