@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @author XuanXiao
  * @CreateDate 2022/12/13
  * 分割等和子集
+ * LeetCode 416
  * <p>
  * 给定一个非空的正整数数组，请判断能否将这些数字分
  * 成和相等的两部分。
