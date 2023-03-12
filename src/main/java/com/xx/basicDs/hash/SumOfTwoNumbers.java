@@ -59,6 +59,6 @@ public class SumOfTwoNumbers implements Answer {
      */
     @Override
     public int[] initData() {
-        return new int[]{2, 7, 11, 15};
+        return new int[]{2, 11, 15, 7};
     }
 }

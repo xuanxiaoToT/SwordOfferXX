@@ -43,9 +43,9 @@ public class AllSubsets implements Answer {
         //选
         temp.add(data[i]);
         myDiGui(temp, i + 1, data);
+        temp.remove(temp.size() - 1);
 
         //不选
-        temp.remove(temp.size() - 1);
         myDiGui(temp, i + 1, data);
 
     }
