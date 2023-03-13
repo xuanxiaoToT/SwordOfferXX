@@ -2,6 +2,8 @@ package com.xx.basicDs.stack;
 
 import com.xx.Answer;
 
+import java.util.Stack;
+
 /**
  * @author 玄霄
  * @CreateDate 2023/3/9
@@ -33,24 +35,71 @@ import com.xx.Answer;
  */
 public class StringDecoding implements Answer {
 
+    //@AllArgsConstructor
+    //@Data
+    public static class StringDecodingTempData {
+        private String str;
+        private int num;
+
+        public StringDecodingTempData(String str, int num) {
+            this.str = str;
+            this.num = num;
+        }
+
+        public String getStr() {
+            return str;
+        }
+
+        public int getNum() {
+            return num;
+        }
+    }
+
     public static void main(String[] args) {
         new StringDecoding().answerOne();
     }
 
     /**
-     * 解1：
+     * 解1：利用栈
+     * 思考的时候：先想清楚要存储什么信息，因为要存这些信息所以才选择了栈。
+     * 思考：每次遇到'['时，都需要先把一个str和int存进去
      */
     @Override
     public void answerOne() {
         String data = initData();
-        //todo
+        Stack<StringDecodingTempData> stack = new Stack<>();
+        StringBuilder sbTemp = new StringBuilder();
+        int num = 0;
+        for (int i = 0; i < data.length(); i++) {
+            Character c = data.charAt(i);
+            if (Character.isDigit(c)) {
+                num = num * 10 + Integer.parseInt(String.valueOf(c));
+            } else if ('[' == c) {
+                stack.add(new StringDecodingTempData(sbTemp.toString(), num));
+                sbTemp = new StringBuilder();
+                num = 0;
+            } else if (']' == c) {
+                StringDecodingTempData pop = stack.pop();
+                int numPop = pop.getNum();
+                String repeatStr = String.valueOf(sbTemp.toString()).repeat(Math.max(0, numPop));
+                sbTemp = new StringBuilder();
+                sbTemp.append(pop.getStr()).append(repeatStr);
+                num = 0;
+            } else {
+                sbTemp.append(c);
+            }
+        }
+        System.out.println(sbTemp.toString());
     }
+
 
     /**
      * 输出数据
      */
     @Override
     public String initData() {
-        return "3[a2[c]]";
+        //return "3[a2[c]]";
+        //return "3[a]2[bc]";
+        return "2[abc]3[cd]ef";
     }
 }
