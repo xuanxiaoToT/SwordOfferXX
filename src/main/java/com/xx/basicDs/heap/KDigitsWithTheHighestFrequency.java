@@ -10,9 +10,20 @@ import java.util.PriorityQueue;
 /**
  * @author XuanXiao
  * @CreateDate 2022/10/8
- * 出现频率最高的k个数字
  * <p>
+ * 出现频率最高的k个数字
+ * LeetCode 347. 前K个高频元素
+ * <p>
+ * 给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。
  * 堆的最典型的用法
+ * <p>
+ * 示例 1:
+ * 输入: nums = [1,1,1,2,2,3], k = 2
+ * 输出: [1,2]
+ * <p>
+ * 示例 2:
+ * 输入: nums = [1], k = 1
+ * 输出: [1]
  */
 public class KDigitsWithTheHighestFrequency implements Answer {
 
