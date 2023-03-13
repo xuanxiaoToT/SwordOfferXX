@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/3/5
  * <p>
  * 在排序数组中查找元素的第一个和最后一个位置

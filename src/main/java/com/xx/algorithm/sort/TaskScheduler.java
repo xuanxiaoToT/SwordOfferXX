@@ -3,7 +3,7 @@ package com.xx.algorithm.sort;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/3/10
  * 任务调度器
  * LeetCode 621

@@ -3,7 +3,7 @@ package com.xx.algorithm.backTracking;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/2/23
  * 买卖股票的最佳时机 II
  * LeetCode 122

@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/2/23
  * 买卖股票的最佳时机 II
  * LeetCode 122

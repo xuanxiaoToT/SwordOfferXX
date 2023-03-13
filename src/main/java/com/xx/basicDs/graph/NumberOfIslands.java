@@ -3,7 +3,7 @@ package com.xx.basicDs.graph;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/3/9
  * 岛屿数量
  * leetcode 200

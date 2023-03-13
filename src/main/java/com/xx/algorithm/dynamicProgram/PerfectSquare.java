@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/2/27
  * 完全平方数
  * LeetCode 279

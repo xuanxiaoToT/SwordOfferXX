@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/3/6
  * <p>
  * 最长递增子序列

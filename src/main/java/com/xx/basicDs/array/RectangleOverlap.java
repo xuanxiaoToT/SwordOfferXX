@@ -3,7 +3,7 @@ package com.xx.basicDs.array;
 import com.xx.Answer;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/3/8
  * 矩形重叠
  * LeetCode 836

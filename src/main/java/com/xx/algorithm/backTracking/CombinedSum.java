@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 玄霄
+ * @author XuanXiao
  * @CreateDate 2023/3/3
  * <p>
  * 组合总和
