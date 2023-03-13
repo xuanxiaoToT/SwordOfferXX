@@ -10,14 +10,17 @@ import java.util.Map;
 /**
  * @author XuanXiao
  * @CreateDate 2022/8/31
+ * <p>
  * 变位词组
+ * LeetCode 49 字母异位词分组
  * <p>
- * 给定一组单词，请将它们按照变位词分组。
+ * 给你一个字符串数组，请你将 字母异位词 组合在一起。可以按任意顺序返回结果列表。
+ * 字母异位词 是由重新排列源单词的字母得到的一个新单词，所有源单词中的字母通常恰好只用一次。
+ * 假设单词中只包含英文小写字母。
  * <p>
- * 例如，输入
- * 一组单词["eat"，"tea"，"tan"，"ate"，"nat"，"bat"]，这组单
- * 词可以分成3组，分别是["eat"，"tea"，"ate"]、["tan"，"nat"]
- * 和["bat"]。假设单词中只包含英文小写字母。
+ * 示例 1:
+ * 输入: strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+ * 输出: [["bat"],["nat","tan"],["ate","eat","tea"]]
  */
 public class AnamorphicPhrase implements Answer {
 
