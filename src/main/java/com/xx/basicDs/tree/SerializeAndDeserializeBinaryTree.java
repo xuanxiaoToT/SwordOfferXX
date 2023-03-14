@@ -12,6 +12,7 @@ import java.util.Queue;
 /**
  * @author XuanXiao
  * @CreateDate 2022/9/22
+ * <p>
  * 序列化和反序列化二叉树
  * <p>
  * 请设计一个算法将二叉树序列化成一个字符串，并能将
@@ -45,6 +46,9 @@ public class SerializeAndDeserializeBinaryTree implements Answer {
         return null;
     }
 
+    /**
+     * 前序，序列化
+     */
     public String treePreSerialize(TreeNode node) {
         if (node == null) {
             return "#";
@@ -54,7 +58,9 @@ public class SerializeAndDeserializeBinaryTree implements Answer {
         return String.valueOf(node.value) + "," + leftStr + "," + rightStr;
     }
 
-    //前序遍历的反序列化，其他中序，后续同理。切割即可。
+    /**
+     * 前序遍历的反序列化，其他中序，后续同理。切割即可。
+     */
     public TreeNode treeDeSerialize(String[] nodeStr, int start, int end) {
         if (start < 0 || end >= nodeStr.length || start > end) {
             return null;
@@ -69,7 +75,6 @@ public class SerializeAndDeserializeBinaryTree implements Answer {
             treeNode.right = treeDeSerialize(nodeStr, mid + 1, end);
             return treeNode;
         }
-
     }
 
     public String treeLevelSerialize(TreeNode node) {

@@ -7,6 +7,9 @@ import com.xx.util.DataFactory;
 /**
  * @author XuanXiao
  * @CreateDate 2022/7/19
+ * <p>
+ * 第 k 大的节点
+ * <p>
  * 给定一棵 二叉搜索树，请找出其中第 k 大的节点。
  */
 public class KthNodeInBinaryTree implements Answer {
