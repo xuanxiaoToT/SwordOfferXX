@@ -7,7 +7,7 @@ import com.xx.util.DataFactory;
 /**
  * @author XuanXiao
  * @CreateDate 2022/8/16
- * Penultimate：倒数第二的
+ * <p>
  * 删除倒数第k个节点
  * <p>
  * 如果给定一个链表，请问如何删除链表中的倒数第k个节点？

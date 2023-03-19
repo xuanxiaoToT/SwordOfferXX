@@ -6,7 +6,9 @@ import com.xx.domain.BiChildLinkNode;
 /**
  * @author XuanXiao
  * @CreateDate 2022/8/30
+ * <p>
  * 展平多级双向链表
+ * <p>
  * 在一个多级双向链表中，节点除了有两个指针分别指向
  * 前后两个节点，还有一个指针指向它的子链表，并且子链表也是一
  * 个双向链表，它的节点也有指向子链表的指针。请将这样的多级双
