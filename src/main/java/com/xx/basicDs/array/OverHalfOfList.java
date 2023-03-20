@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * @author XuanXiao
  * @CreateDate 2022/6/29
+ * <p>
  * 超过一半的数字
  * <p>
  * 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。

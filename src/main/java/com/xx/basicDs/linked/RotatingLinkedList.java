@@ -33,7 +33,7 @@ public class RotatingLinkedList implements Answer {
      */
     @Override
     public void answerOne() {
-        int K = 2;
+        //int K = 2;
     }
 
     /**

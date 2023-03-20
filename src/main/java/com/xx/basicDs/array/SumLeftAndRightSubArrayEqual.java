@@ -5,6 +5,7 @@ import com.xx.Answer;
 /**
  * @author XuanXiao
  * @CreateDate 2022/8/4
+ * <p>
  * 左右两边子数组的和相等
  * <p>
  * 输入一个整数数组，如果一个数字左边的子数组的数字
