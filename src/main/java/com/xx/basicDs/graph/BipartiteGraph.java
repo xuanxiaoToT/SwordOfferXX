@@ -44,7 +44,7 @@ public class BipartiteGraph implements Answer {
         for (int i = 0; i < size; i++) {
             // 还没有涂色
             if (colors[i] == -1) {
-                if (!setColor(graph, colors, i, 0)) {
+                if (!setColorByDfs(graph, colors, i, 0)) {
                     System.out.println(false);
                     return;
                 }
@@ -58,7 +58,7 @@ public class BipartiteGraph implements Answer {
      *
      * @param color:0 or 1
      */
-    private boolean setColor(int[][] graph, int[] colors, int i, int color) {
+    private boolean setColorByBfs(int[][] graph, int[] colors, int i, int color) {
         Queue<Integer> queue = new LinkedList<>();
         queue.add(i);
         colors[i] = color;
@@ -75,6 +75,25 @@ public class BipartiteGraph implements Answer {
                     colors[neighbor] = 1 - colors[node];
                     queue.add(neighbor);
                 }
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 采用深度优先来涂色
+     */
+    private boolean setColorByDfs(int[][] graph, int[] colors, int i, int color) {
+        if (colors[i] == -1) {
+            colors[i] = color;
+        } else {
+            // 已经被访问涂色了，直接返回。
+            return colors[i] == color;
+        }
+
+        for (int next : graph[i]) {
+            if (!setColorByDfs(graph, colors, next, 1 - color)) {
+                return false;
             }
         }
         return true;
