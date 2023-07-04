@@ -44,8 +44,8 @@ public class AllPaths implements Answer {
             return;
         }
         int[] ints = graph[index];
-        for (int i = 0; i < ints.length; i++) {
-            myDiGui(graph, ints[i], result, new ArrayList<>(temp));
+        for (int anInt : ints) {
+            myDiGui(graph, anInt, result, new ArrayList<>(temp));
         }
     }
 

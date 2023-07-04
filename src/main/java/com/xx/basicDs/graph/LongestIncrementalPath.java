@@ -15,6 +15,7 @@ import com.xx.Answer;
  * 如阴影部分所示。
  */
 public class LongestIncrementalPath implements Answer {
+
     public static void main(String[] args) {
         new LongestIncrementalPath().answerOne();
     }
