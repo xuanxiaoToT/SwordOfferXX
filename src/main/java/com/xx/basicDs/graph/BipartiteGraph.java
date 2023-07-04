@@ -2,6 +2,10 @@ package com.xx.basicDs.graph;
 
 import com.xx.Answer;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @author XuanXiao
  * @CreateDate 2022/12/20
@@ -12,10 +16,15 @@ import com.xx.Answer;
  * 相邻的节点，请判断该图是否为二分图。
  * <p>
  * 例如：如果输入graph为[[1，3]，[0，2]，[1，3]，[0，2]]，则graph[0]表示0的相邻点为1，3
- * 则其groph画出来如图：    0--3   则此图是二分图。
+ * 则其groph画出来如图，(1的相邻节点为0、2，以此类推)：
+ * 0--1
  * |  |
- * 1--2
- * 而如果输入graph为[[1，2，3]，[0，2]，[0，1，3]，[0，2]]，那么该图是一个非二分图
+ * 3--2
+ * 则此图是二分图。
+ * 而如果输入graph为[[1，2，3]，[0，2]，[0，1，3]，[0，2]]，那么该图是一个非二分图。
+ * <p>
+ * 可以理解为对图中所有的节点着色，两种不同类型的节点分别涂上不同的颜色。如果任意一条边的两个节点，
+ * 都是不同的颜色，则整个图就是二分图。
  */
 public class BipartiteGraph implements Answer {
 
@@ -24,11 +33,51 @@ public class BipartiteGraph implements Answer {
     }
 
     /**
-     * 解:二分图的节点可以分成两种不同的类型，任意一条边的两个节点分别属于两种不同的类型。
+     * 解:一个图可能包含多个连通子图，逐一对每个子图的节点着色。
      */
     @Override
     public void answerOne() {
+        int[][] graph = initData();
+        int size = graph.length;
+        int[] colors = new int[size];
+        Arrays.fill(colors, -1);
+        for (int i = 0; i < size; i++) {
+            // 还没有涂色
+            if (colors[i] == -1) {
+                if (!setColor(graph, colors, i, 0)) {
+                    System.out.println(false);
+                    return;
+                }
+            }
+        }
+        System.out.println(true);
+    }
 
+    /**
+     * 用广度优先搜索算法搜索与节点i连通的所有节点。
+     *
+     * @param color:0 or 1
+     */
+    private boolean setColor(int[][] graph, int[] colors, int i, int color) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(i);
+        colors[i] = color;
+        while (!queue.isEmpty()) {
+            Integer node = queue.poll();
+            for (int neighbor : graph[node]) {
+                if (colors[neighbor] > 0) {
+                    //已经被上色了，对比一下相邻的颜色是否不同。
+                    if (colors[node] == colors[neighbor]) {
+                        return false;
+                    }
+                } else {
+                    // 还没被上色，那么此节点需要跟相邻节点不同色。即之前为0，本次为1；之前为1，本次为0
+                    colors[neighbor] = 1 - colors[node];
+                    queue.add(neighbor);
+                }
+            }
+        }
+        return true;
     }
 
     /**

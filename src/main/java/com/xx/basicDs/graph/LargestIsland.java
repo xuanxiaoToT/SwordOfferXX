@@ -22,7 +22,7 @@ public class LargestIsland implements Answer {
     }
 
     /**
-     * 解
+     * 解：类似图的遍历。采用深度优先或者广度优先都可以。
      */
     @Override
     public void answerOne() {
