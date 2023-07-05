@@ -21,6 +21,11 @@ import java.util.Queue;
  * 例如，如果beginWord为"hit"，endWord为"cog"，单词列表为
  * ["hot"，"dot"，"dog"，"lot"，"log"，"cog"]，则演变序列的最短
  * 长度为5，一个可行的演变序列为"hit"→"hot"→"dot"→"dog"→"cog"。
+ * <p>
+ * 思路：这个问题是关于单词的演变的，所以每个单词就是图中的一个节点。
+ * 如果两个单词能够相互演变（改变一个单词的一个字母能变成另一个单词），
+ * 那么这两个单词之间有一条边相连。
+ * 由于要求最短的连接距离，所以采用广度优先遍历。
  */
 public class WordEvolution implements Answer {
 
@@ -29,7 +34,8 @@ public class WordEvolution implements Answer {
     }
 
     /**
-     * 解1:类似求解树的深度
+     * 解1:采用广度优先遍历
+     * 距离即为层数，类似用层序遍历求解树的高度。
      */
     @Override
     public void answerOne() {
@@ -50,7 +56,7 @@ public class WordEvolution implements Answer {
                     return;
                 }
                 for (String dataStr : data) {
-                    if (OneLetterApart(pollStr, dataStr) && !hashSet.contains(dataStr)) {
+                    if (oneLetterApart(pollStr, dataStr) && !hashSet.contains(dataStr)) {
                         hashSet.add(dataStr);
                         queue.add(dataStr);
                         System.out.println(dataStr + "  " + length);
@@ -62,7 +68,7 @@ public class WordEvolution implements Answer {
         System.out.println("done~!");
     }
 
-    private boolean OneLetterApart(String str1, String str2) {
+    private boolean oneLetterApart(String str1, String str2) {
         int sum = 0;
         for (int i = 0; i < str1.length(); i++) {
             if (str1.charAt(i) != str2.charAt(i)) {
@@ -104,14 +110,14 @@ public class WordEvolution implements Answer {
                 String pollUpStr = queueUp.poll();
                 String pollDownStr = queueDown.poll();
                 for (String dataStr : data) {
-                    if (OneLetterApart(pollUpStr, dataStr) && !hashSetUp.contains(dataStr)) {
+                    if (oneLetterApart(pollUpStr, dataStr) && !hashSetUp.contains(dataStr)) {
                         hashSetUp.add(dataStr);
                         queueUp.add(dataStr);
                         // System.out.println(dataStr + "  " + length);
                     }
                 }
                 for (String dataStr : data) {
-                    if (OneLetterApart(pollDownStr, dataStr) && !hashSetDown.contains(dataStr)) {
+                    if (oneLetterApart(pollDownStr, dataStr) && !hashSetDown.contains(dataStr)) {
                         hashSetDown.add(dataStr);
                         queueDown.add(dataStr);
                         // System.out.println(dataStr + "  " + length);
