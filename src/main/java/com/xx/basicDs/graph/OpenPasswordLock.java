@@ -9,7 +9,9 @@ import java.util.Queue;
 /**
  * @author XuanXiao
  * @CreateDate 2022/12/22
+ * <p>
  * 开密码锁
+ * <p>
  * 一个密码锁由4个环形转轮组成，每个转轮由0～9这10个
  * 数字组成。每次可以上下拨动一个转轮，如可以将一个转轮从0拨到
  * 1，也可以从0拨到9。
@@ -26,6 +28,11 @@ import java.util.Queue;
  * 是"0000"→"1000"→"1100"→"1200"→"1201"→"1202"→"0202"。虽
  * 然序列"0000"→"0001"→"0002"→"0102"→"0202"更短，只需要拨动4
  * 次转轮，但它包含死锁状态"0102"，因此这是一个无效的开锁序列。
+ * <p>
+ * 思路：一般而言，如果一个问题是关于某事
+ * 物状态的改变，那么可以考虑把问题转换成图搜索的问题。事物的每
+ * 个状态是图中的一个节点，如果一个状态能够转变到另一个状态，那
+ * 么这两个状态对应的节点之间有一条边相连。
  */
 public class OpenPasswordLock implements Answer {
 
@@ -53,6 +60,7 @@ public class OpenPasswordLock implements Answer {
                     System.out.println(depth);
                     return;
                 }
+                // flag：表明本层是否会造成死锁。
                 boolean flag = true;
                 for (String lockDatum : lockData) {
                     if (lockDatum.equals(pollStr)) {
