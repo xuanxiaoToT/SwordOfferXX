@@ -10,21 +10,30 @@ import java.util.Queue;
 /**
  * @author XuanXiao
  * @CreateDate 2022/12/20
+ * <p>
  * 矩阵中的距离
+ * <p>
  * 输入一个由0、1组成的矩阵M，请输出一个大小相同的矩
  * 阵D，矩阵D中的每个格子是矩阵M中对应格子离最近的0的距离。水
  * 平或竖直方向相邻的两个格子的距离为1。假设矩阵M中至少有一个
  * 0。
+ * 举例：
+ * 000     000
+ * 010     010
+ * 111     121
+ * 图二即结果
  */
 public class DistanceInMatrix implements Answer {
 
+    /**
+     * 遇到与无权图的最近距离相关的问题，都优先考虑使用广度优先遍历来解决。
+     */
     public static void main(String[] args) {
         new DistanceInMatrix().answerTwo();
     }
 
     /**
-     * 解:深度优先遍历--解法错误~！
-     * 关键的问题是：已经遍历过的1点，如何处理再遍历的问题。
+     * 深度优先错误解法
      */
     @Override
     public void answerOne() {
@@ -98,6 +107,10 @@ public class DistanceInMatrix implements Answer {
         System.out.println(Arrays.deepToString(result));
     }
 
+    /**
+     * 解法错误~！
+     * 关键的问题是：已经遍历过的1点，如何处理再遍历的问题。
+     */
     private int myDiGui(int[][] data, int i, int j, HashSet<String> flag, int distance) {
         if (whether(data, i, j, flag)) {
             if (data[i][j] == 1) {
