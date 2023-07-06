@@ -1,6 +1,9 @@
 package com.xx.basicDs.graph;
 
 import com.xx.Answer;
+import lombok.Data;
+
+import java.util.*;
 
 /**
  * @author XuanXiao
@@ -34,26 +37,116 @@ import com.xx.Answer;
  * 示例 3：
  * 输入：equations = [["a","b"]], values = [0.5], queries = [["a","b"],["b","a"],["a","c"],["x","y"]]
  * 输出：[0.50000,2.00000,-1.00000,-1.00000]
+ * <p>
+ * 思路：
+ * 这个问题是关于两个变量之间的除法，因此可以将变量看作图中的节点。
+ * 如果存在两个变量的除法等式，那么这两个变量对应的节点之间有一条边相连。一个除法等式除了被除
+ * 数和除数，还有商。被除数和除数都对应图中的节点，商是两个变量的除法的结果，表达的是变量之间的关系，
+ * 因此商应该是边的属性。可以给图中的每条边定义一个权重，为两个变量的除法的商。由于a/b一般不等于b/a，
+ * 因此从节点a到节点b的边和从节点b到节点a的边的权重不同，即这个图是有向图，
+ * 节点a和节点b之间有两条不同方向的有向边。
  */
 public class DivisionEvaluation implements Answer {
 
     public static void main(String[] args) {
-
+        new DivisionEvaluation().answerOne();
     }
 
     /**
-     * 解1：
+     * 解1：采用深度优先遍历
      */
     @Override
     public void answerOne() {
+        TestData testData = initData();
+        String[][] equations = testData.getEquations();
+        Double[] values = testData.getValues();
+        String[][] queries = testData.getQueries();
+        List<Double> result = new ArrayList<>();
+        // 构造图
+        Map<String, Map<String, Double>> graph = buildGraph(equations, values);
+        for (String[] query : queries) {
+            String up = query[0];
+            String down = query[1];
+            if (graph.containsKey(up) && graph.containsKey(down)) {
+                if (up.equals(down)) {
+                    result.add(1.0);
+                } else {
+                    Double dfsValue = myDfs(graph, up, down, new HashSet<>(), 1.0);
+                    result.add(dfsValue);
+                }
+            } else {
+                result.add(-1.0);
+            }
+        }
 
+        System.out.println(result);
     }
+
+    private Double myDfs(Map<String, Map<String, Double>> graph, String up, String down, HashSet<String> visited, Double temp) {
+        if (visited.contains(up)) {
+            return -1.0;
+        }
+        visited.add(up);
+        Map<String, Double> stringDoubleMap = graph.get(up);
+        for (Map.Entry<String, Double> entry : stringDoubleMap.entrySet()) {
+            String next = entry.getKey();
+            Double value = entry.getValue();
+            if (down.equals(next)) {
+                return temp * value;
+            } else {
+                Double aDouble = myDfs(graph, next, down, visited, temp * value);
+                if (aDouble > 0) {
+                    return aDouble;
+                }
+            }
+        }
+        visited.remove(up);
+        return -1.0;
+    }
+
+    private Map<String, Map<String, Double>> buildGraph(String[][] equations, Double[] values) {
+        Map<String, Map<String, Double>> map = new HashMap<>();
+        for (int i = 0; i < equations.length; i++) {
+            String[] equation = equations[i];
+            String start = equation[0];
+            String end = equation[1];
+            if (!map.containsKey(start)) {
+                Map<String, Double> temp = new HashMap<>();
+                temp.put(end, values[i]);
+                map.put(start, temp);
+            } else {
+                Map<String, Double> temp = map.get(start);
+                temp.put(end, values[i]);
+                map.put(start, temp);
+            }
+            if (!map.containsKey(end)) {
+                Map<String, Double> temp = new HashMap<>();
+                temp.put(start, 1 / values[i]);
+                map.put(end, temp);
+            } else {
+                Map<String, Double> temp = map.get(end);
+                temp.put(start, 1 / values[i]);
+                map.put(end, temp);
+            }
+        }
+        return map;
+    }
+
 
     /**
      * 输出数据
      */
     @Override
-    public Object initData() {
-        return null;
+    public TestData initData() {
+        return new TestData();
+    }
+
+    @Data
+    private static class TestData {
+        private String[][] equations = new String[][]{{"a", "b"}, {"b", "c"}};
+
+        private Double[] values = new Double[]{2.0, 3.0};
+
+        private String[][] queries = new String[][]{{"a", "c"}, {"b", "a"}, {"a", "e"}, {"a", "a"}, {"x", "x"}};
     }
 }
