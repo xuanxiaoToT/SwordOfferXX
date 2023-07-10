@@ -129,7 +129,7 @@ public class ReconstructQueueBasedHeight implements Answer {
                 }
             }
         }
-        System.out.println(ans);
+        System.out.println(Arrays.deepToString(ans));
     }
 
     /**
