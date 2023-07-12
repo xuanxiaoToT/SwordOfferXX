@@ -7,12 +7,24 @@ import com.xx.util.DataFactory;
 /**
  * @author XuanXiao
  * @CreateDate 2022/10/25
+ * <p>
  * 链表排序
+ * LeetCode 148. 排序链表
  * <p>
- * 输入一个链表的头节点，请将该链表排序。
+ * 给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。
+ * 进阶：你可以在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序吗？
  * <p>
- * 例如，输入图12.4（a）中的链表，
- * 该链表排序后如图12.4（b）所示。
+ * 示例 1：
+ * 输入：head = [4,2,1,3]
+ * 输出：[1,2,3,4]
+ * <p>
+ * 示例 2：
+ * 输入：head = [-1,5,3,4,0]
+ * 输出：[-1,0,3,4,5]
+ * <p>
+ * 示例 3：
+ * 输入：head = []
+ * 输出：[]
  */
 public class LinkedListSorting implements Answer {
 
