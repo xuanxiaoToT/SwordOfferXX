@@ -69,6 +69,32 @@ public class ProductExceptSelf implements Answer {
     }
 
     /**
+     * 官解：想要O(1)复杂度，则需要省略掉right的使用。
+     * 即在计算right的时候，同时计算result。
+     * 再简化一点：就是left可以用result来临时替代。
+     */
+    public void answerTwo() {
+        int[] inputData = initData();
+        int[] result = new int[inputData.length];
+        int left = 1;
+        for (int i = 0; i < inputData.length; i++) {
+            if (i >= 1) {
+                left = left * inputData[i - 1];
+            }
+            result[i] = left;
+        }
+        int right = 1;
+        for (int j = inputData.length - 1; j >= 0; j--) {
+            if (j < inputData.length - 1) {
+                right = right * inputData[j + 1];
+            }
+            result[j] = right * result[j];
+        }
+
+        System.out.println(Arrays.toString(result));
+    }
+
+    /**
      * 输出数据
      */
     @Override
