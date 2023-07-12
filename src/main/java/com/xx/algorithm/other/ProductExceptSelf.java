@@ -33,7 +33,9 @@ public class ProductExceptSelf implements Answer {
     }
 
     /**
-     * 解1：
+     * 解1：用两个数组来存储临时值。
+     * 其中left(i)表示，左侧包括i在内的全部乘积。right(i)同理。
+     * 那么除i外的乘积值，就等于i左右两侧相乘。
      */
     @Override
     public void answerOne() {
