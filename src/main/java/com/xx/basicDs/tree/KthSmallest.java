@@ -62,6 +62,20 @@ public class KthSmallest implements Answer {
     }
 
     /**
+     * 进阶：
+     * 可以用map存储每个节点的子节点数量，这样如果左子树没变，请求的K值在左子树，则可以直接返回结果。
+     * 具体规则如下：
+     * 对当前结点 node  进行如下操作：
+     * <p>
+     * 如果 node 的左子树的结点数 left 小于 k−1k-1k−1，则第 k 小的元素一定在 node  的右子树中，令 node 等于其的右子结点，k 等于 k−left−1，并继续搜索；
+     * 如果 node 的左子树的结点数 left 等于 k−1k-1k−1，则第 k 小的元素即为 node ，结束搜索并返回 node 即可；
+     * 如果 node 的左子树的结点数 left 大于 k−1k-1k−1，则第 k 小的元素一定在 node  的左子树中，令 node 等于其左子结点，并继续搜索。
+     */
+    public void answerThree() {
+
+    }
+
+    /**
      * 输出数据
      */
     @Override
