@@ -8,14 +8,25 @@ import java.util.List;
 /**
  * @author XuanXiao
  * @CreateDate 2022/7/5
+ * <p>
  * 连续子数组的最大和
+ * LeetCode 053 最大子数组和
  * <p>
  * 输入一个整型数组，数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。
  * 要求时间复杂度为O(n)。
  * <p>
+ * 示例 1：
  * 输入: nums = [-2,1,-3,4,-1,2,1,-5,4]
  * 输出: 6
  * 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
+ * <p>
+ * 示例 2：
+ * 输入：nums = [1]
+ * 输出：1
+ * <p>
+ * 示例 3：
+ * 输入：nums = [5,4,-1,7,8]
+ * 输出：23
  */
 public class MaxSumContinuousSubarrays implements Answer {
 
