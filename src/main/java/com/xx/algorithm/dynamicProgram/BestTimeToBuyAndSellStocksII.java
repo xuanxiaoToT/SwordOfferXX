@@ -15,6 +15,8 @@ import java.util.Arrays;
  * 在每一天，你可以决定是否购买和/或出售股票。你在任何时候 最多 只能持有 一股 股票。你也可以先购买，然后在 同一天 出售。
  * 返回 你能获得的 最大 利润 。
  * <p>
+ * 注意点：本题与 买卖股票I 的不同是，可以进行多次交易，只限制每次手上仅一股。
+ * <p>
  * 示例 1：
  * 输入：prices = [7,1,5,3,6,4]
  * 输出：7
@@ -33,7 +35,7 @@ import java.util.Arrays;
  * 输出：0
  * 解释：在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0 。
  * <p>
- *  回溯法，参考{@link com.xx.algorithm.backTracking.BestTimeToBuyAndSellStocksII}
+ * 回溯法，参考{@link com.xx.algorithm.backTracking.BestTimeToBuyAndSellStocksII}
  */
 public class BestTimeToBuyAndSellStocksII implements Answer {
 
