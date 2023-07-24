@@ -7,6 +7,7 @@ import java.util.Arrays;
 /**
  * @author XuanXiao
  * @CreateDate 2023/2/23
+ * <p>
  * 买卖股票的最佳时机 II
  * LeetCode 122
  * <p>
@@ -31,6 +32,8 @@ import java.util.Arrays;
  * 输入：prices = [7,6,4,3,1]
  * 输出：0
  * 解释：在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0 。
+ * <p>
+ *  回溯法，参考{@link com.xx.algorithm.backTracking.BestTimeToBuyAndSellStocksII}
  */
 public class BestTimeToBuyAndSellStocksII implements Answer {
 
@@ -63,7 +66,7 @@ public class BestTimeToBuyAndSellStocksII implements Answer {
                 dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
             }
         }
-        System.out.println(dp[prices.length-1][0]);
+        System.out.println(dp[prices.length - 1][0]);
         System.out.println(Arrays.deepToString(dp));
     }
 

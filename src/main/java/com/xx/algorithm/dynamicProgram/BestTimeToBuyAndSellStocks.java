@@ -1,4 +1,4 @@
-package com.xx.algorithm.backTracking;
+package com.xx.algorithm.dynamicProgram;
 
 import com.xx.Answer;
 
@@ -62,6 +62,24 @@ public class BestTimeToBuyAndSellStocks implements Answer {
             }
         }
         System.out.println(max);
+    }
+
+
+    /**
+     * 解2：单循环遍历法。购买股票使得其总是最低点买入。
+     */
+    public void answerThree() {
+        int[] prices = initData();
+        int minprice = Integer.MAX_VALUE;
+        int maxprofit = 0;
+        for (int price : prices) {
+            if (price < minprice) {
+                minprice = price;
+            } else if (price - minprice > maxprofit) {
+                maxprofit = price - minprice;
+            }
+        }
+        System.out.println(maxprofit);
     }
 
     /**
