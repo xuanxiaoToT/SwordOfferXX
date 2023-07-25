@@ -28,7 +28,7 @@ import java.util.Arrays;
 public class BestTimeToBuyAndSellStocksFreezingPeriod implements Answer {
 
     public static void main(String[] args) {
-        new BestTimeToBuyAndSellStocksFreezingPeriod().answerOne();
+        new BestTimeToBuyAndSellStocksFreezingPeriod().answerTwo();
     }
 
     /**
@@ -58,12 +58,38 @@ public class BestTimeToBuyAndSellStocksFreezingPeriod implements Answer {
     }
 
     /**
+     * 尝试用三个状态来做：
+     * 要注意，其代表的是第i天结束后的状态。
+     * 0.没有股票，且不在冷静期
+     * 1.持有股票
+     * 2.没有股票，昨天刚卖
+     * <p>
+     * 注意：f(i)代表的是i天结束后的状态，不是i天当时的状态。
+     */
+    public void answerTwo() {
+        int[] prices = initData();
+        int[][] dp = new int[prices.length][3];
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        dp[0][2] = 0;
+        for (int i = 1; i < prices.length; i++) {
+            //持有股票。昨天就持有、今天新买的
+            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
+            //未持有股票。并且不能卖，因为卖完就算冷静期了，就属于[i][2]了
+            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][2]);
+            dp[i][2] = dp[i - 1][1] + prices[i];
+
+        }
+        System.out.println(Arrays.deepToString(dp));
+    }
+
+    /**
      * 输出数据
      */
     @Override
     public int[] initData() {
 
-        //return new int[]{1, 2, 3, 0, 2};
-        return new int[]{6, 1, 6, 4, 3, 0, 2};
+        return new int[]{1, 2, 3, 0, 2};
+        //return new int[]{6, 1, 6, 4, 3, 0, 2};
     }
 }
