@@ -50,7 +50,8 @@ public class BestTimeToBuyAndSellStocksII implements Answer {
      * 回溯法请参考backTracking里的解法。
      * <p>
      * 考虑到「不能同时参与多笔交易」，因此每天交易结束后只可能存在手里有一支股票或者没有股票的状态。
-     * 定义状态 dp[i][0]表示第 i 天交易完后手里没有股票的最大利润，
+     * 定义状态
+     * dp[i][0]表示第 i 天交易完后手里没有股票的最大利润，
      * dp[i][1]表示第 i 天交易完后手里持有一支股票的最大利润（i 从 0开始）。
      */
     @Override
