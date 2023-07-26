@@ -1,6 +1,9 @@
 package com.xx.algorithm.dynamicProgram;
 
 import com.xx.Answer;
+import com.xx.util.MathUtil;
+
+import java.util.Arrays;
 
 /**
  * @author XuanXiao
@@ -44,18 +47,47 @@ public class BestTimeToBuyAndSellStocksIII implements Answer {
     }
 
     /**
-     * 解1：先分析股票的状态：i天，是否持有股票、是否满足了两次交易
+     * 解1：先分析股票的状态：i天，是否持有股票、两次机会是否用完。一共两种状态
+     * 故我们假设其DP(i,j,k) i表示天数，j表示持有股票，k表示进行了几次交易。
+     * 比如 dp[2][1][1] 表示2天，持有股票，进行了1次交易。
+     * 注意：买入后，就算进行了一次交易。
      */
     @Override
     public void answerOne() {
+        Integer[] prices = initData();
+        Integer[][][] dp = new Integer[prices.length][2][3];
+        dp[0][0][0] = 0;
+        dp[0][0][1] = null;
+        dp[0][0][2] = null;
+        dp[0][1][0] = null;
+        dp[0][1][1] = -prices[0];
+        dp[0][1][2] = null;
+        for (int i = 1; i < prices.length; i++) {
+            dp[i][0][0] = dp[i - 1][0][0];
+            //不持有股票，且进行了1次交易，则只有把之前的卖出
+            dp[i][0][1] = dp[i - 1][1][1] != null ? MathUtil.intMax(dp[i - 1][0][1], dp[i - 1][1][1] + prices[i]) : dp[i - 1][0][1];
+            //不持有股票，且进行了2次交易，则只有把之前的卖出
+            dp[i][0][2] = dp[i - 1][1][2] != null ? MathUtil.intMax(dp[i - 1][0][2], dp[i - 1][1][2] + prices[i]) : dp[i - 1][0][2];
+            // 不可能存在
+            dp[i][1][0] = null;
+            //想持有股票，且进行了1次交易，则需要本次买入，且之前为0次交易。
+            dp[i][1][1] = MathUtil.intMax(dp[i - 1][1][1], MathUtil.nvl(dp[i - 1][0][0], 0) - prices[i]);
+            //想持有股票，且进行了2次交易，则需要本次买入，且之前为1次交易。
+            dp[i][1][2] = MathUtil.intMax(dp[i - 1][1][2], MathUtil.nvl(dp[i - 1][0][1], 0) - prices[i]);
 
+            System.out.println(Arrays.deepToString(dp));
+        }
+
+        System.out.println(MathUtil.intMax(0, dp[prices.length - 1][0]));
     }
 
     /**
      * 输出数据
      */
     @Override
-    public int[] initData() {
-        return new int[]{3, 3, 5, 0, 0, 3, 1, 4};
+    public Integer[] initData() {
+        //return new Integer[]{3, 3, 5, 0, 0, 3, 1, 4};
+        //return new Integer[]{1, 2, 3, 4, 5};
+        return new Integer[]{7, 6, 4, 3, 1};
     }
 }
