@@ -43,7 +43,7 @@ import java.util.Arrays;
 public class BestTimeToBuyAndSellStocksIII implements Answer {
 
     public static void main(String[] args) {
-        new BestTimeToBuyAndSellStocksIII().answerOne();
+        new BestTimeToBuyAndSellStocksIII().answerTwo();
     }
 
     /**
@@ -65,20 +65,47 @@ public class BestTimeToBuyAndSellStocksIII implements Answer {
         for (int i = 1; i < prices.length; i++) {
             dp[i][0][0] = dp[i - 1][0][0];
             //不持有股票，且进行了1次交易，则只有把之前的卖出
-            dp[i][0][1] = dp[i - 1][1][1] != null ? MathUtil.intMax(dp[i - 1][0][1], dp[i - 1][1][1] + prices[i]) : dp[i - 1][0][1];
+            dp[i][0][1] = dp[i - 1][1][1] != null ? MathUtil.intMaxByNull(dp[i - 1][0][1], dp[i - 1][1][1] + prices[i]) : dp[i - 1][0][1];
             //不持有股票，且进行了2次交易，则只有把之前的卖出
-            dp[i][0][2] = dp[i - 1][1][2] != null ? MathUtil.intMax(dp[i - 1][0][2], dp[i - 1][1][2] + prices[i]) : dp[i - 1][0][2];
+            dp[i][0][2] = dp[i - 1][1][2] != null ? MathUtil.intMaxByNull(dp[i - 1][0][2], dp[i - 1][1][2] + prices[i]) : dp[i - 1][0][2];
             // 不可能存在
             dp[i][1][0] = null;
             //想持有股票，且进行了1次交易，则需要本次买入，且之前为0次交易。
-            dp[i][1][1] = MathUtil.intMax(dp[i - 1][1][1], MathUtil.nvl(dp[i - 1][0][0], 0) - prices[i]);
+            dp[i][1][1] = MathUtil.intMaxByNull(dp[i - 1][1][1], MathUtil.nvl(dp[i - 1][0][0], 0) - prices[i]);
             //想持有股票，且进行了2次交易，则需要本次买入，且之前为1次交易。
-            dp[i][1][2] = MathUtil.intMax(dp[i - 1][1][2], MathUtil.nvl(dp[i - 1][0][1], 0) - prices[i]);
+            dp[i][1][2] = MathUtil.intMaxByNull(dp[i - 1][1][2], MathUtil.nvl(dp[i - 1][0][1], 0) - prices[i]);
 
             System.out.println(Arrays.deepToString(dp));
         }
 
-        System.out.println(MathUtil.intMax(0, dp[prices.length - 1][0]));
+        System.out.println(MathUtil.intMaxByNull(0, dp[prices.length - 1][0]));
+    }
+
+    /**
+     * 尝试用二维状态
+     * 每天交易完成后有5个状态：
+     * 0:不持有，且未完成交易。
+     * 1:不持有，且完成1次交易。
+     * 2:不持有，且完成2次交易。
+     * 3:持有，且完成1次交易。
+     * 4:持有，且完成2次交易。
+     */
+    public void answerTwo() {
+        Integer[] prices = initData();
+        Integer[][] dp = new Integer[prices.length][5];
+        dp[0][0] = 0;
+        dp[0][1] = null;
+        dp[0][2] = null;
+        dp[0][3] = -prices[0];
+        dp[0][4] = null;
+        for (int i = 1; i < prices.length; i++) {
+            dp[i][0] = dp[i - 1][0];
+            dp[i][1] = MathUtil.intMaxByNull(dp[i - 1][1], dp[i - 1][3] + prices[i]);
+            dp[i][2] = dp[i - 1][4] != null ? MathUtil.intMaxByNull(dp[i - 1][2], dp[i - 1][4] + prices[i]) : dp[i - 1][2];
+            dp[i][3] = MathUtil.intMaxByNull(dp[i - 1][3], dp[i - 1][0] - prices[i]);
+            dp[i][4] = MathUtil.intMaxByNull(dp[i - 1][4], MathUtil.nvl(dp[i - 1][1], 0) - prices[i]);
+        }
+        System.out.println(Arrays.deepToString(dp));
     }
 
     /**
@@ -86,8 +113,8 @@ public class BestTimeToBuyAndSellStocksIII implements Answer {
      */
     @Override
     public Integer[] initData() {
-        //return new Integer[]{3, 3, 5, 0, 0, 3, 1, 4};
+        return new Integer[]{3, 3, 5, 0, 0, 3, 1, 4};
         //return new Integer[]{1, 2, 3, 4, 5};
-        return new Integer[]{7, 6, 4, 3, 1};
+        //return new Integer[]{7, 6, 4, 3, 1};
     }
 }

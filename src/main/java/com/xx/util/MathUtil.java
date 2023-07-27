@@ -6,7 +6,7 @@ package com.xx.util;
  */
 public class MathUtil {
 
-    public static Integer intMax(Integer data1, Integer... data2) {
+    public static Integer intMaxByNull(Integer data1, Integer... data2) {
         Integer max = data1;
         for (Integer i : data2) {
             if (data1 == null && i != null) {
