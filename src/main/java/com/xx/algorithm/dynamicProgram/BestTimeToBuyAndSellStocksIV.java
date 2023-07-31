@@ -29,7 +29,7 @@ import java.util.Arrays;
  */
 public class BestTimeToBuyAndSellStocksIV implements Answer {
     public static void main(String[] args) {
-        new BestTimeToBuyAndSellStocksIV().answerOne();
+        new BestTimeToBuyAndSellStocksIV().answerTwo();
     }
 
     /**
@@ -38,7 +38,7 @@ public class BestTimeToBuyAndSellStocksIV implements Answer {
      * i表示第几天。
      * j表示是否持有。0：不持有。1：持有。
      * k表示已经交易了k次，购买后的当天更新。
-     * 可以参考{@link BestTimeToBuyAndSellStocksIII}的三元解法
+     * 可以参考{@link BestTimeToBuyAndSellStocksIII}的answerOne解法
      * <p>
      * 关键点：注意null值的处理。null表示不可能存在的情况。
      * 对于卖出时，不可能存在时，便不允许卖出。
@@ -62,6 +62,40 @@ public class BestTimeToBuyAndSellStocksIV implements Answer {
         System.out.println(Arrays.deepToString(dp[prices.length - 1][0]));
         System.out.println(MathUtil.intMaxByNull(0, dp[prices.length - 1][0]));
     }
+
+    /**
+     * 同样的，本题也可以用二元dp来处理。
+     * 参考{@link BestTimeToBuyAndSellStocksIII}的answerTwo解法
+     * <p>
+     * 0 不持有，0次完成。
+     * 1 持有，1次完成。
+     * 2 不持有，1次完成。
+     * 3 持有，2次完成。
+     * 4 不持有，2次完成
+     * 以此类推。
+     */
+    public void answerTwo() {
+        int k = 2;
+        int[] prices = initData();
+        Integer[][] dp = new Integer[prices.length][2 * k + 1];
+        dp[0][0] = 0;
+        dp[0][1] = -prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            dp[i][0] = null;
+            for (int j = 1; j <= 2 * k; j++) {
+                if (j % 2 != 0) {
+                    //奇数，持有
+                    dp[i][j] = MathUtil.intMaxByNull(dp[i - 1][j], MathUtil.nvl(dp[i - 1][j - 1], 0) - prices[i]);
+                } else {
+                    //偶数，不持有
+                    dp[i][j] = dp[i - 1][j - 1] != null ? MathUtil.intMaxByNull(dp[i - 1][j], dp[i - 1][j - 1] + prices[i]) : dp[i - 1][j];
+                }
+            }
+            //System.out.println(Arrays.toString(dp[i]));
+        }
+        System.out.println(Arrays.toString(dp[dp.length - 1]));
+    }
+
 
     /**
      * 输出数据
