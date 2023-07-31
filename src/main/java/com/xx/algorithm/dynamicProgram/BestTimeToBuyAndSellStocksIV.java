@@ -39,6 +39,10 @@ public class BestTimeToBuyAndSellStocksIV implements Answer {
      * j表示是否持有。0：不持有。1：持有。
      * k表示已经交易了k次，购买后的当天更新。
      * 可以参考{@link BestTimeToBuyAndSellStocksIII}的三元解法
+     * <p>
+     * 关键点：注意null值的处理。null表示不可能存在的情况。
+     * 对于卖出时，不可能存在时，便不允许卖出。
+     * 对于买入时，不可能存在时(前值)，表示本次第一次买入，应该按0处理。
      */
     @Override
     public void answerOne() {
