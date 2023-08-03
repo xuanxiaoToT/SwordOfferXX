@@ -2,30 +2,37 @@ package com.xx.basicDs.graph.disjointSet;
 
 import com.xx.Answer;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author xuanxiao
  * @CreateDate 2023/1/4
  * <p>
  * 最长连续序列
+ * LeetCode 128
  * <p>
  * 输入一个无序的整数数组，请计算最长的连续数值序列的长度。
  * 例如，输入数组[10，5，9，2，4，3]，则最长的连续数值
  * 序列是[2，3，4，5]，因此输出4。
+ * <p>
+ * 示例 1：
+ * 输入：nums = [100,4,200,1,3,2]
+ * 输出：4
+ * 解释：最长数字连续序列是 [1, 2, 3, 4]。它的长度为 4。
+ * <p>
+ * 示例 2：
+ * 输入：nums = [0,3,7,2,5,8,4,6,0,1]
+ * 输出：9
  */
 public class LongestContinuousSequence implements Answer {
 
     public static void main(String[] args) {
-        new LongestContinuousSequence().answerThree();
+        new LongestContinuousSequence().answerTwo();
     }
 
     /**
-     * 解1:无脑排序即可。
-     * 缺点：最差O(NlogN)
+     * 解1:无脑排序即可。然后判断前后差1的，最大长度即可。
+     * 缺点：O(NlogN)
      */
     @Override
     public void answerOne() {
@@ -39,8 +46,39 @@ public class LongestContinuousSequence implements Answer {
      * 每次的值记录，然后取最大值即可。
      */
     private void answerTwo() {
-        // 解法略。ps：感觉不如直接排序
-        // 优点：O(N)
+        int[] data = initData();
+        HashSet<Integer> dataSet = new HashSet<>(data.length);
+        for (int datum : data) {
+            dataSet.add(datum);
+        }
+        int max = 0;
+        for (int datum : data) {
+            int bfs = bfs(dataSet, datum);
+            max = Math.max(bfs, max);
+        }
+        System.out.println(max);
+    }
+
+    private int bfs(HashSet<Integer> dataSet, int startNum) {
+        Queue<Integer> queue = new LinkedList<>();
+        int result = 0;
+        if (dataSet.contains(startNum)) {
+            queue.add(startNum);
+            dataSet.remove(startNum);
+        }
+        while (!queue.isEmpty()) {
+            Integer poll = queue.poll();
+            result++;
+            if (dataSet.contains(poll - 1)) {
+                queue.add(poll - 1);
+                dataSet.remove(poll - 1);
+            }
+            if (dataSet.contains(poll + 1)) {
+                queue.add(poll + 1);
+                dataSet.remove(poll + 1);
+            }
+        }
+        return result;
     }
 
     /**
@@ -92,6 +130,8 @@ public class LongestContinuousSequence implements Answer {
      */
     @Override
     public int[] initData() {
-        return new int[]{10, 5, 9, 2, 4, 3};
+        //return new int[]{10, 5, 9, 2, 4, 3};
+        //return new int[]{0, 3, 7, 2, 5, 8, 4, 6, 0, 1};
+        return new int[]{100, 4, 200, 1, 3, 2};
     }
 }
