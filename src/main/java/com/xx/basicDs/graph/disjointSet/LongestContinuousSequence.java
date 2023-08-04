@@ -46,14 +46,14 @@ public class LongestContinuousSequence implements Answer {
         for (int num : numSet) {
             if (!numSet.contains(num - 1)) {
                 int currentNum = num;
-                int currentStreak = 1;
+                int tempCount = 1;
 
                 while (numSet.contains(currentNum + 1)) {
                     currentNum += 1;
-                    currentStreak += 1;
+                    tempCount += 1;
                 }
 
-                longestStreak = Math.max(longestStreak, currentStreak);
+                longestStreak = Math.max(longestStreak, tempCount);
             }
         }
         System.out.println(longestStreak);
