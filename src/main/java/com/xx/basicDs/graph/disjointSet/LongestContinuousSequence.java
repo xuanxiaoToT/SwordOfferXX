@@ -27,16 +27,36 @@ import java.util.*;
 public class LongestContinuousSequence implements Answer {
 
     public static void main(String[] args) {
-        new LongestContinuousSequence().answerTwo();
+        new LongestContinuousSequence().answerThree();
     }
 
     /**
-     * 解1:无脑排序即可。然后判断前后差1的，最大长度即可。
-     * 缺点：O(NlogN)
+     * 解1:使用哈希表
      */
     @Override
     public void answerOne() {
-        // 快排略
+        int[] nums = initData();
+        Set<Integer> numSet = new HashSet<>();
+        for (int num : nums) {
+            numSet.add(num);
+        }
+
+        int longestStreak = 0;
+
+        for (int num : numSet) {
+            if (!numSet.contains(num - 1)) {
+                int currentNum = num;
+                int currentStreak = 1;
+
+                while (numSet.contains(currentNum + 1)) {
+                    currentNum += 1;
+                    currentStreak += 1;
+                }
+
+                longestStreak = Math.max(longestStreak, currentStreak);
+            }
+        }
+        System.out.println(longestStreak);
     }
 
     /**
@@ -90,30 +110,39 @@ public class LongestContinuousSequence implements Answer {
         int[] data = initData();
         Set<Integer> setData = new HashSet<>();
         Map<Integer, Integer> fatherMap = new HashMap<>();
-        Set<Integer> had = new HashSet<>();
+        Map<Integer, Integer> countMap = new HashMap<>();
         for (int datum : data) {
             setData.add(datum);
             fatherMap.put(datum, datum);
+            countMap.put(datum, 1);
         }
+        int max = 0;
         for (int datum : data) {
-            had.add(datum);
-            unionNode(fatherMap, datum, setData, had);
+            unionNode(fatherMap, countMap, datum, setData);
         }
-        System.out.println(fatherMap);
+        for (Integer value : countMap.values()) {
+            max = Math.max(max, value);
+        }
+
+        System.out.println(max);
+
     }
 
-    private void unionNode(Map<Integer, Integer> fatherMap, int datum, Set<Integer> setData, Set<Integer> had) {
+    private void unionNode(Map<Integer, Integer> fatherMap, Map<Integer, Integer> countMap, int datum, Set<Integer> setData) {
+        setData.remove(datum);
         int root = findRoot(fatherMap, datum);
         if (setData.contains(datum - 1)) {
             int rootLeft = findRoot(fatherMap, datum - 1);
             if (root != rootLeft) {
-                fatherMap.put(root, rootLeft);
+                fatherMap.put(rootLeft, root);
+                countMap.put(root, countMap.get(root) + countMap.get(rootLeft));
             }
         }
         if (setData.contains(datum + 1)) {
             int rootRight = findRoot(fatherMap, datum + 1);
             if (root != rootRight) {
-                fatherMap.put(root, rootRight);
+                fatherMap.put(rootRight, root);
+                countMap.put(root, countMap.get(root) + countMap.get(rootRight));
             }
         }
     }
@@ -131,7 +160,7 @@ public class LongestContinuousSequence implements Answer {
     @Override
     public int[] initData() {
         //return new int[]{10, 5, 9, 2, 4, 3};
-        //return new int[]{0, 3, 7, 2, 5, 8, 4, 6, 0, 1};
-        return new int[]{100, 4, 200, 1, 3, 2};
+        return new int[]{0, 3, 7, 2, 5, 8, 4, 6, 0, 1};
+        //return new int[]{100, 4, 200, 1, 3, 2};
     }
 }
