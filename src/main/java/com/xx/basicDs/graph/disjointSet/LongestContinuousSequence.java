@@ -32,6 +32,7 @@ public class LongestContinuousSequence implements Answer {
 
     /**
      * 解1:使用哈希表
+     * 思路参考：https://leetcode.cn/problems/longest-consecutive-sequence/solutions/276931/zui-chang-lian-xu-xu-lie-by-leetcode-solution/
      */
     @Override
     public void answerOne() {
