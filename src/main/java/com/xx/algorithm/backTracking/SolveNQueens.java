@@ -1,7 +1,6 @@
 package com.xx.algorithm.backTracking;
 
 import com.xx.Answer;
-import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -99,18 +98,16 @@ public class SolveNQueens implements Answer {
         return true;
     }
 
-    /**
-     * 产生斜对角的坐标集合。
-     */
-    private void generateDiagonalCoordinates(int row, int column) {
 
-    }
-
-    @AllArgsConstructor
     public static class Point {
         public int row;
 
         public int column;
+
+        public Point(int row, int column) {
+            this.row = row;
+            this.column = column;
+        }
 
         @Override
         public boolean equals(Object o) {
