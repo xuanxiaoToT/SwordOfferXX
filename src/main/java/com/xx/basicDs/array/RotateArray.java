@@ -32,11 +32,12 @@ import java.util.Arrays;
 public class RotateArray implements Answer {
 
     public static void main(String[] args) {
-        new RotateArray().answerOne();
+        new RotateArray().answerTwo();
     }
 
     /**
      * 解1：使用额外数组。
+     * 空间复杂度 O(K)
      */
     @Override
     public void answerOne() {
@@ -55,6 +56,28 @@ public class RotateArray implements Answer {
         }
         for (int i = 0; i < k; i++) {
             nums[i] = temp[i];
+        }
+        System.out.println(Arrays.toString(nums));
+    }
+
+    /**
+     * 空间复杂度为 O(1) 的 原地 算法
+     * 用一个temp来放，然后挨个挪动即可。
+     * 时间复杂度O(kN)
+     */
+    public void answerTwo() {
+        int k = 3;
+        int[] nums = initData();
+        // 做题时注意边界条件
+        if (k >= nums.length) {
+            k = k % nums.length;
+        }
+        for (int i = 0; i < k; i++) {
+            int temp = nums[nums.length - 1];
+            for (int j = nums.length - 1; j >= 1; j--) {
+                nums[j] = nums[j - 1];
+            }
+            nums[0] = temp;
         }
         System.out.println(Arrays.toString(nums));
     }
