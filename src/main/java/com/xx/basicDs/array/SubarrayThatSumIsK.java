@@ -41,6 +41,7 @@ public class SubarrayThatSumIsK implements Answer {
     @Override
     public void answerOne() {
         int[] nums = initData();
+        // sumTemp[i]表示i左侧以及自己，的元素和。
         int[] sumTemp = new int[nums.length];
         int k = 4;
         int result = 0;
