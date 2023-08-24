@@ -34,6 +34,7 @@ public class FindFirstMissingPositive implements Answer {
     /**
      * 解1：最简单的很容易想出来，即用set来做。但是空间复杂度会超。
      * 利用桶排序hash的思想
+     * 如果数组中包含 x∈[1,N]，那么恢复后，数组的第 x−1个元素为 x。
      */
     @Override
     public void answerOne() {
