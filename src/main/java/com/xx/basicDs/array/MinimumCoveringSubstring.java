@@ -34,6 +34,8 @@ import java.util.Map;
  * 输出: ""
  * 解释: t 中两个字符 'a' 均应包含在 s 的子串中，
  * 因此没有符合条件的子字符串，返回空字符串。
+ * <p>
+ * fixme：进阶：你能设计一个在 o(m+n) 时间内解决此问题的算法吗？
  */
 public class MinimumCoveringSubstring implements Answer {
     public static void main(String[] args) {
@@ -42,6 +44,16 @@ public class MinimumCoveringSubstring implements Answer {
 
     /**
      * 解1：使用滑动窗口算法
+     * 时间仅击败5%。
+     * todo：优化此算法
+     * <p>
+     * 考虑如何优化？ 如果 s=XX⋯XABCXXXX，t=ABC，那么显然 [XX⋯XABC] 是第一个得到的「可行」区间，得到这个可行区间后，
+     * 我们按照「收缩」窗口的原则更新左边界，得到最小区间。我们其实做了一些无用的操作，
+     * 就是更新右边界的时候「延伸」进了很多无用的 X\，更新左边界的时候「收缩」扔掉了这些无用的 X，做了这么多无用的操作，
+     * 只是为了得到短短的 ABC。没错，其实在 sss 中，有的字符我们是不关心的，我们只关心 ttt 中出现的字符，
+     * 我们可不可以先预处理 sss，扔掉那些 ttt 中没有出现的字符，然后再做滑动窗口呢？也许你会说，这样可能出现 XXABXXC 的情况，
+     * 在统计长度的时候可以扔掉前两个 X，但是不扔掉中间的 X，怎样解决这个问题呢？
+     * 优化后的时空复杂度又是多少？
      */
     @Override
     public void answerOne() {
@@ -51,13 +63,13 @@ public class MinimumCoveringSubstring implements Answer {
         HashMap<Character, Integer> dataMap = new HashMap<>();
         for (int i = 0; i < target.length(); i++) {
             Character c = target.charAt(i);
-            targetMap.put(c, targetMap.computeIfAbsent(c, key -> 0) + 1);
+            targetMap.put(c, targetMap.getOrDefault(c, 0) + 1);
         }
         int left = 0;
         int right = 0;
         int resultMin = Integer.MAX_VALUE;
         String result = "";
-        dataMap.put(data.charAt(0), dataMap.computeIfAbsent(data.charAt(0), key -> 0) + 1);
+        dataMap.put(data.charAt(0), dataMap.getOrDefault(data.charAt(0), 0) + 1);
         while (right < data.length() && left <= right) {
             if (isEligible(targetMap, dataMap)) {
                 if (right - left + 1 < resultMin) {
@@ -65,14 +77,14 @@ public class MinimumCoveringSubstring implements Answer {
                     result = data.substring(left, right + 1);
                     System.out.println(result);
                 }
-                dataMap.put(data.charAt(left), dataMap.computeIfAbsent(data.charAt(left), key -> 0) - 1);
+                dataMap.put(data.charAt(left), dataMap.getOrDefault(data.charAt(left), 0) - 1);
                 left++;
             } else {
                 right++;
                 if (right >= data.length()) {
                     break;
                 }
-                dataMap.put(data.charAt(right), dataMap.computeIfAbsent(data.charAt(right), key -> 0) + 1);
+                dataMap.put(data.charAt(right), dataMap.getOrDefault(data.charAt(right), 0) + 1);
             }
         }
         System.out.println(result);
