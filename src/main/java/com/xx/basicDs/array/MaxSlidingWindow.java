@@ -36,7 +36,7 @@ import java.util.PriorityQueue;
 public class MaxSlidingWindow implements Answer {
 
     public static void main(String[] args) {
-        new MaxSlidingWindow().answerOne();
+        new MaxSlidingWindow().answerTwo();
     }
 
     /**
@@ -77,29 +77,49 @@ public class MaxSlidingWindow implements Answer {
     }
 
     /**
-     * 使用堆来做
+     * 使用堆来做。
+     * 对于本题而言，初始时，我们将数组 nums 的前 k 个元素放入优先队列中。每当我们向右移动窗口时，我们就可以把一个新的元素放入优先队列中，
+     * 此时堆顶的元素就是堆中所有元素的最大值。然而这个最大值可能并不在滑动窗口中，在这种情况下，这个值在数组 nums中的位置出现在滑动窗口左边界的左侧。
+     * 因此，当我们后续继续向右移动窗口时，这个值就永远不可能出现在滑动窗口中了，我们可以将其永久地从优先队列中移除。
+     * <p>
+     * 我们不断地移除堆顶的元素，直到其确实出现在滑动窗口中。此时，堆顶元素就是滑动窗口中的最大值。为了方便判断堆顶元素与滑动窗口的位置关系，
+     * 我们可以在优先队列中存储二元组 (num,index)，表示元素 num 在数组中的下标为 index。
      */
     public void answerTwo() {
-        int k = 3;
+        int k = 1;
         int[] nums = initData();
         int[] result = new int[nums.length - k + 1];
+        PriorityQueue<int[]> maxheap = new PriorityQueue<int[]>((pair1, pair2) -> {
+            return pair1[0] != pair2[0] ? pair2[0] - pair1[0] : pair2[1] - pair1[1];
+        });
+
+        for (int i = 0; i < k; ++i) {
+            maxheap.offer(new int[]{nums[i], i});
+        }
+
+        int left = 0;
+        int right = k - 1;
         int index = 0;
-        PriorityQueue<Integer> minheap = new PriorityQueue<>();
+        while (right < nums.length) {
+            int[] peek = maxheap.peek();
 
+            while (peek[1] < left) {
+                maxheap.poll();
+                peek = maxheap.peek();
+            }
+            result[index] = peek[0];
 
-
-    }
-
-    private void addStack(PriorityQueue<Integer> heap, Integer num, int k) {
-        if (heap.size() < k) {
-            heap.add(num);
-        } else {
-            if (num > heap.peek()) {
-                heap.poll();
-                heap.add(num);
+            index++;
+            left++;
+            right++;
+            if (right < nums.length) {
+                maxheap.add(new int[]{nums[right], right});
             }
         }
+        System.out.println(Arrays.toString(result));
+
     }
+
 
     private Integer findMax(final int left, final int right, int[] nums) {
         int maxTemp = Integer.MIN_VALUE;
@@ -114,6 +134,7 @@ public class MaxSlidingWindow implements Answer {
      */
     @Override
     public int[] initData() {
-        return new int[]{1, 3, -1, -3, 5, 3, 6, 7};
+        //return new int[]{1, 3, -1, -3, 5, 3, 6, 7};
+        return new int[]{1, -1};
     }
 }
