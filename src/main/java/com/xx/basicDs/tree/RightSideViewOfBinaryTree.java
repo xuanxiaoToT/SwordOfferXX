@@ -13,7 +13,8 @@ import java.util.Queue;
  * @author XuanXiao
  * @CreateDate 2022/9/21
  * <p>
- * 树的右视图
+ * 二叉树的右视图
+ * LeetCode 199
  * <p>
  * 给定一棵二叉树，如果站在该二叉树的右侧，那么从上
  * 到下看到的节点构成二叉树的右侧视图。
