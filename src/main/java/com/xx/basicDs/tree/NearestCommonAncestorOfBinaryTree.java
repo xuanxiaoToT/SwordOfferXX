@@ -56,16 +56,6 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         System.out.println(result.value);
     }
 
-    /**
-     * 官解，在遍历递归的同时即可对比。而不是单开一个递归去对比。
-     */
-    public void answerTwo() {
-        TreeNode root = initData();
-        TreeNode targetOne = new TreeNode(13);
-        TreeNode targetTwo = new TreeNode(7);
-        lca(root, targetOne, targetTwo);
-        System.out.println(result.value);
-    }
 
     private void myTransverse(TreeNode node, TreeNode targetOne, TreeNode targetTwo) {
         if (node != null && node.left != null && node.right != null) {
@@ -84,6 +74,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
             }
         }
     }
+
 
     private boolean whetherExit(TreeNode node, TreeNode targetOne, TreeNode targetTwo) {
         if (node == null) {
@@ -104,6 +95,18 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         }
         return false;
     }
+
+    /**
+     * 官解，在遍历递归的同时即可对比。而不是单开一个递归去对比。
+     */
+    public void answerTwo() {
+        TreeNode root = initData();
+        TreeNode targetOne = new TreeNode(13);
+        TreeNode targetTwo = new TreeNode(7);
+        lca(root, targetOne, targetTwo);
+        System.out.println(result.value);
+    }
+
 
     /**
      * 节点的对比简化为了值的比较。
