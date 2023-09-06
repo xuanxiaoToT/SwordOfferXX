@@ -8,6 +8,7 @@ import com.xx.domain.TreeNode;
  * @CreateDate 2022/9/26
  * <p>
  * 节点值之和最大的路径
+ * LeetCode 124. 二叉树中的最大路径和
  * <p>
  * 在二叉树中将路径定义为顺着节点之间的连接从任意一
  * 个节点开始到达任意一个节点所经过的所有节点。路径中至少包含
@@ -38,7 +39,7 @@ public class PathWithMaxNumOfNodeValues implements Answer {
     @Override
     public void answerOne() {
         TreeNode treeNode = initData();
-        Integer asd = diGuiTree(treeNode.right);
+        Integer asd = diGuiTree(treeNode);
         System.out.println(maxResult + " " + asd);
     }
 
@@ -53,9 +54,15 @@ public class PathWithMaxNumOfNodeValues implements Answer {
         }
         Integer left = diGuiTree(node.left);
         Integer right = diGuiTree(node.right);
-        System.out.println(maxResult);
+        //System.out.println(maxResult);
         if (left != null && right != null) {
-            int tempMax = left + right + node.value;
+            int tempMax = node.value;
+            if (left > 0) {
+                tempMax = tempMax + left;
+            }
+            if (right > 0) {
+                tempMax = tempMax + right;
+            }
             maxResult = Math.max(tempMax, maxResult);
             return Math.max(Math.max(left + node.value, right + node.value), node.value);
         } else {
