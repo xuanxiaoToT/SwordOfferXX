@@ -54,7 +54,6 @@ public class PathWithMaxNumOfNodeValues implements Answer {
         }
         Integer left = diGuiTree(node.left);
         Integer right = diGuiTree(node.right);
-        //System.out.println(maxResult);
         if (left != null && right != null) {
             int tempMax = node.value;
             if (left > 0) {
