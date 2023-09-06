@@ -7,7 +7,10 @@ import java.util.*;
 /**
  * @author XuanXiao
  * @CreateDate 2022/12/27
+ * <p>
  * 课程顺序
+ * LeetCode 207. 课程表
+ * <p>
  * n门课程的编号为0～n-1。输入一个数组
  * prerequisites，它的每个元素prerequisites[i]表示两门课程的先
  * 修顺序。如果prerequisites[i]=[ai，bi]，那么必须先修完bi才能
@@ -17,6 +20,17 @@ import java.util.*;
  * <p>
  * 例：总共有4门课程，先修顺序prerequisites为[[1，0]，[2，0]，[3，1]，[3，2]]，
  * 一个可行的修课序列是0→2→1→3。
+ * <p>
+ * 示例 1：
+ * 输入：numCourses = 2, prerequisites = [[1,0]]
+ * 输出：true
+ * 解释：总共有 2 门课程。学习课程 1 之前，你需要完成课程 0 。这是可能的。
+ * <p>
+ * 示例 2：
+ * 输入：numCourses = 2, prerequisites = [[1,0],[0,1]]
+ * 输出：false
+ * 解释：总共有 2 门课程。学习课程 1 之前，你需要先完成课程 0 ；并且学习课程 0 之前，你还应先完成课程 1 。这是不可能的。
+ *
  * <p>
  * PS：拓扑排序
  * 一种常用的拓扑排序算法是每次从有向无环图中取出一个入度为0
@@ -39,8 +53,9 @@ public class CourseSequence implements Answer {
     public void answerOne() {
         // 初始化数据
         int[][] data = initData();
+        int numCourses = 2;
         Map<Integer, List<Integer>> graph = new HashMap<>();
-        int[] inDegrees = new int[data.length];
+        int[] inDegrees = new int[numCourses];
         Queue<Integer> queue = new LinkedList<>();
         List<Integer> result = new ArrayList<>();
         // 构造图
@@ -77,7 +92,7 @@ public class CourseSequence implements Answer {
                 }
             }
         }
-        System.out.println(result);
+        System.out.println(result.size());
     }
 
     /**
@@ -85,6 +100,8 @@ public class CourseSequence implements Answer {
      */
     @Override
     public int[][] initData() {
-        return new int[][]{{1, 0}, {2, 0}, {3, 1}, {3, 2}};
+        //return new int[][]{{1, 0}, {2, 0}, {3, 1}, {3, 2}};
+        //return new int[][]{{1, 0}, {0, 1}};
+        return new int[][]{{1, 0}};
     }
 }
