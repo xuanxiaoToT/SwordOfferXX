@@ -10,7 +10,9 @@ import java.util.PriorityQueue;
 /**
  * @author XuanXiao
  * @CreateDate 2022/7/1
+ * <p>
  * 数据流中的中位数
+ * LeetCode 295. 数据流的中位数
  * <p>
  * 如何得到一个数据流中的中位数？
  * 如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。
@@ -58,11 +60,19 @@ public class MedianInDataFlow implements Answer {
         System.out.println(list);
     }
 
-    // 采用堆的方式
-    public void answerTwo() {
-        // 初始化操作
-        maxHeap = new PriorityQueue<Integer>((x, y) -> (y - x));
-        minHeap = new PriorityQueue<Integer>();
+    private void addNum(Integer data) {
+        for (int i = 0; i < list.size(); i++) {
+            if (data < list.get(i)) {
+                if (i > 1) {
+                    list.add(i, data);
+                    return;
+                } else {
+                    list.add(0, data);
+                    return;
+                }
+            }
+        }
+        list.add(list.size(), data);
     }
 
     private double findMedian() {
@@ -73,6 +83,13 @@ public class MedianInDataFlow implements Answer {
         } else {
             return list.get(mid);
         }
+    }
+
+    // 采用堆的方式
+    public void answerTwo() {
+        // 初始化操作
+        maxHeap = new PriorityQueue<Integer>((x, y) -> (y - x));
+        minHeap = new PriorityQueue<Integer>();
     }
 
     private void addNum2(Integer num) {
@@ -119,24 +136,18 @@ public class MedianInDataFlow implements Answer {
             // 理论上应该要加入到 minHeap 才对
             // 所以，先去获取此时 maxHeap 的堆顶元素（不一定值是 num），即最大值，把它抛出后加入到 minHeap 中
             minHeap.add(maxHeap.poll());
-
         }
     }
 
-    private void addNum(Integer data) {
-        for (int i = 0; i < list.size(); i++) {
-            if (data < list.get(i)) {
-                if (i > 1) {
-                    list.add(i, data);
-                    return;
-                } else {
-                    list.add(0, data);
-                    return;
-                }
-            }
+    private double findMedian2() {
+        if (maxHeap.size() != minHeap.size()) {
+            return minHeap.peek();
+        } else {
+            return (minHeap.peek() + maxHeap.peek()) * 1.0 / 2;
         }
-        list.add(list.size(), data);
     }
+
+
 
     @Override
     public List<Integer> initData() {
