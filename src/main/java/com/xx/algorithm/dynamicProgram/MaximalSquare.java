@@ -7,8 +7,10 @@ import java.util.Arrays;
 /**
  * @author XuanXiao
  * @CreateDate 2023/3/5
+ * <p>
  * 最大正方形
  * LeetCoce 221
+ * <p>
  * 在一个由 '0' 和 '1' 组成的二维矩阵内，找到只包含 '1' 的最大正方形，并返回其面积。
  * <p>
  * 示例 1：
@@ -40,6 +42,7 @@ public class MaximalSquare implements Answer {
 
     /**
      * 利用动态规划
+     * dp[i][j]代表：正方形以 data[i][j] 作为右下角时的最大边长值。
      */
     public void answerTwo() {
         int max = 0;
