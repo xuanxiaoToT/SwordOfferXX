@@ -59,6 +59,22 @@ public class JumpGameII implements Answer {
         System.out.println(Arrays.deepToString(dp));
     }
 
+    /**
+     * 节省内存，仅用一维dp
+     * dp[i] 表示i结尾的最小跳跃数。
+     */
+    public void answerTwo() {
+        int[] data = initData();
+        int[] dp = new int[data.length];
+        for (int i = 0; i < data.length; i++) {
+            int maxStep = data[i];
+            for (int j = i + 1; j <= i + maxStep && j < data.length; j++) {
+                dp[j] = dp[j] == 0 ? dp[i] + 1 : Math.min(dp[j], dp[i] + 1);
+            }
+        }
+        System.out.println(Arrays.toString(dp));
+    }
+
     private int findMin(int[][] dp, int i) {
         int min = -1;
         for (int j = 0; j < i; j++) {
