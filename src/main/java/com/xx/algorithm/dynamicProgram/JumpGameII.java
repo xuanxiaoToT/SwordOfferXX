@@ -68,6 +68,7 @@ public class JumpGameII implements Answer {
         int[] dp = new int[data.length];
         for (int i = 0; i < data.length; i++) {
             int maxStep = data[i];
+            // 从i出发，可以到达的点，其跳跃数即为dp[i] + 1，若之前已有到达的，则计算其最小值。
             for (int j = i + 1; j <= i + maxStep && j < data.length; j++) {
                 dp[j] = dp[j] == 0 ? dp[i] + 1 : Math.min(dp[j], dp[i] + 1);
             }
