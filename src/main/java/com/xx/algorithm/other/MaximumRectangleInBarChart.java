@@ -49,6 +49,9 @@ public class MaximumRectangleInBarChart implements Answer {
         System.out.println(max);
     }
 
+    /**
+     * 在一维数组中对每一个数找到第一个比自己小的元素。这类“在一维数组中找第一个满足某种条件的数”的场景就是典型的单调栈应用场景。
+     */
     public void answerTwo() {
 
     }
