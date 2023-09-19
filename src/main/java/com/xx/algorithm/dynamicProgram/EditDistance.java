@@ -58,7 +58,7 @@ public class EditDistance implements Answer {
         String word1 = data[0];
         String word2 = data[1];
         if (word1.isEmpty() || word2.isEmpty()) {
-            System.out.println(Math.max(word1.length(), word2.length()););
+            System.out.println(Math.max(word1.length(), word2.length()));
             return;
         }
 
