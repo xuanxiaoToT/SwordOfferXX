@@ -46,7 +46,11 @@ public class EditDistance implements Answer {
     }
 
     /**
-     * 解1：
+     * 解1：Levenshtein Distance莱文斯坦距离，属于编辑距离的一种。由苏联数学家Vladimir Levenshtein于1965年提出。
+     * 对于两个字符串A、B而言，字符串A的前i个字符和字符串B的前j个字符的莱文斯坦距离符合如下公式
+     * if min(i,j) = 0,则lev = max(i,j);   --表明全部不同，编辑距离等同于字符数
+     * else  lev = min(lev(i-1,j)+1,lev(i,j-1)+1,lev(i-1,j-1)+1(ci==cj时))
+     * --前面两个表示对最后一个字符进行删除和新增的操作，最后一个是对最后一位进行替换操作时可能需要的距离数。当两字符相同时，则不需要进行+1.
      */
     @Override
     public void answerOne() {
