@@ -9,20 +9,20 @@ import java.util.Stack;
  * @CreateDate 2022/9/7
  * <p>
  * 直方图最大矩形面积
- * LeetCode11 盛最多水的容器
+ * LeetCode 84 柱状图中最大的矩形  困难
  * <p>
  * 直方图是由排列在同一基线上的相邻柱子组成的图形。
  * 输入一个由非负数组成的数组，数组中的数字是直方图中柱子的
  * 高。求直方图中最大矩形面积。假设直方图中柱子的宽都为1。
  * <p>
  * 示例 1:
- * 输入：[3，2，5，4，6，1，4，2]
- * 输出：12
+ * 输入：heights = [2,1,5,6,2,3]
+ * 输出：10
+ * 解释：最大的矩形为图中红色区域，面积为 10
  * <p>
  * 示例 2：
- * 输入：[1,8,6,2,5,4,8,3,7]
- * 输出：49
- * 解释：图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。
+ * 输入： heights = [2,4]
+ * 输出： 4
  */
 public class HistogramMaxRectangularArea implements Answer {
 
@@ -60,20 +60,17 @@ public class HistogramMaxRectangularArea implements Answer {
                 while (!minIndexStack.isEmpty()) {
                     Integer peek = minIndexStack.peek();
                     int peekNum = inputData[peek];
-                    if (inputData[i] > peekNum) {
+                    if (inputData[i] >= peekNum) {
                         minIndexStack.push(i);
                         break;
                     } else {
                         // 如果当前扫描到的柱子的高小于位于栈顶的柱子的高，那么将位
                         // 于栈顶的柱子的下标出栈，并且计算以位于栈顶的柱子为顶的最大矩形面积。
-                        minIndexStack.pop();
-                        Integer left = minIndexStack.isEmpty() ? 0 : minIndexStack.peek();
-                        Integer right = i;
-                        Integer area = (right - left + 1) * Math.min(inputData[left], inputData[right]);
-                        if (area > max) {
-                            max = area;
-                            System.out.println(max + " " + left + " " + right);
-                        }
+                        Integer thisHeightIndex = minIndexStack.pop();
+                        int left = minIndexStack.isEmpty() ? 0 : minIndexStack.peek();
+                        int right = i;
+                        int area = left != thisHeightIndex ? (right - left - 1) * inputData[thisHeightIndex] : (right - left) * inputData[thisHeightIndex];
+                        max = Math.max(max, area);
                         if (minIndexStack.isEmpty() || inputData[i] > minIndexStack.peek()) {
                             minIndexStack.push(i);
                             break;
@@ -82,8 +79,28 @@ public class HistogramMaxRectangularArea implements Answer {
                 }
             }
         }
+        while (!minIndexStack.isEmpty()) {
+            // 计算以当前柱子为顶的最大矩形面积
+            Integer thisHeightIndex = minIndexStack.pop();
+            int left = minIndexStack.isEmpty() ? 0 : minIndexStack.peek();
+            int right = thisHeightIndex;
+            for (int i = thisHeightIndex; i < inputData.length; i++) {
+                if (inputData[i] < inputData[thisHeightIndex]) {
+                    right = i;
+                    break;
+                }
+            }
+            if (left == thisHeightIndex && thisHeightIndex == right) {
+                int area = inputData[thisHeightIndex];
+                max = Math.max(max, area);
+            } else {
+                int area = right != thisHeightIndex ? (right - left - 1) * inputData[thisHeightIndex] : (right - left) * inputData[thisHeightIndex];
+                max = Math.max(max, area);
+            }
+        }
         // 在对stack中剩余的下标进行计算。略
         System.out.println(minIndexStack);
+        System.out.println(max);
     }
 
     /**
@@ -99,6 +116,8 @@ public class HistogramMaxRectangularArea implements Answer {
      */
     @Override
     public int[] initData() {
-        return new int[]{3, 2, 5, 4, 6, 1, 4, 2};
+        //return new int[]{2, 1, 5, 6, 2, 3};
+        //return new int[]{2, 4};
+        return new int[]{2, 2};
     }
 }
