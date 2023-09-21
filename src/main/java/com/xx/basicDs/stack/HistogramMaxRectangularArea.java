@@ -2,6 +2,8 @@ package com.xx.basicDs.stack;
 
 import com.xx.Answer;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 /**
@@ -48,6 +50,8 @@ public class HistogramMaxRectangularArea implements Answer {
      * 实现：如果当前扫描到的柱子的高小于位于栈顶的柱子的高，那么将位
      * 于栈顶的柱子的下标出栈，并且计算以位于栈顶的柱子为顶的最大矩
      * 形面积。如果大于，则直接入栈。
+     * <p>
+     * fixme：有些问题
      */
     private void answerTwo() {
         int[] inputData = initData();
@@ -60,17 +64,26 @@ public class HistogramMaxRectangularArea implements Answer {
                 while (!minIndexStack.isEmpty()) {
                     Integer peek = minIndexStack.peek();
                     int peekNum = inputData[peek];
-                    if (inputData[i] >= peekNum) {
+                    if (inputData[i] > peekNum) {
                         minIndexStack.push(i);
                         break;
                     } else {
                         // 如果当前扫描到的柱子的高小于位于栈顶的柱子的高，那么将位
                         // 于栈顶的柱子的下标出栈，并且计算以位于栈顶的柱子为顶的最大矩形面积。
                         Integer thisHeightIndex = minIndexStack.pop();
-                        int left = minIndexStack.isEmpty() ? 0 : minIndexStack.peek();
+                        if (thisHeightIndex == 4) {
+                            System.out.println(123);
+                        }
+                        int left = minIndexStack.isEmpty() ? -1 : minIndexStack.peek();
                         int right = i;
-                        int area = left != thisHeightIndex ? (right - left - 1) * inputData[thisHeightIndex] : (right - left) * inputData[thisHeightIndex];
-                        max = Math.max(max, area);
+                        if (inputData[right] == inputData[thisHeightIndex] && thisHeightIndex != right) {
+                            int area = (right - left) * inputData[thisHeightIndex];
+                            max = Math.max(max, area);
+                        } else {
+                            int area = (right - left - 1) * inputData[thisHeightIndex];
+                            max = Math.max(max, area);
+                        }
+
                         if (minIndexStack.isEmpty() || inputData[i] > minIndexStack.peek()) {
                             minIndexStack.push(i);
                             break;
@@ -82,21 +95,19 @@ public class HistogramMaxRectangularArea implements Answer {
         while (!minIndexStack.isEmpty()) {
             // 计算以当前柱子为顶的最大矩形面积
             Integer thisHeightIndex = minIndexStack.pop();
-            int left = minIndexStack.isEmpty() ? 0 : minIndexStack.peek();
-            int right = thisHeightIndex;
+            int left = minIndexStack.isEmpty() ? -1 : minIndexStack.peek();
+            int right = thisHeightIndex + 1;
+            boolean find = false;
             for (int i = thisHeightIndex; i < inputData.length; i++) {
                 if (inputData[i] < inputData[thisHeightIndex]) {
                     right = i;
+                    find = true;
                     break;
                 }
             }
-            if (left == thisHeightIndex && thisHeightIndex == right) {
-                int area = inputData[thisHeightIndex];
-                max = Math.max(max, area);
-            } else {
-                int area = right != thisHeightIndex ? (right - left - 1) * inputData[thisHeightIndex] : (right - left) * inputData[thisHeightIndex];
-                max = Math.max(max, area);
-            }
+            right = find ? right : inputData.length;
+            int area = (right - left - 1) * inputData[thisHeightIndex];
+            max = Math.max(max, area);
         }
         // 在对stack中剩余的下标进行计算。略
         System.out.println(minIndexStack);
@@ -112,12 +123,51 @@ public class HistogramMaxRectangularArea implements Answer {
     }
 
     /**
+     * 单调栈
+     */
+    public int largestRectangleArea(int[] heights) {
+        int n = heights.length;
+        int[] left = new int[n];
+        int[] right = new int[n];
+
+        //利用单调栈构建左侧第一个小的下标
+        Deque<Integer> mono_stack = new ArrayDeque<Integer>();
+        for (int i = 0; i < n; ++i) {
+            while (!mono_stack.isEmpty() && heights[mono_stack.peek()] >= heights[i]) {
+                mono_stack.pop();
+            }
+            left[i] = (mono_stack.isEmpty() ? -1 : mono_stack.peek());
+            mono_stack.push(i);
+        }
+
+        mono_stack.clear();
+        //利用单调栈构建右侧第一个小的下标
+        for (int i = n - 1; i >= 0; --i) {
+            while (!mono_stack.isEmpty() && heights[mono_stack.peek()] >= heights[i]) {
+                mono_stack.pop();
+            }
+            right[i] = (mono_stack.isEmpty() ? n : mono_stack.peek());
+            mono_stack.push(i);
+        }
+
+        int ans = 0;
+        for (int i = 0; i < n; ++i) {
+            ans = Math.max(ans, (right[i] - left[i] - 1) * heights[i]);
+        }
+        return ans;
+    }
+
+
+    /**
      * something
      */
     @Override
     public int[] initData() {
         //return new int[]{2, 1, 5, 6, 2, 3};
-        //return new int[]{2, 4};
-        return new int[]{2, 2};
+        //return new int[]{2, 4, 6, 8};
+        //return new int[]{2, 3};
+        //return new int[]{2, 2};
+        return new int[]{3, 6, 5, 7, 4, 8, 1, 0};
+
     }
 }
