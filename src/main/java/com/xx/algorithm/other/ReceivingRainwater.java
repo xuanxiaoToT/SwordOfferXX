@@ -7,10 +7,10 @@ import com.xx.Answer;
  * @CreateDate 2023/8/5
  * <p>
  * 接雨水
- * LeetCode 42.
+ * LeetCode 42. 困难
  * <p>
  * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
- * <img width="640" height="320" src="https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/legend.png" alt="">
+ * https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/legend.png
  * <p>
  * 示例 1：
  * 输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]
@@ -53,22 +53,6 @@ public class ReceivingRainwater implements Answer {
     }
 
     /**
-     * 结算start和end之间的雨水体积。
-     * todo：此处可以优化，即在findNextGreaterIndex方法中，同时计算雨水体积，可以节省遍历次数。
-     */
-    private int computeRainwaterVolume(int[] height, int start, int end) {
-        if (end == start + 1 || end == start) {
-            return 0;
-        }
-        int base = Math.min(height[start], height[end]);
-        int result = 0;
-        for (int i = start + 1; i < end; i++) {
-            result = result + (base - height[i]);
-        }
-        return result;
-    }
-
-    /**
      * 1.如果右侧存在比本节点大的，则立即返回。(即找出第一个比本节点大的)
      * 2.如果右侧不存在比本节点大的，则找出右节点中最大的。
      */
@@ -86,6 +70,23 @@ public class ReceivingRainwater implements Answer {
         }
         return result;
     }
+
+    /**
+     * 结算start和end之间的雨水体积。
+     * todo：此处可以优化，即在findNextGreaterIndex方法中，同时计算雨水体积，可以节省遍历次数。
+     */
+    private int computeRainwaterVolume(int[] height, int start, int end) {
+        if (end == start + 1 || end == start) {
+            return 0;
+        }
+        int base = Math.min(height[start], height[end]);
+        int result = 0;
+        for (int i = start + 1; i < end; i++) {
+            result = result + (base - height[i]);
+        }
+        return result;
+    }
+
 
     /**
      * 输出数据

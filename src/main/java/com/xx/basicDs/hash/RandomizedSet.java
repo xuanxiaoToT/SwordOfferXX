@@ -10,7 +10,7 @@ import java.util.Random;
  * @CreateDate 2022/8/31
  * <p>
  * 插入、删除和随机访问都是O（1）的容器
- * LeetCode 380. O(1) 时间插入、删除和获取随机元素
+ * LeetCode 380. O(1) 时间插入、删除和获取随机元素  中等
  * <p>
  * 设计一个数据结构，使如下3个操作的时间复杂度都是O(1)。
  * ● insert（value）：如果数据集中不包含一个数值，则把它添加到数据集中。
@@ -24,12 +24,12 @@ public class RandomizedSet {
 
     public static void main(String[] args) {
         RandomizedSet randomizedSet = new RandomizedSet();
-        boolean r1 = randomizedSet.remove(0);
-        boolean r2 = randomizedSet.remove(0);
-        boolean r3 = randomizedSet.insert(0);
-        System.out.println(randomizedSet.getRandom());
-        boolean r4 = randomizedSet.remove(0);
-        boolean r5 = randomizedSet.insert(0);
+        //boolean r1 = randomizedSet.remove(0);
+        //boolean r2 = randomizedSet.remove(0);
+        //boolean r3 = randomizedSet.insert(0);
+        //System.out.println(randomizedSet.getRandom());
+        //boolean r4 = randomizedSet.remove(0);
+        //boolean r5 = randomizedSet.insert(0);
     }
 
     public RandomizedSet() {
