@@ -41,7 +41,7 @@ public class InvertWordsInString implements Answer {
     }
 
     /**
-     * 解1：用split
+     * 解1：尾部遍历，遇到空格就处理当前的单词。
      */
     @Override
     public void answerOne() {
