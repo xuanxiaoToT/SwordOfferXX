@@ -35,6 +35,7 @@ import com.xx.Answer;
  * s 中 至少存在一个 单词
  */
 public class InvertWordsInString implements Answer {
+
     public static void main(String[] args) {
         new InvertWordsInString().answerOne();
     }
