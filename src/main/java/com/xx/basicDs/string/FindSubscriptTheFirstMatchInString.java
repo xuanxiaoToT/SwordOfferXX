@@ -34,7 +34,7 @@ public class FindSubscriptTheFirstMatchInString implements Answer {
     }
 
     /**
-     * 解1：
+     * 解1：暴力法
      */
     @Override
     public void answerOne() {
@@ -42,6 +42,14 @@ public class FindSubscriptTheFirstMatchInString implements Answer {
         String haystack = data[0];
         String needle = data[1];
         System.out.println(strStr(haystack, needle));
+    }
+
+    /**
+     * 注明的KMP算法。
+     * 解法略
+     */
+    public void answerTwo() {
+
     }
 
     public int strStr(String haystack, String needle) {
