@@ -50,7 +50,6 @@ public class AdditionOfNumbersInLinkList implements Answer {
     }
 
     /**
-     * LeetCode 002 两数相加
      * 本身就是逆序存储
      */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
