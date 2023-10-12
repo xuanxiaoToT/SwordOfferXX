@@ -1,4 +1,4 @@
-package com.xx.basicDs.graph.disjointSet;
+package com.xx.basicDs.hash;
 
 import com.xx.Answer;
 
