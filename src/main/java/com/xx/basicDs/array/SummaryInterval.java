@@ -89,6 +89,38 @@ public class SummaryInterval implements Answer {
         System.out.println(result);
     }
 
+
+    /**
+     * 官解,更简洁
+     * <p>
+     * 我们从数组的位置 000 出发，向右遍历。每次遇到相邻元素之间的差值大于 111 时，我们就找到了一个区间。遍历完数组之后，就能得到一系列的区间的列表。
+     * 在遍历过程中，维护下标 low 和 high 分别记录区间的起点和终点，对于任何区间都有 low≤high。当得到一个区间时，根据 low 和 high 的值生成区间的字符串表示。
+     * <p>
+     * 当 low < high 时，区间的字符串表示为 "low→high"；
+     * 当 low = high 时，区间的字符串表示为 "low"。
+     */
+    public List<String> summaryRanges(int[] nums) {
+        List<String> ret = new ArrayList<String>();
+        int i = 0;
+        int n = nums.length;
+        while (i < n) {
+            int low = i;
+            i++;
+            while (i < n && nums[i] == nums[i - 1] + 1) {
+                i++;
+            }
+            int high = i - 1;
+            StringBuffer temp = new StringBuffer(Integer.toString(nums[low]));
+            if (low < high) {
+                temp.append("->");
+                temp.append(Integer.toString(nums[high]));
+            }
+            ret.add(temp.toString());
+        }
+        return ret;
+    }
+
+
     @Override
     public int[] initData() {
         //return new int[]{0, 1, 2, 4, 5, 7};
