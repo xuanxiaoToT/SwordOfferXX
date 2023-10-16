@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2023/9/13
  * <p>
  * 跳跃游戏 II
- * LeetCode 045  中等
+ * LeetCode 045  Medium
  * <p>
  * 给定一个长度为 n 的 0 索引整数数组 nums。初始位置为 nums[0]。
  * 每个元素 nums[i] 表示从索引 i 向前跳转的最大长度。换句话说，如果你在 nums[i] 处，你可以跳转到任意 nums[i + j] 处:

@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2022/12/7
  * <p>
  * 最长公共子序列
- * LeetCode 1143 中等
+ * LeetCode 1143 Medium
  * <p>
  * 输入两个字符串，请求出它们的最长公共子序列的长度。
  * 如果从字符串s1中删除若干字符之后能得到字符串s2，

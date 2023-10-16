@@ -9,7 +9,7 @@ import java.util.HashMap;
  * @CreateDate 2023/10/11
  * <p>
  * 同构字符串
- * LeetCode 205. 简单
+ * LeetCode 205. Easy
  * <p>
  * 给定两个字符串 s 和 t ，判断它们是否是同构的。
  * 如果 s 中的字符可以按某种映射关系替换得到 t ，那么这两个字符串是同构的。

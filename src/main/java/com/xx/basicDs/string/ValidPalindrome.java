@@ -7,7 +7,7 @@ import com.xx.Answer;
  * @CreateDate 2022/8/10
  * <p>
  * 验证回文串
- * LeetCode 125.  简单
+ * LeetCode 125.  Easy
  * <p>
  * 给定一个字符串，请判断它是不是回文。假设只需要考
  * 虑字母和数字字符，并忽略大小写。例如，"Was it a cat I

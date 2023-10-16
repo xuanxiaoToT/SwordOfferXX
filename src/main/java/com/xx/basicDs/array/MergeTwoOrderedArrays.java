@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2023/9/21
  * <p>
  * 合并两个有序数组
- * LeetCode 88  简单
+ * LeetCode 88  Easy
  * <p>
  * 给你两个按 非递减顺序 排列的整数数组 nums1 和 nums2，另有两个整数 m 和 n ，
  * 分别表示 nums1 和 nums2 中的元素数目。

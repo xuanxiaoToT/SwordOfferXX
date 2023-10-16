@@ -9,7 +9,7 @@ import java.util.HashMap;
  * @CreateDate 2023/10/9
  * <p>
  * 有效的数独
- * LeetCode 36 中等
+ * LeetCode 36 Medium
  * <p>
  * 请你判断一个 9 x 9 的数独是否有效。只需要 根据以下规则 ，验证已经填入的数字是否有效即可。
  * 数字 1-9 在每一行只能出现一次。

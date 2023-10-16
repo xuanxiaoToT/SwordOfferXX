@@ -7,7 +7,7 @@ import com.xx.Answer;
  * @CreateDate 2023/9/27
  * <p>
  * 最长公共前缀
- * LeetCode 14. 简单
+ * LeetCode 14. Easy
  * <p>
  * 编写一个函数来查找字符串数组中的最长公共前缀。
  * 如果不存在公共前缀，返回空字符串 ""。

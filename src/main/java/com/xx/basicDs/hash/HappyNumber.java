@@ -10,7 +10,7 @@ import java.util.LinkedHashSet;
  * @CreateDate 2023/10/12
  * <p>
  * 快乐数
- * LeetCode 202. 简单
+ * LeetCode 202. Easy
  * <p>
  * 编写一个算法来判断一个数 n 是不是快乐数。
  * 「快乐数」 定义为：

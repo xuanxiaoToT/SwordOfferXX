@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2023/9/25
  * <p>
  * H 指数
- * LeetCode 274. 中等
+ * LeetCode 274. Medium
  * <p>
  * 给你一个整数数组 citations ，其中 citations[i] 表示研究者的第 i 篇论文被引用的次数。计算并返回该研究者的 h 指数。
  * 根据维基百科上 h 指数的定义：h 代表“高引用次数” ，一名科研人员的 h 指数 是指他（她）至少发表了 h 篇论文，

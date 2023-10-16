@@ -7,7 +7,7 @@ import com.xx.Answer;
  * @CreateDate 2022/7/21
  * <p>
  * 两数之和
- * LeetCode 167. 两数之和II - 输入有序数组  中等
+ * LeetCode 167. 两数之和II - 输入有序数组  Medium
  * <p>
  * 输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。
  * 如果有多对数字的和等于s，则输出任意一对即可。

@@ -9,7 +9,7 @@ import java.util.HashMap;
  * @CreateDate 2023/9/26
  * <p>
  * 罗马数字转整数
- * LeetCode 13. 简单
+ * LeetCode 13. Easy
  * <p>
  * 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
  * <p>

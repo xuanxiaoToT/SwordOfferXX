@@ -9,7 +9,7 @@ import java.util.HashMap;
  * @CreateDate 2023/10/11
  * <p>
  * 单词规律
- * LeetCode 290. 简单
+ * LeetCode 290. Easy
  * <p>
  * 给定一种规律 pattern 和一个字符串 s ，判断 s 是否遵循相同的规律。
  * 这里的 遵循 指完全匹配，例如， pattern 里的每个字母和字符串 s 中的每个非空单词之间存在着双向连接的对应规律。

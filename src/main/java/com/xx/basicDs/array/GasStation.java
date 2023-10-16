@@ -7,7 +7,7 @@ import com.xx.Answer;
  * @CreateDate 2023/9/25
  * <p>
  * 加油站
- * LeetCode 134. 中等
+ * LeetCode 134. Medium
  * <p>
  * 在一条环路上有 n 个加油站，其中第 i 个加油站有汽油 gas[i] 升。
  * 你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。
