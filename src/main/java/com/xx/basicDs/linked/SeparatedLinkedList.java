@@ -33,7 +33,9 @@ public class SeparatedLinkedList implements Answer {
     }
 
     /**
-     * 解1：
+     * 解1：直观来说我们只需维护两个链表 small 和 large 即可，small 链表按顺序存储所有小于 x的节点，
+     * large 链表按顺序存储所有大于等于 x 的节点。遍历完原链表后，
+     * 我们只要将 small 链表尾节点指向 large 链表的头节点即能完成对链表的分隔。
      */
     @Override
     public void answerOne() {
