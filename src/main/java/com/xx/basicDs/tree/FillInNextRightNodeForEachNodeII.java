@@ -1,4 +1,4 @@
-package com.xx.basicDs.linked;
+package com.xx.basicDs.tree;
 
 import com.xx.Answer;
 
