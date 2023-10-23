@@ -11,7 +11,7 @@ import java.util.Stack;
  * @CreateDate 2023/7/11
  * <p>
  * 二叉树的最近公共祖先
- * LeetCode 236
+ * LeetCode 236 Medium
  * <p>
  * 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
  * 最近公共祖先的定义为：“对于有根树 T 的两个节点 p、q，最近公共祖先表示为一个节点 x，
@@ -46,6 +46,8 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
     /**
      * 解1：如果两个节点分布在X节点的左右，那么X节点一定是他的最近公共祖先。
      * 如果两个节点都在左，则向左遍历。如果都在右，则向右遍历。
+     * <p>
+     * 公共祖先节点可以为节点本身!!!。
      */
     @Override
     public void answerOne() {
@@ -56,7 +58,9 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         System.out.println(result.value);
     }
 
-
+    /**
+     * fixme：没有考虑节点本身为祖先的情况
+     */
     private void myTransverse(TreeNode node, TreeNode targetOne, TreeNode targetTwo) {
         if (node != null && node.left != null && node.right != null) {
             boolean left = whetherExit(node.left, targetOne, targetTwo);
@@ -109,7 +113,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
 
 
     /**
-     * 节点的对比简化为了值的比较。
+     *
      */
     private boolean lca(TreeNode node, TreeNode targetOne, TreeNode targetTwo) {
         if (node == null) {
