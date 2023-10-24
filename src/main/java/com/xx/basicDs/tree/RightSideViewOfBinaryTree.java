@@ -14,10 +14,26 @@ import java.util.Queue;
  * @CreateDate 2022/9/21
  * <p>
  * 二叉树的右视图
- * LeetCode 199
+ * LeetCode 199 Medium
  * <p>
  * 给定一棵二叉树，如果站在该二叉树的右侧，那么从上
  * 到下看到的节点构成二叉树的右侧视图。
+ * <p>
+ * 示例 1:
+ * 输入: [1,2,3,null,5,null,4]
+ * 输出: [1,3,4]
+ * <p>
+ * 示例 2:
+ * 输入: [1,null,3]
+ * 输出: [1,3]
+ * <p>
+ * 示例 3:
+ * 输入: []
+ * 输出: []
+ * <p>
+ * 提示:
+ * 二叉树的节点个数的范围是 [0,100]
+ * -100 <= Node.val <= 100
  */
 public class RightSideViewOfBinaryTree implements Answer {
 
