@@ -12,7 +12,7 @@ import java.util.LinkedList;
  * @CreateDate 2023/9/4
  * <p>
  * 验证二叉搜索树
- * LeetCode 098
+ * LeetCode 098 Medium
  * <p>
  * 给你一个二叉树的根节点 root ，判断其是否是一个有效的二叉搜索树。
  * 有效 二叉搜索树定义如下：
@@ -61,15 +61,16 @@ public class WhetherBinarySearchTree implements Answer {
         System.out.println(true);
     }
 
+    /**
+     * 方法2：递归，验证每一个子树，是否是二叉搜索树。
+     */
     public void answerTwo() {
         TreeNode root = initData();
         boolean validBST = isValidBST(root, root.val, 0);
         System.out.println(validBST);
     }
 
-    /**
-     *
-     */
+
     public boolean isValidBST(TreeNode node, long lower, long upper) {
         if (node == null) {
             return true;
