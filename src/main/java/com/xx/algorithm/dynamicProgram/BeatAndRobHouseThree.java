@@ -54,7 +54,7 @@ public class BeatAndRobHouseThree implements Answer {
         int[] rightMax = getMaxNode(node.right);
 
         // [选了自己，没选自己]
-        return new int[]{node.value + leftMax[1] + rightMax[1],
+        return new int[]{node.val + leftMax[1] + rightMax[1],
                 Math.max(leftMax[0], leftMax[1]) + Math.max(rightMax[0], rightMax[1])};
     }
 

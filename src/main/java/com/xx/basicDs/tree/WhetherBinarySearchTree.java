@@ -51,11 +51,11 @@ public class WhetherBinarySearchTree implements Answer {
             }
             root = stack.pop();
             // 如果中序遍历得到的节点的值小于等于前一个 inorder，说明不是二叉搜索树
-            if (root.value <= inorder) {
+            if (root.val <= inorder) {
                 System.out.println(false);
                 return;
             }
-            inorder = root.value;
+            inorder = root.val;
             root = root.right;
         }
         System.out.println(true);
@@ -63,7 +63,7 @@ public class WhetherBinarySearchTree implements Answer {
 
     public void answerTwo() {
         TreeNode root = initData();
-        boolean validBST = isValidBST(root, root.value, 0);
+        boolean validBST = isValidBST(root, root.val, 0);
         System.out.println(validBST);
     }
 
@@ -74,10 +74,10 @@ public class WhetherBinarySearchTree implements Answer {
         if (node == null) {
             return true;
         }
-        if (node.value <= lower || node.value >= upper) {
+        if (node.val <= lower || node.val >= upper) {
             return false;
         }
-        return isValidBST(node.left, lower, node.value) && isValidBST(node.right, node.value, upper);
+        return isValidBST(node.left, lower, node.val) && isValidBST(node.right, node.val, upper);
     }
 
 

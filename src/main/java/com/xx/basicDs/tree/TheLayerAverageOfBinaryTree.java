@@ -52,7 +52,7 @@ public class TheLayerAverageOfBinaryTree implements Answer {
             long sumTemp = 0;
             for (int i = 0; i < size; i++) {
                 TreeNode temp = outQueue.poll();
-                sumTemp += temp.value;
+                sumTemp += temp.val;
                 if (temp.left != null) {
                     outQueue.add(temp.left);
                 }

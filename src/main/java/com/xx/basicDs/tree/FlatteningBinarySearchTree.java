@@ -41,7 +41,7 @@ public class FlatteningBinarySearchTree implements Answer {
             return;
         }
         diGuiTree(node.left);
-        System.out.println(node.value + " " + last.value);
+        System.out.println(node.val + " " + last.val);
         last.right = node;
         last.left = null;
         last = node;
@@ -63,7 +63,7 @@ public class FlatteningBinarySearchTree implements Answer {
                 cur = cur.left;
             }
             cur = stack.pop();
-            System.out.println(cur.value);
+            System.out.println(cur.val);
             cur = cur.right;
         }
     }

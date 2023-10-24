@@ -55,7 +55,7 @@ public class SerializeAndDeserializeBinaryTree implements Answer {
         }
         String leftStr = treePreSerialize(node.left);
         String rightStr = treePreSerialize(node.right);
-        return String.valueOf(node.value) + "," + leftStr + "," + rightStr;
+        return String.valueOf(node.val) + "," + leftStr + "," + rightStr;
     }
 
     /**
@@ -87,7 +87,7 @@ public class SerializeAndDeserializeBinaryTree implements Answer {
         while (!outQueue.isEmpty()) {
             TreeNode temp = outQueue.poll();
             if (temp != null) {
-                list.add(String.valueOf(temp.value));
+                list.add(String.valueOf(temp.val));
                 outQueue.add(temp.left);
                 outQueue.add(temp.right);
             } else {

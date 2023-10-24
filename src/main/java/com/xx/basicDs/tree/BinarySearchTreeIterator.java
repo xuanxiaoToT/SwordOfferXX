@@ -40,7 +40,7 @@ public class BinarySearchTreeIterator {
             cur = cur.left;
         }
         cur = stack.pop();
-        int temp = cur.value;
+        int temp = cur.val;
         cur = cur.right;
         return temp;
     }

@@ -51,8 +51,8 @@ public class SumOfGreaterOrEqualNode implements Answer {
                 cur = cur.right;
             }
             cur = stack.pop();
-            sum = sum + cur.value;
-            cur.value = sum;
+            sum = sum + cur.val;
+            cur.val = sum;
             cur = cur.left;
         }
 
@@ -67,8 +67,8 @@ public class SumOfGreaterOrEqualNode implements Answer {
         }
         int result;
         int rightValue = diGuiTree(node.right, fatherValue);
-        result = fatherValue + node.value + rightValue;
-        node.value = result;
+        result = fatherValue + node.val + rightValue;
+        node.val = result;
         int leftVlue = diGuiTree(node.left, result);
         return result;
     }

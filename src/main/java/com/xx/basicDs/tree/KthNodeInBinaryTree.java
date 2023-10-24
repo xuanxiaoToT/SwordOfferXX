@@ -37,7 +37,7 @@ public class KthNodeInBinaryTree implements Answer {
         traversalTree(node.right);
         k--;
         if (k == 0) {
-            System.out.println(node.value);
+            System.out.println(node.val);
         }
         traversalTree(node.left);
     }

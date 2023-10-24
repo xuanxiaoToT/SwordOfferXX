@@ -35,7 +35,7 @@ public class AATraversalOfTree {
         TreeNode cur = root;
         while (cur != null || !stack.empty()) {
             while (cur != null) {
-                list.add(cur.value);
+                list.add(cur.val);
                 stack.push(cur);
                 cur = cur.left;
             }
@@ -61,7 +61,7 @@ public class AATraversalOfTree {
                 cur = cur.left;
             }
             cur = stack.pop();
-            list.add(cur.value);
+            list.add(cur.val);
             cur = cur.right;
         }
         return list;
@@ -85,7 +85,7 @@ public class AATraversalOfTree {
             }
             cur = stack.peek();
             if (cur.right == null || cur.right == pre) {
-                list.add(cur.value);
+                list.add(cur.val);
                 stack.pop();
                 pre = cur;
                 cur = null;
@@ -107,7 +107,7 @@ public class AATraversalOfTree {
         }
         while (!outQueue.isEmpty()) {
             TreeNode temp = outQueue.poll();
-            list.add(temp.value);
+            list.add(temp.val);
             if (temp.left != null) {
                 outQueue.add(temp.left);
             }

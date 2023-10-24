@@ -39,7 +39,7 @@ public class LeftmostValueLowestLevelOfBinTree implements Answer {
             for (int i = 0; i < size; i++) {
                 TreeNode temp = outQueue.poll();
                 if (i == 0) {
-                    result = temp.value;
+                    result = temp.val;
                 }
                 if (temp.left != null) {
                     outQueue.add(temp.left);

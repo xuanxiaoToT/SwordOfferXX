@@ -35,7 +35,7 @@ public class NextNodeOfBinarySearchTree implements Answer {
         int target = 17;
         // 略
         while (point != null) {
-            if (point.value < target) {
+            if (point.val < target) {
                 // 记录父节点。
                 result = point;
                 point = point.left;
@@ -43,7 +43,7 @@ public class NextNodeOfBinarySearchTree implements Answer {
                 point = point.right;
             }
         }
-        System.out.println(result.value);
+        System.out.println(result.val);
 
     }
 
@@ -65,10 +65,10 @@ public class NextNodeOfBinarySearchTree implements Answer {
             }
             cur = stack.pop();
             if (flag) {
-                System.out.println(cur.value);
+                System.out.println(cur.val);
                 return;
             }
-            if (cur.value == target) {
+            if (cur.val == target) {
                 flag = true;
             }
             cur = cur.right;

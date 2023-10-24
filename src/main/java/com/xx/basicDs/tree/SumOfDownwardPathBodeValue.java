@@ -57,13 +57,13 @@ public class SumOfDownwardPathBodeValue implements Answer {
 
     private void diGuiTree(TreeNode node, List<Integer> list) {
         if (node.left == null && node.right == null) {
-            list.add(node.value);
+            list.add(node.val);
             checkList(list);
             // 剪枝
             list.remove(list.size() - 1);
             return;
         }
-        list.add(node.value);
+        list.add(node.val);
         if (node.left != null) {
             diGuiTree(node.left, list);
         }

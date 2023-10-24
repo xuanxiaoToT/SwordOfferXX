@@ -41,7 +41,7 @@ public class RightSideViewOfBinaryTree implements Answer {
             for (int i = 0; i < size; i++) {
                 TreeNode temp = outQueue.poll();
                 if (i == size - 1) {
-                    resultList.add(temp.value);
+                    resultList.add(temp.val);
                 }
                 if (temp.left != null) {
                     outQueue.add(temp.left);

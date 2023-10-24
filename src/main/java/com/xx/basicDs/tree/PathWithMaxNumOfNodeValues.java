@@ -62,13 +62,13 @@ public class PathWithMaxNumOfNodeValues implements Answer {
         }
         if (node.right == null && node.left == null) {
             // 都为null
-            maxResult = Math.max(node.value, maxResult);
-            return node.value;
+            maxResult = Math.max(node.val, maxResult);
+            return node.val;
         }
         Integer left = diGuiTree(node.left);
         Integer right = diGuiTree(node.right);
         if (left != null && right != null) {
-            int tempMax = node.value;
+            int tempMax = node.val;
             if (left > 0) {
                 tempMax = tempMax + left;
             }
@@ -76,14 +76,14 @@ public class PathWithMaxNumOfNodeValues implements Answer {
                 tempMax = tempMax + right;
             }
             maxResult = Math.max(tempMax, maxResult);
-            return Math.max(Math.max(left + node.value, right + node.value), node.value);
+            return Math.max(Math.max(left + node.val, right + node.val), node.val);
         } else {
             if (left != null) {
-                int tempMax = Math.max(left + node.value, node.value);
+                int tempMax = Math.max(left + node.val, node.val);
                 maxResult = Math.max(tempMax, maxResult);
                 return tempMax;
             } else {
-                int tempMax = Math.max(right + node.value, node.value);
+                int tempMax = Math.max(right + node.val, node.val);
                 maxResult = Math.max(tempMax, maxResult);
                 return tempMax;
             }

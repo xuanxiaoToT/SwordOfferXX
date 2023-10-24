@@ -54,7 +54,7 @@ public class KthSmallest implements Answer {
             tempList.add(cur);
             // 可以不用list来接，只用个count来计数即可。
             if (tempList.size() == k) {
-                System.out.println(cur.value);
+                System.out.println(cur.val);
                 return;
             }
             cur = cur.right;

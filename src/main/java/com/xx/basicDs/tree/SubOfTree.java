@@ -44,7 +44,7 @@ public class SubOfTree implements Answer {
             return false;
         }
 
-        return (ori.value == headTarget.value) &&
+        return (ori.val == headTarget.val) &&
                 validate(ori.left, headTarget.left) &&
                 validate(ori.right, headTarget.right);
     }

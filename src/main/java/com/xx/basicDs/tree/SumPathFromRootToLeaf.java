@@ -33,11 +33,11 @@ public class SumPathFromRootToLeaf implements Answer {
 
     private void diGuiTree(TreeNode node, int lastNum) {
         if (node.left == null && node.right == null) {
-            System.out.println(lastNum * 10 + node.value);
-            sum = sum + lastNum * 10 + node.value;
+            System.out.println(lastNum * 10 + node.val);
+            sum = sum + lastNum * 10 + node.val;
             return;
         }
-        lastNum = lastNum * 10 + node.value;
+        lastNum = lastNum * 10 + node.val;
         if (node.left != null) {
             diGuiTree(node.left, lastNum);
         }

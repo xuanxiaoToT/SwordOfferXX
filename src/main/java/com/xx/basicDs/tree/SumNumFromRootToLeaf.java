@@ -62,14 +62,14 @@ public class SumNumFromRootToLeaf implements Answer {
 
     public void sumNumbers(TreeNode node, int tempSum) {
         if (node.left == null && node.right == null) {
-            result = result + (tempSum * 10 + node.value);
+            result = result + (tempSum * 10 + node.val);
             return;
         } else {
             if (node.left != null) {
-                sumNumbers(node.left, tempSum * 10 + node.value);
+                sumNumbers(node.left, tempSum * 10 + node.val);
             }
             if (node.right != null) {
-                sumNumbers(node.right, tempSum * 10 + node.value);
+                sumNumbers(node.right, tempSum * 10 + node.val);
             }
         }
     }
@@ -92,7 +92,7 @@ public class SumNumFromRootToLeaf implements Answer {
         Queue<TreeNode> nodeQueue = new LinkedList<TreeNode>();
         Queue<Integer> numQueue = new LinkedList<Integer>();
         nodeQueue.offer(root);
-        numQueue.offer(root.value);
+        numQueue.offer(root.val);
         while (!nodeQueue.isEmpty()) {
             TreeNode node = nodeQueue.poll();
             int num = numQueue.poll();
@@ -102,11 +102,11 @@ public class SumNumFromRootToLeaf implements Answer {
             } else {
                 if (left != null) {
                     nodeQueue.offer(left);
-                    numQueue.offer(num * 10 + left.value);
+                    numQueue.offer(num * 10 + left.val);
                 }
                 if (right != null) {
                     nodeQueue.offer(right);
-                    numQueue.offer(num * 10 + right.value);
+                    numQueue.offer(num * 10 + right.val);
                 }
             }
         }

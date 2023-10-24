@@ -57,12 +57,12 @@ public class SumOfTreePath implements Answer {
 
     public boolean hasPathSum(TreeNode node, int tempSum, int targetSum) {
         if (node.left == null && node.right == null) {
-            return (tempSum + node.value) == targetSum;
+            return (tempSum + node.val) == targetSum;
         } else {
             if (node.left != null && node.right != null) {
-                return hasPathSum(node.left, tempSum + node.value, targetSum) || hasPathSum(node.right, tempSum + node.value, targetSum);
+                return hasPathSum(node.left, tempSum + node.val, targetSum) || hasPathSum(node.right, tempSum + node.val, targetSum);
             } else
-                return hasPathSum(Objects.requireNonNullElseGet(node.left, () -> node.right), tempSum + node.value, targetSum);
+                return hasPathSum(Objects.requireNonNullElseGet(node.left, () -> node.right), tempSum + node.val, targetSum);
         }
     }
 

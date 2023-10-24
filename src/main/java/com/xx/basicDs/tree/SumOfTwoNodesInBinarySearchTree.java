@@ -43,10 +43,10 @@ public class SumOfTwoNodesInBinarySearchTree implements Answer {
             if (cur == it) {
                 continue;
             }
-            if (cur.value == target) {
+            if (cur.val == target) {
                 return true;
             } else {
-                if (cur.value > target) {
+                if (cur.val > target) {
                     cur = cur.left;
                 } else {
                     cur = cur.right;

@@ -54,7 +54,7 @@ public class SameTree implements Answer {
             return true;
         } else {
             if (p != null && q != null) {
-                return p.value == q.value && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+                return p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
             } else {
                 return false;
             }
@@ -77,7 +77,7 @@ public class SameTree implements Answer {
         while (!queue1.isEmpty() && !queue2.isEmpty()) {
             TreeNode node1 = queue1.poll();
             TreeNode node2 = queue2.poll();
-            if (node1.value != node2.value) {
+            if (node1.val != node2.val) {
                 return false;
             }
             TreeNode left1 = node1.left, right1 = node1.right, left2 = node2.left, right2 = node2.right;

@@ -63,10 +63,10 @@ public class ZigzagTransverseOutTree implements Answer {
                 TreeNode node = queue.poll();
                 // 如果是奇数层，那么按顺序添加到双端队列的尾部
                 if (isOddNumber) {
-                    temp.addLast(node.value);
+                    temp.addLast(node.val);
                 } else {
                     // 如果是偶数层，那么按顺序添加到双端队列的头部
-                    temp.addFirst(node.value);
+                    temp.addFirst(node.val);
                 }
                 if (node.left != null) {
                     queue.add(node.left);

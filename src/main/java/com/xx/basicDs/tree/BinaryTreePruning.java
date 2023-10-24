@@ -35,7 +35,7 @@ public class BinaryTreePruning implements Answer {
         }
         node.left = answerZero(node.left);
         node.right = answerZero(node.right);
-        if (node.left == null && node.right == null && node.value == 0) {
+        if (node.left == null && node.right == null && node.val == 0) {
             return null;
         }
         return node;
@@ -72,7 +72,7 @@ public class BinaryTreePruning implements Answer {
             cur = stack.peek();
             if (cur.right == null || cur.right == last) {
                 // 子树判断
-                if (cur.value == 0) {
+                if (cur.val == 0) {
                     checkZeroNode(set, cur);
                 } else {
                     if (whetherZero(set, cur.left)) {
@@ -113,7 +113,7 @@ public class BinaryTreePruning implements Answer {
         if (root == null) {
             return;
         }
-        if (root.value == 1) {
+        if (root.val == 1) {
             checkTree(root.left, root, "left");
             checkTree(root.right, root, "right");
         } else {
@@ -134,7 +134,7 @@ public class BinaryTreePruning implements Answer {
         if (node == null) {
             return true;
         }
-        return node.value == 0 && whetherZeroTree(node.left) && whetherZeroTree(node.right);
+        return node.val == 0 && whetherZeroTree(node.left) && whetherZeroTree(node.right);
     }
 
     /**

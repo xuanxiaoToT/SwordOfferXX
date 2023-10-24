@@ -55,7 +55,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         TreeNode targetOne = new TreeNode(13);
         TreeNode targetTwo = new TreeNode(7);
         myTransverse(root, targetOne, targetTwo);
-        System.out.println(result.value);
+        System.out.println(result.val);
     }
 
     /**
@@ -88,7 +88,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         TreeNode cur = node;
         while (cur != null || !stack.empty()) {
             while (cur != null) {
-                if (cur.value == targetOne.value || cur.value == targetTwo.value) {
+                if (cur.val == targetOne.val || cur.val == targetTwo.val) {
                     return true;
                 }
                 stack.push(cur);
@@ -108,7 +108,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         TreeNode targetOne = new TreeNode(13);
         TreeNode targetTwo = new TreeNode(7);
         lca(root, targetOne, targetTwo);
-        System.out.println(result.value);
+        System.out.println(result.val);
     }
 
 
@@ -121,7 +121,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         }
         boolean left = lca(node.left, targetOne, targetTwo);
         boolean right = lca(node.right, targetOne, targetTwo);
-        boolean self = node.value == targetOne.value || node.value == targetTwo.value;
+        boolean self = node.val == targetOne.val || node.val == targetTwo.val;
 
         if (self && left || self && right || left && right) {
             result = node;

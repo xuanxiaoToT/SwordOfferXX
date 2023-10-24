@@ -35,7 +35,7 @@ public class MaximumOfEachLevelInTree implements Answer {
             int max = 0;
             for (int i = 0; i < size; i++) {
                 TreeNode temp = outQueue.poll();
-                max = Math.max(temp.value, max);
+                max = Math.max(temp.val, max);
                 if (temp.left != null) {
                     outQueue.add(temp.left);
                 }

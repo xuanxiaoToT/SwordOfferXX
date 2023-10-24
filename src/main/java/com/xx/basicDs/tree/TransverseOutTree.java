@@ -45,7 +45,7 @@ public class TransverseOutTree implements Answer {
         while (!outQueue.isEmpty()) {
             // System.out.println(outQueue.size());
             TreeNode temp = outQueue.poll();
-            System.out.println(temp.value);
+            System.out.println(temp.val);
             if (temp.left != null) {
                 outQueue.add(temp.left);
             }
