@@ -10,7 +10,7 @@ import java.util.*;
  * @CreateDate 2023/7/4
  * <p>
  * 除法求值
- * LeetCode 399
+ * LeetCode 399  Medium
  * <p>
  * 给你一个变量对数组 equations 和一个实数值数组 values 作为已知条件，
  * 其中 equations[i] = [Ai, Bi] 和 values[i] 共同表示等式 Ai / Bi = values[i] 。
