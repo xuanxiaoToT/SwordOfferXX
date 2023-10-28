@@ -140,6 +140,19 @@ public class SnakesAndLadders implements Answer {
     }
 
     /**
+     * 官解：先减1，在计算。
+     */
+    private int[] computeNextBySnakesAndLadders2(int val, int[][] board) {
+        int n = board.length;
+        int[] result = new int[2];
+        int r = (val - 1) / n, c = (val - 1) % n;
+        if (r % 2 == 1) {
+            c = n - 1 - c;
+        }
+        return new int[]{n - 1 - r, c};
+    }
+
+    /**
      * 输出数据
      */
     @Override
