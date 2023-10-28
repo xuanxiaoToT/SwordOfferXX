@@ -144,7 +144,6 @@ public class SnakesAndLadders implements Answer {
      */
     private int[] computeNextBySnakesAndLadders2(int val, int[][] board) {
         int n = board.length;
-        int[] result = new int[2];
         int r = (val - 1) / n, c = (val - 1) % n;
         if (r % 2 == 1) {
             c = n - 1 - c;
