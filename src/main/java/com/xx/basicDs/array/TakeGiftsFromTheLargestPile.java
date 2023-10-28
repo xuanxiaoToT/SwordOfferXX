@@ -54,7 +54,7 @@ public class TakeGiftsFromTheLargestPile implements Answer {
     public void answerOne() {
         int[] gifts = initData();
         int k = 4;
-        pickGifts(gifts, k);
+        System.out.println(pickGifts(gifts, k));
     }
 
     public long pickGifts(int[] gifts, int k) {
