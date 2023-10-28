@@ -65,6 +65,9 @@ public class SnakesAndLadders implements Answer {
         //System.out.println(Arrays.toString(computeNextBySnakesAndLadders(19, board)));
     }
 
+    /**
+     * 广度优先遍历，每一个节点，其下一步可能到达的节点，全部加到queue中。
+     */
     public int snakesAndLadders(int[][] board) {
         int stepCount = 0;
         int target = (board.length) * (board.length);
