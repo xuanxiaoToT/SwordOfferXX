@@ -93,11 +93,23 @@ public class FindKOrValuesInArray implements Answer {
     }
 
     /**
-     * todo:用移位法再做一下。
+     * 用移位法再做一下。
      */
     public int findKOr2(int[] nums, int k) {
-
-        return 0;
+        int ans = 0;
+        for (int i = 0; i < 31; i++) {
+            int cnt1 = 0;
+            for (int x : nums) {
+                //x >> i 即右移i位
+                if (((x >> i) & 1) == 1) {
+                    cnt1++;
+                }
+            }
+            if (cnt1 >= k) {
+                ans = (int) (ans + Math.pow(2, i));
+            }
+        }
+        return ans;
     }
 
     /**
