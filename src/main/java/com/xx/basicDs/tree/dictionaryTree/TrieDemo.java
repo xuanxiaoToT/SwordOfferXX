@@ -1,4 +1,4 @@
-package com.xx.basicDs.tree;
+package com.xx.basicDs.tree.dictionaryTree;
 
 import com.xx.domain.TrieNode;
 
@@ -7,7 +7,7 @@ import com.xx.domain.TrieNode;
  * @CreateDate 2022/10/12
  * <p>
  * 实现 Trie (前缀树)
- * LeetCode 208.
+ * LeetCode 208. Medium
  * <p>
  * 请设计实现一棵前缀树Trie，它有如下操作。
  * ● 函数insert，在前缀树中添加一个字符串。

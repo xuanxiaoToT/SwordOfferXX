@@ -19,9 +19,9 @@ public class TrieNode {
      * 改进2：只用用26的数组替代，查找时直接childNodeList[C-'a']
      */
     // private List<TrieNode> childNodeList;
-    private TrieNode[] childNodeList;
+    public TrieNode[] childNodeList;
 
-    private boolean wordEndFlag = false;
+    public boolean wordEndFlag = false;
 
     public TrieNode() {
         this.value = null;

@@ -1,7 +1,7 @@
 package com.xx.algorithm.other;
 
 import com.xx.Answer;
-import com.xx.basicDs.tree.TrieDemo;
+import com.xx.basicDs.tree.dictionaryTree.TrieDemo;
 
 /**
  * @author XuanXiao
