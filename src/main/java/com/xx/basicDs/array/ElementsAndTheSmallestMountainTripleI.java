@@ -48,6 +48,8 @@ public class ElementsAndTheSmallestMountainTripleI implements Answer {
 
     /**
      * 解1：
+     * 思路：对于每个数num[i]，最左求比自己小的最小值，最右求比自己小的最小值。然后求解即可。
+     * 那么，最右求最小值有很多重复遍历，是否可以保存下来？
      */
     @Override
     public void answerOne() {
