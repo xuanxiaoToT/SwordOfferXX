@@ -1,7 +1,6 @@
 package com.xx.domain;
 
 import com.xx.basicDs.tree.AATraversalOfTree;
-import lombok.Data;
 
 import java.util.List;
 
@@ -9,7 +8,6 @@ import java.util.List;
  * @author XuanXiao
  * @CreateDate 2022/6/22
  */
-@Data
 public class TreeNode {
 
     public int val;
