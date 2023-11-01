@@ -3,8 +3,9 @@ package com.xx.algorithm.search;
 /**
  * @author XuanXiao
  * @CreateDate 2022/6/17
+ * <p>
  * 矩阵中的路径
- * LeetCode 79 单词搜索
+ * LeetCode 79 单词搜索 Medium
  * <p>
  * 请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。路径可以从矩阵中的任意一格开始，
  * 每一步可以在矩阵中向左、右、上、下移动一格。
