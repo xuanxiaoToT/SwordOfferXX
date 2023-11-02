@@ -10,7 +10,7 @@ import java.util.List;
  * @CreateDate 2023/3/3
  * <p>
  * 组合总和
- * LeetCode 39
+ * LeetCode 39 Medium
  * <p>
  * 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，
  * 找出 candidates 中可以使数字和为目标数 target 的 所有 不同组合 ，
@@ -33,6 +33,12 @@ import java.util.List;
  * 示例 3：
  * 输入: candidates = [2], target = 1
  * 输出: []
+ * <p>
+ * 提示：
+ * 1 <= candidates.length <= 30
+ * 2 <= candidates[i] <= 40
+ * candidates 的所有元素 互不相同
+ * 1 <= target <= 40
  */
 public class CombinedSum implements Answer {
 
