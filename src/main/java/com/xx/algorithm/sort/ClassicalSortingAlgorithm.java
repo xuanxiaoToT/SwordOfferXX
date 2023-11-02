@@ -5,7 +5,7 @@ package com.xx.algorithm.sort;
  * @CreateDate 2022/6/30
  * 常见的排序算法
  */
-public class CommonSortingAlgorithm {
+public class ClassicalSortingAlgorithm {
 
     public static void main(String[] args) {
 
