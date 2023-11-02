@@ -14,6 +14,29 @@ package com.xx.algorithm.search;
  * 例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。
  * [["a","b","c","e"], ["s","f","c","s"], ["a","d","e","e"]]
  * 但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
+ * <p>
+ * 示例 1：
+ * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+ * 输出：true
+ * <p>
+ * 示例 2：
+ * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
+ * 输出：true
+ * <p>
+ * 示例 3：
+ * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
+ * 输出：false
+ * <p>
+ * 提示：
+ * m == board.length
+ * n = board[i].length
+ * 1 <= m, n <= 6
+ * 1 <= word.length <= 15
+ * board 和 word 仅由大小写英文字母组成
+ * <p>
+ * <p>
+ * 进阶：你可以使用搜索剪枝的技术来优化解决方案，使其在 board 更大的情况下可以更快解决问题？
+ * 可以用前缀树来进行startWith判断，快速减枝
  */
 public class PathInMatrix {
 
