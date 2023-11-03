@@ -1,6 +1,7 @@
 package com.xx.algorithm.backTracking;
 
 import com.xx.Answer;
+import com.xx.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -43,7 +44,7 @@ public class SolveNQueens implements Answer {
         List<List<String>> result = new ArrayList<>();
         List<String> tempResult = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
-            String temp = ".".repeat(n);
+            String temp = StringUtil.repeatStr(".",n);
             tempResult.add(temp);
         }
 

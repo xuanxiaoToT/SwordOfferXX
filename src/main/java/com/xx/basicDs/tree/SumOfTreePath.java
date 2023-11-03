@@ -4,8 +4,6 @@ import com.xx.Answer;
 import com.xx.domain.TreeNode;
 import com.xx.util.DataFactory;
 
-import java.util.Objects;
-
 /**
  * @author XuanXiao
  * @CreateDate 2023/10/20
@@ -62,7 +60,7 @@ public class SumOfTreePath implements Answer {
             if (node.left != null && node.right != null) {
                 return hasPathSum(node.left, tempSum + node.val, targetSum) || hasPathSum(node.right, tempSum + node.val, targetSum);
             } else
-                return hasPathSum(Objects.requireNonNullElseGet(node.left, () -> node.right), tempSum + node.val, targetSum);
+                return hasPathSum(node.left == null ? node.right : node.left, tempSum + node.val, targetSum);
         }
     }
 

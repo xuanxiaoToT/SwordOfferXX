@@ -51,7 +51,7 @@ public class InvertWordsInString implements Answer {
         for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
             if (c == ' ') {
-                if (!sb.isEmpty()) {
+                if (sb.length() != 0) {
                     result.append(sb.reverse());
                     result.append(" ");
                     sb = new StringBuilder();
@@ -60,7 +60,7 @@ public class InvertWordsInString implements Answer {
                 sb.append(c);
             }
         }
-        if (!sb.isEmpty()) {
+        if (sb.length() != 0) {
             result.append(sb.reverse());
         } else {
             result.deleteCharAt(result.length() - 1);

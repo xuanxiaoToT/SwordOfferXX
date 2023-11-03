@@ -1,6 +1,7 @@
 package com.xx.basicDs.stack;
 
 import com.xx.Answer;
+import com.xx.util.StringUtil;
 
 import java.util.Stack;
 
@@ -81,7 +82,7 @@ public class StringDecoding implements Answer {
             } else if (']' == c) {
                 StringDecodingTempData pop = stack.pop();
                 int numPop = pop.getNum();
-                String repeatStr = String.valueOf(sbTemp.toString()).repeat(Math.max(0, numPop));
+                String repeatStr = StringUtil.repeatStr(sbTemp.toString(), Math.max(0, numPop));
                 sbTemp = new StringBuilder();
                 sbTemp.append(pop.getStr()).append(repeatStr);
                 num = 0;
