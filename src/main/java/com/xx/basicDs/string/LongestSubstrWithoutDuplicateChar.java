@@ -37,7 +37,7 @@ public class LongestSubstrWithoutDuplicateChar implements Answer {
     }
 
     /**
-     * 使用双指针 滑动窗口 法
+     * 使用双指针 滑动窗口.md 法
      */
     @Override
     public void answerOne() {

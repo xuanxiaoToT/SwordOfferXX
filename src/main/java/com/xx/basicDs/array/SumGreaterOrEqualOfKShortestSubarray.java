@@ -55,7 +55,7 @@ public class SumGreaterOrEqualOfKShortestSubarray implements Answer {
 
     /**
      * 题目明确了是正整数,且要求的是连续子数组
-     * 采用双指针，滑动窗口
+     * 采用双指针，滑动窗口.md
      */
     private void answerTwo() {
         int[] nums = initData();
