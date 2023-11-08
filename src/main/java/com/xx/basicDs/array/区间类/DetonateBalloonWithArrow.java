@@ -1,4 +1,4 @@
-package com.xx.basicDs.array.interval;
+package com.xx.basicDs.array.区间类;
 
 import com.xx.Answer;
 

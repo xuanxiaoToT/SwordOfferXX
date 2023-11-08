@@ -1,4 +1,4 @@
-package com.xx.basicDs.number;
+package com.xx.basicDs.number.二进制;
 
 import com.xx.Answer;
 
@@ -11,7 +11,9 @@ import java.util.Arrays;
  * 前n个数字二进制形式中1的个数
  * <p>
  * 输入一个非负数n，请计算0到n之间每个数字的二进制形
- * 式中1的个数，并输出一个数组。例如，输入的n为4，由于0、1、
+ * 式中1的个数，并输出一个数组。
+ * <p>
+ * 例如，输入的n为4，由于0、1、
  * 2、3、4的二进制形式中1的个数分别为0、1、1、2、1，因此输出数
  * 组[0，1，1，2，1]。
  */

@@ -1,4 +1,4 @@
-package com.xx.basicDs.array.slidingWindow;
+package com.xx.basicDs.array.滑动窗口;
 
 import com.xx.Answer;
 

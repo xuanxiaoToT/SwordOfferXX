@@ -1,10 +1,11 @@
-package com.xx.algorithm.other;
+package com.xx.basicDs.number.二进制;
 
 import com.xx.Answer;
 
 /**
  * @author XuanXiao
  * @CreateDate 2022/10/18
+ * <p>
  * 最大的异或
  * <p>
  * 输入一个整数数组（每个数字都大于或等于0），请计算

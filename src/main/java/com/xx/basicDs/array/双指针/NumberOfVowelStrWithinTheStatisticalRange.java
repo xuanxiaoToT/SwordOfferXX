@@ -1,4 +1,4 @@
-package com.xx.basicDs.array.doublePointer;
+package com.xx.basicDs.array.双指针;
 
 import com.xx.Answer;
 

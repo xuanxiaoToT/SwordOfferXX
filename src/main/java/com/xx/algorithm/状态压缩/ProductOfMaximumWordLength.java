@@ -1,4 +1,4 @@
-package com.xx.algorithm.stateCompression;
+package com.xx.algorithm.状态压缩;
 
 import com.xx.Answer;
 import com.xx.util.NumberUtil;
@@ -80,6 +80,30 @@ public class ProductOfMaximumWordLength implements Answer {
             }
         }
         return maxResult;
+    }
+
+    // 此题的关键是判断两个字符串是否拥有相同字母。
+    private boolean isCommon(String str1, String str2) {
+        //方法1，直接用hashMap实现
+
+        //方法2：用长度26的数组来作为map
+
+        //方法3：二进制表示：可以用一个int型整数记录某个字符串中
+        // 出现的字符。如果字符串中包含'a'，那么整数最右边的数位为1；如
+        // 果字符串中包含'b'，那么整数的倒数第2位为1，其余以此类推。这样
+        // 做的好处是能更快地判断两个字符串是否包含相同的字符。如果两个
+        // 字符串中包含相同的字符，那么它们对应的整数相同的某个数位都为
+        // 1，两个整数的与运算将不会等于0。如果两个字符串没有相同的字
+        // 符，那么它们对应的整数的与运算的结果等于0。
+        int bitFlag1 = 0;
+        int bitFlag2 = 0;
+        for (char c : str1.toCharArray()) {
+            bitFlag1 = NumberUtil.setBit(bitFlag1, c - 'a');
+        }
+        for (char c : str2.toCharArray()) {
+            bitFlag2 = NumberUtil.setBit(bitFlag2, c - 'a');
+        }
+        return (bitFlag1 & bitFlag2) == 0;
     }
 
     /**
