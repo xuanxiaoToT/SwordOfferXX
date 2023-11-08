@@ -1,4 +1,4 @@
-package com.xx.basicDs.array;
+package com.xx.basicDs.array.interval;
 
 import com.xx.Answer;
 
