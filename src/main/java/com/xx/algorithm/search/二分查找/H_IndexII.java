@@ -1,4 +1,4 @@
-package com.xx.algorithm.search;
+package com.xx.algorithm.search.二分查找;
 
 import com.xx.Answer;
 
@@ -30,6 +30,8 @@ import com.xx.Answer;
  * 1 <= n <= 10^5
  * 0 <= citations[i] <= 1000
  * citations 按 升序排列
+ *
+ * Tag: 二分查找
  */
 public class H_IndexII implements Answer {
 

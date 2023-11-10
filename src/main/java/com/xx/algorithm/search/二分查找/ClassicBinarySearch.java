@@ -1,4 +1,4 @@
-package com.xx.algorithm.search;
+package com.xx.algorithm.search.二分查找;
 
 /**
  * @author XuanXiao
@@ -15,7 +15,7 @@ public class ClassicBinarySearch {
 
     public int binarySearch(int[] nums, int target) {
         int start = 0;
-        int end = nums.length;
+        int end = nums.length - 1;
         // 此处是小于等于
         while (start <= end) {
             int mid = (start + end) / 2;

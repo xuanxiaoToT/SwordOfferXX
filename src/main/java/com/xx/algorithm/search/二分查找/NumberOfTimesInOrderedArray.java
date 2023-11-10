@@ -1,10 +1,11 @@
-package com.xx.algorithm.search;
+package com.xx.algorithm.search.二分查找;
 
 import com.xx.Answer;
 
 /**
  * @author XuanXiao
  * @CreateDate 2022/7/14
+ * <p>
  * 在排序数组中查找数字
  * <p>
  * 统计一个数字在排序数组中出现的次数。
@@ -14,7 +15,6 @@ import com.xx.Answer;
  * 示例 2:
  * 输入: nums = [5,7,7,8,8,10], target = 6
  * 输出: 0
- *
  */
 public class NumberOfTimesInOrderedArray implements Answer {
 
