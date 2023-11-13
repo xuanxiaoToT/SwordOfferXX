@@ -7,6 +7,10 @@ package com.xx;
 public class Solution {
 
     public static void main(String[] args) {
+        new Solution().answer();
+    }
+
+    public void answer() {
 
     }
 
