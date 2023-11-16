@@ -2,6 +2,8 @@ package com.xx.basicDs.array.滑动窗口;
 
 import com.xx.Answer;
 
+import java.util.Arrays;
+
 /**
  * @author XuanXiao
  * @CreateDate 2023/11/16
@@ -43,7 +45,7 @@ import com.xx.Answer;
  * 1 <= nums.length <= 100
  * 1 <= nums[i] <= 100
  * 1 <= threshold <= 100
- *
+ * <p>
  * Tag: 滑动窗口  数组
  */
 public class LongestParitySubarray implements Answer {
@@ -55,7 +57,7 @@ public class LongestParitySubarray implements Answer {
     public void answerOne() {
         int[] nums = initData();
         int threshold = 4;
-        System.out.println(longestAlternatingSubarray(nums, threshold));
+        System.out.println(longestAlternatingSubarray3(nums, threshold));
     }
 
     /**
@@ -90,21 +92,53 @@ public class LongestParitySubarray implements Answer {
 
     /**
      * 参考其他人的写法
+     * 分组循环
+     * 适用场景：按照题目要求，数组会被分割成若干组，且每一组的判断/处理逻辑是一样的。
+     * <p>
+     * 核心思想：
+     * 外层循环负责遍历组之前的准备工作（记录开始位置），和遍历组之后的统计工作（更新答案最大值）。
+     * 内层循环负责遍历组，找出这一组在哪结束。
+     * 这个写法的好处是，各个逻辑块分工明确，也不需要特判最后一组（易错点）。以我的经验，这个写法是所有写法中最不容易出 bug 的，推荐大家记住。
+     * 时间复杂度乍一看是 O(n2)，但注意变量 i 只会增加，不会重置也不会减少。
+     * 所以二重循环总共循环 O(n)次，所以时间复杂度是 O(n)。
      */
     public int longestAlternatingSubarray2(int[] nums, int threshold) {
         int n = nums.length;
-        int ans = 0;
-        for (int i = 0; i < n; i++) {
-            if (nums[i] % 2 != 0) continue;
-            if (nums[i] > threshold) continue;
-            int right = i + 1;
-            while (right < n && nums[right] <= threshold && (nums[right] % 2 != nums[right - 1] % 2)) {
-                right++;
+        int ans = 0, i = 0;
+        while (i < n) {
+            if (nums[i] > threshold || nums[i] % 2 != 0) {
+                i++; // 直接跳过
+                continue;
             }
-            ans = Math.max(ans, right - i);
-            i = right - 1;
+            int start = i; // 记录这一组的开始位置
+            i++; // 开始位置已经满足要求，从下一个位置开始判断
+            while (i < n && nums[i] <= threshold && nums[i] % 2 != nums[i - 1] % 2) {
+                i++;
+            }
+            // 从 start 到 i-1 是满足题目要求的子数组
+            ans = Math.max(ans, i - start);
         }
         return ans;
+    }
+
+    /**
+     * 采用动态规划来做
+     */
+    public int longestAlternatingSubarray3(int[] nums, int threshold) {
+        int n = nums.length;
+        int[] dp = new int[nums.length];
+        int max = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] <= threshold && nums[i] % 2 == 0) {
+                dp[i] = Math.max(dp[i], 1);
+            }
+            if (i >= 1 && dp[i - 1] >= 1 && nums[i] <= threshold && (nums[i] % 2 != nums[i - 1] % 2)) {
+                dp[i] = Math.max(dp[i], dp[i - 1] + 1);
+            }
+            max = Math.max(max, dp[i]);
+        }
+        System.out.println(Arrays.toString(dp));
+        return max;
     }
 
     @Override
