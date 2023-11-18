@@ -57,10 +57,7 @@ public class MaximumSumOfPairsOfDigitsEqualNumbers implements Answer {
         int ans = -1;
         int[] mx = new int[82]; // 至多 9 个 9 相加
         for (int num : nums) {
-            int s = 0; // num 的数位和
-            for (int x = num; x > 0; x /= 10) { // 枚举 num 的每个数位
-                s += x % 10;
-            }
+            int s = computeSumByDigit(num); // num 的数位和
             if (mx[s] > 0) { // 说明左边也有数位和等于 s 的元素
                 ans = Math.max(ans, mx[s] + num); // 更新答案的最大值
             }
