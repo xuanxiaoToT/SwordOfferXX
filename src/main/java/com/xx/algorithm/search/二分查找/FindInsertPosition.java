@@ -1,4 +1,4 @@
-package com.xx.algorithm.search;
+package com.xx.algorithm.search.二分查找;
 
 import com.xx.Answer;
 
@@ -6,8 +6,8 @@ import com.xx.Answer;
  * @author XuanXiao
  * @CreateDate 2022/10/18
  * <p>
- * 查找插入位置
- * LeetCode 35. 搜索插入位置
+ * 搜索插入位置
+ * LeetCode 35. Easy
  * <p>
  * 输入一个排序的整数数组nums和一个目标值t，如果数组
  * nums中包含t，则返回t在数组中的下标；如果数组nums中不包含t，
@@ -28,6 +28,8 @@ import com.xx.Answer;
  * 示例 3:
  * 输入: nums = [1,3,5,6], target = 7
  * 输出: 4
+ * <p>
+ * Tag：二分查找  数组
  */
 public class FindInsertPosition implements Answer {
 
