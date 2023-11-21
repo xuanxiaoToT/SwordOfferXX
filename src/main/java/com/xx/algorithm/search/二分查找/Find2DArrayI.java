@@ -1,4 +1,4 @@
-package com.xx.algorithm.search;
+package com.xx.algorithm.search.二分查找;
 
 import com.xx.Answer;
 
@@ -7,7 +7,7 @@ import com.xx.Answer;
  * @CreateDate 2023/9/7
  * <p>
  * 搜索二维矩阵
- * LeetCode 74.
+ * LeetCode 74. Medium
  * <p>
  * 给你一个满足下述两条属性的 m x n 整数矩阵：
  * 每行中的整数从左到右按非递减顺序排列。
@@ -22,6 +22,8 @@ import com.xx.Answer;
  * 示例 2：
  * 输入：matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
  * 输出：false
+ * <p>
+ * Tag：查找  二分查找  矩阵
  */
 public class Find2DArrayI implements Answer {
 
