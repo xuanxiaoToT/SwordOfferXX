@@ -107,7 +107,7 @@ public class AddAndSearchForWords {
     }
 
     /**
-     * 广度优先遍历。.进去后，无法回退，导致会出现错误的结果
+     * 广度优先遍历。'.'进去后，无法回退，导致会出现错误的结果
      * todo:fix
      */
     private boolean bfsError(String word) {
