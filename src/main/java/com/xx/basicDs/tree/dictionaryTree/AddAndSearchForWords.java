@@ -41,6 +41,8 @@ import java.util.Queue;
  * addWord 中的 word 由小写英文字母组成
  * search 中的 word 由 '.' 或小写英文字母组成
  * 最多调用 104 次 addWord 和 search
+ * <p>
+ * Tag： 深度优先遍历 dfs  字典树
  */
 public class AddAndSearchForWords {
 
@@ -77,10 +79,38 @@ public class AddAndSearchForWords {
         last.wordEndFlag = true;
     }
 
+
+    public boolean search(String word) {
+        return dfs(word, 0, root);
+    }
+
+
     /**
+     * 采用深度优先遍历
+     */
+    private boolean dfs(String word, int index, TrieNode root) {
+        if (index >= word.length()) {
+            return root.wordEndFlag;
+        }
+        char c = word.charAt(index);
+        if (c != '.') {
+            TrieNode nextNode = root.childNodeList[c - 'a'];
+            return nextNode != null && dfs(word, index + 1, nextNode);
+        } else {
+            for (TrieNode nextNode : root.childNodeList) {
+                if (nextNode != null && dfs(word, index + 1, nextNode)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    /**
+     * 广度优先遍历。.进去后，无法回退，导致会出现错误的结果
      * todo:fix
      */
-    public boolean search(String word) {
+    private boolean bfsError(String word) {
         TrieNode last = root;
         Queue<TrieNode> queue = new LinkedList<>();
         queue.add(last);
@@ -124,4 +154,6 @@ public class AddAndSearchForWords {
         }
         return false;
     }
+
+
 }
