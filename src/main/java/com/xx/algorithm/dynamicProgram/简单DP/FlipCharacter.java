@@ -1,6 +1,8 @@
-package com.xx.algorithm.dynamicProgram;
+package com.xx.algorithm.dynamicProgram.简单DP;
 
 import com.xx.Answer;
+
+import java.util.Arrays;
 
 /**
  * @author XuanXiao
@@ -46,7 +48,7 @@ public class FlipCharacter implements Answer {
             }
         }
 
-        System.out.println(dp);
+        System.out.println(Arrays.toString(dp));
     }
 
 

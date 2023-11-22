@@ -1,4 +1,4 @@
-package com.xx.algorithm.dynamicProgram;
+package com.xx.algorithm.dynamicProgram.二维DP;
 
 import com.xx.Answer;
 
