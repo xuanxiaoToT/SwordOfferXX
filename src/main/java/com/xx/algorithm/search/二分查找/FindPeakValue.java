@@ -69,15 +69,15 @@ public class FindPeakValue implements Answer {
                     return mid;
                 }
                 //峰值在左侧
-                if (nums[mid - 1] >= nums[mid] && nums[mid] >= nums[mid + 1]) {
+                if (nums[mid - 1] > nums[mid] && nums[mid] > nums[mid + 1]) {
                     right = mid - 1;
                 }
                 //峰值在右侧
-                if (nums[mid - 1] <= nums[mid] && nums[mid] <= nums[mid + 1]) {
+                if (nums[mid - 1] < nums[mid] && nums[mid] < nums[mid + 1]) {
                     left = mid + 1;
                 }
                 // 凹形
-                if (nums[mid - 1] >= nums[mid] && nums[mid] <= nums[mid + 1]) {
+                if (nums[mid - 1] > nums[mid] && nums[mid] < nums[mid + 1]) {
                     left = mid + 1;
                 }
             }
