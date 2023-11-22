@@ -30,7 +30,7 @@ import com.xx.Answer;
  * -231 <= nums[i] <= 231 - 1
  * 对于所有有效的 i 都有 nums[i] != nums[i + 1]
  * <p>
- * Tag: 二分查找  数组
+ * Tag: 二分查找  数组  爬坡法
  */
 public class FindPeakValue implements Answer {
 
