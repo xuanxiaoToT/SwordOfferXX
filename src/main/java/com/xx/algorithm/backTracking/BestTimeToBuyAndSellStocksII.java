@@ -31,7 +31,7 @@ import com.xx.Answer;
  * 输出：0
  * 解释：在这种情况下, 交易无法获得正利润，所以不参与交易可以获得最大利润，最大利润为 0 。
  *
- * 关于动态规划的解法，参考{@link com.xx.algorithm.dynamicProgram.BestTimeToBuyAndSellStocksII}
+ * 关于动态规划的解法，参考{@link com.xx.algorithm.dynamicProgram.股票类DP.BestTimeToBuyAndSellStocksII}
  */
 public class BestTimeToBuyAndSellStocksII implements Answer {
 
