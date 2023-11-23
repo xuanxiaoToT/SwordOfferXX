@@ -1,4 +1,4 @@
-package com.xx.algorithm.search;
+package com.xx.algorithm.search.二分查找;
 
 import com.xx.Answer;
 
@@ -7,7 +7,7 @@ import com.xx.Answer;
  * @CreateDate 2023/1/9
  * <p>
  * 搜索旋转排序数组
- * LeetCode 33
+ * LeetCode 33  Medium
  * <p>
  * 整数数组 nums 按升序排列，数组中的值互不相同 。
  * 在传递给函数之前，nums在预先未知的某个下标 k（0 <= k < nums.length）上进行了旋转，
@@ -18,6 +18,8 @@ import com.xx.Answer;
  * 则返回它的下标，否则返回 -1 。
  * <p>
  * 你必须设计一个时间复杂度为 O(log n) 的算法解决此问题。
+ * <p>
+ * Tag: 二分查找  数组
  */
 public class SearchRotationSortArray implements Answer {
 
@@ -34,14 +36,13 @@ public class SearchRotationSortArray implements Answer {
         int target = 7;
         int left = 0;
         int right = nums.length - 1;
-        int mid = left + (right - left) / 2;
+        int mid = (right - left) / 2;
 
         while (left <= right) {
             if (nums[mid] == target) {
                 System.out.println(mid);
                 return;
             }
-
             //左边升序
             if (nums[left] <= nums[mid]) {
                 //在左边范围内
@@ -63,7 +64,6 @@ public class SearchRotationSortArray implements Answer {
             }
             mid = left + (right - left) / 2;
         }
-
         //没找到
         System.out.println(-1);
     }

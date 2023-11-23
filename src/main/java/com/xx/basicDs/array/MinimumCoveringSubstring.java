@@ -10,7 +10,7 @@ import java.util.Map;
  * @CreateDate 2023/8/21
  * <p>
  * 最小覆盖子串
- * LeetCode 76.
+ * LeetCode 76. Hard
  * <p>
  * 给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。
  * 如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
@@ -36,6 +36,8 @@ import java.util.Map;
  * 因此没有符合条件的子字符串，返回空字符串。
  * <p>
  * fixme：进阶：你能设计一个在 o(m+n) 时间内解决此问题的算法吗？
+ * <p>
+ * Tag: 滑动窗口
  */
 public class MinimumCoveringSubstring implements Answer {
     public static void main(String[] args) {
@@ -50,8 +52,8 @@ public class MinimumCoveringSubstring implements Answer {
      * 考虑如何优化？ 如果 s=XX⋯XABCXXXX，t=ABC，那么显然 [XX⋯XABC] 是第一个得到的「可行」区间，得到这个可行区间后，
      * 我们按照「收缩」窗口的原则更新左边界，得到最小区间。我们其实做了一些无用的操作，
      * 就是更新右边界的时候「延伸」进了很多无用的 X\，更新左边界的时候「收缩」扔掉了这些无用的 X，做了这么多无用的操作，
-     * 只是为了得到短短的 ABC。没错，其实在 sss 中，有的字符我们是不关心的，我们只关心 ttt 中出现的字符，
-     * 我们可不可以先预处理 sss，扔掉那些 ttt 中没有出现的字符，然后再做滑动窗口呢？也许你会说，这样可能出现 XXABXXC 的情况，
+     * 只是为了得到短短的 ABC。没错，其实在 s 中，有的字符我们是不关心的，我们只关心 t 中出现的字符，
+     * 我们可不可以先预处理 s，扔掉那些 t 中没有出现的字符，然后再做滑动窗口呢？也许你会说，这样可能出现 XXABXXC 的情况，
      * 在统计长度的时候可以扔掉前两个 X，但是不扔掉中间的 X，怎样解决这个问题呢？
      * 优化后的时空复杂度又是多少？
      */
