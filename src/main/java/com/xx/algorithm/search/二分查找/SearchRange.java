@@ -1,4 +1,4 @@
-package com.xx.algorithm.search;
+package com.xx.algorithm.search.二分查找;
 
 import com.xx.Answer;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2023/3/5
  * <p>
  * 在排序数组中查找元素的第一个和最后一个位置
- * LeetCode 34.
+ * LeetCode 34. Medium
  * <p>
  * 给你一个按照非递减顺序排列的整数数组 nums，和一个目标值 target。
  * 请你找出给定目标值在数组中的开始位置和结束位置。
@@ -27,6 +27,8 @@ import java.util.Arrays;
  * 示例 3：
  * 输入：nums = [], target = 0
  * 输出：[-1,-1]
+ * <p>
+ * Tag: 二分查找  数组
  */
 public class SearchRange implements Answer {
 
