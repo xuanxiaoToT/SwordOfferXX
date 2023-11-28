@@ -25,4 +25,19 @@ public class MathUtil {
         }
         return num;
     }
+
+    /**
+     * 计算阶乘
+     */
+    public static int unRecursion(int num) {
+        int result = 1;
+        if (num == 0) {
+            //0的阶乘为1
+            return 1;
+        }
+        for (int i = 2; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
 }
