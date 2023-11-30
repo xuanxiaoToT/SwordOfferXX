@@ -4,8 +4,8 @@ package com.xx.basicDs.array;
  * @author XuanXiao
  * @CreateDate 2022/6/16
  * <p>
- * 旋转数组的最小数字
- * LeetCode 153. 寻找旋转排序数组中的最小值
+ * 寻找旋转排序数组中的最小值
+ * LeetCode 153.  Medium
  * <p>
  * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。
  * 例如，数组[3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为 1。
@@ -24,8 +24,16 @@ package com.xx.basicDs.array;
  * 输入：nums = [11,13,15,17]
  * 输出：11
  * 解释：原数组为 [11,13,15,17] ，旋转 4 次得到输入数组。
+ * <p>
+ * 提示：
+ * n == nums.length
+ * 1 <= n <= 5000
+ * -5000 <= nums[i] <= 5000
+ * nums 中的所有整数 互不相同
+ * nums 原来是一个升序排序的数组，并进行了 1 至 n 次旋转
+ * <p>
+ * Tag: 二分查找
  */
-
 public class RotateArrayFindMin {
 
     public static void main(String[] args) {
@@ -57,6 +65,7 @@ public class RotateArrayFindMin {
                 right = mid;
                 continue;
             }
+            // 此题用不到，因为互不相同。但有相同情况时，可以用到。
             if (dataArray[right] == dataArray[mid] && dataArray[left] == dataArray[mid]) {
                 return findMin(dataArray, left, right);
             }
