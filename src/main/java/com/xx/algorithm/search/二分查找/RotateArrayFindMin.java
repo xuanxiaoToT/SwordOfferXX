@@ -1,4 +1,4 @@
-package com.xx.basicDs.array;
+package com.xx.algorithm.search.二分查找;
 
 /**
  * @author XuanXiao

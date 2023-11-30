@@ -1,6 +1,7 @@
-package com.xx.algorithm.other;
+package com.xx.basicDs.heap;
 
 import com.xx.Answer;
+import com.xx.basicDs.queue.FrontMiddleBackQueue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,21 +12,39 @@ import java.util.PriorityQueue;
  * @author XuanXiao
  * @CreateDate 2022/7/1
  * <p>
- * 数据流中的中位数
- * LeetCode 295. 数据流的中位数
+ * 数据流的中位数
+ * LeetCode 295. Hard
  * <p>
- * 如何得到一个数据流中的中位数？
- * 如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。
- * 如果从数据流中读出偶数个数值，那么中位数就是所有数值排序之后中间两个数的平均值。
- * 例如，
- * [2,3,4] 的中位数是 3
+ * 中位数是有序整数列表中的中间值。如果列表的大小是偶数，则没有中间值，中位数是两个中间值的平均值。
  * <p>
- * [2,3] 的中位数是 (2 + 3) / 2 = 2.5
+ * 例如 arr = [2,3,4] 的中位数是 3 。
+ * 例如 arr = [2,3] 的中位数是 (2 + 3) / 2 = 2.5 。
+ * 实现 MedianFinder 类:
+ * MedianFinder() 初始化 MedianFinder 对象。
+ * void addNum(int num) 将数据流中的整数 num 添加到数据结构中。
+ * double findMedian() 返回到目前为止所有元素的中位数。与实际答案相差 10-5 以内的答案将被接受。
  * <p>
- * 设计一个支持以下两种操作的数据结构：
+ * 示例 1：
+ * 输入
+ * ["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]
+ * [[], [1], [2], [], [3], []]
+ * 输出
+ * [null, null, null, 1.5, null, 2.0]
  * <p>
- * void addNum(int num) - 从数据流中添加一个整数到数据结构中。
- * double findMedian() - 返回目前所有元素的中位数。
+ * 解释
+ * MedianFinder medianFinder = new MedianFinder();
+ * medianFinder.addNum(1);    // arr = [1]
+ * medianFinder.addNum(2);    // arr = [1, 2]
+ * medianFinder.findMedian(); // 返回 1.5 ((1 + 2) / 2)
+ * medianFinder.addNum(3);    // arr[1, 2, 3]
+ * medianFinder.findMedian(); // return 2.0
+ * 提示:
+ * <p>
+ * -10^5 <= num <= 10^5
+ * 在调用 findMedian 之前，数据结构中至少有一个元素
+ * 最多 5 * 10^4 次调用 addNum 和 findMedian
+ * <p>
+ * Tag: 堆  大顶堆   小顶堆
  */
 public class MedianInDataFlow implements Answer {
 
@@ -43,7 +62,10 @@ public class MedianInDataFlow implements Answer {
     // minHeap 来存储数据流中较大一半的值
     PriorityQueue<Integer> minHeap;
 
-
+    /**
+     * 思路类似
+     * {@link FrontMiddleBackQueue}
+     */
     public static void main(String[] args) {
         MedianInDataFlow medianInDataFlow = new MedianInDataFlow();
         medianInDataFlow.answerOne();
@@ -146,7 +168,6 @@ public class MedianInDataFlow implements Answer {
             return (minHeap.peek() + maxHeap.peek()) * 1.0 / 2;
         }
     }
-
 
 
     @Override
