@@ -1,4 +1,4 @@
-package com.xx.basicDs.number;
+package com.xx.basicDs.number.二进制;
 
 import com.xx.Answer;
 
