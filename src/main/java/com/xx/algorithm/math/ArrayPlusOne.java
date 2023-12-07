@@ -2,6 +2,8 @@ package com.xx.algorithm.math;
 
 import com.xx.Answer;
 
+import java.util.Arrays;
+
 /**
  * @author XuanXiao
  * @CreateDate 2023/11/30
@@ -36,12 +38,16 @@ import com.xx.Answer;
  */
 public class ArrayPlusOne implements Answer {
 
+    public static void main(String[] args) {
+        new ArrayPlusOne().answerOne();
+    }
+
     /**
      * 解1：
      */
     @Override
     public void answerOne() {
-
+        System.out.println(Arrays.toString(plusOne(new int[]{1, 2, 3, 9})));
     }
 
     /**
