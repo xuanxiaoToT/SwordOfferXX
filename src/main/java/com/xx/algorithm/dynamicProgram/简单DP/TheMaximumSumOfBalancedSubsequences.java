@@ -1,4 +1,4 @@
-package com.xx.algorithm.dynamicProgram.subArray;
+package com.xx.algorithm.dynamicProgram.简单DP;
 
 import com.xx.Answer;
 
