@@ -50,9 +50,7 @@ public class LongestPalindromicSubstring implements Answer {
     @Override
     public void answerOne() {
         String data = initData();
-
-
-        System.out.println(result);
+        System.out.println(longestPalindrome(data));
     }
 
     public String longestPalindrome(String data) {
