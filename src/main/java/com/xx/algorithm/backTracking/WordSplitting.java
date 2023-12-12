@@ -57,8 +57,6 @@ public class WordSplitting implements Answer {
     /**
      * 尝试使用动态规划来解决试试
      * 定义 dp[i] 表示字符串 s 前 i 个字符组成的字符串 s[0..i−1] 是否能被空格拆分成若干个字典中出现的单词。
-     *
-     *
      */
     public boolean wordBreak(String s, List<String> dic) {
         boolean[] dp = new boolean[s.length() + 1];
