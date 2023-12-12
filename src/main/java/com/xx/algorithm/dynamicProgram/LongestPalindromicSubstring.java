@@ -8,7 +8,7 @@ import com.xx.basicDs.string.NumberOfPalindromeSubstrings;
  * @CreateDate 2023/3/17
  * <p>
  * 最长回文子串
- * LeetCode 005
+ * LeetCode 005  Medium
  * <p>
  * 给你一个字符串 s，找到 s 中最长的回文子串。
  * 如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。
@@ -21,6 +21,12 @@ import com.xx.basicDs.string.NumberOfPalindromeSubstrings;
  * 示例 2：
  * 输入：s = "cbbd"
  * 输出："bb"
+ * <p>
+ * 提示：
+ * 1 <= s.length <= 1000
+ * s 仅由数字和英文字母组成
+ * <p>
+ * Tag:
  */
 public class LongestPalindromicSubstring implements Answer {
 
@@ -44,9 +50,15 @@ public class LongestPalindromicSubstring implements Answer {
     @Override
     public void answerOne() {
         String data = initData();
+
+
+        System.out.println(result);
+    }
+
+    public String longestPalindrome(String data) {
         int len = data.length();
         if (len < 2) {
-            System.out.println(data);
+            return data;
         }
 
         int maxLen = 1;
@@ -88,8 +100,7 @@ public class LongestPalindromicSubstring implements Answer {
         }
 
         String result = data.substring(begin, begin + maxLen);
-
-        System.out.println(result);
+        return result;
     }
 
     /**
