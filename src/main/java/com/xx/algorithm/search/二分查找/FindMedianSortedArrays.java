@@ -30,6 +30,8 @@ import com.xx.Answer;
  * 0 <= n <= 1000
  * 1 <= m + n <= 2000
  * -10^6 <= nums1[i], nums2[i] <= 10^6
+ * <p>
+ * Tag: 二分法
  */
 public class FindMedianSortedArrays implements Answer {
 
