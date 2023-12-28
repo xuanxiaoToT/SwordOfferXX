@@ -34,7 +34,7 @@ import java.util.Stack;
  * '-' 可以用作一元运算(即 "-1" 和 "-(2 + 3)" 是有效的)
  * 输入中不存在两个连续的操作符
  * 每个数字和运行的计算将适合于一个有符号的 32位 整数
- *
+ * <p>
  * Tag：递归  栈
  */
 public class BasicCalculator implements Answer {
@@ -48,8 +48,9 @@ public class BasicCalculator implements Answer {
         //String data = "-1+(-3)+(6+8)";
         //String data = "2-4-(8+2-6+(8+4-(1)+8-10))";
         String data = "1+2-(3+4+5)+6";
-        System.out.println(calculate(data));
+        System.out.println(myCalculator("1  +  1"));
     }
+
 
     /**
      * https://leetcode.cn/problems/basic-calculator/solutions/2384893/javapython3czhan-zhan-kai-gua-hao-qiu-he-uu72/?envType=study-plan-v2&envId=top-interview-150
@@ -116,106 +117,45 @@ public class BasicCalculator implements Answer {
     }
 
     public int myCalculator(String data) {
-        Stack<String> calStack = new Stack<>();
+        int sign = 1;
         StringBuilder sb = new StringBuilder();
-        int bracketCount = 0;
-        if (data.charAt(0) == '-') {
-            calStack.push("0");
-        }
-        for (char c : data.toCharArray()) {
+        int result = 0;
+        Stack<Integer> signStack = new Stack<>();
+        Stack<Integer> tempResultStack = new Stack<>();
+        for (int i = 0; i < data.length(); i++) {
+            char c = data.charAt(i);
+            if (c == ' ') {
+                continue;
+            }
             if (Character.isDigit(c)) {
                 sb.append(c);
             } else {
-                if (sb.length() != 0) {
-                    calStack.push(sb.toString());
-                    if (bracketCount == 0) {
-                        calByNoBracket(calStack);
-                    }
+                if (sb.length() > 0) {
+                    int num = Integer.parseInt(sb.toString());
+                    sb = new StringBuilder();
+                    result = result + sign * num;
                 }
-                sb = new StringBuilder();
                 if (c == '+' || c == '-') {
-                    calStack.push(String.valueOf(c));
+                    sign = c == '+' ? 1 : -1;
                 }
                 if (c == '(') {
-                    bracketCount++;
-                    calStack.push(String.valueOf(c));
+                    signStack.push(sign);
+                    tempResultStack.push(result);
+                    result = 0;
+                    sign = 1;
                 }
                 if (c == ')') {
-                    bracketCount--;
-                    calByBracket(calStack);
-                    if (bracketCount == 0) {
-                        calByNoBracket(calStack);
-                    }
+                    int tempResult = tempResultStack.pop();
+                    sign = signStack.pop();
+                    result = tempResult + result * sign;
                 }
             }
         }
         if (sb.length() > 0) {
-            calStack.push(sb.toString());
-            calByNoBracket(calStack);
+            int num = Integer.parseInt(sb.toString());
+            result = result + sign * num;
         }
-        if (calStack.size() > 1) {
-            calByNoBracket(calStack);
-        }
-
-        return Integer.parseInt(calStack.pop());
-    }
-
-    private void calByBracket(Stack<String> calStack) {
-        while (calStack.size() >= 3) {
-            String str1 = calStack.pop();
-            String str2 = calStack.pop();
-            String str3 = calStack.pop();
-            if (str2.equals("(")) {
-                calStack.push(str3);
-                calStack.push(str1);
-                return;
-            } else {
-                if (str3.equals("(") && str2.equals("-")) {
-                    calStack.push(str2 + str1);
-                    return;
-                }
-                if (str2.equals("+")) {
-                    int result = Integer.parseInt(str1) + Integer.parseInt(str3);
-                    calStack.push(String.valueOf(result));
-                }
-                if (str2.equals("-")) {
-                    int result = Integer.parseInt(str3) - Integer.parseInt(str1);
-                    calStack.push(String.valueOf(result));
-                }
-            }
-        }
-        if (calStack.size() == 2) {
-            String str1 = calStack.pop();
-            String str2 = calStack.pop();
-            if (str2.equals("(")) {
-                calStack.push(str1);
-            }
-        }
-    }
-
-    private void calByNoBracket(Stack<String> calStack) {
-        while (calStack.size() >= 3) {
-            String str1 = calStack.pop();
-            String str2 = calStack.pop();
-            String str3 = calStack.pop();
-            if (str3.equals("+") || str3.equals("-")) {
-                if (str2.equals("-")) {
-                    calStack.push(str3);
-                    calStack.push(str2 + str1);
-                } else {
-                    System.out.println("Error！");
-                }
-            } else {
-                if (str2.equals("+")) {
-                    int result = Integer.parseInt(str1) + Integer.parseInt(str3);
-                    calStack.push(String.valueOf(result));
-                }
-                if (str2.equals("-")) {
-                    int result = Integer.parseInt(str3) - Integer.parseInt(str1);
-                    calStack.push(String.valueOf(result));
-                }
-            }
-        }
+        return result;
     }
 
 
