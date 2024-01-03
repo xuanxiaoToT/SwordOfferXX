@@ -1,4 +1,4 @@
-package com.xx.basicDs.array;
+package com.xx.basicDs.array.滑动窗口;
 
 import com.xx.Answer;
 
@@ -27,7 +27,7 @@ import com.xx.Answer;
  * 1 <= n <= 10^4
  * -10^5 <= nums[i] <= 10^5
  *
- * Tag: 数组
+ * Tag: 数组  滑动窗口
  */
 public class NonDecreasingArray implements Answer {
 
