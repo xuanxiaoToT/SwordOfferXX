@@ -58,7 +58,7 @@ class FindAllMissingNumInArray implements Answer {
     public List<Integer> findDisappearedNumbers1(int[] nums) {
         int n = nums.length;
         for (int num : nums) {
-            int x = num % n - 1;
+            int x = (num - 1) % n;
             nums[x] += n;
         }
         List<Integer> ret = new ArrayList<Integer>();
