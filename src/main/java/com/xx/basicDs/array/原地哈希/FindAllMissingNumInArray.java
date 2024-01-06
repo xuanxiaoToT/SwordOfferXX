@@ -1,4 +1,4 @@
-package com.xx.basicDs.array;
+package com.xx.basicDs.array.原地哈希;
 
 import com.xx.Answer;
 
@@ -32,7 +32,7 @@ import java.util.List;
  * <p>
  * Tag：哈希  数组
  */
-class FindAllMissingNumInArray implements Answer {
+public class FindAllMissingNumInArray implements Answer {
 
     public static void main(String[] args) {
         new FindAllMissingNumInArray().answerOne();
