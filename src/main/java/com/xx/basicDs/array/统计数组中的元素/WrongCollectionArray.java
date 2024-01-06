@@ -1,4 +1,4 @@
-package com.xx.basicDs.array.原地哈希;
+package com.xx.basicDs.array.统计数组中的元素;
 
 import com.xx.Answer;
 

@@ -1,4 +1,4 @@
-package com.xx.basicDs.array.原地哈希;
+package com.xx.basicDs.array.统计数组中的元素;
 
 import com.xx.Answer;
 
@@ -34,7 +34,7 @@ import java.util.List;
  * 1 <= nums[i] <= n
  * nums 中的每个元素出现 一次 或 两次
  * <p>
- * Tag: 原地哈希  数组
+ * Tag: 统计数组中的元素  数组
  */
 public class DuplicateDataInArray implements Answer {
 

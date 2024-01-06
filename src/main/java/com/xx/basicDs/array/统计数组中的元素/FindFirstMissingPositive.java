@@ -1,7 +1,6 @@
-package com.xx.basicDs.hash;
+package com.xx.basicDs.array.统计数组中的元素;
 
 import com.xx.Answer;
-import com.xx.util.ArrayUtil;
 
 /**
  * @author XuanXiao
@@ -24,6 +23,8 @@ import com.xx.util.ArrayUtil;
  * 示例 3：
  * 输入：nums = [7,8,9,11,12]
  * 输出：1
+ * <p>
+ * Tag：原地哈希  数组
  */
 public class FindFirstMissingPositive implements Answer {
 
@@ -38,24 +39,29 @@ public class FindFirstMissingPositive implements Answer {
      */
     @Override
     public void answerOne() {
-        int[] nums = initData();
+        int[] nums = {3, 4, -1, 1};
+        System.out.println(firstMissingPositive(nums));
+    }
+
+    public int firstMissingPositive(int[] nums) {
         int len = nums.length;
         for (int i = 0; i < len; i++) {
             while (nums[i] > 0 && nums[i] <= len && nums[nums[i] - 1] != nums[i]) {
                 // 满足在指定范围内、并且没有放在正确的位置上，才交换
                 // 例如：数值 3 应该放在索引 2 的位置上
-                ArrayUtil.swapNum(nums, nums[i] - 1, i);
+                int temp = nums[nums[i] - 1];
+                nums[nums[i] - 1] = nums[i];
+                nums[i] = temp;
             }
         }
 
         for (int i = 0; i < len; i++) {
             if (nums[i] != i + 1) {
-                System.out.println(i + 1);
-                return;
+                // System.out.println(i + 1);
+                return i + 1;
             }
         }
-        // 都正确则返回数组长度 + 1
-        System.out.println(len + 1);
+        return len + 1;
     }
 
     /**
