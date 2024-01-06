@@ -48,7 +48,7 @@ public class CodeStatics {
             HashSet<String> notAllowedDir = codeStatics.generateNotDir();
             File inFile = new File("G:\\MyCode\\SwordOfferXX\\SwordOfferXX");
             codeStatics.codeStatics(inFile, notAllowedDir);
-            System.out.println("统计:" + sumFile + "题，再接再厉\t");
+            System.out.println("统计: " + sumFile + " 题，再接再厉\t");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
