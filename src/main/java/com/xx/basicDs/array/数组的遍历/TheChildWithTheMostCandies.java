@@ -64,11 +64,7 @@ public class TheChildWithTheMostCandies implements Answer {
             max = Math.max(candy, max);
         }
         for (int candy : candies) {
-            if (candy + extraCandies >= max) {
-                result.add(true);
-            } else {
-                result.add(false);
-            }
+            result.add(candy + extraCandies >= max);
         }
         return result;
     }
