@@ -50,7 +50,6 @@ public class InvertWordsInString implements Answer {
     }
 
     public String reverseWords(String s) {
-        String s = initData();
         StringBuilder sb = new StringBuilder();
         StringBuilder result = new StringBuilder();
         for (int i = s.length() - 1; i >= 0; i--) {
@@ -70,7 +69,6 @@ public class InvertWordsInString implements Answer {
         } else {
             result.deleteCharAt(result.length() - 1);
         }
-
         return result.toString();
     }
 

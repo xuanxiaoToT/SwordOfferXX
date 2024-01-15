@@ -1,4 +1,4 @@
-package com.xx.basicDs.array;
+package com.xx.basicDs.array.三元组问题;
 
 import com.xx.Answer;
 
