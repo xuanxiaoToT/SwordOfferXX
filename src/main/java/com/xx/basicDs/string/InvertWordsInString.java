@@ -45,6 +45,11 @@ public class InvertWordsInString implements Answer {
      */
     @Override
     public void answerOne() {
+        String data = initData();
+        System.out.println(reverseWords(data));
+    }
+
+    public String reverseWords(String s) {
         String s = initData();
         StringBuilder sb = new StringBuilder();
         StringBuilder result = new StringBuilder();
@@ -65,7 +70,8 @@ public class InvertWordsInString implements Answer {
         } else {
             result.deleteCharAt(result.length() - 1);
         }
-        System.out.println(result.toString());
+
+        return result.toString();
     }
 
     /**
