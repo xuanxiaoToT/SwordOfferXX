@@ -1,4 +1,4 @@
-package com.xx.basicDs.array;
+package com.xx.basicDs.array.双指针;
 
 import com.xx.Answer;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2023/8/8
  * <p>
  * 移动零
- * LeetCode 283.
+ * LeetCode 283. Easy
  * <p>
  * 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
  * 请注意，必须在不复制数组的情况下原地对数组进行操作。
@@ -21,6 +21,8 @@ import java.util.Arrays;
  * 示例 2:
  * 输入: nums = [0]
  * 输出: [0]
+ * <p>
+ * Tag:双指针  计数
  */
 public class MoveZero implements Answer {
 
