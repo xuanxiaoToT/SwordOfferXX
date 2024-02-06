@@ -60,7 +60,7 @@ public class MergeKSortedLinkedLists implements Answer {
                     minIndex = i;
                     minPoint = temp;
                 } else {
-                    if (minPoint.value > temp.value) {
+                    if (minPoint.val > temp.val) {
                         minPoint = temp;
                         minIndex = i;
                     }
@@ -120,7 +120,7 @@ public class MergeKSortedLinkedLists implements Answer {
         ListNode point1 = one;
         ListNode point2 = two;
         while (point1 != null && point2 != null) {
-            if (point1.value > point2.value) {
+            if (point1.val > point2.val) {
                 if (newHead == null) {
                     newHead = point2;
                     newPoint = newHead;

@@ -19,7 +19,7 @@ public class ReverseOutList {
         Stack stack = new Stack();
         ListNode point = listNode;
         while (point != null) {
-            stack.push(point.value);
+            stack.push(point.val);
             point = point.next;
         }
 

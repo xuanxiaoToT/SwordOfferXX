@@ -27,7 +27,7 @@ public class RearrangeLinkList implements Answer {
     public void answerOne() {
         ListNode head = initData();
         ListNode midNode = findLinkMidNode(head);
-        System.out.println(midNode.value);
+        System.out.println(midNode.val);
 
         ListNode newReverseNode = ArrayUtil.reverseLinkList(midNode);
 

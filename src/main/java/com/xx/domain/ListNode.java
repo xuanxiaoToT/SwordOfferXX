@@ -8,15 +8,15 @@ import java.util.Set;
 @Data
 public class ListNode {
 
-    public int value;
+    public int val;
     public ListNode next;
 
-    public ListNode(int value) {
-        this.value = value;
+    public ListNode(int val) {
+        this.val = val;
     }
 
-    public ListNode(int value, ListNode next) {
-        this.value = value;
+    public ListNode(int val, ListNode next) {
+        this.val = val;
         this.next = next;
     }
 
@@ -27,12 +27,12 @@ public class ListNode {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         Set<ListNode> set = new HashSet<>();
-        sb.append(this.value);
+        sb.append(this.val);
         sb.append(" -> ");
         ListNode point = this.next;
         while (point != null && !set.contains(point)) {
             set.add(point);
-            sb.append(point.value);
+            sb.append(point.val);
             sb.append(" -> ");
             point = point.next;
         }

@@ -50,7 +50,7 @@ public class RemoveDuplicateNodesFromTheSortedLinkList implements Answer {
         ListNode newPoint = null;
         int count = 1;
         while (point != null) {
-            if (point.value != pre.value) {
+            if (point.val != pre.val) {
                 if (count == 1) {
                     if (newPoint == null) {
                         newPoint = pre;
@@ -104,9 +104,9 @@ public class RemoveDuplicateNodesFromTheSortedLinkList implements Answer {
 
         ListNode cur = dummy;
         while (cur.next != null && cur.next.next != null) {
-            if (cur.next.value == cur.next.next.value) {
-                int x = cur.next.value;
-                while (cur.next != null && cur.next.value == x) {
+            if (cur.next.val == cur.next.next.val) {
+                int x = cur.next.val;
+                while (cur.next != null && cur.next.val == x) {
                     cur.next = cur.next.next;
                 }
             } else {

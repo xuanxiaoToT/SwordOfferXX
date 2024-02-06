@@ -40,7 +40,7 @@ public class EntryNodeInLinkedList implements Answer {
                 return;
             }
         } while (slow != quick);
-        System.out.println(quick.value);
+        System.out.println(quick.val);
         // 求环的大小l
 
         // 双指针，快的先走l步，最后会跟慢的在入口处相遇。

@@ -70,7 +70,7 @@ public class LinkedListSorting implements Answer {
         ListNode newRoot = null;
         ListNode p = null;
         while (head1 != null && head2 != null) {
-            if (head1.value < head2.value) {
+            if (head1.val < head2.val) {
                 if (p == null) {
                     p = head1;
                     newRoot = p;

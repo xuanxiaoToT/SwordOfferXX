@@ -47,7 +47,7 @@ public class SeparatedLinkedList implements Answer {
         ListNode newHeadGreater = null;
         ListNode greaterPoint = null;
         while (point != null) {
-            if (point.value < target) {
+            if (point.val < target) {
                 if (newHeadLess == null) {
                     newHeadLess = point;
                     lessPoint = newHeadLess;
