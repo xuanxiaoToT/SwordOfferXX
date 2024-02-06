@@ -41,6 +41,8 @@ import com.xx.util.DataFactory;
  * 提示：
  * 链表中节点的数目在范围 [1, 10^5] 内
  * 1 <= Node.val <= 10^5
+ * <p>
+ * Tag:删除节点  快慢指针
  */
 public class DeleteMidNodeInLinkedList implements Answer {
 
