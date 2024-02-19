@@ -1,7 +1,6 @@
 package com.xx.basicDs.graph;
 
 import com.xx.Answer;
-import lombok.Data;
 
 import java.util.*;
 
@@ -57,29 +56,33 @@ public class DivisionEvaluation implements Answer {
      */
     @Override
     public void answerOne() {
-        TestData testData = initData();
-        String[][] equations = testData.getEquations();
-        Double[] values = testData.getValues();
-        String[][] queries = testData.getQueries();
-        List<Double> result = new ArrayList<>();
+        List<List<String>> equations = Arrays.asList(Arrays.asList("a", "b"), Arrays.asList("b", "c"));
+        double[] values = {2.0, 3.0};
+        List<List<String>> queries = Arrays.asList(Arrays.asList("a", "c"), Arrays.asList("b", "a"), Arrays.asList("a", "e"),
+                Arrays.asList("a", "a"), Arrays.asList("x", "x"));
+        System.out.println(Arrays.toString(calcEquation(equations, values, queries)));
+    }
+
+    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
         // 构造图
         Map<String, Map<String, Double>> graph = buildGraph(equations, values);
-        for (String[] query : queries) {
-            String up = query[0];
-            String down = query[1];
+        double[] result = new double[queries.size()];
+        for (int i = 0; i < queries.size(); i++) {
+            List<String> query = queries.get(i);
+            String up = query.get(0);
+            String down = query.get(1);
             if (graph.containsKey(up) && graph.containsKey(down)) {
                 if (up.equals(down)) {
-                    result.add(1.0);
+                    result[i] = 1.0;
                 } else {
                     Double dfsValue = myDfs(graph, up, down, new HashSet<>(), 1.0);
-                    result.add(dfsValue);
+                    result[i] = dfsValue;
                 }
             } else {
-                result.add(-1.0);
+                result[i] = -1.0;
             }
         }
-
-        System.out.println(result);
+        return result;
     }
 
     private Double myDfs(Map<String, Map<String, Double>> graph, String up, String down, HashSet<String> visited, Double temp) {
@@ -104,12 +107,12 @@ public class DivisionEvaluation implements Answer {
         return -1.0;
     }
 
-    private Map<String, Map<String, Double>> buildGraph(String[][] equations, Double[] values) {
+    private Map<String, Map<String, Double>> buildGraph(List<List<String>> equations, double[] values) {
         Map<String, Map<String, Double>> map = new HashMap<>();
-        for (int i = 0; i < equations.length; i++) {
-            String[] equation = equations[i];
-            String start = equation[0];
-            String end = equation[1];
+        for (int i = 0; i < equations.size(); i++) {
+            List<String> equation = equations.get(i);
+            String start = equation.get(0);
+            String end = equation.get(1);
             if (!map.containsKey(start)) {
                 Map<String, Double> temp = new HashMap<>();
                 temp.put(end, values[i]);
@@ -137,16 +140,9 @@ public class DivisionEvaluation implements Answer {
      * 输出数据
      */
     @Override
-    public TestData initData() {
-        return new TestData();
+    public Object initData() {
+        return null;
     }
 
-    @Data
-    private static class TestData {
-        private String[][] equations = new String[][]{{"a", "b"}, {"b", "c"}};
 
-        private Double[] values = new Double[]{2.0, 3.0};
-
-        private String[][] queries = new String[][]{{"a", "c"}, {"b", "a"}, {"a", "e"}, {"a", "a"}, {"x", "x"}};
-    }
 }
