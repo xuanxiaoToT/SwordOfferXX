@@ -30,7 +30,6 @@ public class ClassicBinarySearch {
                 start = mid + 1;
             }
         }
-
         return -1;
     }
 
