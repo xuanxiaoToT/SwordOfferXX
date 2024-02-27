@@ -2,10 +2,14 @@ package com.xx.algorithm.search;
 
 import com.xx.Answer;
 
+import java.util.Arrays;
+
 /**
  * @author XuanXiao
  * @CreateDate 2022/10/20
+ * <p>
  * 狒狒吃香蕉
+ * LeetCode 875. 爱吃香蕉的珂珂  Medium
  * <p>
  * 狒狒很喜欢吃香蕉。一天它发现了n堆香蕉，第i堆有
  * piles[i]根香蕉。门卫刚好走开，H小时后才会回来。狒狒吃香蕉喜
@@ -18,6 +22,23 @@ import com.xx.Answer;
  * 门卫将于8小时之后回来，那么狒狒每小时吃香蕉的最少数目为4根。
  * 如果它每小时吃4根香蕉，那么它用8小时吃完所有香蕉。如果它每小
  * 时只吃3根香蕉，则需要10小时，不能在门卫回来之前吃完。
+ * <p>
+ * 示例 1：
+ * 输入：piles = [3,6,7,11], h = 8
+ * 输出：4
+ * <p>
+ * 示例 2：
+ * 输入：piles = [30,11,23,4,20], h = 5
+ * 输出：30
+ * <p>
+ * 示例 3：
+ * 输入：piles = [30,11,23,4,20], h = 6
+ * 输出：23
+ * <p>
+ * 提示：
+ * 1 <= piles.length <= 10^4
+ * piles.length <= h <= 10^9
+ * 1 <= piles[i] <= 10^9
  */
 public class BaboonsEatBananas implements Answer {
 
@@ -32,39 +53,31 @@ public class BaboonsEatBananas implements Answer {
      */
     @Override
     public void answerOne() {
-        int[] piles = initData();
+        int[] piles = {332484035, 524908576, 855865114, 632922376, 222257295, 690155293, 112677673, 679580077, 337406589, 290818316, 877337160, 901728858, 679284947, 688210097, 692137887, 718203285, 629455728, 941802184};
         // 门卫回来的时间
-        int targetHours = 8;
-        int max = 0;
-        int min = Integer.MAX_VALUE;
-        for (int pile : piles) {
-            max = Math.max(pile, max);
-            min = Math.min(pile, min);
-        }
+        int targetHours = 823855818;
+        System.out.println(minEatingSpeed(piles, targetHours));
+    }
+
+    public int minEatingSpeed(int[] piles, int targetHours) {
+        int max = Arrays.stream(piles).max().getAsInt();
+        int min = 1;
         if (targetHours == piles.length) {
-            System.out.println(max);
-            return;
+            return max;
         }
+        int result = max;
         while (min < max) {
-            int mid = (max + min) / 2;
+            int mid = min + (max - min) / 2;
             int eatHours = computeEatHours(piles, mid);
-            if (eatHours == targetHours) {
-                if (computeEatHours(piles, mid - 1) > targetHours) {
-                    System.out.println(mid);
-                    return;
-                } else {
-                    max = mid;
-                }
+            if (eatHours <= targetHours) {
+                max = mid;
+                //最后一个mid值
+                result = mid;
             } else {
-                if (eatHours > targetHours) {
-                    min = mid;
-                } else {
-                    max = mid;
-                }
+                min = mid + 1;
             }
         }
-
-
+        return result;
     }
 
     private int computeEatHours(int[] piles, int mid) {
