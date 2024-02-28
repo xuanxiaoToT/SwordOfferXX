@@ -32,6 +32,8 @@ import java.util.Map;
  * 提示：
  * 0 <= digits.length <= 4
  * digits[i] 是范围 ['2', '9'] 的一个数字。
+ * <p>
+ * Tag: 回溯  剪枝
  */
 public class CombinationOfTelephoneNumber implements Answer {
 

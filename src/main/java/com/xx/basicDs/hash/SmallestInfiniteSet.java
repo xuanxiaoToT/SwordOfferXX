@@ -78,7 +78,7 @@ class SmallestInfiniteSet {
     //}
     //
     ///**
-    // * 最简单的:直接用set来记录不在集合中的，由于最多调用1000次，所以集合不会很大
+    // * 最简单的:直接用set来记录不在集合中的，由于最多调用1000次，所以集合不会很大。 时间较慢
     // */
     //public int popSmallest() {
     //    for (int i = 1; i < Integer.MAX_VALUE; i++) {
