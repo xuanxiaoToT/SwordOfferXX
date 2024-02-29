@@ -1,4 +1,4 @@
-package com.xx.algorithm.dynamicProgram;
+package com.xx.algorithm.dynamicProgram.二维DP;
 
 import com.xx.Answer;
 
@@ -30,6 +30,8 @@ import java.util.Arrays;
  * 示例 4：
  * 输入：m = 3, n = 3
  * 输出：6
+ * <p>
+ * Tag:多维动态规划
  */
 public class NumberOfRobotPaths implements Answer {
 
