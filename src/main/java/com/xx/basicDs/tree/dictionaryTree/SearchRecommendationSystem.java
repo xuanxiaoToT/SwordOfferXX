@@ -116,6 +116,28 @@ public class SearchRecommendationSystem implements Answer {
         return ans;
     }
 
+    /**
+     * 简单粗暴直接遍历法
+     */
+    public List<List<String>> suggestedProducts3(String[] products, String searchWord) {
+        Arrays.sort(products); // 先按字典序排序
+        List<List<String>> ls = new ArrayList<>();
+        for (int i = 1; i <= searchWord.length(); ++i) {
+            String s = searchWord.substring(0, i); // 找出每个前缀
+            List<String> l1 = new ArrayList<>();
+            for (String str : products) {
+                if (str.startsWith(s)) { // 将符合的前缀加到集合中
+                    l1.add(str);
+                }
+                if (l1.size() == 3) { // 如果集合长度为3，就结束循环，不在继续寻找
+                    break;
+                }
+            }
+            ls.add(l1);
+        }
+        return ls;
+    }
+
     public void insert(String str) {
         TrieNode last = root;
         for (Character c : str.toCharArray()) {
