@@ -1,4 +1,4 @@
-package com.xx.basicDs.number.二进制;
+package com.xx.basicDs.number.位运算;
 
 import com.xx.Answer;
 
@@ -24,7 +24,7 @@ import com.xx.Answer;
  * a 和 b 仅由字符 '0' 或 '1' 组成
  * 字符串如果不是 "0" ，就不含前导零
  * <p>
- * Tag：字符串求和  二进制求和  二进制
+ * Tag：字符串求和  二进制求和  位运算
  */
 public class BinarySummation implements Answer {
 

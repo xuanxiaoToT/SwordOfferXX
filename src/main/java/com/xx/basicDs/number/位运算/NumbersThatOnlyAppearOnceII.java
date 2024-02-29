@@ -1,4 +1,4 @@
-package com.xx.basicDs.number.二进制;
+package com.xx.basicDs.number.位运算;
 
 import com.xx.Answer;
 
@@ -29,7 +29,7 @@ import java.util.Map;
  * -2^31 <= nums[i] <= 2^31 - 1
  * nums 中，除某个元素仅出现 一次 外，其余每个元素都恰出现 三次
  * <p>
- * Tag: 哈希表  二进制
+ * Tag: 哈希表  位运算
  * <p>
  */
 public class NumbersThatOnlyAppearOnceII implements Answer {

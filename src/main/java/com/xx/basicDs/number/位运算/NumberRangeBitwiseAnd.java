@@ -1,4 +1,4 @@
-package com.xx.basicDs.number.二进制;
+package com.xx.basicDs.number.位运算;
 
 import com.xx.Answer;
 
