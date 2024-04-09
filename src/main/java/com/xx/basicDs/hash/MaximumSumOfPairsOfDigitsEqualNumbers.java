@@ -2,7 +2,9 @@ package com.xx.basicDs.hash;
 
 import com.xx.Answer;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 /**
  * @author XuanXiao
