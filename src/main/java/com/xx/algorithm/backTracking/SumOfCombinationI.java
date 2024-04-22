@@ -40,10 +40,10 @@ import java.util.List;
  * candidates 的所有元素 互不相同
  * 1 <= target <= 40
  */
-public class CombinedSum implements Answer {
+public class SumOfCombinationI implements Answer {
 
     public static void main(String[] args) {
-        new CombinedSum().answerOne();
+        new SumOfCombinationI().answerOne();
     }
 
     /**

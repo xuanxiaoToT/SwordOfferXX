@@ -31,8 +31,8 @@ public class AllowRepeatedSelectionOfCombineOfElements implements Answer {
      */
     @Override
     public void answerOne() {
-        int target = 8;
-        int[] data = initData();
+        int target = 4;
+        int[] data = {1,2,3};
         diGui(target, data, 0, new ArrayList<>(), 0);
         System.out.println(result);
     }
