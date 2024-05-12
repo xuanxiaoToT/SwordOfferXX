@@ -67,6 +67,7 @@ public class MinTimeForCollectGarbage implements Answer {
      * 解:
      * 优化点1：字符遍历可以省？可以，因为总是要加
      * 优化点2：travel每次都要遍历三遍，能不能省？ travel的值取决于结束后，三个last的最大值
+     * 知识点：String.indexOf:存在返回第一个字符索引位置,不存才返回-1，效率要比contains高
      */
     @Override
     public void answerOne() {
@@ -89,45 +90,20 @@ public class MinTimeForCollectGarbage implements Answer {
 
         //M P G
         for (int i = 0; i < garbage.length; i++) {
-            //int[] countChar = countChar(garbage[i]);
             String gar = garbage[i];
             result += gar.length();
-            if (gar.contains("M")) {
-                //result = result + getResult(travel, lastM, i);
+            if (gar.indexOf("M")>-1) {
                 lastM = i;
             }
-            if (gar.contains("P")) {
-                //result += countChar[1];
-                //result = result + getResult(travel, lastP, i);
+            if (gar.indexOf("P")>-1) {
                 lastP = i;
             }
-            if (gar.contains("G")) {
-                //result += countChar[2];
-                //result = result + getResult(travel, lastG, i);
+            if (gar.indexOf("G")>-1) {
                 lastG = i;
             }
         }
         result = result + getResult(travel, lastM, lastP, lastG);
         return result;
-    }
-
-    /**
-     *
-     */
-    private int[] countChar(String str) {
-        int[] count = new int[3];
-        for (char c : str.toCharArray()) {
-            if (c == 'M') {
-                count[0]++;
-            }
-            if (c == 'P') {
-                count[1]++;
-            }
-            if (c == 'G') {
-                count[2]++;
-            }
-        }
-        return count;
     }
 
     private int getResult(int[] travel, int lastM, int lastP, int lastG) {
