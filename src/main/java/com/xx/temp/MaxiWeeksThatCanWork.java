@@ -2,7 +2,6 @@ package com.xx.temp;
 
 import com.xx.Answer;
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
@@ -65,7 +64,7 @@ public class MaxiWeeksThatCanWork implements Answer {
     public void answerOne() {
         //int[] miletones = new int[]{1, 2, 3};
         //int[] miletones = new int[]{5, 2, 1};
-        //int[] miletones = new int[]{5, 7, 5, 7, 9, 7};
+        int[] miletones = new int[]{5, 7, 5, 7, 9, 7};
         //int[] miletones = new int[]{5, 5, 21};
         System.out.println(numberOfWeeks(miletones));
     }
