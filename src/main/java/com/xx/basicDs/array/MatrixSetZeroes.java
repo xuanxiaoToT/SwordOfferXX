@@ -10,6 +10,7 @@ import java.util.HashSet;
  * @CreateDate 2023/8/10
  * <p>
  * 矩阵置零
+ * 零矩阵
  * LeetCode 73
  * <p>
  * 给定一个 m x n 的矩阵，如果一个元素为 0 ，则将其所在行和列的所有元素都设为 0 。
@@ -45,6 +46,11 @@ public class MatrixSetZeroes implements Answer {
     @Override
     public void answerOne() {
         int[][] matrix = initData();
+        setZeroes(matrix);
+        System.out.println(Arrays.deepToString(matrix));
+    }
+
+    public void setZeroes(int[][] matrix) {
         HashSet<Integer> setJ = new HashSet<>();
         HashSet<Integer> setI = new HashSet<>();
         for (int i = 0; i < matrix.length; i++) {
@@ -65,7 +71,6 @@ public class MatrixSetZeroes implements Answer {
                 matrix[k][j] = 0;
             }
         });
-        System.out.println(Arrays.deepToString(matrix));
     }
 
     /**

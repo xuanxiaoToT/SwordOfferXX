@@ -36,9 +36,8 @@ public class RotateStringLeft implements Answer {
         for (int i = k; i < chars.length; i++) {
             chars[i - k] = chars[i];
         }
-        for (int i = chars.length - k; i < chars.length; i++) {
-            chars[i] = temp[i - (chars.length - k)];
-        }
+        if (chars.length - (chars.length - k) >= 0)
+            System.arraycopy(temp, chars.length - k - (chars.length - k), chars, chars.length - k, chars.length - (chars.length - k));
         System.out.println(chars);
     }
 
