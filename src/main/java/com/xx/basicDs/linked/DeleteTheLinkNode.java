@@ -55,7 +55,12 @@ public class DeleteTheLinkNode implements Answer {
      * 无法知道前一个节点的值，所以用后一个节点的值来替代，并删除后一个节点。
      */
     public void deleteNode(ListNode node) {
-
+        if (node == null) {
+            return;
+        }
+        if (node.next == null) {
+            return;
+        }
         node.val = node.next.val;
         node.next = node.next.next;
     }
