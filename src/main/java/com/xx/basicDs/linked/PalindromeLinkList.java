@@ -28,6 +28,7 @@ public class PalindromeLinkList implements Answer {
      * 思路：
      * 1.将后半段(或前半段)连表逆置。然后比较。一共O(3n)也是O(n)
      * 2.存储在一个string里比较。空间复杂度o(N)
+     * 3.利用栈结构来做
      */
     @Override
     public void answerOne() {
