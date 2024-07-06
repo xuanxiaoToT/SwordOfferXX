@@ -9,7 +9,8 @@ import java.util.Stack;
  * @CreateDate 2022/6/23
  * <p>
  * 最小栈
- * LeetCode 155.
+ * 栈的最小值
+ * LeetCode 155. Easy
  * <p>
  * 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数，
  * 在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。
@@ -50,7 +51,8 @@ public class StackMin implements Answer {
      */
     @Override
     public void answerOne() {
-
+        mainStack = new Stack<>();
+        minStack = new Stack<>();
     }
 
     public void push(Integer value) {
