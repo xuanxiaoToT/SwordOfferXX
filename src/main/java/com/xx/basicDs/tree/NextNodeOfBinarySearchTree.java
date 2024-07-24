@@ -35,22 +35,7 @@ public class NextNodeOfBinarySearchTree implements Answer {
      * 否则从头遍历 如果该值大于目标，则下一个节点在右侧，否则在左侧。
      */
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
-        if (p.right != null) {
-            return p.right;
-        }
-        TreeNode point = root;
-        TreeNode result = null;
-        // 略
-        while (point != null) {
-            if (point.val < target) {
-                // 记录父节点。
-                result = point;
-                point = point.left;
-            } else {
-                point = point.right;
-            }
-        }
-        return result;
+        return null;
     }
 
     /**
