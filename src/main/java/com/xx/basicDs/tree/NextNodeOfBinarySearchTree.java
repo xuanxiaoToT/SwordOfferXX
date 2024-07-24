@@ -22,17 +22,24 @@ public class NextNodeOfBinarySearchTree implements Answer {
         new NextNodeOfBinarySearchTree().answerTwo();
     }
 
+
+    @Override
+    public void answerOne() {
+
+
+    }
+
     /**
      * 利用二叉搜索树的特性。
      * 首先判断该节点有无右节点，有的话直接前往右节点的最左节点即可。
      * 否则从头遍历 如果该值大于目标，则下一个节点在右侧，否则在左侧。
      */
-    @Override
-    public void answerOne() {
-        TreeNode treeNode = initData();
-        TreeNode point = treeNode;
+    public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
+        if (p.right != null) {
+            return p.right;
+        }
+        TreeNode point = root;
         TreeNode result = null;
-        int target = 17;
         // 略
         while (point != null) {
             if (point.val < target) {
@@ -43,21 +50,16 @@ public class NextNodeOfBinarySearchTree implements Answer {
                 point = point.right;
             }
         }
-        System.out.println(result.val);
-
+        return result;
     }
 
     /**
      * 2.用标志位法
      */
-    public void answerTwo() {
-        TreeNode treeNode = initData();
-
-        TreeNode cur = treeNode;
-        int target = 20;
+    public TreeNode inorderSuccessor2(TreeNode root, TreeNode p) {
+        TreeNode cur = root;
         boolean flag = false;
         Stack<TreeNode> stack = new Stack<>();
-
         while (!stack.isEmpty() || cur != null) {
             while (cur != null) {
                 stack.push(cur);
@@ -65,15 +67,16 @@ public class NextNodeOfBinarySearchTree implements Answer {
             }
             cur = stack.pop();
             if (flag) {
-                System.out.println(cur.val);
-                return;
+                return cur;
             }
-            if (cur.val == target) {
+            if (cur == p) {
                 flag = true;
             }
             cur = cur.right;
         }
+        return null;
     }
+
 
     /**
      * something
