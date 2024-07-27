@@ -38,7 +38,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
     private TreeNode result = null;
 
     public static void main(String[] args) {
-        new NearestCommonAncestorOfBinaryTree().answerTwo();
+        new NearestCommonAncestorOfBinaryTree().answerOne();
     }
 
     /**

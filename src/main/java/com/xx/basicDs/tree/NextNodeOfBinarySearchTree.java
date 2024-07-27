@@ -19,7 +19,7 @@ import java.util.Stack;
 public class NextNodeOfBinarySearchTree implements Answer {
 
     public static void main(String[] args) {
-        new NextNodeOfBinarySearchTree().answerTwo();
+        new NextNodeOfBinarySearchTree().answerOne();
     }
 
 
