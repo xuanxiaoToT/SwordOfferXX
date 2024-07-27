@@ -4,8 +4,6 @@ import com.xx.Answer;
 import com.xx.domain.TreeNode;
 import com.xx.util.DataFactory;
 
-import java.util.Stack;
-
 /**
  * @author XuanXiao
  * @CreateDate 2023/7/11
@@ -54,63 +52,16 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
         TreeNode root = initData();
         TreeNode targetOne = new TreeNode(13);
         TreeNode targetTwo = new TreeNode(7);
-        myTransverse(root, targetOne, targetTwo);
-        System.out.println(result.val);
+        System.out.println(lowestCommonAncestor(root, targetOne, targetTwo));
     }
 
-    /**
-     * fixme：没有考虑节点本身为祖先的情况
-     */
-    private void myTransverse(TreeNode node, TreeNode targetOne, TreeNode targetTwo) {
-        if (node != null && node.left != null && node.right != null) {
-            boolean left = whetherExit(node.left, targetOne, targetTwo);
-            boolean right = whetherExit(node.right, targetOne, targetTwo);
-            if (left && right) {
-                result = node;
-                return;
-            } else {
-                if (left) {
-                    myTransverse(node.left, targetOne, targetTwo);
-                }
-                if (right) {
-                    myTransverse(node.right, targetOne, targetTwo);
-                }
-            }
-        }
-    }
-
-
-    private boolean whetherExit(TreeNode node, TreeNode targetOne, TreeNode targetTwo) {
+    public TreeNode lowestCommonAncestor(TreeNode node, TreeNode targetOne, TreeNode targetTwo) {
         if (node == null) {
-            return false;
+            return null;
         }
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode cur = node;
-        while (cur != null || !stack.empty()) {
-            while (cur != null) {
-                if (cur.val == targetOne.val || cur.val == targetTwo.val) {
-                    return true;
-                }
-                stack.push(cur);
-                cur = cur.left;
-            }
-            cur = stack.pop();
-            cur = cur.right;
-        }
-        return false;
+        lca(node, targetOne, targetTwo);
+        return result;
     }
-
-    /**
-     * 官解，在遍历递归的同时即可对比。而不是单开一个递归去对比。
-     */
-    public void answerTwo() {
-        TreeNode root = initData();
-        TreeNode targetOne = new TreeNode(13);
-        TreeNode targetTwo = new TreeNode(7);
-        lca(root, targetOne, targetTwo);
-        System.out.println(result.val);
-    }
-
 
     /**
      *
