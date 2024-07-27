@@ -12,6 +12,7 @@ import java.util.List;
  * @CreateDate 2022/9/23
  * <p>
  * 向下的路径节点值之和
+ * 求和路径
  * LeetCode 437. 路径总和 III
  * <p>
  * 给定一棵二叉树和一个值sum，求二叉树中节点值之和等
@@ -56,6 +57,9 @@ public class SumOfDownwardPathBodeValue implements Answer {
     }
 
     private void diGuiTree(TreeNode node, List<Integer> list) {
+        if (node == null) {
+            return;
+        }
         if (node.left == null && node.right == null) {
             list.add(node.val);
             checkList(list);
@@ -70,6 +74,7 @@ public class SumOfDownwardPathBodeValue implements Answer {
         if (node.right != null) {
             diGuiTree(node.right, list);
         }
+        checkList(list);
         list.remove(list.size() - 1);
     }
 
