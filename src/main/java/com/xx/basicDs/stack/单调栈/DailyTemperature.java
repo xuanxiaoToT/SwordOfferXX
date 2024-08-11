@@ -3,7 +3,8 @@ package com.xx.basicDs.stack.单调栈;
 import com.xx.Answer;
 
 import java.util.Arrays;
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 /**
  * @author XuanXiao
@@ -24,7 +25,7 @@ import java.util.Stack;
 public class DailyTemperature implements Answer {
 
     public static void main(String[] args) {
-        new DailyTemperature().answerTwo();
+        new DailyTemperature().answerOne();
     }
 
     /**
@@ -45,19 +46,21 @@ public class DailyTemperature implements Answer {
      * 如果栈中已经没有比当前温度低的温度，则将当前温度在数组中的下
      * 标入栈。
      */
-    public void answerTwo() {
-        int[] testDate = initData();
-        int[] result = new int[testDate.length];
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < testDate.length; i++) {
-            while (!stack.isEmpty() && testDate[i] > testDate[stack.peek()]) {
-                int pre = stack.pop();
-                result[pre] = i - pre;
+    public int[] dailyTemperatures(int[] temperatures) {
+        int length = temperatures.length;
+        int[] ans = new int[length];
+        Deque<Integer> stack = new LinkedList<Integer>();
+        for (int i = 0; i < length; i++) {
+            int temperature = temperatures[i];
+            while (!stack.isEmpty() && temperature > temperatures[stack.peek()]) {
+                int prevIndex = stack.pop();
+                ans[prevIndex] = i - prevIndex;
             }
             stack.push(i);
         }
-        System.out.println(stack);
+        return ans;
     }
+
 
     /**
      * 方法三，每次跟左侧的比较。
