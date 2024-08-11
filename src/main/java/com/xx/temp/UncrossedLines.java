@@ -100,6 +100,7 @@ public class UncrossedLines implements Answer {
     }
 
     // 记住：只求明细，不求详情的。回溯法可以做的，都可以转DP
+    //定义dp[i][j]为nums1前i个数和nums2前j个数所能连接的最大线条数目
     public int maxUncrossedLines2(int[] nums1, int[] nums2) {
         int[][] dp = new int[nums1.length][nums2.length];
         for (int i = 0; i < nums1.length; i++) {
