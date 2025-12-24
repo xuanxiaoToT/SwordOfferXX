@@ -1,4 +1,4 @@
-package com.xx.temp;
+package com.xx.algorithm.greedy;
 
 import com.xx.Answer;
 
