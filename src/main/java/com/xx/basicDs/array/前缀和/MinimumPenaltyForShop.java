@@ -41,7 +41,7 @@ import com.xx.Answer;
  * 提示：
  * 1 <= customers.length <= 105
  * customers 只包含字符 'Y' 和 'N' 。
- *
+ * <p>
  * tag：前缀和  字符串
  */
 public class MinimumPenaltyForShop implements Answer {
@@ -83,6 +83,33 @@ public class MinimumPenaltyForShop implements Answer {
         }
 
         return minIndex;
+    }
+
+    /**
+     * 代价最小，也可以反向理解为收入最大
+     * 代价的算法是：关门前N，关门后Y
+     * 收入则等价于：关门前Y，关门后N。
+     * 由于只关心几点关门，不关心代价的数值，因此可以设收入的含义为：Y+1，N-1
+     *
+     */
+    public int bestClosingTime2(String customers) {
+        int resultIndex = 0;
+        int maxVal = 0;
+        int nowVal = 0;
+        for (int i = 0; i < customers.length(); i++) {
+            if (customers.charAt(i) == 'Y') {
+                nowVal++;
+            } else {
+                nowVal--;
+            }
+            if (nowVal > maxVal) {
+                maxVal = nowVal;
+                // 为何要加1，因为今天的收入已经计算其中了，要计算的是下一天关门的收益
+                // 如果0号关门，则根据贪心可知，第一天关门的情况必然是第一天为N，收益必然为-1，不会大于0
+                resultIndex = i + 1;
+            }
+        }
+        return resultIndex;
     }
 
     @Override
