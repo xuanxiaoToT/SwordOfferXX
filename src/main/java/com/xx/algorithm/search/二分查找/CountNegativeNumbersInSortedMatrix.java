@@ -43,7 +43,7 @@ public class CountNegativeNumbersInSortedMatrix implements Answer {
      * <p>
      * 撕数法：
      * 参考：https://leetcode.cn/problems/count-negative-numbers-in-a-sorted-matrix/solutions/3861108/tu-jie-zuo-fa-tong-240-ti-yi-tu-miao-don-vovs/?envType=daily-question&envId=2025-12-28
-     *
+     * <p>
      * 以右上角的为标准：
      * 大于等于0，说明这一行都不需要计算；
      * 小于0，说明这一列都是，也可以不用再计算了；
@@ -67,6 +67,9 @@ public class CountNegativeNumbersInSortedMatrix implements Answer {
         return result;
     }
 
+    /**
+     * 对每一行采用二分，列则还是遍历
+     */
     public int countNegatives(int[][] grid) {
         int result = 0;
         for (int[] ints : grid) {
