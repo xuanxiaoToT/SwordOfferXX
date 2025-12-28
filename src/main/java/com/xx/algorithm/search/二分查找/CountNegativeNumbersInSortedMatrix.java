@@ -35,7 +35,36 @@ public class CountNegativeNumbersInSortedMatrix implements Answer {
     public void answerOne() {
         // int[][] grid = new int[][]{{4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}};
         int[][] grid = new int[][]{{3, 2}, {1, 0}};
-        System.out.println(countNegatives(grid));
+        System.out.println(countNegatives2(grid));
+    }
+
+    /**
+     * 进阶：你可以设计一个时间复杂度为 O(n + m) 的解决方案吗？
+     * <p>
+     * 撕数法：
+     * 参考：https://leetcode.cn/problems/count-negative-numbers-in-a-sorted-matrix/solutions/3861108/tu-jie-zuo-fa-tong-240-ti-yi-tu-miao-don-vovs/?envType=daily-question&envId=2025-12-28
+     *
+     * 以右上角的为标准：
+     * 大于等于0，说明这一行都不需要计算；
+     * 小于0，说明这一列都是，也可以不用再计算了；
+     */
+    public int countNegatives2(int[][] grid) {
+        int result = 0;
+        // 从右上角开始判断
+        int hang = 0;
+        int lie = grid[0].length - 1;
+        while (hang < grid.length && lie >= 0) {
+            // 这一行都大于0，跳过
+            if (grid[hang][lie] >= 0) {
+                hang++;
+            }
+            // 这一列全部小于0
+            if (hang < grid.length && grid[hang][lie] < 0) {
+                result += grid.length - hang;
+                lie--;
+            }
+        }
+        return result;
     }
 
     public int countNegatives(int[][] grid) {
