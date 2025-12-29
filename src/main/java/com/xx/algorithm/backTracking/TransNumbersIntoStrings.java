@@ -7,6 +7,7 @@ import java.util.Arrays;
 /**
  * @author XuanXiao
  * @CreateDate 2022/7/11
+ * <p>
  * 把数字翻译成字符串
  * <p>
  * 给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 “a” ，1 翻译成 “b”，……，11 翻译成 “l”，……，25 翻译成 “z”。
@@ -81,7 +82,7 @@ public class TransNumbersIntoStrings implements Answer {
                 // 2、直接把 14 翻译为字母 ，结果就是 o
                 // 所以 dp[i] = 2
                 if (i == 1) {
-                    //有两种翻译方法
+                    // 有两种翻译方法
                     dp[i] = 2;
                     // 否则的话，说明遍历的字符串有三个数字了
                     // 并且最后两个数字可以翻译为字母

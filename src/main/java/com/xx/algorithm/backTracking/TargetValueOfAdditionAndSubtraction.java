@@ -7,6 +7,7 @@ import java.util.Arrays;
 /**
  * @author XuanXiao
  * @CreateDate 2022/12/14
+ * <p>
  * 加减的目标值
  * leetcode 494 目标和
  * <p>
@@ -97,7 +98,7 @@ public class TargetValueOfAdditionAndSubtraction implements Answer {
      */
     @Override
     public int[] initData() {
-        //return new int[]{2, 2, 2};
+        // return new int[]{2, 2, 2};
         return new int[]{1, 1, 1, 1, 1};
     }
 }
