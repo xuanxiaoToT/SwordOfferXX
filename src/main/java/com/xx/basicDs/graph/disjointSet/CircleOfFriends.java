@@ -24,6 +24,8 @@ import java.util.Arrays;
  * 例如，输入数组[[1，1，0]，[1，1，0]，[0，0，1]]，学生0和
  * 学生1是朋友，他们组成一个朋友圈；学生2一个人组成一个朋友圈。
  * 因此，该班级中朋友圈的数目是2。
+ * <p>
+ * Tag：并查集
  */
 public class CircleOfFriends implements Answer {
 
@@ -56,7 +58,7 @@ public class CircleOfFriends implements Answer {
         Arrays.parallelSetAll(fatherNode, i -> i);
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[0].length; j++) {
-                //i和j是朋友，则将其合并为一个图
+                // i和j是朋友，则将其合并为一个图
                 if (data[i][j] == 1) {
                     unionFather(fatherNode, i, j);
                 }
@@ -88,7 +90,7 @@ public class CircleOfFriends implements Answer {
         // 判断这两个的根节点
         int fatherRootI = findRoot(fatherNode, i);
         int fatherRootJ = findRoot(fatherNode, j);
-        //不同的根节点，说明此时不在一个图里，则将这两个点合并
+        // 不同的根节点，说明此时不在一个图里，则将这两个点合并
         // if (fatherRootI != fatherRootJ) {
         //     fatherNode[j] = i;
         // }

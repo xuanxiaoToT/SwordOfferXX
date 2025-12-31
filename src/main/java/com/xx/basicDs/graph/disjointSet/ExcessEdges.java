@@ -21,6 +21,8 @@ import java.util.*;
  * 4]，[2，5]]，则它对应的无向图如图15.25所示。输出为边[3，4]
  * <p>
  * 只要是有环，那么理论上这环的任意一条边都行。
+ * <p>
+ * Tag：并查集
  */
 public class ExcessEdges implements Answer {
 
@@ -88,7 +90,7 @@ public class ExcessEdges implements Answer {
                 }
             }
         }
-        //不在had里的便是成为一个圈的。此时倒叙遍历data即可获得。
+        // 不在had里的便是成为一个圈的。此时倒叙遍历data即可获得。
         for (int i = data.length - 1; i > 0; i--) {
             int[] edge = data[i];
             if (!had.contains(edge[0]) && !had.contains(edge[1])) {
