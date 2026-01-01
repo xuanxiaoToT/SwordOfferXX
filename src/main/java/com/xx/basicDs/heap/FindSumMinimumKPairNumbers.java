@@ -73,6 +73,7 @@ public class FindSumMinimumKPairNumbers implements Answer {
 
         int m = nums1.length;
         int n = nums2.length;
+
         // m n过大时，超出内存限制
         int[][] flag = new int[m][n];
         HashSet<int[]> set = new HashSet<>();
