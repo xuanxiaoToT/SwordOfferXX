@@ -21,6 +21,8 @@ import com.xx.Answer;
  * n 范围在[1, 1000000]之间
  * <p>
  * Tag: 动态规划
+ *
+ * {@link ClimbStairsProblem} 同：爬楼梯问题
  */
 public class ThreeStepsProblem implements Answer {
     public static void main(String[] args) {
