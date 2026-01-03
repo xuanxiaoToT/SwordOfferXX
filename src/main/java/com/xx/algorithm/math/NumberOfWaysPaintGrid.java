@@ -1,4 +1,4 @@
-package com.xx.temp;
+package com.xx.algorithm.math;
 
 import com.xx.Answer;
 
