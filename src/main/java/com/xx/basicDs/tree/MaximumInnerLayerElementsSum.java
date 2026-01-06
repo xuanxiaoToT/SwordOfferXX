@@ -34,7 +34,7 @@ import java.util.Queue;
  * 树中的节点数在 [1, 10^4]范围内
  * -10^5 <= Node.val <= 10^5
  * <p>
- * Tag: 树的遍历 广度优先遍历
+ * Tag: 树的遍历 广度优先遍历  层序遍历
  */
 public class MaximumInnerLayerElementsSum implements Answer {
     public static void main(String[] args) {
