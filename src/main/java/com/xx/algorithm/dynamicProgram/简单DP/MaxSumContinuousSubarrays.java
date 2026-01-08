@@ -37,17 +37,19 @@ public class MaxSumContinuousSubarrays implements Answer {
     // dp策略
     @Override
     public void answerOne() {
-        List<Integer> list = initData();
-        Integer[] maxRecord = new Integer[list.size()];
-        maxRecord[0] = list.get(0);
-        for (int i = 1; i < list.size(); i++) {
-            if (maxRecord[i - 1] + list.get(i) < list.get(i)) {
-                maxRecord[i] = list.get(i);
-            } else {
-                maxRecord[i] = maxRecord[i - 1] + list.get(i);
-            }
+        int[] nums = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(maxSubArray(nums));
+    }
+
+    public int maxSubArray(int[] nums) {
+        int[] maxRecord = new int[nums.length];
+        maxRecord[0] = nums[0];
+        int maxVal = maxRecord[0];
+        for (int i = 1; i < nums.length; i++) {
+            maxRecord[i] = Math.max(nums[i], maxRecord[i - 1] + nums[i]);
+            maxVal = Math.max(maxVal, maxRecord[i]);
         }
-        System.out.println(Arrays.toString(maxRecord));
+        return maxVal;
     }
 
     public void answerTwo() {
