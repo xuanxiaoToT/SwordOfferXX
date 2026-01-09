@@ -77,7 +77,6 @@ public class FindAllMissingNumInArray implements Answer {
      * 桶排序算法，交换
      */
     public List<Integer> findDisappearedNumbers(int[] nums) {
-
         List<Integer> res = new LinkedList<>();
         for (int i = 0; i < nums.length; i++) {
             while (nums[i] - 1 != i && nums[nums[i] - 1] != nums[i]) {

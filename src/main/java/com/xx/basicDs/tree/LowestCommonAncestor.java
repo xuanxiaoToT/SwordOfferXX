@@ -48,11 +48,8 @@ public class LowestCommonAncestor implements Answer {
 
     private TreeNode findLowestCommonAncestor(TreeNode root, TreeNode targetOne, TreeNode targetTwo) {
         int parentVal = root.val;
-
         int pVal = targetOne.val;
-
         int qVal = targetTwo.val;
-
         if (pVal > parentVal && qVal > parentVal) {
             return findLowestCommonAncestor(root.right, targetOne, targetTwo);
         } else if (pVal < parentVal && qVal < parentVal) {
