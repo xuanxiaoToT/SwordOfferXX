@@ -44,8 +44,9 @@ public class BinaryTreeToLinkedList implements Answer {
     public void answerOne() {
         TreeNode root = initData();
         //右左中,变为这种后续遍历.
-        if (root == null)
+        if (root == null){
             return;
+        }
         myDiGui(root);
     }
 
