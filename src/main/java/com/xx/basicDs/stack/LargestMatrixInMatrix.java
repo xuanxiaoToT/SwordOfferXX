@@ -7,10 +7,32 @@ import java.util.Arrays;
 /**
  * @author XuanXiao
  * @CreateDate 2022/9/13
+ * <p>
  * 矩阵中的最大矩形
+ * 最大矩形
+ * LeetCode 85 Hard
  * <p>
  * 请在一个由0、1组成的矩阵中找出最大的只包含1的矩形
  * 并输出它的面积。
+ * <p>
+ * 示例 1：
+ * 输入：matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+ * 输出：6
+ * 解释：最大矩形如上图所示。
+ * <p>
+ * 示例 2：
+ * 输入：matrix = [["0"]]
+ * 输出：0
+ * <p>
+ * 示例 3：
+ * 输入：matrix = [["1"]]
+ * 输出：1
+ * <p>
+ * 提示：
+ * rows == matrix.length
+ * cols == matrix[0].length
+ * 1 <= rows, cols <= 200
+ * matrix[i][j] 为 '0' 或 '1'
  */
 public class LargestMatrixInMatrix implements Answer {
     public static void main(String[] args) {
@@ -27,7 +49,6 @@ public class LargestMatrixInMatrix implements Answer {
     public void answerOne() {
 
     }
-
 
 
     /**
