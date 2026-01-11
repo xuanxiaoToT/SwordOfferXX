@@ -2,8 +2,6 @@ package com.xx.basicDs.stack;
 
 import com.xx.Answer;
 
-import java.util.Arrays;
-
 /**
  * @author XuanXiao
  * @CreateDate 2022/9/13
@@ -36,7 +34,7 @@ import java.util.Arrays;
  */
 public class LargestMatrixInMatrix implements Answer {
     public static void main(String[] args) {
-        new LargestMatrixInMatrix().answerTwo();
+        new LargestMatrixInMatrix().answerOne();
     }
 
     /**
@@ -47,28 +45,42 @@ public class LargestMatrixInMatrix implements Answer {
      */
     @Override
     public void answerOne() {
-
+        // char[][] matrix = new char[][]{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}};
+        char[][] matrix = new char[][]{{'1', '1', '0', '1'}, {'1', '1', '0', '1'}, {'1', '1', '1', '1'}};
+        System.out.println(maximalRectangle(matrix));
     }
 
-
     /**
-     * 按每一行为标准进行遍历，而对应的列则可以视为柱状图，则将问题转换为了<直方图最大矩形面积>的解法。
+     * 记录下每列的前缀长，然后按行遍历，最长的行，乘以最短的列，就是当前的最大。
      */
-    public void answerTwo() {
-        int[][] input = initData();
-        int[] temp = input[0].clone();
-        for (int i = 1; i < input.length; i++) {
-            for (int j = 0; j < input[0].length; j++) {
-                if (input[i][j] == 1) {
-                    temp[j] = temp[j] + 1;
-                } else {
-                    temp[j] = 0;
+    public int maximalRectangle(char[][] matrix) {
+        // 表示i，j点处的上面列的高度
+        int[][] dp = new int[matrix.length][matrix[0].length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] == '1') {
+                    dp[i][j] = i >= 1 ? dp[i - 1][j] + 1 : 1;
                 }
             }
-            System.out.println(Arrays.toString(temp));
-            //  传入此temp，给  HistogramMaxRectangularArea 的方法来计算。
         }
-
+        int result = 0;
+        // 这里可以优化成单调栈，参考{@link HistogramMaxRectangularArea} 直方图最大矩形面积
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                // 计算i,j为最左下角时，其最大矩形是多少
+                if (matrix[i][j] == '1') {
+                    int hangSum = 1;
+                    int min = dp[i][j];
+                    result = Math.max(result, hangSum * min);
+                    for (int k = j + 1; k < matrix[0].length && matrix[i][k] == '1'; k++) {
+                        hangSum++;
+                        min = Math.min(min, dp[i][k]);
+                        result = Math.max(result, hangSum * min);
+                    }
+                }
+            }
+        }
+        return result;
     }
 
     /**

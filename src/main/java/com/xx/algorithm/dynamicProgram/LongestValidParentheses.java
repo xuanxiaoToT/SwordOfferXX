@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2023/9/12
  * <p>
  * 最长有效括号
- * LeetCode 32 困难
+ * LeetCode 32 Hard
  * <p>
  * 给你一个只包含 '(' 和 ')' 的字符串，找出最长有效（格式正确且连续）括号子串的长度。
  * <p>

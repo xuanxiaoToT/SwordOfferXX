@@ -7,7 +7,7 @@ import com.xx.Answer;
  * @CreateDate 2023/8/5
  * <p>
  * 接雨水
- * LeetCode 42. 困难
+ * LeetCode 42. Hard
  * <p>
  * 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
  * https://raw.github.com/wiki/ReactiveX/RxJava/images/rx-operators/legend.png

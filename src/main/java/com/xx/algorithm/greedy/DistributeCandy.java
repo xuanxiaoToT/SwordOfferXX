@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @CreateDate 2023/9/26
  * <p>
  * 分发糖果
- * LeetCode 135. 困难
+ * LeetCode 135. Hard
  * <p>
  * n 个孩子站成一排。给你一个整数数组 ratings 表示每个孩子的评分。
  * 你需要按照以下要求，给这些孩子分发糖果：
