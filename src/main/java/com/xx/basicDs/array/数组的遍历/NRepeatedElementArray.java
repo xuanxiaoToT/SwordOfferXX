@@ -1,4 +1,4 @@
-package com.xx.temp;
+package com.xx.basicDs.array.数组的遍历;
 
 import com.xx.Answer;
 
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 /**
- * 在长度 2N 的数组中找出重复 N 次的元素
+ * 在长度2N的数组中找出重复N次的元素
  * LeetCode 961 Easy
  * <p>
  * 给你一个整数数组 nums ，该数组具有以下属性：

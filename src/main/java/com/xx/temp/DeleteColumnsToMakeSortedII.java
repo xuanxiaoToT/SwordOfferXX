@@ -5,7 +5,7 @@ import com.xx.Answer;
 import java.util.Arrays;
 
 /**
- * 删列造序 II
+ * 删列造序II
  * LeetCode 955. Medium
  * <p>
  * 给定由 n 个字符串组成的数组 strs，其中每个字符串长度相等。
