@@ -48,7 +48,6 @@ public class LongestContinuousSequence implements Answer {
             if (!numSet.contains(num - 1)) {
                 int currentNum = num;
                 int tempCount = 1;
-
                 while (numSet.contains(currentNum + 1)) {
                     currentNum += 1;
                     tempCount += 1;
