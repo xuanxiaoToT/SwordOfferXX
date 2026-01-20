@@ -2,7 +2,9 @@ package com.xx.basicDs.stack.单调栈;
 
 import com.xx.Answer;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Stack;
 
 /**
  * @author XuanXiao
@@ -43,8 +45,8 @@ public class FindTheMostCompetitiveSubsequence implements Answer {
      */
     @Override
     public void answerOne() {
-        //int[] nums = {2, 4, 3, 3, 5, 4, 9, 6};
-        //int k = 4;
+        // int[] nums = {2, 4, 3, 3, 5, 4, 9, 6};
+        // int k = 4;
         int[] nums = {3, 5, 2, 6};
         int k = 2;
         System.out.println(Arrays.toString(mostCompetitive(nums, k)));
@@ -53,11 +55,21 @@ public class FindTheMostCompetitiveSubsequence implements Answer {
     /**
      * 这种求某个区间内的最小值的
      * 利用单调栈！！
+     * <p>
+     * 根据题目对竞争力的定义，我们可以发现越小的数字放置的位置越前，对应的子序列越具竞争力。
+     * 我们可以用类似单调栈的思想尽量将更小的元素放到子序列的前面，令 nums 的大小为 n，遍历数组 nums，假设当前访问的下标为 i，对数字 nums[i] 执行以下操作：
+     * 记栈中的元素数目为 m，我们不断地进行操作直到不满足条件：
+     * 如果 m>0 且 m+n−i>k 且单调栈的栈顶元素大于 nums[i]，
+     * 那么说明栈顶元素可以被当前数字 nums[i] 替换，弹出单调栈的栈顶元素。
+     * 将 nums[i] 压入栈中。
+     * 最后返回栈中自下而上的前 k 个元素为结果。
+     *
      */
     public int[] mostCompetitive3(int[] nums, int k) {
         Stack<Integer> stack = new Stack<Integer>();
         int n = nums.length;
         for (int i = 0; i < n; i++) {
+            // 在弹出栈顶元素之前，必须保证栈中元素个数加上剩余元素个数是大于 k 的。
             while (!stack.isEmpty() && n - i + stack.size() > k && stack.peek() > nums[i]) {
                 stack.pop();
             }
