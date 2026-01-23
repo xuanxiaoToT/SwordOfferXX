@@ -49,11 +49,11 @@ import java.util.Set;
  */
 public class CountResiduePrefixes implements Answer {
     public static void main(String[] args) {
-        new CountResiduePrefixes().answerOne();
+        new CountResiduePrefixes().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String s = "abc";
         System.out.println(residuePrefixes(s));
     }

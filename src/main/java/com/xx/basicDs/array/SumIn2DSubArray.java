@@ -18,7 +18,7 @@ import com.xx.util.DataFactory;
 public class SumIn2DSubArray implements Answer {
 
     public static void main(String[] args) {
-        new SumIn2DSubArray().answerOne();
+        new SumIn2DSubArray().answer();
     }
 
     /**
@@ -26,7 +26,7 @@ public class SumIn2DSubArray implements Answer {
      * 故使用一个中间结果表，来存放每行的中间结果。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] nums = initData();
         int[][] sumMidList = new int[nums.length][nums[0].length];
         for (int i = 0; i < nums.length; i++) {

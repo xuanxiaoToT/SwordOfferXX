@@ -41,14 +41,14 @@ import java.util.Arrays;
 public class HouseTheft implements Answer {
 
     public static void main(String[] args) {
-        new HouseTheft().answerOne();
+        new HouseTheft().answer();
     }
 
     /**
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int[] dp = new int[data.length];
         dp[0] = data[0];

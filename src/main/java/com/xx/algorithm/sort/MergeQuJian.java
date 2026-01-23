@@ -22,14 +22,14 @@ import java.util.List;
  */
 public class MergeQuJian implements Answer {
     public static void main(String[] args) {
-        new MergeQuJian().answerOne();
+        new MergeQuJian().answer();
     }
 
     /**
      * 1.先对第一个值排序,然后两两比较
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] ints = initData();
         //排序
         Arrays.sort(ints, Comparator.comparingInt(o -> o[0]));

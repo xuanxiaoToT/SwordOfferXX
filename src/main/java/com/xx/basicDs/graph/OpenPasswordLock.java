@@ -38,7 +38,7 @@ import java.util.Queue;
 public class OpenPasswordLock implements Answer {
 
     public static void main(String[] args) {
-        new OpenPasswordLock().answerOne();
+        new OpenPasswordLock().answer();
     }
 
     /**
@@ -46,7 +46,7 @@ public class OpenPasswordLock implements Answer {
      * 可以改为双向广度优先搜索
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] lockData = initData();
         String target = "0202";
         Queue<String> queue = new LinkedList<>();

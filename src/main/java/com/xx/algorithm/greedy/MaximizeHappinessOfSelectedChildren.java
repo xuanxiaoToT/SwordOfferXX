@@ -46,11 +46,11 @@ import java.util.PriorityQueue;
  */
 public class MaximizeHappinessOfSelectedChildren implements Answer {
     public static void main(String[] args) {
-        new MaximizeHappinessOfSelectedChildren().answerOne();
+        new MaximizeHappinessOfSelectedChildren().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] happiness = new int[]{1, 2, 3};
         int k = 2;
 

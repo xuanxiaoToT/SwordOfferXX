@@ -38,11 +38,11 @@ import java.util.Random;
  */
 public class NRepeatedElementArray implements Answer {
     public static void main(String[] args) {
-        new NRepeatedElementArray().answerOne();
+        new NRepeatedElementArray().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{2, 1, 2, 5, 3, 2};
         System.out.println(repeatedNTimes(nums));
     }

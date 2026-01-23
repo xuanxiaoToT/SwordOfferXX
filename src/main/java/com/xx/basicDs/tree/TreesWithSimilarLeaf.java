@@ -36,11 +36,11 @@ import java.util.List;
 public class TreesWithSimilarLeaf implements Answer {
 
     public static void main(String[] args) {
-        new TreesWithSimilarLeaf().answerOne();
+        new TreesWithSimilarLeaf().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root1 = DataFactory.generateTreeNode();
         System.out.println(whetherSimilar(root1, root1));
     }

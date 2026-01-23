@@ -54,14 +54,14 @@ import java.util.*;
 public class HighAccessEmployees implements Answer {
 
     public static void main(String[] args) {
-        new HighAccessEmployees().answerOne();
+        new HighAccessEmployees().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         List<List<String>> list = initData();
         System.out.println(findHighAccessEmployees(list));
     }

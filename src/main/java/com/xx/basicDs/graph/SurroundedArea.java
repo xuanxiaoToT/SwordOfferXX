@@ -33,7 +33,7 @@ import java.util.Arrays;
 public class SurroundedArea implements Answer {
 
     public static void main(String[] args) {
-        new SurroundedArea().answerOne();
+        new SurroundedArea().answer();
     }
 
     /**
@@ -42,7 +42,7 @@ public class SurroundedArea implements Answer {
      * 如果符合，则进行置换为X
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         char[][] board = initData();
         int[][] flag = new int[board.length][board[0].length];
         int flagValue = 1;

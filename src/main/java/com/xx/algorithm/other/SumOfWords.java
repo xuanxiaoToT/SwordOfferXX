@@ -23,7 +23,7 @@ import com.xx.basicDs.tree.dictionaryTree.TrieDemo;
 public class SumOfWords implements Answer {
 
     public static void main(String[] args) {
-        new SumOfWords().answerOne();
+        new SumOfWords().answer();
     }
 
     /**
@@ -31,7 +31,7 @@ public class SumOfWords implements Answer {
      * 然后用前缀求sum时，只需要在其结束处遍历所有的子节点即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TrieDemo trie = new TrieDemo();
         // 以下略
     }

@@ -24,14 +24,14 @@ import com.xx.Answer;
  */
 public class WhetherPermutation implements Answer {
     public static void main(String[] args) {
-        new WhetherPermutation().answerOne();
+        new WhetherPermutation().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(CheckPermutation("abc", "bca"));
     }
 

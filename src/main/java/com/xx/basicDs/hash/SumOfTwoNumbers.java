@@ -30,14 +30,14 @@ import java.util.Map;
 public class SumOfTwoNumbers implements Answer {
 
     public static void main(String[] args) {
-        new SumOfTwoNumbers().answerOne();
+        new SumOfTwoNumbers().answer();
     }
 
     /**
      * 解1：hash法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] numbs = initData();
         int target = 9;
         Map<Integer, Integer> map = new HashMap<>();

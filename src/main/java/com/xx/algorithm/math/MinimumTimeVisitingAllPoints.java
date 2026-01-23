@@ -36,12 +36,12 @@ import com.xx.Answer;
  */
 public class MinimumTimeVisitingAllPoints implements Answer {
     public static void main(String[] args) {
-        new MinimumTimeVisitingAllPoints().answerOne();
+        new MinimumTimeVisitingAllPoints().answer();
 
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] points = new int[][]{{1, 1}, {3, 4}, {-1, 0}};
         // int[][] points = new int[][]{{1, 1}, {1, 5}};
         int[][] points = new int[][]{{3, 2}, {-2, 2}};

@@ -38,14 +38,14 @@ import java.util.List;
 public class Combination implements Answer {
 
     public static void main(String[] args) {
-        new Combination().answerOne();
+        new Combination().answer();
     }
 
     /**
      * 解1：经典回溯法+剪枝
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = 4;
         int k = 2;
         System.out.println(combine(n, k));

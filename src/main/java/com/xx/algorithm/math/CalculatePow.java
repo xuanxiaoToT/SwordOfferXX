@@ -33,14 +33,14 @@ import com.xx.Answer;
  */
 public class CalculatePow implements Answer {
     public static void main(String[] args) {
-        new CalculatePow().answerOne();
+        new CalculatePow().answer();
     }
 
     /**
      * 解1：直接用
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(myPow2(1.0, -2147483648));
     }
 

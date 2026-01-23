@@ -9,11 +9,11 @@ import com.xx.Answer;
 public class SumOfTheMinimumOfSubarray implements Answer {
 
     public static void main(String[] args) {
-        new SumOfTheMinimumOfSubarray().answerOne();
+        new SumOfTheMinimumOfSubarray().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] arr = new int[]{11, 81, 94, 43, 3};
         System.out.println(sumSubarrayMinsMy(arr));
     }

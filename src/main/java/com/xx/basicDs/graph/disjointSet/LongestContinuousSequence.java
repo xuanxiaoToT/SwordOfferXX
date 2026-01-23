@@ -35,7 +35,7 @@ public class LongestContinuousSequence implements Answer {
      * 思路参考：https://leetcode.cn/problems/longest-consecutive-sequence/solutions/276931/zui-chang-lian-xu-xu-lie-by-leetcode-solution/
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         Set<Integer> numSet = new HashSet<>();
         for (int num : nums) {

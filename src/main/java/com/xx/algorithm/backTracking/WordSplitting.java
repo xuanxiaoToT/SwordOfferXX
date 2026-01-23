@@ -37,7 +37,7 @@ import java.util.Set;
 public class WordSplitting implements Answer {
 
     public static void main(String[] args) {
-        new WordSplitting().answerOne();
+        new WordSplitting().answer();
     }
 
     /**
@@ -47,7 +47,7 @@ public class WordSplitting implements Answer {
      * 思路是一样的
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Set<String> dic = initData();
         String inputData = "applepenapple";
         //String inputData = "catsandog";

@@ -42,7 +42,7 @@ import java.util.Arrays;
  */
 public class EditDistance implements Answer {
     public static void main(String[] args) {
-        new EditDistance().answerOne();
+        new EditDistance().answer();
     }
 
     /**
@@ -53,7 +53,7 @@ public class EditDistance implements Answer {
      * --前面两个表示对最后一个字符进行删除和新增的操作，最后一个是对最后一位进行替换操作时可能需要的距离数。当两字符相同时，则不需要进行+1.
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] data = initData();
         String word1 = data[0];
         String word2 = data[1];

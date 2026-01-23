@@ -35,7 +35,7 @@ public class SumGreaterOrEqualOfKShortestSubarray implements Answer {
      * 以一个数为起点，向右遍历。
      * 缺点：重复计算了很多
      */
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int n = 7;
         int min = Integer.MAX_VALUE;

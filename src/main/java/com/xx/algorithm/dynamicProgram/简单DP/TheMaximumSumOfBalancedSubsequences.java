@@ -49,14 +49,14 @@ import java.util.Arrays;
 public class TheMaximumSumOfBalancedSubsequences implements Answer {
 
     public static void main(String[] args) {
-        new TheMaximumSumOfBalancedSubsequences().answerOne();
+        new TheMaximumSumOfBalancedSubsequences().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
     }
 

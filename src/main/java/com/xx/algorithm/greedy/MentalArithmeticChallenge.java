@@ -34,14 +34,14 @@ import java.util.Arrays;
  */
 public class MentalArithmeticChallenge implements Answer {
     public static void main(String[] args) {
-        new MentalArithmeticChallenge().answerOne();
+        new MentalArithmeticChallenge().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] cards = {1, 2, 8, 9};
         int cnt = 3;
         System.out.println(maxmiumScore(cards, cnt));

@@ -37,14 +37,14 @@ import com.xx.Answer;
  */
 public class DifferentPathsII implements Answer {
     public static void main(String[] args) {
-        new DifferentPathsII().answerOne();
+        new DifferentPathsII().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] obstacleGrid = new int[][]{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}};
         System.out.println(uniquePathsWithObstacles(obstacleGrid));
     }

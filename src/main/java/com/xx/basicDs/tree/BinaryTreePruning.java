@@ -46,7 +46,7 @@ public class BinaryTreePruning implements Answer {
      * 自己第一遍的时候想的
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         TreeNode newTree = null;
         checkTree(treeNode, newTree, "left");

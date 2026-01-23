@@ -41,14 +41,14 @@ import java.util.Set;
 public class ProductOfMaximumWordLength implements Answer {
 
     public static void main(String[] args) {
-        new ProductOfMaximumWordLength().answerOne();
+        new ProductOfMaximumWordLength().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] words = initData();
         System.out.println(maxProduct(words));
     }

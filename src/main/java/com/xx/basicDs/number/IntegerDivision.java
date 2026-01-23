@@ -16,11 +16,11 @@ import com.xx.Answer;
 public class IntegerDivision implements Answer {
 
     public static void main(String[] args) {
-        new IntegerDivision().answerOne();
+        new IntegerDivision().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // 用减法替代，但是如果数很小，需要除的很大时，则有问题
         // 负数未考虑到
         // 改进：使用2 4 6 8倍数

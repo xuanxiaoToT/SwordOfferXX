@@ -43,7 +43,7 @@ import com.xx.Answer;
 public class ElementsAndTheSmallestMountainTripleI implements Answer {
 
     public static void main(String[] args) {
-        new ElementsAndTheSmallestMountainTripleI().answerOne();
+        new ElementsAndTheSmallestMountainTripleI().answer();
     }
 
     /**
@@ -52,7 +52,7 @@ public class ElementsAndTheSmallestMountainTripleI implements Answer {
      * 那么，最右求最小值有很多重复遍历，是否可以保存下来？
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         System.out.println(minimumSum(nums));
     }

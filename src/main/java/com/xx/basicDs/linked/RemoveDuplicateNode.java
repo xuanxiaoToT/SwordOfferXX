@@ -34,14 +34,14 @@ import java.util.Set;
 public class RemoveDuplicateNode implements Answer {
 
     public static void main(String[] args) {
-        new RemoveDuplicateNode().answerOne();
+        new RemoveDuplicateNode().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode listNode = DataFactory.generateLinkedList();
         System.out.println(removeDuplicateNodes(listNode));
     }

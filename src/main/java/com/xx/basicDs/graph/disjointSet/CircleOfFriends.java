@@ -37,7 +37,7 @@ public class CircleOfFriends implements Answer {
      * 解：类似求小岛的数目，直接利用广度或深度优先遍历来做即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 解法略
     }
 

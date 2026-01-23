@@ -31,7 +31,7 @@ import com.xx.basicDs.string.NumberOfPalindromeSubstrings;
 public class LongestPalindromicSubstring implements Answer {
 
     public static void main(String[] args) {
-        new LongestPalindromicSubstring().answerOne();
+        new LongestPalindromicSubstring().answer();
     }
 
     /**
@@ -48,7 +48,7 @@ public class LongestPalindromicSubstring implements Answer {
      * 也就是说，只有 s[i+1:j−1]是回文串，并且 sss 的第 i 和 j 个字母相同时，s[i:j] 才会是回文串。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         System.out.println(longestPalindrome(data));
     }

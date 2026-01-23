@@ -39,11 +39,11 @@ import com.xx.Answer;
 public class LongestBalancedString implements Answer {
 
     public static void main(String[] args) {
-        new LongestBalancedString().answerOne();
+        new LongestBalancedString().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String s = initData();
         System.out.println(findTheLongestBalancedSubstring2(s));
     }

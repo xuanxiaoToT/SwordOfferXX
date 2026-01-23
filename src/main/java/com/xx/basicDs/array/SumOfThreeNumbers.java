@@ -44,7 +44,7 @@ public class SumOfThreeNumbers implements Answer {
      * 题意理解错误：三元组不能重复，而非每个位置只能在三元组使用一次~！！！！
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         HashMap<Integer, HashSet<Integer>> map = new HashMap<>();
         for (int i = 0; i < data.length; i++) {

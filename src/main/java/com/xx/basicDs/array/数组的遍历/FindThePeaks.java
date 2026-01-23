@@ -40,14 +40,14 @@ import java.util.List;
  */
 public class FindThePeaks implements Answer {
     public static void main(String[] args) {
-        new FindThePeaks().answerOne();
+        new FindThePeaks().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] mountain = {1, 4, 3, 8, 5};
         System.out.println(findPeaks(mountain));
     }

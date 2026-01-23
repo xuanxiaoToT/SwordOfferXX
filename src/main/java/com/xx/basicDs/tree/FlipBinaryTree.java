@@ -32,14 +32,14 @@ import com.xx.util.DataFactory;
 public class FlipBinaryTree implements Answer {
 
     public static void main(String[] args) {
-        new FlipBinaryTree().answerOne();
+        new FlipBinaryTree().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         TreeNode newRoot = invertTree(treeNode);
         System.out.println(newRoot);

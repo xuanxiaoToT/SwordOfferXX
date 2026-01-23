@@ -65,11 +65,11 @@ public class RomanNumeralToInteger implements Answer {
 
 
     public static void main(String[] args) {
-        new RomanNumeralToInteger().answerOne();
+        new RomanNumeralToInteger().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         HashMap<String, Integer> map = new HashMap<>();
         map.put("I", 1);
         map.put("V", 5);

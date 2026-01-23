@@ -38,14 +38,14 @@ import java.util.Queue;
 public class RightSideViewOfBinaryTree implements Answer {
 
     public static void main(String[] args) {
-        new RightSideViewOfBinaryTree().answerOne();
+        new RightSideViewOfBinaryTree().answer();
     }
 
     /**
      * 其实就是每层的最右侧节点
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         Queue<TreeNode> outQueue = new LinkedList<>();
         List<Integer> resultList = new ArrayList<>();

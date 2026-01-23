@@ -38,7 +38,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
     private TreeNode result = null;
 
     public static void main(String[] args) {
-        new NearestCommonAncestorOfBinaryTree().answerOne();
+        new NearestCommonAncestorOfBinaryTree().answer();
     }
 
     /**
@@ -48,7 +48,7 @@ public class NearestCommonAncestorOfBinaryTree implements Answer {
      * 公共祖先节点可以为节点本身!!!。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         TreeNode targetOne = new TreeNode(13);
         TreeNode targetTwo = new TreeNode(7);

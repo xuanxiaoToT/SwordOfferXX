@@ -47,11 +47,11 @@ import java.util.Arrays;
  */
 public class FindMissingObservations implements Answer {
     public static void main(String[] args) {
-        new FindMissingObservations().answerOne();
+        new FindMissingObservations().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] rolls = new int[]{3, 2, 4, 3};
         // int mean = 4;
         // int n = 2;

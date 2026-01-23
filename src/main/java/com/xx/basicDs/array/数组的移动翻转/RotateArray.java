@@ -40,7 +40,7 @@ public class RotateArray implements Answer {
      * 空间复杂度 O(K)
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 3;
         int[] nums = initData();
         // 做题时注意边界条件

@@ -15,7 +15,7 @@ import com.xx.Answer;
 public class TheSmallestSumKNumberPair implements Answer {
 
     public static void main(String[] args) {
-        new TheSmallestSumKNumberPair().answerOne();
+        new TheSmallestSumKNumberPair().answer();
     }
 
     /**
@@ -23,7 +23,7 @@ public class TheSmallestSumKNumberPair implements Answer {
      * 没有用到递增的特性
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

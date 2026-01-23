@@ -35,14 +35,14 @@ import com.xx.Answer;
 public class MinimumDeletionsForBeautifyingArrays implements Answer {
 
     public static void main(String[] args) {
-        new MinimumDeletionsForBeautifyingArrays().answerOne();
+        new MinimumDeletionsForBeautifyingArrays().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         System.out.println(minDeletion(nums));
     }

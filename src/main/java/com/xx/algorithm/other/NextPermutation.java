@@ -40,7 +40,7 @@ import java.util.Arrays;
 public class NextPermutation implements Answer {
 
     public static void main(String[] args) {
-        new NextPermutation().answerOne();
+        new NextPermutation().answer();
     }
 
     /**
@@ -57,7 +57,7 @@ public class NextPermutation implements Answer {
      * 以上就是求 “下一个排列” 的分析过程。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         //寻找最后两个逆序的
         int start = -1;

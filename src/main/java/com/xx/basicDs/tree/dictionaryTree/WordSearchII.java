@@ -41,11 +41,11 @@ import java.util.stream.Collectors;
 public class WordSearchII implements Answer {
 
     public static void main(String[] args) {
-        new WordSearchII().answerOne();
+        new WordSearchII().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         char[][] board = new char[][]{{'o', 'a', 'a', 'n'}, {'e', 't', 'a', 'e'},
                 {'i', 'h', 'k', 'r'}, {'i', 'f', 'l', 'v'}};
         String[] words = new String[]{"oath", "pea", "eat", "rain"};

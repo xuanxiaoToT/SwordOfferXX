@@ -29,7 +29,7 @@ public class RandomListCopy implements Answer {
      * 此方法的缺点是：如果value重复，就需要采用其他的key，比如自定义hash方法等。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         RandomList ori = initData();
         RandomList randomList = copyRandomList(ori);
         System.out.println("done");

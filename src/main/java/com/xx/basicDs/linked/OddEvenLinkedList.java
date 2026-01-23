@@ -33,11 +33,11 @@ import com.xx.domain.ListNode;
 public class OddEvenLinkedList implements Answer {
 
     public static void main(String[] args) {
-        new OddEvenLinkedList().answerOne();
+        new OddEvenLinkedList().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         //ListNode listNode = DataFactory.generateLinkedList();
         ListNode listNode = new ListNode(5, null);
         System.out.println(oddEvenList(listNode));

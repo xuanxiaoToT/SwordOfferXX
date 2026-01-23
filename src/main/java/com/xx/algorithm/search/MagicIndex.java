@@ -26,11 +26,11 @@ import com.xx.Answer;
  */
 public class MagicIndex implements Answer {
     public static void main(String[] args) {
-        new MagicIndex().answerOne();
+        new MagicIndex().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] nums = new int[]{0, 2, 3, 4, 5};
         // int[] nums = new int[]{1, 1, 1, 1};
         int[] nums = new int[]{0, 0, 2};

@@ -20,7 +20,7 @@ import java.util.Arrays;
 public class MinimumPalindromeSegmentation implements Answer {
 
     public static void main(String[] args) {
-        new MinimumPalindromeSegmentation().answerOne();
+        new MinimumPalindromeSegmentation().answer();
     }
 
     /**
@@ -28,7 +28,7 @@ public class MinimumPalindromeSegmentation implements Answer {
      * f(i)表示s[0..i]的字符串，最少几个回文。如果s[i..j]是一个回文，那么f(j)=f(i-1)+1
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         int[] dp = new int[data.length()];
         Arrays.parallelSetAll(dp, i -> i + 1);

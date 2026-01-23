@@ -23,7 +23,7 @@ import com.xx.Answer;
 public class DifferentBinarySearchTrees implements Answer {
 
     public static void main(String[] args) {
-        new DifferentBinarySearchTrees().answerOne();
+        new DifferentBinarySearchTrees().answer();
     }
 
     /**
@@ -38,7 +38,7 @@ public class DifferentBinarySearchTrees implements Answer {
      * PS：公式很难想到，数学不太行~！
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer n = initData();
         int[] dp = new int[n + 1];
         dp[0] = 1;

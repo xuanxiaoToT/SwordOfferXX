@@ -38,11 +38,11 @@ import java.util.LinkedHashSet;
 public class HappyNumber implements Answer {
 
     public static void main(String[] args) {
-        new HappyNumber().answerOne();
+        new HappyNumber().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer num = initData();
         System.out.println(isHappy(num));
         System.out.println(isHappy2(num));

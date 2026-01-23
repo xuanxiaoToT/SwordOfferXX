@@ -28,14 +28,14 @@ import java.util.List;
 public class YangHuiTriangle implements Answer {
 
     public static void main(String[] args) {
-        new YangHuiTriangle().answerOne();
+        new YangHuiTriangle().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer count = initData();
         System.out.println(generate(count));
     }

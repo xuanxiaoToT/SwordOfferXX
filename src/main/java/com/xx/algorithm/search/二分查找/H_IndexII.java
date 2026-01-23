@@ -36,14 +36,14 @@ import com.xx.Answer;
 public class H_IndexII implements Answer {
 
     public static void main(String[] args) {
-        new H_IndexII().answerOne();
+        new H_IndexII().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         System.out.println(hIndex(data));
     }

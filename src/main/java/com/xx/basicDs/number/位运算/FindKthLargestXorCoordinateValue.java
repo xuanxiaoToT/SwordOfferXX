@@ -48,14 +48,14 @@ import java.util.PriorityQueue;
 public class FindKthLargestXorCoordinateValue implements Answer {
 
     public static void main(String[] args) {
-        new FindKthLargestXorCoordinateValue().answerOne();
+        new FindKthLargestXorCoordinateValue().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] matrix = {{5, 2}, {1, 6}};
         int k = 4;
         System.out.println(kthLargestValue(matrix, k));

@@ -24,14 +24,14 @@ import com.xx.Answer;
 public class RotateImage implements Answer {
 
     public static void main(String[] args) {
-        new RotateImage().answerOne();
+        new RotateImage().answer();
     }
 
     /**
      * 解1：先转置矩阵,然后再反转每一行.
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] matrix = initData();
 
         int n = matrix.length;

@@ -35,7 +35,7 @@ import com.xx.Answer;
 public class ZeroAfterFactorial implements Answer {
 
     public static void main(String[] args) {
-        new ZeroAfterFactorial().answerOne();
+        new ZeroAfterFactorial().answer();
     }
 
     /**
@@ -51,7 +51,7 @@ public class ZeroAfterFactorial implements Answer {
      * 那么只要求乘到n时一共经过几次5的倍数就好了，其实就是在求n÷5向下取整，所以直接n /= 5就好了
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(trailingZeroes(10));
     }
 

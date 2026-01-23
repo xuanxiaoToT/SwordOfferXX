@@ -26,14 +26,14 @@ public class AlienLanguageWhetherOrdered implements Answer {
     private String alphabet = "zyxwvutsrqponmlkjihgfedcba";
 
     public static void main(String[] args) {
-        new AlienLanguageWhetherOrdered().answerOne();
+        new AlienLanguageWhetherOrdered().answer();
     }
 
     /**
      * 就正常按照字母序列验证即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] strings = initData();
         Map<Character, Integer> dict = generateDict(alphabet);
         for (int i = 0; i < strings.length; i++) {

@@ -45,14 +45,14 @@ import java.util.Arrays;
 public class SumOfCombinationIV implements Answer {
 
     public static void main(String[] args) {
-        new SumOfCombinationIV().answerOne();
+        new SumOfCombinationIV().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {1, 2, 3};
         int target = 35;
         System.out.println(combinationSum4Dp(nums, target));

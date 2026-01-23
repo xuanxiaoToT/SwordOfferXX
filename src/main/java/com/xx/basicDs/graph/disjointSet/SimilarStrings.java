@@ -28,14 +28,14 @@ import java.util.Arrays;
 public class SimilarStrings implements Answer {
 
     public static void main(String[] args) {
-        new SimilarStrings().answerOne();
+        new SimilarStrings().answer();
     }
 
     /**
      * 解:思路与{@link CircleOfFriends}类似
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] data = initData();
         int[] father = new int[data.length];
         Arrays.parallelSetAll(father, i -> i);

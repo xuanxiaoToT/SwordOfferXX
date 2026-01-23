@@ -32,14 +32,14 @@ import com.xx.Answer;
 public class IntegerInversion implements Answer {
 
     public static void main(String[] args) {
-        new IntegerInversion().answerOne();
+        new IntegerInversion().answer();
     }
 
     /**
      * 解1:解题的关键是关于溢出的判断；
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int temp;
         int newx = 0;
         int x = initData();

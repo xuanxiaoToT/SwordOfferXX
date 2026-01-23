@@ -31,7 +31,7 @@ public class SumOfGreaterOrEqualNode implements Answer {
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         diGuiTree(treeNode, 0);
         System.out.println(treeNode);

@@ -42,11 +42,11 @@ import java.util.Arrays;
 public class ArrayRotateFunction implements Answer {
 
     public static void main(String[] args) {
-        new ArrayRotateFunction().answerOne();
+        new ArrayRotateFunction().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{-8, 5, -10, -5, -7};
         System.out.println(maxRotateFunction(nums));
     }

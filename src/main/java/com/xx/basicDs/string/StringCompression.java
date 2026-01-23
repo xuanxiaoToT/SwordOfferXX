@@ -41,11 +41,11 @@ import com.xx.Answer;
  */
 public class StringCompression implements Answer {
     public static void main(String[] args) {
-        new StringCompression().answerOne();
+        new StringCompression().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         char[] chars = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
         System.out.println(returnLengthStringCompression(chars));
     }

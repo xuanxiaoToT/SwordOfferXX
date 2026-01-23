@@ -48,14 +48,14 @@ import java.util.*;
 public class DivisionEvaluation implements Answer {
 
     public static void main(String[] args) {
-        new DivisionEvaluation().answerOne();
+        new DivisionEvaluation().answer();
     }
 
     /**
      * 解1：采用深度优先遍历
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         List<List<String>> equations = Arrays.asList(Arrays.asList("a", "b"), Arrays.asList("b", "c"));
         double[] values = {2.0, 3.0};
         List<List<String>> queries = Arrays.asList(Arrays.asList("a", "c"), Arrays.asList("b", "a"), Arrays.asList("a", "e"),

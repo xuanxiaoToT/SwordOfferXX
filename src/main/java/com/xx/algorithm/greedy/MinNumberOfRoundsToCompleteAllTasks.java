@@ -39,11 +39,11 @@ import java.util.Map;
 public class MinNumberOfRoundsToCompleteAllTasks implements Answer {
 
     public static void main(String[] args) {
-        new MinNumberOfRoundsToCompleteAllTasks().answerOne();
+        new MinNumberOfRoundsToCompleteAllTasks().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] tasks = new int[]{2, 2, 3, 3, 2, 4, 4, 4, 4, 4};
         int[] tasks = new int[]{2, 3, 3};
         System.out.println(minimumRounds(tasks));

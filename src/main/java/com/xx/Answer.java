@@ -9,7 +9,7 @@ public interface Answer {
     /**
      * 解1：
      */
-    public void answerOne();
+    public void answer();
 
     /**
      * 输出数据

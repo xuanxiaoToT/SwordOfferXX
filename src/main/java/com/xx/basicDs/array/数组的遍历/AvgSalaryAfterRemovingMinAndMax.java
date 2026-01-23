@@ -44,14 +44,14 @@ import com.xx.Answer;
 public class AvgSalaryAfterRemovingMinAndMax implements Answer {
 
     public static void main(String[] args) {
-        new AvgSalaryAfterRemovingMinAndMax().answerOne();
+        new AvgSalaryAfterRemovingMinAndMax().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

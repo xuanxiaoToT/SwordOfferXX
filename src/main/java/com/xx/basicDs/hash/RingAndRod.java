@@ -52,14 +52,14 @@ import java.util.Map;
 public class RingAndRod implements Answer {
 
     public static void main(String[] args) {
-        new RingAndRod().answerOne();
+        new RingAndRod().answer();
     }
 
     /**
      * 解1：用map简单做即可
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String rings = initData();
         System.out.println(countPoints(rings));
     }

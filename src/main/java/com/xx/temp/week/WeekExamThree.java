@@ -5,11 +5,11 @@ import com.xx.Answer;
 
 public class WeekExamThree implements Answer {
     public static void main(String[] args) {
-        new WeekExamThree().answerOne();
+        new WeekExamThree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

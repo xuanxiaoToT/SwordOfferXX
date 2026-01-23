@@ -16,7 +16,7 @@ import com.xx.Answer;
 public class NumberThatAppearsOnceInSortArray implements Answer {
 
     public static void main(String[] args) {
-        new NumberThatAppearsOnceInSortArray().answerOne();
+        new NumberThatAppearsOnceInSortArray().answer();
     }
 
     /**
@@ -24,7 +24,7 @@ public class NumberThatAppearsOnceInSortArray implements Answer {
      * 2.利用二分
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int maxRight = nums.length - 1;
         int left = 0;

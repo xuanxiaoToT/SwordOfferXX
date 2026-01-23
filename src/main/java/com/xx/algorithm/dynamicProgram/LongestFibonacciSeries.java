@@ -24,14 +24,14 @@ import java.util.Map;
  */
 public class LongestFibonacciSeries implements Answer {
     public static void main(String[] args) {
-        new LongestFibonacciSeries().answerOne();
+        new LongestFibonacciSeries().answer();
     }
 
     /**
      * dp得用二维数组dp[I][J] = 表示data[J]结尾并且上一个数是data[I]的序列的最长值
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int[][] dp = new int[data.length][data.length];
         Map<Integer, Integer> tempMap = new HashMap<>();

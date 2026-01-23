@@ -34,7 +34,7 @@ import com.xx.Answer;
 public class MaximalSquare implements Answer {
 
     public static void main(String[] args) {
-        new MaximalSquare().answerOne();
+        new MaximalSquare().answer();
     }
 
     /**
@@ -42,7 +42,7 @@ public class MaximalSquare implements Answer {
      * 解法略
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 略
     }
 

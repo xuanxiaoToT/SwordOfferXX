@@ -47,14 +47,14 @@ import java.util.*;
  */
 public class IdentifyTheWinnersOfArrayGames implements Answer {
     public static void main(String[] args) {
-        new IdentifyTheWinnersOfArrayGames().answerOne();
+        new IdentifyTheWinnersOfArrayGames().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] arr = new int[]{2, 1, 3, 5, 4, 6, 7};
         //int k = 2;
         int[] arr = new int[]{1, 9, 8, 2, 3, 7, 6, 4, 5};

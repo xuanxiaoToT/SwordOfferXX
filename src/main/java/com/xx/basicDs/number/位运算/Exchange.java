@@ -23,11 +23,11 @@ import com.xx.Answer;
  */
 public class Exchange implements Answer {
     public static void main(String[] args) {
-        new Exchange().answerOne();
+        new Exchange().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int num = 3;
         // int num = 2;
         // int num = 1;

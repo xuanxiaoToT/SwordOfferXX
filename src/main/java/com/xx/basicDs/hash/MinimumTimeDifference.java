@@ -15,7 +15,7 @@ import com.xx.Answer;
  */
 public class MinimumTimeDifference implements Answer {
     public static void main(String[] args) {
-        new MinimumTimeDifference().answerOne();
+        new MinimumTimeDifference().answer();
     }
 
     /**
@@ -23,7 +23,7 @@ public class MinimumTimeDifference implements Answer {
      * 2.转换到一个数组上，全天共1440分钟，则创建一个1440的数组，然后遍历此数组，找出离得最近的即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] strings = initData();
         String[] dict = new String[1441];
         for (String time : strings) {

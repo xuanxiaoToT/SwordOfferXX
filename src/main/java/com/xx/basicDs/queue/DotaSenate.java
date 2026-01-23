@@ -52,14 +52,14 @@ import java.util.Queue;
 public class DotaSenate implements Answer {
 
     public static void main(String[] args) {
-        new DotaSenate().answerOne();
+        new DotaSenate().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String senate = "RDD";
         System.out.println(predictPartyVictory(senate));
     }

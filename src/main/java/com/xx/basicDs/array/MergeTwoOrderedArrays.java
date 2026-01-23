@@ -50,14 +50,14 @@ import java.util.Arrays;
 public class MergeTwoOrderedArrays implements Answer {
 
     public static void main(String[] args) {
-        new MergeTwoOrderedArrays().answerOne();
+        new MergeTwoOrderedArrays().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         int[] nums1 = data[0];
         int[] nums2 = data[1];

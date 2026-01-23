@@ -37,7 +37,7 @@ public class BestTimeToBuyAndSellStocks implements Answer {
      * 解1：DP法 DP(i,0)表示持有股票的状态,DP(i,1)表示未持有股票的状态。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] price = initData();
         int[][] dp = new int[price.length][2];
 

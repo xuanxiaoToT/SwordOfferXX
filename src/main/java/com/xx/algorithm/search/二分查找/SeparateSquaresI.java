@@ -38,11 +38,11 @@ import com.xx.Answer;
  */
 public class SeparateSquaresI implements Answer {
     public static void main(String[] args) {
-        new SeparateSquaresI().answerOne();
+        new SeparateSquaresI().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] squares = new int[][]{{0, 0, 1}, {2, 2, 1}};
         int[][] squares = new int[][]{{0, 0, 2}, {1, 1, 1}};
         System.out.println(separateSquares(squares));

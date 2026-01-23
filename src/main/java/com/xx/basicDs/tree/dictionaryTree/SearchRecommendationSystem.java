@@ -53,11 +53,11 @@ import java.util.List;
  */
 public class SearchRecommendationSystem implements Answer {
     public static void main(String[] args) {
-        new SearchRecommendationSystem().answerOne();
+        new SearchRecommendationSystem().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] products = {"mobile", "mouse", "moneypot", "monitor", "mousepad"};
         String searchWord = "mouse";
         System.out.println(suggestedProducts(products, searchWord));

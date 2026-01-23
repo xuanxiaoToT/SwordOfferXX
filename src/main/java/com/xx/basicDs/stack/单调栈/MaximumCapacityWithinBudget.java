@@ -50,11 +50,11 @@ import java.util.Comparator;
  */
 public class MaximumCapacityWithinBudget implements Answer {
     public static void main(String[] args) {
-        new MaximumCapacityWithinBudget().answerOne();
+        new MaximumCapacityWithinBudget().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] costs = new int[]{4, 8, 5, 3};
         int[] capacity = new int[]{1, 5, 2, 7};
         int budget = 8;

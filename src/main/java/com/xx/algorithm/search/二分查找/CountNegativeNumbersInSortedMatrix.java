@@ -27,12 +27,12 @@ import com.xx.Answer;
  */
 public class CountNegativeNumbersInSortedMatrix implements Answer {
     public static void main(String[] args) {
-        new CountNegativeNumbersInSortedMatrix().answerOne();
+        new CountNegativeNumbersInSortedMatrix().answer();
     }
 
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] grid = new int[][]{{4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}};
         int[][] grid = new int[][]{{3, 2}, {1, 0}};
         System.out.println(countNegatives2(grid));

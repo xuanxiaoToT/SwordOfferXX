@@ -37,14 +37,14 @@ import java.util.PriorityQueue;
 public class MinCostOfHiringKWorkers implements Answer {
 
     public static void main(String[] args) {
-        new MinCostOfHiringKWorkers().answerOne();
+        new MinCostOfHiringKWorkers().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] quality = {10, 20, 5};
         int[] wage = {70, 50, 30};
         int k = 2;

@@ -20,11 +20,11 @@ import com.xx.Answer;
  */
 public class ReverseBits implements Answer {
     public static void main(String[] args) {
-        new ReverseBits().answerOne();
+        new ReverseBits().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int num = 1775;
         // int num = 7;
         // int num = 1;

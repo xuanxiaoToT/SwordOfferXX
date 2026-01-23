@@ -47,14 +47,14 @@ import java.util.HashSet;
  */
 public class NumberOfDifferentElements implements Answer {
     public static void main(String[] args) {
-        new NumberOfDifferentElements().answerOne();
+        new NumberOfDifferentElements().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {3, 2, 3, 4, 2};
         System.out.println(Arrays.toString(distinctDifferenceArray(nums)));
     }

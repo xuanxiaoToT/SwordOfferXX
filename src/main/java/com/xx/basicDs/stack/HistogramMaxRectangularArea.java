@@ -36,7 +36,7 @@ public class HistogramMaxRectangularArea implements Answer {
      * 方法一：最简单的，直接遍历O(N2)。相当于算出所有组合。然后求出最大值。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

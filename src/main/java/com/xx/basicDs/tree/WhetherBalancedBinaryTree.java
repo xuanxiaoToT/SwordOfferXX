@@ -40,11 +40,11 @@ import com.xx.util.DataFactory;
 public class WhetherBalancedBinaryTree implements Answer {
 
     public static void main(String[] args) {
-        new WhetherBalancedBinaryTree().answerOne();
+        new WhetherBalancedBinaryTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         System.out.println(isBalanced(treeNode));
     }

@@ -29,11 +29,11 @@ import com.xx.Answer;
 public class EffectiveLetterEctopicWords implements Answer {
 
     public static void main(String[] args) {
-        new EffectiveLetterEctopicWords().answerOne();
+        new EffectiveLetterEctopicWords().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(isAnagram("rat", "car"));
     }
 

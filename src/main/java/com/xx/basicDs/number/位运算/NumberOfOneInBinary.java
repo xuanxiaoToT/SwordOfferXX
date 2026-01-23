@@ -20,7 +20,7 @@ import java.util.Arrays;
 public class NumberOfOneInBinary implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfOneInBinary().answerOne();
+        new NumberOfOneInBinary().answer();
     }
 
     /**
@@ -31,7 +31,7 @@ public class NumberOfOneInBinary implements Answer {
      * 制形式中1的个数比“i/2”的1的个数多1。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer n = initData();
         int[] result = new int[n];
         result[0] = 0;

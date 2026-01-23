@@ -20,14 +20,14 @@ import com.xx.Answer;
 public class SumLeftAndRightSubArrayEqual implements Answer {
 
     public static void main(String[] args) {
-        new SumLeftAndRightSubArrayEqual().answerOne();
+        new SumLeftAndRightSubArrayEqual().answer();
     }
 
     /**
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int[] sumTemp = new int[nums.length];
         sumTemp[0] = nums[0];

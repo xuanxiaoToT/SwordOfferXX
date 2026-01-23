@@ -29,7 +29,7 @@ import com.xx.domain.ListNode;
 public class SeparatedLinkedList implements Answer {
 
     public static void main(String[] args) {
-        new SeparatedLinkedList().answerOne();
+        new SeparatedLinkedList().answer();
     }
 
     /**
@@ -38,7 +38,7 @@ public class SeparatedLinkedList implements Answer {
      * 我们只要将 small 链表尾节点指向 large 链表的头节点即能完成对链表的分隔。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode head = initData();
         int target = 3;
         System.out.println(partition(head, target));

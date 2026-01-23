@@ -20,14 +20,14 @@ public class MinimumNumberOfK implements Answer {
 
     public static void main(String[] args) {
         MinimumNumberOfK minimumNumberOfK = new MinimumNumberOfK();
-        minimumNumberOfK.answerOne();
+        minimumNumberOfK.answer();
     }
 
     /**
      * 方法1：循环K遍
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 4;
         List<Integer> list = initData();
         Map<Integer, Integer> map = new HashMap<>(k);

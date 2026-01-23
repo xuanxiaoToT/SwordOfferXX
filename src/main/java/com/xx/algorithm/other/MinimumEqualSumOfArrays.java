@@ -33,14 +33,14 @@ import com.xx.Answer;
 public class MinimumEqualSumOfArrays implements Answer {
 
     public static void main(String[] args) {
-        new MinimumEqualSumOfArrays().answerOne();
+        new MinimumEqualSumOfArrays().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums1 = new int[]{3, 2, 0, 1, 0}, nums2 = new int[]{6, 5, 0};
         System.out.println(minSum(nums1, nums2));
     }

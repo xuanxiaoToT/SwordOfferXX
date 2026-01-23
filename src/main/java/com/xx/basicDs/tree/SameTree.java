@@ -34,11 +34,11 @@ import java.util.Queue;
  */
 public class SameTree implements Answer {
     public static void main(String[] args) {
-        new SameTree().answerOne();
+        new SameTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode p = DataFactory.generateTreeNode();
         TreeNode q = DataFactory.generateTreeNode();
         TreeNode s = new TreeNode(5);

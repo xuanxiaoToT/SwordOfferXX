@@ -47,11 +47,11 @@ import java.util.List;
 public class DetonateBalloonWithArrow implements Answer {
 
     public static void main(String[] args) {
-        new DetonateBalloonWithArrow().answerOne();
+        new DetonateBalloonWithArrow().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         Arrays.sort(data, Comparator.comparingInt(o -> o[0]));
         //System.out.println(Arrays.deepToString(data));

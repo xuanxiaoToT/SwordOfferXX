@@ -33,11 +33,11 @@ import com.xx.Answer;
  */
 public class MinimumAsciiDeleteSumForTwoStrings implements Answer {
     public static void main(String[] args) {
-        new MinimumAsciiDeleteSumForTwoStrings().answerOne();
+        new MinimumAsciiDeleteSumForTwoStrings().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // String s1 = "delete";
         // String s2 = "leet";
 

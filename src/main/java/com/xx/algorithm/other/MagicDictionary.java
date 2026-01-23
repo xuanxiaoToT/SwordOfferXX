@@ -25,14 +25,14 @@ import java.util.stream.Collectors;
 public class MagicDictionary implements Answer {
 
     public static void main(String[] args) {
-        new MagicDictionary().answerOne();
+        new MagicDictionary().answer();
     }
 
     /**
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] strings = initData();
         String inputWord = "now";
         Map<Integer, List<String>> map = Arrays.stream(strings).collect(Collectors.groupingBy(String::length));

@@ -31,14 +31,14 @@ import com.xx.Answer;
  */
 public class NumbersThatOnlyAppearOnce implements Answer {
     public static void main(String[] args) {
-        new NumbersThatOnlyAppearOnce().answerOne();
+        new NumbersThatOnlyAppearOnce().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(singleNumber(new int[]{4, 1, 2, 1, 2}));
     }
 

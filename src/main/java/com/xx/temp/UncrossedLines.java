@@ -41,14 +41,14 @@ import java.util.*;
 public class UncrossedLines implements Answer {
 
     public static void main(String[] args) {
-        new UncrossedLines().answerOne();
+        new UncrossedLines().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] nums1 = {1, 4, 2};
         //int[] nums2 = {1, 2, 4};
         //int[] nums1 = {2, 5, 1, 2, 5};

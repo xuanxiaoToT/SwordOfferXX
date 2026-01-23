@@ -49,11 +49,11 @@ import java.util.HashSet;
  */
 public class MaximumOfVowelsInFixedLenSubStr implements Answer {
     public static void main(String[] args) {
-        new MaximumOfVowelsInFixedLenSubStr().answerOne();
+        new MaximumOfVowelsInFixedLenSubStr().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String str = "leetcode";
         int k = 3;
         System.out.println(computeMaxVowels(str, k));

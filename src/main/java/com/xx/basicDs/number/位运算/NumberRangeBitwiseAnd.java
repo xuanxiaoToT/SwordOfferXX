@@ -30,14 +30,14 @@ import com.xx.Answer;
 public class NumberRangeBitwiseAnd implements Answer {
 
     public static void main(String[] args) {
-        new NumberRangeBitwiseAnd().answerOne();
+        new NumberRangeBitwiseAnd().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(rangeBitwiseAnd(5, 7));
     }
 

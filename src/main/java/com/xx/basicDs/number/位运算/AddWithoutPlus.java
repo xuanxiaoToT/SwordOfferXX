@@ -20,11 +20,11 @@ import com.xx.Answer;
  */
 public class AddWithoutPlus implements Answer {
     public static void main(String[] args) {
-        new AddWithoutPlus().answerOne();
+        new AddWithoutPlus().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(add(5, 6));
     }
 

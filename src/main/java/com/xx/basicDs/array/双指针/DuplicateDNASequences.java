@@ -34,14 +34,14 @@ import java.util.Map;
  */
 public class DuplicateDNASequences implements Answer {
     public static void main(String[] args) {
-        new DuplicateDNASequences().answerOne();
+        new DuplicateDNASequences().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String s = initData();
         System.out.println(findRepeatedDnaSequences(s));
     }

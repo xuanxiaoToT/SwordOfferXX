@@ -30,7 +30,7 @@ import com.xx.domain.ListNode;
 public class RemoveDuplicateNodesFromTheSortedLinkList implements Answer {
 
     public static void main(String[] args) {
-        new RemoveDuplicateNodesFromTheSortedLinkList().answerOne();
+        new RemoveDuplicateNodesFromTheSortedLinkList().answer();
     }
 
     /**
@@ -39,7 +39,7 @@ public class RemoveDuplicateNodesFromTheSortedLinkList implements Answer {
      * 参考: {@link RemoveDuplicatesFromOrderedArraysII}
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode head = initData();
         if (head == null || head.next == null) {
             System.out.println(head);

@@ -16,7 +16,7 @@ import java.util.Arrays;
  */
 public class NumberOfSubsequences implements Answer {
     public static void main(String[] args) {
-        new NumberOfSubsequences().answerOne();
+        new NumberOfSubsequences().answer();
     }
 
     /**
@@ -24,7 +24,7 @@ public class NumberOfSubsequences implements Answer {
      * 解法：f(i,j) = 表示字符串S(j)中有n个子序列等于T(i);
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] strings = initData();
         String target = strings[0];
         String material = strings[1];

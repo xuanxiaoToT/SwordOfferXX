@@ -33,14 +33,14 @@ import java.util.Arrays;
 public class SearchRange implements Answer {
 
     public static void main(String[] args) {
-        new SearchRange().answerOne();
+        new SearchRange().answer();
     }
 
     /**
      * 解1：用两次二分法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int target = 8;
         int[] result = solution(data, target);

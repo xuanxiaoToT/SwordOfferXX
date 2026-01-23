@@ -25,14 +25,14 @@ public class TransNumbersIntoStrings implements Answer {
     private int result = 0;
 
     public static void main(String[] args) {
-        new TransNumbersIntoStrings().answerOne();
+        new TransNumbersIntoStrings().answer();
     }
 
     /**
      * 回溯法递归
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String ori = initData();
         stringSize = ori.length();
         int point = 0;

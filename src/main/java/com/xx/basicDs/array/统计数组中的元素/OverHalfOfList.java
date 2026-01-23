@@ -33,7 +33,7 @@ public class OverHalfOfList implements Answer {
 
     public static void main(String[] args) {
         OverHalfOfList overHalfOfList = new OverHalfOfList();
-        overHalfOfList.answerOne();
+        overHalfOfList.answer();
     }
 
     public int majorityElement(int[] nums) {
@@ -63,7 +63,7 @@ public class OverHalfOfList implements Answer {
      * 抵消法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] nums = new int[]{1, 2, 5, 9, 5, 9, 5, 5, 5};
         int[] nums = new int[]{5, 5, 1, 2,};
         System.out.println(majorityElement(nums));

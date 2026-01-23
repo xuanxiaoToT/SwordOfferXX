@@ -47,11 +47,11 @@ import java.util.Map;
  */
 public class CountCaesarCipherPairs implements Answer {
     public static void main(String[] args) {
-        new CountCaesarCipherPairs().answerOne();
+        new CountCaesarCipherPairs().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] words = new String[]{"fusion", "layout"};
         // String[] words = new String[]{"ab", "aa", "za", "aa"};
         // String[] words = new String[]{"ab", "za"};

@@ -31,7 +31,7 @@ import com.xx.util.DataFactory;
 public class BinaryTreeToLinkedList implements Answer {
 
     public static void main(String[] args) {
-        new BinaryTreeToLinkedList().answerOne();
+        new BinaryTreeToLinkedList().answer();
     }
 
     private TreeNode lastnode = null;
@@ -41,7 +41,7 @@ public class BinaryTreeToLinkedList implements Answer {
      * 2：用后续来做：因为按照左中右递归时，中间处理则会把右节点给丢失掉。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         //右左中,变为这种后续遍历.
         if (root == null){

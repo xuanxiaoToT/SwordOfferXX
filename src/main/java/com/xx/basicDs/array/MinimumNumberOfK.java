@@ -26,7 +26,7 @@ public class MinimumNumberOfK implements Answer {
      * 时间复杂度：k*O(N)
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 4;
         List<Integer> list = initData();
 

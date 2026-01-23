@@ -36,7 +36,7 @@ import java.util.Arrays;
 public class DistributeCandy implements Answer {
 
     public static void main(String[] args) {
-        new DistributeCandy().answerOne();
+        new DistributeCandy().answer();
     }
 
     /**
@@ -49,7 +49,7 @@ public class DistributeCandy implements Answer {
      * 所以贪心：candyVec[i] = candyVec[i - 1] + 1
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] ratings = initData();
         int[] dp = new int[ratings.length];
         //从左往右,上升结果

@@ -39,7 +39,7 @@ public class WhetherBinarySearchTree implements Answer {
      * 解1：中序遍历，一定是有序的
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
         double inorder = -Double.MAX_VALUE;

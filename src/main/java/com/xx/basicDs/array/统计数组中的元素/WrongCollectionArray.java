@@ -33,12 +33,12 @@ import java.util.Arrays;
 public class WrongCollectionArray implements Answer {
 
     public static void main(String[] args) {
-        new WrongCollectionArray().answerOne();
+        new WrongCollectionArray().answer();
     }
 
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {1, 2, 2, 4};
         System.out.println(Arrays.toString(findErrorNums(nums)));
     }

@@ -10,11 +10,11 @@ import com.xx.domain.TreeNode;
 public class MinimumHeightTree implements Answer {
 
     public static void main(String[] args) {
-        new MinimumHeightTree().answerOne();
+        new MinimumHeightTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         int[] nums = new int[]{1, 2};
         System.out.println(buildMinHeightTree(nums));

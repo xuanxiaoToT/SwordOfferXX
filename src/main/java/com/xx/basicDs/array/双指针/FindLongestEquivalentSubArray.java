@@ -41,14 +41,14 @@ import java.util.*;
  */
 public class FindLongestEquivalentSubArray implements Answer {
     public static void main(String[] args) {
-        new FindLongestEquivalentSubArray().answerOne();
+        new FindLongestEquivalentSubArray().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         List<Integer> nums = Arrays.asList(1, 3, 2, 3, 1, 3);
         int k = 3;
         System.out.println(longestEqualSubarray(nums, k));

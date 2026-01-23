@@ -20,7 +20,7 @@ import com.xx.Answer;
 public class FirstCharacterAppearsOnce implements Answer {
 
     public static void main(String[] args) {
-        new FirstCharacterAppearsOnce().answerOne();
+        new FirstCharacterAppearsOnce().answer();
     }
 
     /**
@@ -28,7 +28,7 @@ public class FirstCharacterAppearsOnce implements Answer {
      * 另外：由于只有26各字母，不需要使用Map
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //复杂度O(2N)
         charCountDto[] numRecord = new charCountDto[26];
         String oriStr = initData();

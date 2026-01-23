@@ -46,14 +46,14 @@ import java.util.Comparator;
  */
 public class PlanningPartTimeJobs implements Answer {
     public static void main(String[] args) {
-        new PlanningPartTimeJobs().answerOne();
+        new PlanningPartTimeJobs().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] startTime = {1, 2, 3, 4, 6};
         //int[] endTime = {3, 5, 10, 6, 9};
         //int[] profit = {20, 20, 100, 70, 60};

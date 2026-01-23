@@ -36,11 +36,11 @@ import java.util.HashMap;
 public class IsomorphicStrings implements Answer {
 
     public static void main(String[] args) {
-        new IsomorphicStrings().answerOne();
+        new IsomorphicStrings().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String s = "badc";
         String t = "baba";
         boolean result = validIsomorphicStrings(s, t);

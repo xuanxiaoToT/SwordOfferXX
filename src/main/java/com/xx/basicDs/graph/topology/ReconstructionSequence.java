@@ -24,14 +24,14 @@ import java.util.*;
 public class ReconstructionSequence implements Answer {
 
     public static void main(String[] args) {
-        new ReconstructionSequence().answerOne();
+        new ReconstructionSequence().answer();
     }
 
     /**
      * 解
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] org = new int[]{1, 2, 3};
         int[][] seqs = initData();
         Map<Integer, Integer> inDegree = new HashMap<>(org.length);

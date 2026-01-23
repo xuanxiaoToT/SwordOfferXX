@@ -37,14 +37,14 @@ import java.util.Stack;
 public class FindTheMostCompetitiveSubsequence implements Answer {
 
     public static void main(String[] args) {
-        new FindTheMostCompetitiveSubsequence().answerOne();
+        new FindTheMostCompetitiveSubsequence().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] nums = {2, 4, 3, 3, 5, 4, 9, 6};
         // int k = 4;
         int[] nums = {3, 5, 2, 6};

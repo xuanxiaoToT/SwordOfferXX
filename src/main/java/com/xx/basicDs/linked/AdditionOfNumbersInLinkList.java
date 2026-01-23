@@ -30,7 +30,7 @@ import com.xx.domain.ListNode;
  */
 public class AdditionOfNumbersInLinkList implements Answer {
     public static void main(String[] args) {
-        new AdditionOfNumbersInLinkList().answerOne();
+        new AdditionOfNumbersInLinkList().answer();
     }
 
     /**
@@ -38,7 +38,7 @@ public class AdditionOfNumbersInLinkList implements Answer {
      * 所以可以先遍历，求出两个string，然后按照string相加的方式进行计算。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //省略
     }
 

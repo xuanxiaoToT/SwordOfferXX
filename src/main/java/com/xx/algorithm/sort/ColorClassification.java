@@ -28,7 +28,7 @@ import java.util.Arrays;
 public class ColorClassification implements Answer {
 
     public static void main(String[] args) {
-        new ColorClassification().answerOne();
+        new ColorClassification().answer();
     }
 
     /**
@@ -36,7 +36,7 @@ public class ColorClassification implements Answer {
      * 两趟扫描
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int left = 0;
         int right = data.length - 1;

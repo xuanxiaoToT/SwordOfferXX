@@ -32,7 +32,7 @@ import com.xx.Answer;
 public class PalindromeNumber implements Answer {
 
     public static void main(String[] args) {
-        new PalindromeNumber().answerOne();
+        new PalindromeNumber().answer();
     }
 
     /**
@@ -40,7 +40,7 @@ public class PalindromeNumber implements Answer {
      * 则需要用其它方式拆分位值
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer data = initData();
         if (data < 0 || data % 10 == 0) {
             System.out.println(false);

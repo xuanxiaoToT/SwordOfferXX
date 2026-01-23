@@ -23,14 +23,14 @@ import java.util.TreeSet;
 public class DifferenceBetweenValueAndSubscriptInRange implements Answer {
 
     public static void main(String[] args) {
-        new DifferenceBetweenValueAndSubscriptInRange().answerOne();
+        new DifferenceBetweenValueAndSubscriptInRange().answer();
     }
 
     /**
      * 方法一：无脑遍历  O(nk)
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int k = 2;
         int t = 3;

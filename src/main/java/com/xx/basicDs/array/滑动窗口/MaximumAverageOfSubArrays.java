@@ -32,11 +32,11 @@ import com.xx.Answer;
 public class MaximumAverageOfSubArrays implements Answer {
 
     public static void main(String[] args) {
-        new MaximumAverageOfSubArrays().answerOne();
+        new MaximumAverageOfSubArrays().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {-1};
         int k = 1;
         System.out.println(findMaxAverage(nums, k));

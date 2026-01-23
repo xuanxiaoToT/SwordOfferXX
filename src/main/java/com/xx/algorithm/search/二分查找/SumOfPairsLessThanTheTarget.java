@@ -49,14 +49,14 @@ import java.util.List;
 public class SumOfPairsLessThanTheTarget implements Answer {
 
     public static void main(String[] args) {
-        new SumOfPairsLessThanTheTarget().answerOne();
+        new SumOfPairsLessThanTheTarget().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
         System.out.println(countPairs2(nums, 9));
     }

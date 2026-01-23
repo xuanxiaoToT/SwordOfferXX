@@ -42,7 +42,7 @@ import java.util.*;
 public class CourseSequenceII implements Answer {
 
     public static void main(String[] args) {
-        new CourseSequenceII().answerOne();
+        new CourseSequenceII().answer();
     }
 
     /**
@@ -52,7 +52,7 @@ public class CourseSequenceII implements Answer {
      * 接下来用广度优先搜索算法实现拓扑排序。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 初始化数据
         int[][] prerequisites = initData();
         int numCourses = 2;

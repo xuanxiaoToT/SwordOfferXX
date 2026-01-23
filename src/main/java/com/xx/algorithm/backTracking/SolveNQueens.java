@@ -32,14 +32,14 @@ import java.util.Objects;
 public class SolveNQueens implements Answer {
 
     public static void main(String[] args) {
-        new SolveNQueens().answerOne();
+        new SolveNQueens().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer n = initData();
         List<List<String>> result = new ArrayList<>();
         List<String> tempResult = new ArrayList<>(n);

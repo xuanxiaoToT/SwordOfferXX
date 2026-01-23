@@ -38,14 +38,14 @@ import java.util.TreeSet;
 public class TheThirdLargestNumber implements Answer {
 
     public static void main(String[] args) {
-        new TheThirdLargestNumber().answerOne();
+        new TheThirdLargestNumber().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

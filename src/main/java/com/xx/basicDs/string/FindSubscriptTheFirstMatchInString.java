@@ -30,14 +30,14 @@ import com.xx.Answer;
 public class FindSubscriptTheFirstMatchInString implements Answer {
 
     public static void main(String[] args) {
-        new FindSubscriptTheFirstMatchInString().answerOne();
+        new FindSubscriptTheFirstMatchInString().answer();
     }
 
     /**
      * 解1：暴力法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] data = initData();
         String haystack = data[0];
         String needle = data[1];

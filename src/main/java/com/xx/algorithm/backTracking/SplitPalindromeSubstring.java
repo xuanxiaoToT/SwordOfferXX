@@ -30,14 +30,14 @@ import java.util.List;
 public class SplitPalindromeSubstring implements Answer {
 
     public static void main(String[] args) {
-        new SplitPalindromeSubstring().answerOne();
+        new SplitPalindromeSubstring().answer();
     }
 
     /**
      * 1.用普通回溯法做，其本质就是找出所有的回文子串。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String initData = initData();
         List<List<String>> result = new ArrayList<>();
         diGui(initData, 0, new ArrayList<>(), result);

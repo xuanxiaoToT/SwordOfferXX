@@ -38,11 +38,11 @@ import java.util.Set;
  */
 public class UniqueOccurrences implements Answer {
     public static void main(String[] args) {
-        new UniqueOccurrences().answerOne();
+        new UniqueOccurrences().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {1, 2, 2, 1, 1, 3, 3};
         System.out.println(whetherUnique(nums));
     }

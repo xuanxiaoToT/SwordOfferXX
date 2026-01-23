@@ -32,14 +32,14 @@ import com.xx.Answer;
 public class NonDecreasingArray implements Answer {
 
     public static void main(String[] args) {
-        new NonDecreasingArray().answerOne();
+        new NonDecreasingArray().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] nums = { 4, 2, 3};
         //int[] nums = {-1, 4, 2, 3};
         int[] nums = {5, 7, 1, 8};

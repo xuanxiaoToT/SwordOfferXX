@@ -39,14 +39,14 @@ import java.util.PriorityQueue;
 public class MaximumSumOfPairsOfDigitsEqualNumbers implements Answer {
 
     public static void main(String[] args) {
-        new MaximumSumOfPairsOfDigitsEqualNumbers().answerOne();
+        new MaximumSumOfPairsOfDigitsEqualNumbers().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {368, 369, 307, 304, 384, 138, 90, 279, 35, 396, 114, 328, 251, 364, 300, 191, 438, 467, 183};
         System.out.println(maximumSum(nums));
     }

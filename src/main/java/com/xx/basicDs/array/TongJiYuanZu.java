@@ -40,14 +40,14 @@ import java.util.Map;
 public class TongJiYuanZu implements Answer {
 
     public static void main(String[] args) {
-        new TongJiYuanZu().answerOne();
+        new TongJiYuanZu().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         if (nums.length < 4) {
             return;

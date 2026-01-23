@@ -37,11 +37,11 @@ import com.xx.Answer;
 public class AngryBookstoreOwner implements Answer {
 
     public static void main(String[] args) {
-        new AngryBookstoreOwner().answerOne();
+        new AngryBookstoreOwner().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] customers = {4, 10, 10};
         int[] grumpy = {1, 1, 0};
         int x = 2;

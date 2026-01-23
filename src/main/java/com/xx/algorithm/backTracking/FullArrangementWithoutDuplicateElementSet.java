@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class FullArrangementWithoutDuplicateElementSet implements Answer {
     public static void main(String[] args) {
-        new FullArrangementWithoutDuplicateElementSet().answerOne();
+        new FullArrangementWithoutDuplicateElementSet().answer();
     }
 
     private List<List<Integer>> result = new ArrayList<>();
@@ -42,7 +42,7 @@ public class FullArrangementWithoutDuplicateElementSet implements Answer {
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         diGui(data, new int[data.length], new ArrayList<>(), 1);
         // diGui2(data,0);

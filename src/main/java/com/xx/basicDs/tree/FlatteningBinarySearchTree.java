@@ -28,7 +28,7 @@ public class FlatteningBinarySearchTree implements Answer {
      * 递归法简单做
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         TreeNode head = new TreeNode(0);
         last = head;

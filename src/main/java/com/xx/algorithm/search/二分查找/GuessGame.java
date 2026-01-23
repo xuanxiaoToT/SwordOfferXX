@@ -44,14 +44,14 @@ import com.xx.Answer;
  */
 public class GuessGame implements Answer {
     public static void main(String[] args) {
-        new GuessGame().answerOne();
+        new GuessGame().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = 2126753390;
         System.out.println(guessNumber(n));
     }

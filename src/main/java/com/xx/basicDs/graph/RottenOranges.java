@@ -40,7 +40,7 @@ public class RottenOranges implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] grid = initData();
         int m = grid.length;
         int n = grid[0].length;

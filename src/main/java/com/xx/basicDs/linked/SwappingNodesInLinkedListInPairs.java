@@ -31,14 +31,14 @@ import com.xx.util.DataFactory;
 public class SwappingNodesInLinkedListInPairs implements Answer {
 
     public static void main(String[] args) {
-        new SwappingNodesInLinkedListInPairs().answerOne();
+        new SwappingNodesInLinkedListInPairs().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode head = initData();
         System.out.println(head);
         head = swapPairs(head);

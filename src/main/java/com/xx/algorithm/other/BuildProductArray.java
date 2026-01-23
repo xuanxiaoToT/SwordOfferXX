@@ -18,11 +18,11 @@ import java.util.Arrays;
  */
 public class BuildProductArray implements Answer {
     public static void main(String[] args) {
-        new BuildProductArray().answerOne();
+        new BuildProductArray().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] oriA = initData();
         int[] resultB = new int[oriA.length];
         int[] tempLeft = new int[oriA.length];

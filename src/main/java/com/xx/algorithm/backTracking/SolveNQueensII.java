@@ -37,7 +37,7 @@ public class SolveNQueensII implements Answer {
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

@@ -55,11 +55,11 @@ import java.util.*;
 public class MinimumGeneWithinEachTree implements Answer {
 
     public static void main(String[] args) {
-        new MinimumGeneWithinEachTree().answerOne();
+        new MinimumGeneWithinEachTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] parents = new int[]{-1, 0, 0, 2};
         //int[] geneNums = new int[]{1, 2, 3, 4};
         //int[] parents = new int[]{-1, 0, 1, 0, 3, 3};

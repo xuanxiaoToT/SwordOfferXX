@@ -29,7 +29,7 @@ import java.util.Arrays;
 public class ProductExceptSelf implements Answer {
 
     public static void main(String[] args) {
-        new ProductExceptSelf().answerOne();
+        new ProductExceptSelf().answer();
     }
 
     /**
@@ -38,7 +38,7 @@ public class ProductExceptSelf implements Answer {
      * 那么除i外的乘积值，就等于i左右两侧相乘。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] inputData = initData();
         int[] left = new int[inputData.length];
         int[] right = new int[inputData.length];

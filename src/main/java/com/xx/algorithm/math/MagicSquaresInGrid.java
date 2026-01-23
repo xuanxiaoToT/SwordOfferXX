@@ -36,11 +36,11 @@ import java.util.TreeSet;
  */
 public class MagicSquaresInGrid implements Answer {
     public static void main(String[] args) {
-        new MagicSquaresInGrid().answerOne();
+        new MagicSquaresInGrid().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] grid = new int[][]{{4, 3, 8, 4}, {9, 5, 1, 9}, {2, 7, 6, 2}};
         int[][] grid = new int[][]{{4, 3, 8, 5, 5, 5}, {9, 5, 1, 5, 5, 5}, {2, 7, 6, 5, 5, 5}};
         System.out.println(numMagicSquaresInside(grid));

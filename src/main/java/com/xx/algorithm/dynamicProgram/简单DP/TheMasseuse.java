@@ -30,11 +30,11 @@ import com.xx.Answer;
  */
 public class TheMasseuse implements Answer {
     public static void main(String[] args) {
-        new TheMasseuse().answerOne();
+        new TheMasseuse().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] nums = new int[]{2, 7, 9, 3, 1};
         // int[] nums = new int[]{1,2,3,1};
         int[] nums = new int[]{2, 1, 4, 5, 3, 1, 1, 3};

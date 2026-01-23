@@ -26,14 +26,14 @@ import java.util.List;
 public class AllPaths implements Answer {
 
     public static void main(String[] args) {
-        new AllPaths().answerOne();
+        new AllPaths().answer();
     }
 
     /**
      * 解:采用深度优先搜索
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] graph = initData();
         List<List<Integer>> result = new ArrayList<>();
         myDiGui(graph, 0, result, new ArrayList<>());

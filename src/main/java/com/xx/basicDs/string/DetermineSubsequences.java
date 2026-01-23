@@ -27,11 +27,11 @@ import com.xx.Answer;
 public class DetermineSubsequences implements Answer {
 
     public static void main(String[] args) {
-        new DetermineSubsequences().answerOne();
+        new DetermineSubsequences().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String s = "axc";
         String t = "ahbgdc";
         System.out.println(determineStrSub(s, t));

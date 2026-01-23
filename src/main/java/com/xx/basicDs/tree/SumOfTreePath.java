@@ -42,14 +42,14 @@ import com.xx.util.DataFactory;
 public class SumOfTreePath implements Answer {
 
     public static void main(String[] args) {
-        new SumOfTreePath().answerOne();
+        new SumOfTreePath().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

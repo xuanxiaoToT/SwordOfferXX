@@ -30,12 +30,12 @@ import com.xx.Answer;
  */
 public class MaximumCountOfConsecutiveOneIII implements Answer {
     public static void main(String[] args) {
-        new MaximumCountOfConsecutiveOneIII().answerOne();
+        new MaximumCountOfConsecutiveOneIII().answer();
     }
 
     //如果可以翻转最多K个0
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {0, 0, 1, 1, 1, 0, 0};
         int k = 0;
         System.out.println(computeMaxCountOne(nums, k));

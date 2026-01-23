@@ -30,11 +30,11 @@ public class RobotInAGrid implements Answer {
     List<List<Integer>> result = new ArrayList<>();
 
     public static void main(String[] args) {
-        new RobotInAGrid().answerOne();
+        new RobotInAGrid().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] obstacleGrid = new int[][]{{0, 0, 0}, {0, 1, 0}, {1, 0, 0}};
         System.out.println(pathWithObstacles(obstacleGrid));
     }

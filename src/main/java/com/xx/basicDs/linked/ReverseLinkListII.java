@@ -31,7 +31,7 @@ import com.xx.util.DataFactory;
 public class ReverseLinkListII implements Answer {
 
     public static void main(String[] args) {
-        new ReverseLinkListII().answerOne();
+        new ReverseLinkListII().answer();
     }
 
     /**
@@ -41,7 +41,7 @@ public class ReverseLinkListII implements Answer {
      * 连接left之后的
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int left = 1;
         int right = 6;
         ListNode head = initData();

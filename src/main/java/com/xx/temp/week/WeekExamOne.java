@@ -6,11 +6,11 @@ import com.xx.Answer;
 public class WeekExamOne implements Answer {
 
     public static void main(String[] args) {
-        new WeekExamOne().answerOne();
+        new WeekExamOne().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

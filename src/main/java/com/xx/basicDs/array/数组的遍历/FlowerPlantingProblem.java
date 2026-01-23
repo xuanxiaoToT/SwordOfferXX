@@ -32,14 +32,14 @@ import com.xx.Answer;
 public class FlowerPlantingProblem implements Answer {
 
     public static void main(String[] args) {
-        new FlowerPlantingProblem().answerOne();
+        new FlowerPlantingProblem().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] flowerbed = {1, 0, 1, 0, 1, 0, 1};
         System.out.println(canPlaceFlowers(flowerbed, 1));
     }

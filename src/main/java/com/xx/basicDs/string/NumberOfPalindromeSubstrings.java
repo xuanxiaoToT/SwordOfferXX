@@ -33,7 +33,7 @@ public class NumberOfPalindromeSubstrings implements Answer {
      * 复杂度N3
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
         String oriStr = initData();
         for (int i = 0; i < oriStr.length(); i++) {

@@ -22,14 +22,14 @@ import java.util.*;
 public class RelativeSortingOfArrays implements Answer {
 
     public static void main(String[] args) {
-        new RelativeSortingOfArrays().answerOne();
+        new RelativeSortingOfArrays().answer();
     }
 
     /**
      * 按照arr2的规则来码放，再吧剩余的排序放回去即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] arr1 = initData();
         int[] arr2 = new int[]{3, 2, 1};
         Map<Integer, Integer> tempMap = new HashMap<>(arr2.length);

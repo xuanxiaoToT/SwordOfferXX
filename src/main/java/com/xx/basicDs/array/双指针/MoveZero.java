@@ -27,14 +27,14 @@ import java.util.Arrays;
 public class MoveZero implements Answer {
 
     public static void main(String[] args) {
-        new MoveZero().answerOne();
+        new MoveZero().answer();
     }
 
     /**
      * 解1：计算0的数，然后补零就行。大于0的数不变即可
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int i = 0;
         int[] nums = initData();
         for (int j = 0; j < nums.length; j++) {

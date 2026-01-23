@@ -44,11 +44,11 @@ import java.util.List;
  */
 public class SummaryInterval implements Answer {
     public static void main(String[] args) {
-        new SummaryInterval().answerOne();
+        new SummaryInterval().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         List<String> result = new ArrayList<>();
         String temp = "";

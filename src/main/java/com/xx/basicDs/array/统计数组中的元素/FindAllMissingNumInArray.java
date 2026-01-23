@@ -35,14 +35,14 @@ import java.util.List;
 public class FindAllMissingNumInArray implements Answer {
 
     public static void main(String[] args) {
-        new FindAllMissingNumInArray().answerOne();
+        new FindAllMissingNumInArray().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
         System.out.println(findDisappearedNumbers1(nums));
     }

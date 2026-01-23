@@ -54,7 +54,7 @@ import com.xx.Answer;
 public class MinNumberToMakeAnArrayBeautiful implements Answer {
 
     public static void main(String[] args) {
-        new MinNumberToMakeAnArrayBeautiful().answerOne();
+        new MinNumberToMakeAnArrayBeautiful().answer();
     }
 
     /**
@@ -62,7 +62,7 @@ public class MinNumberToMakeAnArrayBeautiful implements Answer {
      * 思考的时候一直以i为开始的三元组进行dp思考，而不是以i为结束。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] nums = new int[]{2, 3, 0, 0, 2};
         //int k = 4;
         //int[] nums = new int[]{0, 1, 3, 3};

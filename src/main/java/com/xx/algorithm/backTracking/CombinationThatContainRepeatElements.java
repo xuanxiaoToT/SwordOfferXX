@@ -23,7 +23,7 @@ import java.util.List;
 public class CombinationThatContainRepeatElements implements Answer {
 
     public static void main(String[] args) {
-        new CombinationThatContainRepeatElements().answerOne();
+        new CombinationThatContainRepeatElements().answer();
     }
 
     private List<List<Integer>> result = new ArrayList<>();
@@ -35,7 +35,7 @@ public class CombinationThatContainRepeatElements implements Answer {
      * 例如 不选2 那么后续的2也都不选
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         Arrays.sort(data);
         diGui(8, data, 0, new ArrayList<>(), 0, 0, true);

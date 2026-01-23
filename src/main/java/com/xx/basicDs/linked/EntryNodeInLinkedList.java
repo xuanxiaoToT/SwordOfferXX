@@ -21,14 +21,14 @@ import java.util.Set;
 public class EntryNodeInLinkedList implements Answer {
 
     public static void main(String[] args) {
-        new EntryNodeInLinkedList().answerOne();
+        new EntryNodeInLinkedList().answer();
     }
 
     /**
      * 1.快慢法，快的每次走两格，慢的走一格，最后能追上。能追上只能证明存在环(还需要知晓环的大小。)
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode head = initData();
         ListNode quick = head;
         ListNode slow = head;

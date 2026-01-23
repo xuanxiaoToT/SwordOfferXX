@@ -46,11 +46,11 @@ import com.xx.Answer;
  */
 public class MinimumPenaltyForShop implements Answer {
     public static void main(String[] args) {
-        new MinimumPenaltyForShop().answerOne();
+        new MinimumPenaltyForShop().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String customers = "YYNY";
         System.out.println(bestClosingTime(customers));
     }

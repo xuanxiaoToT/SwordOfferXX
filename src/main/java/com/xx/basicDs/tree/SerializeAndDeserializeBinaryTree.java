@@ -21,14 +21,14 @@ import java.util.Queue;
 public class SerializeAndDeserializeBinaryTree implements Answer {
 
     public static void main(String[] args) {
-        new SerializeAndDeserializeBinaryTree().answerOne();
+        new SerializeAndDeserializeBinaryTree().answer();
     }
 
     /**
      * 注意一定要按照完全二叉树来进行序列化和反序列化，null值用特殊的字符串，如'#'替代。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // TreeNode treeNode = initData();
         // String s = treeLevelSerialize(treeNode);
         String[] pre = new String[]{"1", "2", "3", "4", "5", "6", "7"};

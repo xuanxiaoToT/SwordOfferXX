@@ -34,7 +34,7 @@ public class PathWithMaxNumOfNodeValues implements Answer {
     private int maxResult = Integer.MIN_VALUE;
 
     public static void main(String[] args) {
-        new PathWithMaxNumOfNodeValues().answerOne();
+        new PathWithMaxNumOfNodeValues().answer();
     }
 
 
@@ -50,7 +50,7 @@ public class PathWithMaxNumOfNodeValues implements Answer {
      * 最大值要么在左节点上，要么在右节点上，要么是自己加左右。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         Integer asd = diGuiTree(treeNode);
         System.out.println(maxResult + " " + asd);

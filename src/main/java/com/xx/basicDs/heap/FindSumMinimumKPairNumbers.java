@@ -43,14 +43,14 @@ import java.util.*;
 public class FindSumMinimumKPairNumbers implements Answer {
 
     public static void main(String[] args) {
-        new FindSumMinimumKPairNumbers().answerOne();
+        new FindSumMinimumKPairNumbers().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums1 = new int[]{1, 7};
         int[] nums2 = new int[]{2, 4, 6};
         int k = 3;

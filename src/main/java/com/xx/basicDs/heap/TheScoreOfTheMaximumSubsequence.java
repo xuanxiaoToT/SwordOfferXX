@@ -46,11 +46,11 @@ import java.util.*;
 public class TheScoreOfTheMaximumSubsequence implements Answer {
 
     public static void main(String[] args) {
-        new TheScoreOfTheMaximumSubsequence().answerOne();
+        new TheScoreOfTheMaximumSubsequence().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums1 = {2, 1, 14, 12};
         int[] nums2 = {11, 7, 13, 6};
         int k = 3;

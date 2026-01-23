@@ -72,7 +72,7 @@ public class MeetingRoomsMyIII implements Answer {
     int maxIndex = 0;
 
     public static void main(String[] args) {
-        new MeetingRoomsMyIII().answerOne();
+        new MeetingRoomsMyIII().answer();
     }
 
     public int mostBooked(int n, int[][] meetings) {
@@ -149,7 +149,7 @@ public class MeetingRoomsMyIII implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int n = 2;
         // int[][] meetings = new int[][]{{0, 10}, {1, 5}, {2, 7}, {3, 4}};
 

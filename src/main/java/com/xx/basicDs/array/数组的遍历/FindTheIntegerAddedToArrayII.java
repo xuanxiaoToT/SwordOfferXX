@@ -37,11 +37,11 @@ import java.util.Arrays;
 public class FindTheIntegerAddedToArrayII implements Answer {
 
     public static void main(String[] args) {
-        new FindTheIntegerAddedToArrayII().answerOne();
+        new FindTheIntegerAddedToArrayII().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums1 = {4, 20, 16, 12, 8};
         int[] num2 = {14, 18, 10};
         //int[] nums1 = {3, 5, 10, 9, 9, 4};

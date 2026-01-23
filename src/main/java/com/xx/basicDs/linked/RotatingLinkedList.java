@@ -24,7 +24,7 @@ import com.xx.util.DataFactory;
 public class RotatingLinkedList implements Answer {
 
     public static void main(String[] args) {
-        new RotatingLinkedList().answerOne();
+        new RotatingLinkedList().answer();
     }
 
     /**
@@ -32,7 +32,7 @@ public class RotatingLinkedList implements Answer {
      * 找倒数第K个，用快慢指针。需要先遍历一遍求出length，然后取余
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int K = 2;
     }
 

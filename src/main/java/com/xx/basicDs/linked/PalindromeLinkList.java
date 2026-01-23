@@ -21,7 +21,7 @@ import java.util.List;
 public class PalindromeLinkList implements Answer {
 
     public static void main(String[] args) {
-        new PalindromeLinkList().answerOne();
+        new PalindromeLinkList().answer();
     }
 
     /**
@@ -31,7 +31,7 @@ public class PalindromeLinkList implements Answer {
      * 3.利用栈结构来做
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

@@ -47,11 +47,11 @@ import java.util.Set;
  */
 public class MaximizeAreaOfSquareHoleInGrid implements Answer {
     public static void main(String[] args) {
-        new MaximizeAreaOfSquareHoleInGrid().answerOne();
+        new MaximizeAreaOfSquareHoleInGrid().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int n = 2;
         // int m = 1;
         // int[] hBars = new int[]{2, 3};

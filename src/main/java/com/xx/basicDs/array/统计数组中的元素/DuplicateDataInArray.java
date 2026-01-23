@@ -39,12 +39,12 @@ import java.util.List;
 public class DuplicateDataInArray implements Answer {
 
     public static void main(String[] args) {
-        new DuplicateDataInArray().answerOne();
+        new DuplicateDataInArray().answer();
     }
 
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {4, 3, 2, 7, 8, 2, 3, 1};
         System.out.println(findDuplicates(nums));
     }

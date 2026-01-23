@@ -23,7 +23,7 @@ import com.xx.Answer;
 public class ShunZiInPlayingCards implements Answer {
 
     public static void main(String[] args) {
-        new ShunZiInPlayingCards().answerOne();
+        new ShunZiInPlayingCards().answer();
     }
 
     /**
@@ -38,7 +38,7 @@ public class ShunZiInPlayingCards implements Answer {
      * 5、遍历完毕之后，判断 Max、Min 是否小于 5。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int min = Integer.MAX_VALUE;
         int max = 0;

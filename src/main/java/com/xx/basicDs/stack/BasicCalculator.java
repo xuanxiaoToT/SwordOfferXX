@@ -40,11 +40,11 @@ import java.util.Stack;
 public class BasicCalculator implements Answer {
 
     public static void main(String[] args) {
-        new BasicCalculator().answerOne();
+        new BasicCalculator().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         //String data = "-1+(-3)+(6+8)";
         //String data = "2-4-(8+2-6+(8+4-(1)+8-10))";
         String data = "1+2-(3+4+5)+6";

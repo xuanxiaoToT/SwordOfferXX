@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class MergeSortLinkedList implements Answer {
     public static void main(String[] args) {
-        new MergeSortLinkedList().answerOne();
+        new MergeSortLinkedList().answer();
     }
 
     /**
@@ -22,7 +22,7 @@ public class MergeSortLinkedList implements Answer {
      * 2.采用最小堆，
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 两两分组
 
         // 两两汇并

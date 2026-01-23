@@ -37,11 +37,11 @@ import com.xx.Answer;
 public class MaximumMatrixSum implements Answer {
     public static void main(String[] args) {
         MaximumMatrixSum maximumMatrixSum = new MaximumMatrixSum();
-        maximumMatrixSum.answerOne();
+        maximumMatrixSum.answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] matrix = new int[][]{{1, -1}, {-1, 1}};
         // int[][] matrix = new int[][]{{1, 2, 3}, {-1, -2, -3}, {1, 2, 3}};
         int[][] matrix = new int[][]{{-1, 0, -1}, {-2, 1, 3}, {3, 2, 2}};

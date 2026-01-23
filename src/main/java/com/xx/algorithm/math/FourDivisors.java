@@ -34,11 +34,11 @@ import com.xx.Answer;
  */
 public class FourDivisors implements Answer {
     public static void main(String[] args) {
-        new FourDivisors().answerOne();
+        new FourDivisors().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         // int[] nums = new int[]{21,21};
         // int[] nums = new int[]{1,2,3,4,5};

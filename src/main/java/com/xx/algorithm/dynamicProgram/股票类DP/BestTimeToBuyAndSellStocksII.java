@@ -42,7 +42,7 @@ public class BestTimeToBuyAndSellStocksII implements Answer {
     private int max = 0;
 
     public static void main(String[] args) {
-        new BestTimeToBuyAndSellStocksII().answerOne();
+        new BestTimeToBuyAndSellStocksII().answer();
     }
 
     /**
@@ -55,7 +55,7 @@ public class BestTimeToBuyAndSellStocksII implements Answer {
      * dp[i][1]表示第 i 天交易完后手里持有一支股票的最大利润（i 从 0开始）。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] prices = initData();
         int[][] dp = new int[prices.length][2];
         for (int i = 0; i < prices.length; i++) {

@@ -56,14 +56,14 @@ import com.xx.Answer;
 public class EstablishingQuadtree implements Answer {
 
     public static void main(String[] args) {
-        new EstablishingQuadtree().answerOne();
+        new EstablishingQuadtree().answer();
     }
 
     /**
      * 解1：分治+递归
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] grid = initData();
         Node construct = construct(grid);
         System.out.println(123);

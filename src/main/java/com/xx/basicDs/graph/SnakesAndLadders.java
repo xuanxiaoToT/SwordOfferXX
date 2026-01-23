@@ -52,14 +52,14 @@ import java.util.*;
 public class SnakesAndLadders implements Answer {
 
     public static void main(String[] args) {
-        new SnakesAndLadders().answerOne();
+        new SnakesAndLadders().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] board = initData();
         System.out.println(snakesAndLadders(board));
         //System.out.println(Arrays.toString(computeNextBySnakesAndLadders(19, board)));

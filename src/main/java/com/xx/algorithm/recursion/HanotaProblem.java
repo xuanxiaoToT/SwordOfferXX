@@ -33,11 +33,11 @@ import java.util.List;
  */
 public class HanotaProblem implements Answer {
     public static void main(String[] args) {
-        new HanotaProblem().answerOne();
+        new HanotaProblem().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         List<Integer> A = new ArrayList<>();
         A.add(2);
         A.add(1);

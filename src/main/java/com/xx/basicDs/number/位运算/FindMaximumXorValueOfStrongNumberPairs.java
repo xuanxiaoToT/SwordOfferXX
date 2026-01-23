@@ -42,14 +42,14 @@ import com.xx.Answer;
 public class FindMaximumXorValueOfStrongNumberPairs implements Answer {
 
     public static void main(String[] args) {
-        new FindMaximumXorValueOfStrongNumberPairs().answerOne();
+        new FindMaximumXorValueOfStrongNumberPairs().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         System.out.println(maximumStrongPairXor(data));
     }

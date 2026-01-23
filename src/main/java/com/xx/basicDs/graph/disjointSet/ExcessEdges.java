@@ -35,7 +35,7 @@ public class ExcessEdges implements Answer {
      * 此时环内的任一条边都可以作为答案(取在edges中最后出现的)。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 构建图
         int[][] data = initData();
         Map<Integer, Set<Integer>> graph = new HashMap<>();

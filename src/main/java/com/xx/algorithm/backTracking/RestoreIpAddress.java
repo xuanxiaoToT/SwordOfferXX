@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class RestoreIpAddress implements Answer {
     public static void main(String[] args) {
-        new RestoreIpAddress().answerOne();
+        new RestoreIpAddress().answer();
     }
 
     private List<List<String>> result = new ArrayList<>();
@@ -29,7 +29,7 @@ public class RestoreIpAddress implements Answer {
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String dataStr = initData();
         diGui(new ArrayList<>(), dataStr, 0);
         System.out.println(result);

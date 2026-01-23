@@ -27,14 +27,14 @@ import java.util.Arrays;
 public class PerfectSquare implements Answer {
 
     public static void main(String[] args) {
-        new PerfectSquare().answerOne();
+        new PerfectSquare().answer();
     }
 
     /**
      * 解1：动态规划，参考《最少的硬币个数》
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = initData();
         int[] dp = new int[n + 1];
         for (int i = 0; i < dp.length; i++) {

@@ -32,14 +32,14 @@ import java.util.Stack;
 public class KthSmallest implements Answer {
 
     public static void main(String[] args) {
-        new KthSmallest().answerOne();
+        new KthSmallest().answer();
     }
 
     /**
      * 解1：因为是二叉搜索树，所以正常中序遍历即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         int k = 3;
         Stack<TreeNode> stack = new Stack<>();

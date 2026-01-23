@@ -16,7 +16,7 @@ import com.xx.util.DataFactory;
  */
 public class RearrangeLinkList implements Answer {
     public static void main(String[] args) {
-        new RearrangeLinkList().answerOne();
+        new RearrangeLinkList().answer();
     }
 
     /**
@@ -24,7 +24,7 @@ public class RearrangeLinkList implements Answer {
      * 然后拼接即可
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode head = initData();
         ListNode midNode = findLinkMidNode(head);
         System.out.println(midNode.val);

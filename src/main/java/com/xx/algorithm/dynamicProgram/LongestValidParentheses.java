@@ -30,7 +30,7 @@ import java.util.Arrays;
 public class LongestValidParentheses implements Answer {
 
     public static void main(String[] args) {
-        new LongestValidParentheses().answerOne();
+        new LongestValidParentheses().answer();
     }
 
     /**
@@ -43,7 +43,7 @@ public class LongestValidParentheses implements Answer {
      * 如果最后一个元素为' ) '是有效子串的一部分，那么他一定有一个对应的'(' 在倒数第二个')'所在的有效子字符串的前面.
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         int[] dp = new int[data.length()];
         int max = 0;

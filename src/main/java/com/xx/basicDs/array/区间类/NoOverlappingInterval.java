@@ -38,11 +38,11 @@ import java.util.Comparator;
  */
 public class NoOverlappingInterval implements Answer {
     public static void main(String[] args) {
-        new NoOverlappingInterval().answerOne();
+        new NoOverlappingInterval().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] intervals = {{1, 2}, {2, 3}, {3, 4}, {1, 3},};
         System.out.println(computeResult(intervals));
     }

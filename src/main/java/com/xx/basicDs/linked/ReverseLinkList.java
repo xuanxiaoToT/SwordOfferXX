@@ -16,14 +16,14 @@ import com.xx.util.DataFactory;
 public class ReverseLinkList implements Answer {
 
     public static void main(String[] args) {
-        new ReverseLinkList().answerOne();
+        new ReverseLinkList().answer();
     }
 
     /**
      * 反转链表
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode head = initData();
         ListNode point = head;
         ListNode newPoint = null;

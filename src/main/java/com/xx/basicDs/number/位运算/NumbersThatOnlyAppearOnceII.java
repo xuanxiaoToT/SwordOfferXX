@@ -35,7 +35,7 @@ import java.util.Map;
 public class NumbersThatOnlyAppearOnceII implements Answer {
 
     public static void main(String[] args) {
-        new NumbersThatOnlyAppearOnceII().answerOne();
+        new NumbersThatOnlyAppearOnceII().answer();
     }
 
     /**
@@ -43,7 +43,7 @@ public class NumbersThatOnlyAppearOnceII implements Answer {
      * 2.重点：任何一个数字异或它自己的结果都是0,相同的3个数字异或的结果是数字本身
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         System.out.println(singleNumber(nums));
     }

@@ -50,11 +50,11 @@ import java.util.PriorityQueue;
 public class TheTotalCostOfHiringWorkers implements Answer {
 
     public static void main(String[] args) {
-        new TheTotalCostOfHiringWorkers().answerOne();
+        new TheTotalCostOfHiringWorkers().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] costs = {17, 12, 10, 2, 7, 2, 11, 20, 8};
         int[] costs = {1, 5, 7, 4, 9, 2, 3, 6};
         System.out.println(computeTotalCost(costs, 3, 3));

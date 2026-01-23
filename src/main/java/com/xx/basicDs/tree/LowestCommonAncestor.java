@@ -29,7 +29,7 @@ import com.xx.util.DataFactory;
 public class LowestCommonAncestor implements Answer {
 
     public static void main(String[] args) {
-        new LowestCommonAncestor().answerOne();
+        new LowestCommonAncestor().answer();
     }
 
     /**
@@ -39,7 +39,7 @@ public class LowestCommonAncestor implements Answer {
      * {@link NearestCommonAncestorOfBinaryTree}
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         TreeNode targetOne = new TreeNode(13);
         TreeNode targetTwo = new TreeNode(21);

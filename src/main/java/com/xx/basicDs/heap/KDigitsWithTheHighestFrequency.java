@@ -29,14 +29,14 @@ import java.util.PriorityQueue;
 public class KDigitsWithTheHighestFrequency implements Answer {
 
     public static void main(String[] args) {
-        new KDigitsWithTheHighestFrequency().answerOne();
+        new KDigitsWithTheHighestFrequency().answer();
     }
 
     /**
      * 用堆
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int k = 3;
         PriorityQueue<Map.Entry<Integer, Integer>> heap = new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));

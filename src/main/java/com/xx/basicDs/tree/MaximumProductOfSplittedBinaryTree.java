@@ -39,11 +39,11 @@ public class MaximumProductOfSplittedBinaryTree implements Answer {
     public int mask = 1000000007;
 
     public static void main(String[] args) {
-        new MaximumProductOfSplittedBinaryTree().answerOne();
+        new MaximumProductOfSplittedBinaryTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         long sum1 = 500000000;
         long sum2 = 500000000;
         long temp = ((sum1 - 1) * sum2) % mask;

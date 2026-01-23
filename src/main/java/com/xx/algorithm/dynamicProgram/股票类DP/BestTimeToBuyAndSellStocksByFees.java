@@ -32,14 +32,14 @@ import java.util.Arrays;
  */
 public class BestTimeToBuyAndSellStocksByFees implements Answer {
     public static void main(String[] args) {
-        new BestTimeToBuyAndSellStocksByFees().answerOne();
+        new BestTimeToBuyAndSellStocksByFees().answer();
     }
 
     /**
      * 解1：解法完全同{@link BestTimeToBuyAndSellStocksII}
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int fee = 2;
         int[] prices = initData();
         int[][] dp = new int[prices.length][2];

@@ -48,14 +48,14 @@ import com.xx.Answer;
 public class FindIntegerWithTheHighestDivScore implements Answer {
 
     public static void main(String[] args) {
-        new FindIntegerWithTheHighestDivScore().answerOne();
+        new FindIntegerWithTheHighestDivScore().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] nums = new int[]{4, 7, 9, 3, 9};
         //int[] divisors = new int[]{5, 2, 3};
         int[] nums = new int[]{73, 13, 20, 6};

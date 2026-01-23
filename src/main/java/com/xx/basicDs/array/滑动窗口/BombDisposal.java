@@ -44,14 +44,14 @@ import java.util.Arrays;
  */
 public class BombDisposal implements Answer {
     public static void main(String[] args) {
-        new BombDisposal().answerOne();
+        new BombDisposal().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] code = {5, 7, 1, 4};
         //int k = 3;
         int[] code = {2, 4, 9, 3};

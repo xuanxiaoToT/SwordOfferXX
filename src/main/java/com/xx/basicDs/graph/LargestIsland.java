@@ -18,14 +18,14 @@ import java.util.Queue;
 public class LargestIsland implements Answer {
 
     public static void main(String[] args) {
-        new LargestIsland().answerOne();
+        new LargestIsland().answer();
     }
 
     /**
      * 解：类似图的遍历。采用深度优先或者广度优先都可以。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         int[][] flag = new int[data.length][data[0].length];
         int max = 0;

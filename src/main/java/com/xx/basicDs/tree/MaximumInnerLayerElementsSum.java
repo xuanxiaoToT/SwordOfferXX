@@ -38,11 +38,11 @@ import java.util.Queue;
  */
 public class MaximumInnerLayerElementsSum implements Answer {
     public static void main(String[] args) {
-        new MaximumInnerLayerElementsSum().answerOne();
+        new MaximumInnerLayerElementsSum().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = DataFactory.generateTreeNode();
         System.out.println(maximumSumIndex(treeNode));
     }

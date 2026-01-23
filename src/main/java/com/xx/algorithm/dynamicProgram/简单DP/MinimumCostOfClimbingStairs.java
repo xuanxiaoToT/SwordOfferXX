@@ -43,14 +43,14 @@ import java.util.Arrays;
 public class MinimumCostOfClimbingStairs implements Answer {
 
     public static void main(String[] args) {
-        new MinimumCostOfClimbingStairs().answerOne();
+        new MinimumCostOfClimbingStairs().answer();
     }
 
     /**
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] cost = initData();
         System.out.println(minCostClimbingStairs(cost));
     }

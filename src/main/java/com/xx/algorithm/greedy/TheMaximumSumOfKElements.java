@@ -47,7 +47,7 @@ import java.util.Arrays;
 public class TheMaximumSumOfKElements implements Answer {
 
     public static void main(String[] args) {
-        new TheMaximumSumOfKElements().answerOne();
+        new TheMaximumSumOfKElements().answer();
     }
 
     /**
@@ -55,7 +55,7 @@ public class TheMaximumSumOfKElements implements Answer {
      * m + 1放回去，依然是最大值
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int k = 3;
         System.out.println(maximizeSum(nums, k));

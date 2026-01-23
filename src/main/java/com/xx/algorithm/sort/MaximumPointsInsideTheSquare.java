@@ -52,14 +52,14 @@ import java.util.*;
 public class MaximumPointsInsideTheSquare implements Answer {
 
     public static void main(String[] args) {
-        new MaximumPointsInsideTheSquare().answerOne();
+        new MaximumPointsInsideTheSquare().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] points = {{2, 2}, {-1, -2}, {-4, 4}, {-3, 1}, {3, -3}};
         String s = "abdca";
         //int[][] points = {{-1, -4}, {16, -8}, {13, -3}, {-12, 0}};

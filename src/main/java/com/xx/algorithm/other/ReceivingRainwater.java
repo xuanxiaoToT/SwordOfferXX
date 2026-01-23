@@ -28,14 +28,14 @@ import com.xx.Answer;
 public class ReceivingRainwater implements Answer {
 
     public static void main(String[] args) {
-        new ReceivingRainwater().answerOne();
+        new ReceivingRainwater().answer();
     }
 
     /**
      * 解1：自己AC的
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] height = initData();
         int result = 0;
         for (int i = 0; i < height.length; i++) {

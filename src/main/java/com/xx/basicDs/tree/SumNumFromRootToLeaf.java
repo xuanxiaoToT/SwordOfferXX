@@ -45,7 +45,7 @@ import java.util.Queue;
 public class SumNumFromRootToLeaf implements Answer {
 
     public static void main(String[] args) {
-        new SumNumFromRootToLeaf().answerOne();
+        new SumNumFromRootToLeaf().answer();
     }
 
     private int result = 0;
@@ -54,7 +54,7 @@ public class SumNumFromRootToLeaf implements Answer {
      * 解1：递归解法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         sumNumbers(treeNode, 0);
         System.out.println(result);

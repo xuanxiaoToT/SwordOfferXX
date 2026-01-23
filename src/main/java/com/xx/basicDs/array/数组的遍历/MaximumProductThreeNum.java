@@ -34,14 +34,14 @@ import java.util.Arrays;
 public class MaximumProductThreeNum implements Answer {
 
     public static void main(String[] args) {
-        new MaximumProductThreeNum().answerOne();
+        new MaximumProductThreeNum().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {-1, -2, -3, -4, -5};
         System.out.println(maximumProduct(nums));
     }

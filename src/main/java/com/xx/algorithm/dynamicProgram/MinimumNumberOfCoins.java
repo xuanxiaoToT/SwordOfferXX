@@ -36,7 +36,7 @@ import java.util.Arrays;
 public class MinimumNumberOfCoins implements Answer {
 
     public static void main(String[] args) {
-        new MinimumNumberOfCoins().answerOne();
+        new MinimumNumberOfCoins().answer();
     }
 
     /**
@@ -46,7 +46,7 @@ public class MinimumNumberOfCoins implements Answer {
      * 题不再是0-1背包问题，而是一个无界背包问题（也叫完全背包问题）。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] coins = new int[]{2};
         int amount = 3;
         System.out.println(coinChange(coins, amount));

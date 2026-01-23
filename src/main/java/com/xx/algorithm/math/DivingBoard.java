@@ -28,11 +28,11 @@ import java.util.Arrays;
  */
 public class DivingBoard implements Answer {
     public static void main(String[] args) {
-        new DivingBoard().answerOne();
+        new DivingBoard().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int shorter = 1;
         int longer = 2;
         int k = 3;

@@ -56,11 +56,11 @@ import java.util.Queue;
  */
 public class TheExitClosestToTheEntranceInMaze implements Answer {
     public static void main(String[] args) {
-        new TheExitClosestToTheEntranceInMaze().answerOne();
+        new TheExitClosestToTheEntranceInMaze().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // char[][] maze = {{'+', '+', '.', '+'}, {'.', '.', '.', '+'}, {'+', '+', '+', '.'}};
         // char[][] maze = {{'+', '+', '+', '+'}, {'.', '.', '.', '.'}, {'+', '+', '+', '+'}};
         char[][] maze = {{'.', '+'}, {'+', '+'}};

@@ -29,14 +29,14 @@ import com.xx.Answer;
 public class LongestCommonPrefix implements Answer {
 
     public static void main(String[] args) {
-        new LongestCommonPrefix().answerOne();
+        new LongestCommonPrefix().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] strs = initData();
         char c = ' ';
         StringBuilder result = new StringBuilder();

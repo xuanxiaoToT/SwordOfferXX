@@ -43,14 +43,14 @@ import com.xx.Answer;
  */
 public class FindTheIntegerAddedToArrayI implements Answer {
     public static void main(String[] args) {
-        new FindTheIntegerAddedToArrayI().answerOne();
+        new FindTheIntegerAddedToArrayI().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums1 = {2, 6, 4};
         int[] nums2 = {9, 7, 5};
         System.out.println(addedInteger(nums1, nums2));

@@ -44,11 +44,11 @@ import java.util.Arrays;
 public class RemoveDuplicatesFromOrderedArraysII implements Answer {
 
     public static void main(String[] args) {
-        new RemoveDuplicatesFromOrderedArraysII().answerOne();
+        new RemoveDuplicatesFromOrderedArraysII().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int left = 1;
         int right = 1;

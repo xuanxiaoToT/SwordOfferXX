@@ -25,11 +25,11 @@ import com.xx.Answer;
  */
 public class FindMajorityElement implements Answer {
     public static void main(String[] args) {
-        new FindMajorityElement().answerOne();
+        new FindMajorityElement().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{1, 2, 5, 9, 5, 9, 5, 5, 5};
         System.out.println(majorityElement(nums));
     }

@@ -15,11 +15,11 @@ public class WhetherPostorderTree implements Answer {
 
     public static void main(String[] args) {
         WhetherPostorderTree whetherPostorderTree = new WhetherPostorderTree();
-        whetherPostorderTree.answerOne();
+        whetherPostorderTree.answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         List<Integer> list = initData();
         boolean validate = validate(list, 0, list.size() - 1);
         System.out.println(validate);

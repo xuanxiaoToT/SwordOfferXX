@@ -47,11 +47,11 @@ import java.util.List;
  */
 public class SumOfCombinationIII implements Answer {
     public static void main(String[] args) {
-        new SumOfCombinationIII().answerOne();
+        new SumOfCombinationIII().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(computeResult(9, 45));
     }
 

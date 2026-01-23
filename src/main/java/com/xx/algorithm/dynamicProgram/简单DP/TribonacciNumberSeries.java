@@ -33,11 +33,11 @@ import com.xx.Answer;
 public class TribonacciNumberSeries implements Answer {
 
     public static void main(String[] args) {
-        new TribonacciNumberSeries().answerOne();
+        new TribonacciNumberSeries().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(computeResult(4));
     }
 

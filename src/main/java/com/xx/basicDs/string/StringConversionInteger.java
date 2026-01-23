@@ -35,14 +35,14 @@ import com.xx.Answer;
 public class StringConversionInteger implements Answer {
 
     public static void main(String[] args) {
-        new StringConversionInteger().answerOne();
+        new StringConversionInteger().answer();
     }
 
     /**
      * 解1： 此题的关键是各类边界条件要考虑到位
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int data = myAtoi(initData());
         System.out.println(data);
     }

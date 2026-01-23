@@ -29,14 +29,14 @@ import com.xx.util.NumberUtil;
  */
 public class WhetherStringAreUnique implements Answer {
     public static void main(String[] args) {
-        new WhetherStringAreUnique().answerOne();
+        new WhetherStringAreUnique().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String astr = "letcode";
         System.out.println(isUnique2(astr));
     }

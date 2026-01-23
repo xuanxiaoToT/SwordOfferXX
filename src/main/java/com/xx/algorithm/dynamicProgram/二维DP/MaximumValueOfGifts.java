@@ -29,11 +29,11 @@ public class MaximumValueOfGifts implements Answer {
     private int maxCol;
 
     public static void main(String[] args) {
-        new MaximumValueOfGifts().answerOne();
+        new MaximumValueOfGifts().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         maxRow = data.length;
         maxCol = data[0].length;

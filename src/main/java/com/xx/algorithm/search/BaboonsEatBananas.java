@@ -43,7 +43,7 @@ import java.util.Arrays;
 public class BaboonsEatBananas implements Answer {
 
     public static void main(String[] args) {
-        new BaboonsEatBananas().answerOne();
+        new BaboonsEatBananas().answer();
     }
 
     /**
@@ -52,7 +52,7 @@ public class BaboonsEatBananas implements Answer {
      * 缺点：每次都需要遍历piles数组。这块能省？
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] piles = {332484035, 524908576, 855865114, 632922376, 222257295, 690155293, 112677673, 679580077, 337406589, 290818316, 877337160, 901728858, 679284947, 688210097, 692137887, 718203285, 629455728, 941802184};
         // 门卫回来的时间
         int targetHours = 823855818;

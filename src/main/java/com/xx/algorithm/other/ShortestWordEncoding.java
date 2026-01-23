@@ -26,14 +26,14 @@ import com.xx.basicDs.tree.dictionaryTree.TrieDemo;
  */
 public class ShortestWordEncoding implements Answer {
     public static void main(String[] args) {
-        new ShortestWordEncoding().answerOne();
+        new ShortestWordEncoding().answer();
     }
 
     /**
      * 转换为逆向的前缀树。然后计算每个分之的长度即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TrieDemo trie = new TrieDemo();
         String[] data = initData();
         for (String datum : data) {

@@ -34,11 +34,11 @@ import com.xx.Answer;
 public class NumberOfDigitsCanBeDividedByAnInteger implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfDigitsCanBeDividedByAnInteger().answerOne();
+        new NumberOfDigitsCanBeDividedByAnInteger().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer num = initData();
         int number = num;
         int result = 0;

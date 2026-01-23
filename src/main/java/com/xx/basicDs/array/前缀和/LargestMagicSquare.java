@@ -33,11 +33,11 @@ import com.xx.Answer;
  */
 public class LargestMagicSquare implements Answer {
     public static void main(String[] args) {
-        new LargestMagicSquare().answerOne();
+        new LargestMagicSquare().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] grid = new int[][]{{7, 1, 4, 5, 6}, {2, 5, 1, 6, 4}, {1, 5, 4, 3, 2}, {1, 2, 7, 3, 4}};
         System.out.println(largestMagicSquare(grid));
     }

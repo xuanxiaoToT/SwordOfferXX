@@ -28,14 +28,14 @@ import com.xx.Answer;
 public class Find2DArrayI implements Answer {
 
     public static void main(String[] args) {
-        new Find2DArrayI().answerOne();
+        new Find2DArrayI().answer();
     }
 
     /**
      * 解1：先对最后一列二分,确定是在第几行
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         int target = 99;
 

@@ -40,7 +40,7 @@ import com.xx.Answer;
 public class TaskScheduler implements Answer {
 
     public static void main(String[] args) {
-        new TaskScheduler().answerOne();
+        new TaskScheduler().answer();
     }
 
     /**
@@ -48,7 +48,7 @@ public class TaskScheduler implements Answer {
      * 采用贪心算法来做  todo
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Character[] data = initData();
 
     }

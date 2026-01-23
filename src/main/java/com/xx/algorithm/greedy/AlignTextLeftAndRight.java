@@ -69,12 +69,12 @@ import java.util.Map;
 public class AlignTextLeftAndRight implements Answer {
 
     public static void main(String[] args) {
-        new AlignTextLeftAndRight().answerOne();
+        new AlignTextLeftAndRight().answer();
     }
 
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] words = new String[]{"This", "is", "an", "example", "of", "text", "justification."};
         int maxWidth = 16;
 

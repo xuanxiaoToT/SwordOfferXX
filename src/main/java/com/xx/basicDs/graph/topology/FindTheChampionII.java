@@ -45,14 +45,14 @@ import java.util.*;
 public class FindTheChampionII implements Answer {
 
     public static void main(String[] args) {
-        new FindTheChampionII().answerOne();
+        new FindTheChampionII().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] edges = initData();
         System.out.println(findChampion2(4, edges));
     }

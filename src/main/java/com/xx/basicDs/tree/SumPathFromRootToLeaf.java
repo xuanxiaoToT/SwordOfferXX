@@ -14,7 +14,7 @@ public class SumPathFromRootToLeaf implements Answer {
     private int sum = 0;
 
     public static void main(String[] args) {
-        new SumPathFromRootToLeaf().answerOne();
+        new SumPathFromRootToLeaf().answer();
     }
 
     /**
@@ -25,7 +25,7 @@ public class SumPathFromRootToLeaf implements Answer {
      * 也是直接递归遍历就行了
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         diGuiTree(treeNode,0);
         System.out.println(sum);

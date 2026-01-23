@@ -42,11 +42,11 @@ import java.util.Map;
 public class TheDegreeOfArray implements Answer {
 
     public static void main(String[] args) {
-        new TheDegreeOfArray().answerOne();
+        new TheDegreeOfArray().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {1, 2, 2, 3, 1};
         System.out.println(findShortestSubArray(nums));
     }

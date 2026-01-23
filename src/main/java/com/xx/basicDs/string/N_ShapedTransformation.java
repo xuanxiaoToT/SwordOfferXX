@@ -46,14 +46,14 @@ import java.util.List;
 public class N_ShapedTransformation implements Answer {
 
     public static void main(String[] args) {
-        new N_ShapedTransformation().answerOne();
+        new N_ShapedTransformation().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         System.out.println(convert(data, 3));
         System.out.println(convert(data, 4));

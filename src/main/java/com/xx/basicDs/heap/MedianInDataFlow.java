@@ -68,11 +68,11 @@ public class MedianInDataFlow implements Answer {
      */
     public static void main(String[] args) {
         MedianInDataFlow medianInDataFlow = new MedianInDataFlow();
-        medianInDataFlow.answerOne();
+        medianInDataFlow.answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // 缺点，插入的复杂度不是O1，而是On。效率很低。
         List<Integer> initData = initData();
         initData.forEach(num -> {

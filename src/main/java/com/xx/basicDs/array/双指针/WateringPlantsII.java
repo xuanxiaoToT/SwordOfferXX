@@ -60,11 +60,11 @@ import com.xx.Answer;
 public class WateringPlantsII implements Answer {
 
     public static void main(String[] args) {
-        new WateringPlantsII().answerOne();
+        new WateringPlantsII().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] plants = {2, 2, 3, 3};
         // int capacityA = 3;
         // int capacityB = 4;

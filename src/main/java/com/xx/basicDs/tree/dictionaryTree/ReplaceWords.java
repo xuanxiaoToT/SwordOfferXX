@@ -22,7 +22,7 @@ import com.xx.domain.TrieNode;
 public class ReplaceWords implements Answer {
 
     public static void main(String[] args) {
-        new ReplaceWords().answerOne();
+        new ReplaceWords().answer();
     }
 
     /**
@@ -30,7 +30,7 @@ public class ReplaceWords implements Answer {
      * 2.用set直接替代，感觉比这快。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] strings = initData();
         String oriStr = "the cattle was rattled by the battery";
         TrieDemo trieDemo = new TrieDemo();

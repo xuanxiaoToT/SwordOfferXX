@@ -34,7 +34,7 @@ import com.xx.Answer;
 public class NumberOfIslands implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfIslands().answerOne();
+        new NumberOfIslands().answer();
     }
 
     /**
@@ -43,7 +43,7 @@ public class NumberOfIslands implements Answer {
      * 可以用flag替代
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         char[][] grid = initData();
         if (grid.length == 0 || grid == null) {
             System.out.println(0);

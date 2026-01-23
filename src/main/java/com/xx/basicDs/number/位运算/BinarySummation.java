@@ -29,14 +29,14 @@ import com.xx.Answer;
 public class BinarySummation implements Answer {
 
     public static void main(String[] args) {
-        new BinarySummation().answerOne();
+        new BinarySummation().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(addBinary("1111", "1111"));
     }
 

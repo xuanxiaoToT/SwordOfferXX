@@ -22,14 +22,14 @@ public class TopOfTheMountainArray implements Answer {
     public static void main(String[] args) {
         int temp = 3 / 2;
         System.out.println(temp);
-        new TopOfTheMountainArray().answerOne();
+        new TopOfTheMountainArray().answer();
     }
 
     /**
      * 与《搜索旋转排序数组》题目一样，但是只需要找最大的那个即可
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int left = 0;
         int right = nums.length - 1;

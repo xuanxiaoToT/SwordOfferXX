@@ -36,14 +36,14 @@ import com.xx.Answer;
  */
 public class SumOfMinimumPaths implements Answer {
     public static void main(String[] args) {
-        new SumOfMinimumPaths().answerOne();
+        new SumOfMinimumPaths().answer();
     }
 
     /**
      * fix:同样  可以优化dp使用的存储空间。变为2两行的即可
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         System.out.println(minPathSum(data));
     }

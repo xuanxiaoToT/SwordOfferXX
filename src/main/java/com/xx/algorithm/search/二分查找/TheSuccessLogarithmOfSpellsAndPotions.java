@@ -46,11 +46,11 @@ import java.util.Arrays;
 public class TheSuccessLogarithmOfSpellsAndPotions implements Answer {
 
     public static void main(String[] args) {
-        new TheSuccessLogarithmOfSpellsAndPotions().answerOne();
+        new TheSuccessLogarithmOfSpellsAndPotions().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] spells = new int[]{5, 1, 3};
         // int[] potions = new int[]{1, 2, 3, 4, 5};
         // int success = 7;

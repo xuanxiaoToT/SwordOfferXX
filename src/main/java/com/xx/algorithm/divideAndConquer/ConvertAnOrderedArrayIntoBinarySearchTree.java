@@ -31,14 +31,14 @@ import com.xx.domain.TreeNode;
 public class ConvertAnOrderedArrayIntoBinarySearchTree implements Answer {
 
     public static void main(String[] args) {
-        new ConvertAnOrderedArrayIntoBinarySearchTree().answerOne();
+        new ConvertAnOrderedArrayIntoBinarySearchTree().answer();
     }
 
     /**
      * 解1:简单递归
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         TreeNode result = generateBinarySearchTree(nums, 0, nums.length - 1);
         System.out.println(result);

@@ -47,11 +47,11 @@ import com.xx.Answer;
 public class RightTriangle implements Answer {
 
     public static void main(String[] args) {
-        new RightTriangle().answerOne();
+        new RightTriangle().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] grid = {{0, 1, 0}, {0, 1, 1}, {0, 1, 0}};
         // int[][] grid = {{1, 0, 0, 0}, {0, 1, 0, 1}, {1, 0, 0, 0}};
         int[][] grid = {{1, 0, 1}, {1, 0, 0}, {1, 0, 0}};

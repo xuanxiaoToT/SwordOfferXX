@@ -43,11 +43,11 @@ import java.util.*;
 public class ImportanceOfEmployees implements Answer {
 
     public static void main(String[] args) {
-        new ImportanceOfEmployees().answerOne();
+        new ImportanceOfEmployees().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         Employee employee1 = new Employee(1, 5);
         Employee employee2 = new Employee(2, 3);
         Employee employee3 = new Employee(3, 3);

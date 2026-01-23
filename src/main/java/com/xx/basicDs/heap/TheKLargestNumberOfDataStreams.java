@@ -36,7 +36,7 @@ public class TheKLargestNumberOfDataStreams implements Answer {
 
 
     public static void main(String[] args) {
-        new TheKLargestNumberOfDataStreams().answerOne();
+        new TheKLargestNumberOfDataStreams().answer();
     }
 
     /**
@@ -45,7 +45,7 @@ public class TheKLargestNumberOfDataStreams implements Answer {
      * 时间复杂度O(N*LogN)
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int k = 5;
         System.out.println(findKthLargest(nums, k));

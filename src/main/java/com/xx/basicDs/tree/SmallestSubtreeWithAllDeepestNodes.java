@@ -45,11 +45,11 @@ public class SmallestSubtreeWithAllDeepestNodes implements Answer {
     int maxDepth = 0;
 
     public static void main(String[] args) {
-        new SmallestSubtreeWithAllDeepestNodes().answerOne();
+        new SmallestSubtreeWithAllDeepestNodes().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = new TreeNode(3);
         TreeNode node1 = new TreeNode(5);
         TreeNode node2 = new TreeNode(1);

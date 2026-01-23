@@ -23,14 +23,14 @@ import java.util.Arrays;
 public class RingHouseTheft implements Answer {
 
     public static void main(String[] args) {
-        new RingHouseTheft().answerOne();
+        new RingHouseTheft().answer();
     }
 
     /**
      * 用一个flag来标记当前房子是否是最后一个。来判断环
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int[] dp = new int[data.length];
         boolean[] flag = new boolean[data.length];

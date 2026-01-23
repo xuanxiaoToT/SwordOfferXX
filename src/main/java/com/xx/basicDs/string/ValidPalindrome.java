@@ -39,14 +39,14 @@ import com.xx.Answer;
 public class ValidPalindrome implements Answer {
 
     public static void main(String[] args) {
-        new ValidPalindrome().answerOne();
+        new ValidPalindrome().answer();
     }
 
     /**
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String oriStr = initData();
         if (oriStr.length() == 0) {
             System.out.println(true);

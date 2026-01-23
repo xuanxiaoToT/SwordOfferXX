@@ -40,7 +40,7 @@ import java.util.*;
 public class WordChain implements Answer {
 
     public static void main(String[] args) {
-        new WordChain().answerOne();
+        new WordChain().answer();
     }
 
     /**
@@ -50,7 +50,7 @@ public class WordChain implements Answer {
      * {@link MinimalGeneticChanges}
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         List<String> wordList = initData();
         String beginWord = "hit", endWord = "cog";
         System.out.println(ladderLength(beginWord, endWord, wordList));

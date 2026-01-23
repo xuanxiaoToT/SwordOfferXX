@@ -41,7 +41,7 @@ import java.util.List;
 public class GrayCode implements Answer {
 
     public static void main(String[] args) {
-        new GrayCode().answerOne();
+        new GrayCode().answer();
     }
 
     /**
@@ -57,7 +57,7 @@ public class GrayCode implements Answer {
      * https://leetcode.cn/problems/gray-code/solutions/1196538/ge-lei-bian-ma-by-leetcode-solution-cqi7/
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = initData();
         List<Integer> ret = new ArrayList<Integer>();
         ret.add(0);

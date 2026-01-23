@@ -42,7 +42,7 @@ import com.xx.Answer;
 public class StringInterleaving implements Answer {
 
     public static void main(String[] args) {
-        new StringInterleaving().answerOne();
+        new StringInterleaving().answer();
     }
 
 
@@ -58,7 +58,7 @@ public class StringInterleaving implements Answer {
      * 问题fix：思考的时候就是0,0没想明白。将其当做-1处理就很容易解决了。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(isInterleave("aa", "ab", "abaa"));
 
     }

@@ -52,12 +52,12 @@ import java.util.Stack;
 public class TheTotalOfMergeOverlappingIntervalsIntoGroup implements Answer {
 
     public static void main(String[] args) {
-        new TheTotalOfMergeOverlappingIntervalsIntoGroup().answerOne();
+        new TheTotalOfMergeOverlappingIntervalsIntoGroup().answer();
     }
 
     //分为两个问题：找汇并区间、分组
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] ranges = new int[][]{{1, 3}, {10, 20}, {2, 5}, {4, 8}};
         //int[][] ranges = new int[][]{{6, 10}, {5, 15}};
         int[][] ranges = {{34, 56}, {28, 29}, {12, 16}, {11, 48}, {28, 54}, {22, 55}, {28, 41}, {41, 44}};

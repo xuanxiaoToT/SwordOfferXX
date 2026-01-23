@@ -33,14 +33,14 @@ public class LongestSubstrWithoutDuplicateChar implements Answer {
     private int max = 0;
 
     public static void main(String[] args) {
-        new LongestSubstrWithoutDuplicateChar().answerOne();
+        new LongestSubstrWithoutDuplicateChar().answer();
     }
 
     /**
      * 使用双指针 滑动窗口.md 法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String oriStr = initData();
         int left = 0;
         int right = 0;

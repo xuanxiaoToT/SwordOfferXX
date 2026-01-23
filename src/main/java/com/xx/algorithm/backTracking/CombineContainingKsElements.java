@@ -20,7 +20,7 @@ import java.util.List;
 public class CombineContainingKsElements implements Answer {
 
     public static void main(String[] args) {
-        new CombineContainingKsElements().answerOne();
+        new CombineContainingKsElements().answer();
     }
 
     List<List<Integer>> result = new ArrayList<>();
@@ -29,7 +29,7 @@ public class CombineContainingKsElements implements Answer {
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 2;
         int[] nums = initData();
         diGui(new ArrayList<>(), 0, nums, k);

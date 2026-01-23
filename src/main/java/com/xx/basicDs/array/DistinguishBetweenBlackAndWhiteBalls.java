@@ -41,12 +41,12 @@ import com.xx.Answer;
 public class DistinguishBetweenBlackAndWhiteBalls implements Answer {
 
     public static void main(String[] args) {
-        new DistinguishBetweenBlackAndWhiteBalls().answerOne();
+        new DistinguishBetweenBlackAndWhiteBalls().answer();
     }
 
 
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(minimumSteps("1010101010101"));
     }
 

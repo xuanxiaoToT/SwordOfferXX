@@ -29,11 +29,11 @@ import com.xx.Answer;
  */
 public class MaximumSideLengthOfSquareWithSumLessThanThreshold implements Answer {
     public static void main(String[] args) {
-        new MaximumSideLengthOfSquareWithSumLessThanThreshold().answerOne();
+        new MaximumSideLengthOfSquareWithSumLessThanThreshold().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

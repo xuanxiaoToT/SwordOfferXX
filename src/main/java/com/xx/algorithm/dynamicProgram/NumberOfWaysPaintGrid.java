@@ -41,11 +41,11 @@ import com.xx.Answer;
  */
 public class NumberOfWaysPaintGrid implements Answer {
     public static void main(String[] args) {
-        new NumberOfWaysPaintGrid().answerOne();
+        new NumberOfWaysPaintGrid().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int n = 1;
         int n = 3;
         System.out.println(numOfWays(n));

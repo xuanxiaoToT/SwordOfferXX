@@ -28,7 +28,7 @@ import com.xx.util.DataFactory;
 public class DeleteTheLinkNodeNthFromEnd implements Answer {
 
     public static void main(String[] args) {
-        new DeleteTheLinkNodeNthFromEnd().answerOne();
+        new DeleteTheLinkNodeNthFromEnd().answer();
     }
 
     /**
@@ -36,7 +36,7 @@ public class DeleteTheLinkNodeNthFromEnd implements Answer {
      * 注意使用哨兵节点，这样可以更好操作。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode listNode = initData();
         System.out.println(listNode);
         ListNode result = removeNthFromEnd(listNode, 2);

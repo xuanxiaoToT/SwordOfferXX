@@ -18,11 +18,11 @@ public class SubOfTree implements Answer {
 
     public static void main(String[] args) {
         SubOfTree subOfTree = new SubOfTree();
-        subOfTree.answerOne();
+        subOfTree.answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode ori = new TreeNode();
         TreeNode target = new TreeNode();
 

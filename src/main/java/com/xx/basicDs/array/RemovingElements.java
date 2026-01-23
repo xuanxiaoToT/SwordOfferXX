@@ -47,14 +47,14 @@ import java.util.Arrays;
  */
 public class RemovingElements implements Answer {
     public static void main(String[] args) {
-        new RemovingElements().answerOne();
+        new RemovingElements().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int elementCount = removeElement(data, 2);
         System.out.println(elementCount);

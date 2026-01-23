@@ -50,11 +50,11 @@ import java.util.List;
  */
 public class MaximumTwinSumOfLinkList implements Answer {
     public static void main(String[] args) {
-        new MaximumTwinSumOfLinkList().answerOne();
+        new MaximumTwinSumOfLinkList().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode listNode = DataFactory.generateLinkedList();
         System.out.println(maximumTwinSum2(listNode));
     }

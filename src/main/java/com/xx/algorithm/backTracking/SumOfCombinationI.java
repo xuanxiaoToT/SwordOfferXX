@@ -43,14 +43,14 @@ import java.util.List;
 public class SumOfCombinationI implements Answer {
 
     public static void main(String[] args) {
-        new SumOfCombinationI().answerOne();
+        new SumOfCombinationI().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int target = 1;
         List<List<Integer>> result = new ArrayList<>();

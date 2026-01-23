@@ -49,11 +49,11 @@ import java.util.Queue;
  */
 public class LastDayWhereYouCanStillCross implements Answer {
     public static void main(String[] args) {
-        new LastDayWhereYouCanStillCross().answerOne();
+        new LastDayWhereYouCanStillCross().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int row = 2;
         // int col = 2;
         // int[][] cells = new int[][]{{1, 1}, {2, 1}, {1, 2}, {2, 2}};

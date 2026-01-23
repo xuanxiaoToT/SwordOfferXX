@@ -36,11 +36,11 @@ import java.util.Queue;
 public class TheLayerAverageOfBinaryTree implements Answer {
 
     public static void main(String[] args) {
-        new TheLayerAverageOfBinaryTree().answerOne();
+        new TheLayerAverageOfBinaryTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         Queue<TreeNode> outQueue = new LinkedList<TreeNode>();
         List<Double> avgList = new ArrayList<>();

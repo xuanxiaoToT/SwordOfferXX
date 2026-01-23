@@ -38,11 +38,11 @@ import java.util.Set;
  */
 public class MaximumSquareAreaByRemovingFencesFromField implements Answer {
     public static void main(String[] args) {
-        new MaximumSquareAreaByRemovingFencesFromField().answerOne();
+        new MaximumSquareAreaByRemovingFencesFromField().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int m = 4;
         int n = 3;
         int[] hFences = new int[]{2, 3};

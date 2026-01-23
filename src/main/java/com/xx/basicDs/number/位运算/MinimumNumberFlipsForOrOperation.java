@@ -36,11 +36,11 @@ import com.xx.Answer;
 public class MinimumNumberFlipsForOrOperation implements Answer {
 
     public static void main(String[] args) {
-        new MinimumNumberFlipsForOrOperation().answerOne();
+        new MinimumNumberFlipsForOrOperation().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(computeResult(1, 2, Integer.MAX_VALUE));
     }
 

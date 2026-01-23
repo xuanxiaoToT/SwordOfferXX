@@ -43,11 +43,11 @@ import java.util.Queue;
 public class FillInNextRightNodeForEachNodeII implements Answer {
 
     public static void main(String[] args) {
-        new FillInNextRightNodeForEachNodeII().answerOne();
+        new FillInNextRightNodeForEachNodeII().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         Node root = initData();
         Node pre = null;
         if (root == null) {

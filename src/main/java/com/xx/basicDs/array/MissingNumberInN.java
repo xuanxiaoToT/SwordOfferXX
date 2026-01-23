@@ -29,14 +29,14 @@ import java.util.Arrays;
 public class MissingNumberInN implements Answer {
 
     public static void main(String[] args) {
-        new MissingNumberInN().answerOne();
+        new MissingNumberInN().answer();
     }
 
     /**
      * 采用桶排序的思想
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         for (int i = 0; i < nums.length; i++) {
             while (i != nums[i] && nums[i] < nums.length) {

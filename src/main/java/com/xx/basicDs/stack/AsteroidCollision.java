@@ -43,14 +43,14 @@ import java.util.Stack;
 public class AsteroidCollision implements Answer {
 
     public static void main(String[] args) {
-        new AsteroidCollision().answerOne();
+        new AsteroidCollision().answer();
     }
 
     /**
      * 这符合“后入先出”的顺序，所以可以考虑用栈实现这个数据容器。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] dateList = initData();
         System.out.println(Arrays.toString(asteroidCollision(dateList)));
     }

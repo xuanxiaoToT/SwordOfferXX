@@ -27,7 +27,7 @@ import java.util.Arrays;
 public class ThreeSumClosest implements Answer {
 
     public static void main(String[] args) {
-        new ThreeSumClosest().answerOne();
+        new ThreeSumClosest().answer();
     }
 
     /**
@@ -36,7 +36,7 @@ public class ThreeSumClosest implements Answer {
      * 解2：利用双指针法。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int targetNum = initTargetNum();
         Arrays.sort(data);

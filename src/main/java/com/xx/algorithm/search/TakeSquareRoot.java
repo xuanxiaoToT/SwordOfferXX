@@ -17,14 +17,14 @@ import com.xx.Answer;
 public class TakeSquareRoot implements Answer {
 
     public static void main(String[] args) {
-        new TakeSquareRoot().answerOne();
+        new TakeSquareRoot().answer();
     }
 
     /**
      * 二分法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer data = initData();
 
         int left = 1;

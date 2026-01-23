@@ -22,7 +22,7 @@ import java.util.Arrays;
 public class FlipCharacter implements Answer {
 
     public static void main(String[] args) {
-        new FlipCharacter().answerOne();
+        new FlipCharacter().answer();
     }
 
     /**
@@ -30,7 +30,7 @@ public class FlipCharacter implements Answer {
      * 遍历完求得最小值即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         int[] dp = new int[data.length()];
         int count1 = computeCharCount(data, '1');

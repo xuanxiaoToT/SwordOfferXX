@@ -21,14 +21,14 @@ import java.util.Arrays;
 public class PaintTheHouse implements Answer {
 
     public static void main(String[] args) {
-        new PaintTheHouse().answerOne();
+        new PaintTheHouse().answer();
     }
 
     /**
      * f(i,j) 第i个房子，刷j颜色。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         // dp可以精简，每次需要的是一维数组 长度为3即可。
         int[][] dp = new int[data.length][3];

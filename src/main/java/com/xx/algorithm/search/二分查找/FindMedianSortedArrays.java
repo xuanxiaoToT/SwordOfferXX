@@ -36,7 +36,7 @@ import com.xx.Answer;
 public class FindMedianSortedArrays implements Answer {
 
     public static void main(String[] args) {
-        new FindMedianSortedArrays().answerOne();
+        new FindMedianSortedArrays().answer();
     }
 
     /**
@@ -45,7 +45,7 @@ public class FindMedianSortedArrays implements Answer {
      * 开发：略
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] numA = new int[]{2, 3};
         int[] numB = new int[]{1};
         System.out.println(findMedianSortedArrays(numA, numB));

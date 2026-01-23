@@ -22,14 +22,14 @@ public class BinarySearchTreeAndBidirectionalLinkedList implements Answer {
 
     public static void main(String[] args) {
         BinarySearchTreeAndBidirectionalLinkedList aaa = new BinarySearchTreeAndBidirectionalLinkedList();
-        aaa.answerOne();
+        aaa.answer();
     }
 
     /**
      * 使用中序遍历
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         TreeNode listHead = null;
         TreeNode listPre = null;

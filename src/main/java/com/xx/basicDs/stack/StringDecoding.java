@@ -57,7 +57,7 @@ public class StringDecoding implements Answer {
     }
 
     public static void main(String[] args) {
-        new StringDecoding().answerOne();
+        new StringDecoding().answer();
     }
 
     /**
@@ -66,7 +66,7 @@ public class StringDecoding implements Answer {
      * 思考：每次遇到'['时，都需要先把一个str和int存进去
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         Stack<StringDecodingTempData> stack = new Stack<>();
         StringBuilder sbTemp = new StringBuilder();

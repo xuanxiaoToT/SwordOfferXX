@@ -33,11 +33,11 @@ import java.util.Queue;
  */
 public class InvertVowelsInString implements Answer {
     public static void main(String[] args) {
-        new InvertVowelsInString().answerOne();
+        new InvertVowelsInString().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(invertString("leetcode"));
     }
 

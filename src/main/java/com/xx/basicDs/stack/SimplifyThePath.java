@@ -51,7 +51,7 @@ import java.util.Deque;
 public class SimplifyThePath implements Answer {
 
     public static void main(String[] args) {
-        new SimplifyThePath().answerOne();
+        new SimplifyThePath().answer();
     }
 
     /**
@@ -68,7 +68,7 @@ public class SimplifyThePath implements Answer {
      * 再在最前面加上 / 表示根目录，就可以得到简化后的规范路径。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         System.out.println(simplifyPath(data));
     }

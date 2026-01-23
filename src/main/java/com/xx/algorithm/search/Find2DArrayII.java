@@ -25,7 +25,7 @@ public class Find2DArrayII implements Answer {
      * 解1：先对行二分，再对列二分的方法是错误的~！
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 错误解法略
     }
 

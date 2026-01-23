@@ -32,11 +32,11 @@ import com.xx.Answer;
  */
 public class InsertIntoBits implements Answer {
     public static void main(String[] args) {
-        new InsertIntoBits().answerOne();
+        new InsertIntoBits().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int N = 1024;
         // int M = 19;
         // int i = 2;

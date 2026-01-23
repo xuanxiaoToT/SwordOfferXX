@@ -53,14 +53,14 @@ import java.util.stream.Collectors;
 public class ConcatenateSubstringsOfAllWords implements Answer {
 
     public static void main(String[] args) {
-        new ConcatenateSubstringsOfAllWords().answerOne();
+        new ConcatenateSubstringsOfAllWords().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //String s = "barfoothefoobarman";
         //String[] words = new String[]{"foo", "bar"};
         //String s = "wordgoodgoodgoodbestword";

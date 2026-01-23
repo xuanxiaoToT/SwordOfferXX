@@ -63,14 +63,14 @@ import java.util.Comparator;
 public class MinimumRectanglesToCoverPoints implements Answer {
 
     public static void main(String[] args) {
-        new MinimumRectanglesToCoverPoints().answerOne();
+        new MinimumRectanglesToCoverPoints().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] points = {{2, 1}, {1, 0}, {1, 4}, {1, 8}, {3, 5}, {4, 6}};
         int w = 1;
         System.out.println(minRectanglesToCoverPoints(points, w));

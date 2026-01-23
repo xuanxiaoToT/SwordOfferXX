@@ -16,11 +16,11 @@ public class DepthOfBinaryTree implements Answer {
     private int maxDepth;
 
     public static void main(String[] args) {
-        new DepthOfBinaryTree().answerOne();
+        new DepthOfBinaryTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // 直接递归遍历
         TreeNode treeNode = initData();
         traversalTree(treeNode, 1);

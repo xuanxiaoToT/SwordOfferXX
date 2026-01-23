@@ -36,14 +36,14 @@ import com.xx.Answer;
 public class InvertBinaryBits implements Answer {
 
     public static void main(String[] args) {
-        new InvertBinaryBits().answerOne();
+        new InvertBinaryBits().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(reverseBits(Integer.valueOf("00000010100101000001111010011100", 2)));
     }
 

@@ -36,7 +36,7 @@ import java.util.Arrays;
 public class NumberOfRobotPaths implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfRobotPaths().answerOne();
+        new NumberOfRobotPaths().answer();
     }
 
     /**
@@ -44,7 +44,7 @@ public class NumberOfRobotPaths implements Answer {
      * 矩阵路径问题
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int m = data[0];
         int n = data[1];

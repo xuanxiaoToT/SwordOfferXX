@@ -39,14 +39,14 @@ import com.xx.domain.TreeNode;
 public class PseudoPalindromePathsInBinaryTrees implements Answer {
 
     public static void main(String[] args) {
-        new PseudoPalindromePathsInBinaryTrees().answerOne();
+        new PseudoPalindromePathsInBinaryTrees().answer();
     }
 
     /**
      * 解1：DFS+回溯
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         System.out.println(pseudoPalindromicPaths(root));
     }

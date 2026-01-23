@@ -56,14 +56,14 @@ import java.util.HashMap;
 public class EffectiveSudoku implements Answer {
 
     public static void main(String[] args) {
-        new EffectiveSudoku().answerOne();
+        new EffectiveSudoku().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

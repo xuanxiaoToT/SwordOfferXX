@@ -43,7 +43,7 @@ public class MaxSlidingWindow implements Answer {
      * 解1：时间不足，时间复杂度太高
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 3;
         int[] nums = initData();
         int[] result = new int[nums.length - k + 1];

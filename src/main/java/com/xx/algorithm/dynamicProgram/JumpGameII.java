@@ -35,7 +35,7 @@ import java.util.Arrays;
 public class JumpGameII implements Answer {
 
     public static void main(String[] args) {
-        new JumpGameII().answerOne();
+        new JumpGameII().answer();
     }
 
     /**
@@ -43,7 +43,7 @@ public class JumpGameII implements Answer {
      * fixme:寄，leetcode执行时，超出内存限制。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int[][] dp = new int[data.length][data.length];
         for (int i = 0; i < data.length; i++) {

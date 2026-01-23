@@ -43,14 +43,14 @@ import com.xx.Answer;
 public class TimoAttack implements Answer {
 
     public static void main(String[] args) {
-        new TimoAttack().answerOne();
+        new TimoAttack().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] timeSeries = {0, 1};
         int duration = 1;
         System.out.println(findPoisonedDuration(timeSeries, duration));

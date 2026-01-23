@@ -42,14 +42,14 @@ import java.util.Queue;
 public class CountOfNodesInCompleteBinaryTree implements Answer {
 
     public static void main(String[] args) {
-        new CountOfNodesInCompleteBinaryTree().answerOne();
+        new CountOfNodesInCompleteBinaryTree().answer();
     }
 
     /**
      * 解1：层序简单算
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         Queue<TreeNode> outQueue = new LinkedList<TreeNode>();
         int count = 0;

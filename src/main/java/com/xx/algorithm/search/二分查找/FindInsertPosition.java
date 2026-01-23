@@ -34,14 +34,14 @@ import com.xx.Answer;
 public class FindInsertPosition implements Answer {
 
     public static void main(String[] args) {
-        new FindInsertPosition().answerOne();
+        new FindInsertPosition().answer();
     }
 
     /**
      * 经典的二分题
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int target = 100;
         int[] nums = initData();
         int start = 0;

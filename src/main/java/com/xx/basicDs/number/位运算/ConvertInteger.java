@@ -23,11 +23,11 @@ import com.xx.Answer;
  */
 public class ConvertInteger implements Answer {
     public static void main(String[] args) {
-        new ConvertInteger().answerOne();
+        new ConvertInteger().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int A = 29;
         // int B = 15;
 

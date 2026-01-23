@@ -19,11 +19,11 @@ import com.xx.Answer;
 public class ArrangeArrayIntoSmallestNumber implements Answer {
     public static void main(String[] args) {
         ArrangeArrayIntoSmallestNumber arrangeArrayIntoSmallestNumber = new ArrangeArrayIntoSmallestNumber();
-        arrangeArrayIntoSmallestNumber.answerOne();
+        arrangeArrayIntoSmallestNumber.answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         // 先将 nums 转换为字符串数组的形式
         String[] strs = new String[nums.length];

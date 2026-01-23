@@ -55,11 +55,11 @@ import java.util.Map;
 public class HtmlEntityParser implements Answer {
 
     public static void main(String[] args) {
-        new HtmlEntityParser().answerOne();
+        new HtmlEntityParser().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String input = "&&&&&&";
         System.out.println(entityParser(input));
     }

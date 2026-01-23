@@ -41,7 +41,7 @@ import java.util.Map;
  */
 public class MinimumCoveringSubstring implements Answer {
     public static void main(String[] args) {
-        new MinimumCoveringSubstring().answerOne();
+        new MinimumCoveringSubstring().answer();
     }
 
     /**
@@ -58,7 +58,7 @@ public class MinimumCoveringSubstring implements Answer {
      * 优化后的时空复杂度又是多少？
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         String target = getTarget();
         HashMap<Character, Integer> targetMap = new HashMap<>();

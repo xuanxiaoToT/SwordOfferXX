@@ -40,11 +40,11 @@ import java.util.*;
 public class ArrangeWorkToAchieveMaximumBenefits implements Answer {
 
     public static void main(String[] args) {
-        new ArrangeWorkToAchieveMaximumBenefits().answerOne();
+        new ArrangeWorkToAchieveMaximumBenefits().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] difficult = new int[]{2, 4, 6, 8, 10};
         int[] profit = new int[]{10, 20, 30, 40, 50};
         int[] worker = new int[]{4, 5, 6, 7};

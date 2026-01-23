@@ -35,11 +35,11 @@ import com.xx.Answer;
 public class TheLengthOfTheLastWord implements Answer {
 
     public static void main(String[] args) {
-        new TheLengthOfTheLastWord().answerOne();
+        new TheLengthOfTheLastWord().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         boolean end = false;
         int count = 0;

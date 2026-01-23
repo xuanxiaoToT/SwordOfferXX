@@ -40,11 +40,11 @@ import java.util.Map;
  */
 public class EqualRowAndColumnPairs implements Answer {
     public static void main(String[] args) {
-        new EqualRowAndColumnPairs().answerOne();
+        new EqualRowAndColumnPairs().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] grid = {{3, 1, 2, 2}, {1, 4, 4, 5}, {2, 4, 2, 2}, {2, 4, 2, 2}};
         System.out.println(computePairs(grid));
     }

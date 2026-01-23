@@ -38,11 +38,11 @@ import com.xx.Answer;
 public class SubArrayWithTheSmallestLength implements Answer {
 
     public static void main(String[] args) {
-        new SubArrayWithTheSmallestLength().answerOne();
+        new SubArrayWithTheSmallestLength().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int result = theSmallestLengthSubArray(nums, 5);
         System.out.println(result);

@@ -23,7 +23,7 @@ import java.util.Arrays;
  */
 public class DividingEqualSumSubsets implements Answer {
     public static void main(String[] args) {
-        new DividingEqualSumSubsets().answerOne();
+        new DividingEqualSumSubsets().answer();
     }
 
     /**
@@ -48,7 +48,7 @@ public class DividingEqualSumSubsets implements Answer {
      * fix：同样的，dp可以仅用两行替代
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int sum = Arrays.stream(data).sum();
         if (sum % 2 != 0) {

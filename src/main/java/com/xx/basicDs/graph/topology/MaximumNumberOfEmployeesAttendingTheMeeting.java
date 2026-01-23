@@ -54,14 +54,14 @@ import java.util.*;
 public class MaximumNumberOfEmployeesAttendingTheMeeting implements Answer {
 
     public static void main(String[] args) {
-        new MaximumNumberOfEmployeesAttendingTheMeeting().answerOne();
+        new MaximumNumberOfEmployeesAttendingTheMeeting().answer();
     }
 
     /**
      * 参考：https://blog.csdn.net/guoxinian/article/details/122354123
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] favorite = initData();
         System.out.println(maximumInvitations(favorite));
     }

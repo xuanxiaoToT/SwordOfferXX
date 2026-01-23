@@ -39,14 +39,14 @@ import java.util.Arrays;
 public class ArrayPlusOne implements Answer {
 
     public static void main(String[] args) {
-        new ArrayPlusOne().answerOne();
+        new ArrayPlusOne().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(Arrays.toString(plusOne(new int[]{1, 2, 3, 9})));
     }
 

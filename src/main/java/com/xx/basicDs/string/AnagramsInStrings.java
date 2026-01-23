@@ -36,7 +36,7 @@ import java.util.Map;
 public class AnagramsInStrings implements Answer {
 
     public static void main(String[] args) {
-        new AnagramsInStrings().answerOne();
+        new AnagramsInStrings().answer();
     }
 
     /**
@@ -45,7 +45,7 @@ public class AnagramsInStrings implements Answer {
      * 复杂度：O(N)
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String str1 = "ac";
         String str2 = initData();
         int left = 0;

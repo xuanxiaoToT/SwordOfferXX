@@ -30,7 +30,7 @@ import java.util.Set;
 public class MaxXORValueOfTwoNumbersInArray implements Answer {
 
     public static void main(String[] args) {
-        new MaxXORValueOfTwoNumbersInArray().answerOne();
+        new MaxXORValueOfTwoNumbersInArray().answer();
     }
 
     /**
@@ -38,7 +38,7 @@ public class MaxXORValueOfTwoNumbersInArray implements Answer {
      * https://cloud.tencent.com/developer/article/1521719
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         System.out.println(findMaximumXOR(nums));
     }

@@ -57,11 +57,11 @@ import java.util.PriorityQueue;
 public class MaxiWeeksThatCanWork implements Answer {
 
     public static void main(String[] args) {
-        new MaxiWeeksThatCanWork().answerOne();
+        new MaxiWeeksThatCanWork().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] miletones = new int[]{1, 2, 3};
         //int[] miletones = new int[]{5, 2, 1};
         int[] miletones = new int[]{5, 7, 5, 7, 9, 7};

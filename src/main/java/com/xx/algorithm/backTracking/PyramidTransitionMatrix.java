@@ -43,11 +43,11 @@ public class PyramidTransitionMatrix implements Answer {
     public boolean result = false;
 
     public static void main(String[] args) {
-        new PyramidTransitionMatrix().answerOne();
+        new PyramidTransitionMatrix().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // String bottom = "BCD";
         // List<String> allowed = Arrays.asList("BCC", "CDE", "CEA");
 

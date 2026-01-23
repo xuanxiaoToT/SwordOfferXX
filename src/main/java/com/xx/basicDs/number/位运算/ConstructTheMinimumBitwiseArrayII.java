@@ -42,11 +42,11 @@ import java.util.List;
  */
 public class ConstructTheMinimumBitwiseArrayII implements Answer {
     public static void main(String[] args) {
-        new ConstructTheMinimumBitwiseArrayII().answerOne();
+        new ConstructTheMinimumBitwiseArrayII().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         List<Integer> nums = Arrays.asList(2, 3, 5, 7);
         System.out.println(Arrays.toString(minBitwiseArray(nums)));
     }

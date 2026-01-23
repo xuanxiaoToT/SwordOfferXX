@@ -39,14 +39,14 @@ import com.xx.Answer;
 public class NumberOfBitsOne implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfBitsOne().answerOne();
+        new NumberOfBitsOne().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

@@ -33,12 +33,12 @@ import com.xx.Answer;
 public class MakeThreeStringsEqual implements Answer {
 
     public static void main(String[] args) {
-        new MakeThreeStringsEqual().answerOne();
+        new MakeThreeStringsEqual().answer();
     }
 
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String s1 = "abc";
         String s2 = "a";
         String s3 = "ab";

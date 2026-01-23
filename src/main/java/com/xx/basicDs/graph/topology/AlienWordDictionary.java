@@ -20,7 +20,7 @@ import com.xx.Answer;
 public class AlienWordDictionary implements Answer {
 
     public static void main(String[] args) {
-        new AlienWordDictionary().answerOne();
+        new AlienWordDictionary().answer();
     }
 
     /**
@@ -28,7 +28,7 @@ public class AlienWordDictionary implements Answer {
      * 唯一的问题是如何将字母表转换为graph
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
         String[] data = initData();
         // 字母表的顺序：即与上一个字符进行对比

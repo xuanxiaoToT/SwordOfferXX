@@ -19,11 +19,11 @@ import com.xx.Answer;
 public class NumberOfTimesInOrderedArray implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfTimesInOrderedArray().answerOne();
+        new NumberOfTimesInOrderedArray().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         //   先用二分查找，找到最左侧位置
         //   再用二分查找，找到最右侧位置
         int[] nums = initData();

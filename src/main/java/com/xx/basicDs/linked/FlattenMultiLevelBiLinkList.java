@@ -20,7 +20,7 @@ import com.xx.domain.BiChildLinkNode;
 public class FlattenMultiLevelBiLinkList implements Answer {
 
     public static void main(String[] args) {
-        new FlattenMultiLevelBiLinkList().answerOne();
+        new FlattenMultiLevelBiLinkList().answer();
     }
 
     /**
@@ -28,7 +28,7 @@ public class FlattenMultiLevelBiLinkList implements Answer {
      * 时间复杂度为O(n)，空间为O(k)，即层数
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         BiChildLinkNode head = initData();
         flattenNode(head);
     }

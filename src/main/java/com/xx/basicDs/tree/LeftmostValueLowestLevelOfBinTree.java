@@ -19,14 +19,14 @@ import java.util.Queue;
 public class LeftmostValueLowestLevelOfBinTree implements Answer {
 
     public static void main(String[] args) {
-        new LeftmostValueLowestLevelOfBinTree().answerOne();
+        new LeftmostValueLowestLevelOfBinTree().answer();
     }
 
     /**
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         Queue<TreeNode> outQueue = new LinkedList<>();
         if (root != null) {

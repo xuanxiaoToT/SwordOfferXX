@@ -39,14 +39,14 @@ import com.xx.Answer;
 public class NumberOfBeautifulPairs implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfBeautifulPairs().answerOne();
+        new NumberOfBeautifulPairs().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{2, 5, 1, 4};
         System.out.println(countBeautifulPairs(nums));
     }

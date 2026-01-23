@@ -37,11 +37,11 @@ public class ZigzagTransverseOutTree implements Answer {
 
     public static void main(String[] args) {
         ZigzagTransverseOutTree zigzagTransverseOutTree = new ZigzagTransverseOutTree();
-        zigzagTransverseOutTree.answerOne();
+        zigzagTransverseOutTree.answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         List<List<Integer>> res = new LinkedList<List<Integer>>();
 

@@ -32,11 +32,11 @@ public class TransverseOutTree implements Answer {
 
     public static void main(String[] args) {
         TransverseOutTree transverseOutTree = new TransverseOutTree();
-        transverseOutTree.answerOne();
+        transverseOutTree.answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         Queue<TreeNode> outQueue = new LinkedList<TreeNode>();
         if (treeNode != null) {

@@ -35,7 +35,7 @@ import com.xx.Answer;
 public class FindPeakValue implements Answer {
 
     public static void main(String[] args) {
-        new FindPeakValue().answerOne();
+        new FindPeakValue().answer();
     }
 
     /**
@@ -46,7 +46,7 @@ public class FindPeakValue implements Answer {
      * 二分方向为数值增加的方向
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         System.out.println(findPeakElement(nums));
     }

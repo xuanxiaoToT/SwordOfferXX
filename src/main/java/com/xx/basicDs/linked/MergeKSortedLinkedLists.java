@@ -44,7 +44,7 @@ public class MergeKSortedLinkedLists implements Answer {
      * 每次扫描K遍，最高扫描k*max(nodeLeigh)
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode[] listNodes = initData();
         ListNode newHead = null;
         ListNode newPoint = null;

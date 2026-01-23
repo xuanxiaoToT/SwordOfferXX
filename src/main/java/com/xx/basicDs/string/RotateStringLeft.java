@@ -23,11 +23,11 @@ import com.xx.Answer;
 public class RotateStringLeft implements Answer {
 
     public static void main(String[] args) {
-        new RotateStringLeft().answerOne();
+        new RotateStringLeft().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String s = initData();
         int k = 6;
         // 如果k大于一半了  则需要特殊处理

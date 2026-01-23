@@ -39,7 +39,7 @@ public class TwoNumbersOfS implements Answer {
      * 最简单的 无脑遍历
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int target = 40;
         for (int num : nums) {

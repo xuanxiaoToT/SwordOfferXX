@@ -42,14 +42,14 @@ import java.util.Queue;
 public class NonNegativeIntegersWithoutConsecutiveOnes implements Answer {
 
     public static void main(String[] args) {
-        new NonNegativeIntegersWithoutConsecutiveOnes().answerOne();
+        new NonNegativeIntegersWithoutConsecutiveOnes().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = 5;
         System.out.println(findIntegers(n));
     }

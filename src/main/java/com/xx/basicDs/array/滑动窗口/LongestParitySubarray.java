@@ -50,11 +50,11 @@ import java.util.Arrays;
  */
 public class LongestParitySubarray implements Answer {
     public static void main(String[] args) {
-        new LongestParitySubarray().answerOne();
+        new LongestParitySubarray().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int threshold = 4;
         System.out.println(longestAlternatingSubarray3(nums, threshold));

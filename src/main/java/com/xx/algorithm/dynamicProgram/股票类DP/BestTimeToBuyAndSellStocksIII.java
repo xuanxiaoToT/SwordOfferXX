@@ -53,7 +53,7 @@ public class BestTimeToBuyAndSellStocksIII implements Answer {
      * 注意：买入后，就算进行了一次交易。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer[] prices = initData();
         Integer[][][] dp = new Integer[prices.length][2][3];
         dp[0][0][0] = 0;

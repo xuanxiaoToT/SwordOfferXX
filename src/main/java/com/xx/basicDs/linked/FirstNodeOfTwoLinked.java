@@ -56,7 +56,7 @@ import java.util.Set;
 public class FirstNodeOfTwoLinked implements Answer {
 
     public static void main(String[] args) {
-        new FirstNodeOfTwoLinked().answerOne();
+        new FirstNodeOfTwoLinked().answer();
     }
 
     /**
@@ -64,7 +64,7 @@ public class FirstNodeOfTwoLinked implements Answer {
      * 求出两个链表的长度，然后计算差值。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode root1 = initData();
         ListNode root2 = initData();
         int len1 = findLinkLength(root1);

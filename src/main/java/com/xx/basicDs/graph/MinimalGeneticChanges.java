@@ -41,7 +41,7 @@ import java.util.*;
 public class MinimalGeneticChanges implements Answer {
 
     public static void main(String[] args) {
-        new MinimalGeneticChanges().answerOne();
+        new MinimalGeneticChanges().answer();
     }
 
     /**
@@ -52,7 +52,7 @@ public class MinimalGeneticChanges implements Answer {
      * 思路解法同： {@link WordEvolution}
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String start = "AAAAACCC", end = "AACCCCCC";
         String[] bank = new String[]{"AAAACCCC", "AAACCCCC", "AACCCCCC"};
         System.out.println(minMutation(start, end, bank));

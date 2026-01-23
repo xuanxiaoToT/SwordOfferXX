@@ -45,14 +45,14 @@ import java.util.List;
 public class TriangleMinimumPathSum implements Answer {
 
     public static void main(String[] args) {
-        new TriangleMinimumPathSum().answerOne();
+        new TriangleMinimumPathSum().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         List<List<Integer>> triangle = Arrays.asList(Arrays.asList(2), Arrays.asList(3, 4), Arrays.asList(6, 5, 7), Arrays.asList(4, 1, 8, 3));
         System.out.println(minimumTotal(triangle));
     }

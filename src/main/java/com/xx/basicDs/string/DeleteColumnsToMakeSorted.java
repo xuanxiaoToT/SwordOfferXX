@@ -113,7 +113,7 @@ public class DeleteColumnsToMakeSorted implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

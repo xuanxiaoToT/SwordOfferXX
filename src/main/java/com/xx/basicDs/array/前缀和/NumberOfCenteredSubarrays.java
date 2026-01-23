@@ -39,11 +39,11 @@ import java.util.Map;
  */
 public class NumberOfCenteredSubarrays implements Answer {
     public static void main(String[] args) {
-        new NumberOfCenteredSubarrays().answerOne();
+        new NumberOfCenteredSubarrays().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{8, 9, 0};
         // int[] nums = new int[]{2, -3};
         // int[] nums = new int[]{8, 0, 0};

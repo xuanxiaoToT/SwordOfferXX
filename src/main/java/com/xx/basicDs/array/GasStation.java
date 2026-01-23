@@ -44,11 +44,11 @@ import com.xx.Answer;
  */
 public class GasStation implements Answer {
     public static void main(String[] args) {
-        new GasStation().answerOne();
+        new GasStation().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         int[] gas = data[0];
         int[] cost = data[1];

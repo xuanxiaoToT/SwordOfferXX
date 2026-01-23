@@ -55,14 +55,14 @@ import java.util.Queue;
  */
 public class MinDaysToEatOranges implements Answer {
     public static void main(String[] args) {
-        new MinDaysToEatOranges().answerOne();
+        new MinDaysToEatOranges().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println(minDays3(5126970));
     }
 

@@ -28,7 +28,7 @@ import com.xx.Answer;
 public class LongestIncrementalPath implements Answer {
 
     public static void main(String[] args) {
-        new LongestIncrementalPath().answerOne();
+        new LongestIncrementalPath().answer();
     }
 
     int result = 1;
@@ -37,7 +37,7 @@ public class LongestIncrementalPath implements Answer {
      * 解:深度利用深度优先遍历
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[0].length; j++) {

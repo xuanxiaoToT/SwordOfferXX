@@ -40,11 +40,11 @@ import java.util.Arrays;
 public class TheMaxCountOfkSum implements Answer {
 
     public static void main(String[] args) {
-        new TheMaxCountOfkSum().answerOne();
+        new TheMaxCountOfkSum().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {3, 1, 3, 4, 3};
         int k = 6;
         System.out.println(maxOperations(nums, k));

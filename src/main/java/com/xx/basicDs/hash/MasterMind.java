@@ -29,11 +29,11 @@ import java.util.Arrays;
  */
 public class MasterMind implements Answer {
     public static void main(String[] args) {
-        new MasterMind().answerOne();
+        new MasterMind().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String solution = "RGBY", guess = "GGRR";
         System.out.println(Arrays.toString(masterMind(solution, guess)));
     }

@@ -24,14 +24,14 @@ public class AddingNodesToFullBinaryTree implements Answer {
     private TreeNode lastNode;
 
     public static void main(String[] args) {
-        new AddingNodesToFullBinaryTree().answerOne();
+        new AddingNodesToFullBinaryTree().answer();
     }
 
     /**
      * 直接层序遍历到最后一层，然后添加即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //初始化完全二叉树中
         TreeNode treeNode = initData();
         insert(treeNode, new TreeNode(123));

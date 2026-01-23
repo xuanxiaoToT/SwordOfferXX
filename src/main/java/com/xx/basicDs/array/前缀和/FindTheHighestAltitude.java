@@ -31,11 +31,11 @@ import com.xx.Answer;
  */
 public class FindTheHighestAltitude implements Answer {
     public static void main(String[] args) {
-        new FindTheHighestAltitude().answerOne();
+        new FindTheHighestAltitude().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] nums = {-5, 1, 5, 0, -7};
         int[] nums = {-4, -3, -2, -1, 4, 3, 2};
         System.out.println(theHighestAltitude(nums));

@@ -29,14 +29,14 @@ import java.util.Queue;
 public class BipartiteGraph implements Answer {
 
     public static void main(String[] args) {
-        new BipartiteGraph().answerOne();
+        new BipartiteGraph().answer();
     }
 
     /**
      * 解:一个图可能包含多个连通子图，逐一对每个子图的节点着色。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] graph = initData();
         int size = graph.length;
         int[] colors = new int[size];

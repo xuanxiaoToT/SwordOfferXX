@@ -25,14 +25,14 @@ public class AllSubsets implements Answer {
     private List<List<Integer>> result = new ArrayList<>();
 
     public static void main(String[] args) {
-        new AllSubsets().answerOne();
+        new AllSubsets().answer();
     }
 
     /**
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         subsets(nums);
         System.out.println(result);

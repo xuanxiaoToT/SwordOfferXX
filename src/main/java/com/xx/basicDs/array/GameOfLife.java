@@ -46,7 +46,7 @@ public class GameOfLife implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         //
         int[][] data = initData();
         //采用辅助数组，解法，略

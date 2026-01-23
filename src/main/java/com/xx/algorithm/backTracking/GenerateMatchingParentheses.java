@@ -32,7 +32,7 @@ import java.util.List;
 public class GenerateMatchingParentheses implements Answer {
 
     public static void main(String[] args) {
-        new GenerateMatchingParentheses().answerOne();
+        new GenerateMatchingParentheses().answer();
     }
 
     private List<List<String>> result = new ArrayList();
@@ -42,7 +42,7 @@ public class GenerateMatchingParentheses implements Answer {
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         n = initData();
         diGui(new ArrayList<>(), n, n);
         System.out.println(result);

@@ -39,7 +39,7 @@ public class SubarrayThatSumIsK implements Answer {
      * 不用双指针的原因：此题目没有指明数字都是正的，不能保证右移变大，左移变小。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         // sumTemp[i]表示i左侧以及自己，的元素和。
         int[] sumTemp = new int[nums.length];

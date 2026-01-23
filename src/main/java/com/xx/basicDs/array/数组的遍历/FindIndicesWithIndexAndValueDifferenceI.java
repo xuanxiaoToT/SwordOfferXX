@@ -54,14 +54,14 @@ import java.util.Arrays;
 public class FindIndicesWithIndexAndValueDifferenceI implements Answer {
 
     public static void main(String[] args) {
-        new FindIndicesWithIndexAndValueDifferenceI().answerOne();
+        new FindIndicesWithIndexAndValueDifferenceI().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {5, 1, 4, 1};
         int indexDifference = 2;
         int valueDifference = 4;

@@ -34,11 +34,11 @@ import java.util.Queue;
  */
 public class ColorFill implements Answer {
     public static void main(String[] args) {
-        new ColorFill().answerOne();
+        new ColorFill().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] image = new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
         int sr = 1;
         int sc = 1;

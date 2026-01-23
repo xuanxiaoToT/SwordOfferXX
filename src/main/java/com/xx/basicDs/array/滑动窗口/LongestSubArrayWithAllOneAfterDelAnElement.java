@@ -37,11 +37,11 @@ import com.xx.Answer;
  */
 public class LongestSubArrayWithAllOneAfterDelAnElement implements Answer {
     public static void main(String[] args) {
-        new LongestSubArrayWithAllOneAfterDelAnElement().answerOne();
+        new LongestSubArrayWithAllOneAfterDelAnElement().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1};
         System.out.println(computeLongestSubArray(nums));
     }

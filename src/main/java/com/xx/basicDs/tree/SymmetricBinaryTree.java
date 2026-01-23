@@ -30,14 +30,14 @@ import com.xx.util.DataFactory;
 public class SymmetricBinaryTree implements Answer {
 
     public static void main(String[] args) {
-        new SymmetricBinaryTree().answerOne();
+        new SymmetricBinaryTree().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         System.out.println(isSymmetric(root, root));
     }

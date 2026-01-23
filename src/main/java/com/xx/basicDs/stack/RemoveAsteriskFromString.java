@@ -44,11 +44,11 @@ import java.util.Stack;
  */
 public class RemoveAsteriskFromString implements Answer {
     public static void main(String[] args) {
-        new RemoveAsteriskFromString().answerOne();
+        new RemoveAsteriskFromString().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String str = "erase****";
         System.out.println(removeAsterisk(str));
     }

@@ -17,14 +17,14 @@ import com.xx.Answer;
 public class MaxYiHuo implements Answer {
 
     public static void main(String[] args) {
-        new MaxYiHuo().answerOne();
+        new MaxYiHuo().answer();
     }
 
     /**
      * 方法1：暴力遍历
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int max = 0;
         for (int i = 0; i < data.length; i++) {

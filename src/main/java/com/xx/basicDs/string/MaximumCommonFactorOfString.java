@@ -32,11 +32,11 @@ import com.xx.Answer;
  */
 public class MaximumCommonFactorOfString implements Answer {
     public static void main(String[] args) {
-        new MaximumCommonFactorOfString().answerOne();
+        new MaximumCommonFactorOfString().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String str1 = "LEET";
         String str2 = "CODE";
         System.out.println(maximumCommonFactor(str1, str2));

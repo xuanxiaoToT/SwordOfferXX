@@ -31,7 +31,7 @@ import java.util.Stack;
 public class MinAbsOfBinarySearchTrees implements Answer {
 
     public static void main(String[] args) {
-        new MinAbsOfBinarySearchTrees().answerOne();
+        new MinAbsOfBinarySearchTrees().answer();
     }
 
 
@@ -39,7 +39,7 @@ public class MinAbsOfBinarySearchTrees implements Answer {
      * 解1：中序遍历简单做
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         Stack<TreeNode> stack = new Stack<>();
         if (root == null) {

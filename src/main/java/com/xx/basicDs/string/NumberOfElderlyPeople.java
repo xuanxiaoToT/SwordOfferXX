@@ -35,14 +35,14 @@ import com.xx.Answer;
  */
 public class NumberOfElderlyPeople implements Answer {
     public static void main(String[] args) {
-        new NumberOfElderlyPeople().answerOne();
+        new NumberOfElderlyPeople().answer();
     }
 
     /**
      * 解1：substring简单做
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] details = initData();
         int result = 0;
         for (String detail : details) {

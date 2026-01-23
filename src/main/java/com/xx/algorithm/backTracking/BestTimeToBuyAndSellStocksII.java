@@ -38,14 +38,14 @@ public class BestTimeToBuyAndSellStocksII implements Answer {
     private int max = 0;
 
     public static void main(String[] args) {
-        new BestTimeToBuyAndSellStocksII().answerOne();
+        new BestTimeToBuyAndSellStocksII().answer();
     }
 
     /**
      * 解1：回溯法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] prices = initData();
         diGui(0, prices, 0, false, 0);
         System.out.println(max);

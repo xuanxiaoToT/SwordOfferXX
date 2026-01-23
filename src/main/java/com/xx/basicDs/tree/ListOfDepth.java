@@ -33,14 +33,14 @@ import java.util.*;
 public class ListOfDepth implements Answer {
 
     public static void main(String[] args) {
-        new ListOfDepth().answerOne();
+        new ListOfDepth().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = DataFactory.generateTreeNode();
         System.out.println(Arrays.toString(listOfDepth(treeNode)));
     }

@@ -16,7 +16,7 @@ import com.xx.util.DataFactory;
  */
 public class DeleteThePenultimateNode implements Answer {
     public static void main(String[] args) {
-        new DeleteThePenultimateNode().answerOne();
+        new DeleteThePenultimateNode().answer();
     }
 
     /**
@@ -25,7 +25,7 @@ public class DeleteThePenultimateNode implements Answer {
      * 双指针：第一个先走K步，第二个再开始走。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 2;
         ListNode node = initData();
         System.out.println(node);

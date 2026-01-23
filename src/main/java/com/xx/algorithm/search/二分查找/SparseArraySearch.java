@@ -24,11 +24,11 @@ import com.xx.Answer;
  */
 public class SparseArraySearch implements Answer {
     public static void main(String[] args) {
-        new SparseArraySearch().answerOne();
+        new SparseArraySearch().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // String[] words = new String[]{"at", "", "", "", "ball", "", "", "car", "", "", "dad", "", ""};
         // String s = "ta";
 

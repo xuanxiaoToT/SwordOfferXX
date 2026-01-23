@@ -36,7 +36,7 @@ import java.util.Map;
  */
 public class DividingLetterIntervals implements Answer {
     public static void main(String[] args) {
-        new DividingLetterIntervals().answerOne();
+        new DividingLetterIntervals().answer();
     }
 
     /**
@@ -44,7 +44,7 @@ public class DividingLetterIntervals implements Answer {
      * fixme：可以将findMax方法省略掉。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         Map<Character, Integer> map = new HashMap<>();
         //计算每个字母出现的最远值。

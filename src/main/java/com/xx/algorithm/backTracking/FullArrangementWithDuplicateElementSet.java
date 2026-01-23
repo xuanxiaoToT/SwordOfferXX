@@ -19,7 +19,7 @@ import java.util.List;
 public class FullArrangementWithDuplicateElementSet implements Answer {
 
     public static void main(String[] args) {
-        new FullArrangementWithDuplicateElementSet().answerOne();
+        new FullArrangementWithDuplicateElementSet().answer();
     }
 
     private List<List<Integer>> result = new ArrayList<>();
@@ -28,7 +28,7 @@ public class FullArrangementWithDuplicateElementSet implements Answer {
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         // 排序后的全排列不变
         Arrays.sort(data);

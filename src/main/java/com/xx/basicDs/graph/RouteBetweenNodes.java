@@ -30,14 +30,14 @@ import java.util.*;
  */
 public class RouteBetweenNodes implements Answer {
     public static void main(String[] args) {
-        new RouteBetweenNodes().answerOne();
+        new RouteBetweenNodes().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = 5;
         int[][] graph = new int[][]{{0, 1}, {0, 2}, {0, 4}, {0, 4}, {0, 1}, {1, 3}, {1, 4}, {1, 3}, {2, 3}, {3, 4}};
         int start = 0;

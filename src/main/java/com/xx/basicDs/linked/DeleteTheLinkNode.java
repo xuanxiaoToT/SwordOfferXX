@@ -39,14 +39,14 @@ import com.xx.util.DataFactory;
 public class DeleteTheLinkNode implements Answer {
 
     public static void main(String[] args) {
-        new DeleteTheLinkNode().answerOne();
+        new DeleteTheLinkNode().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode listNode = initData();
         deleteNode(listNode);
     }

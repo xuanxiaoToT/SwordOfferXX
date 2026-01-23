@@ -27,14 +27,14 @@ import com.xx.Answer;
 public class CompressString implements Answer {
 
     public static void main(String[] args) {
-        new CompressString().answerOne();
+        new CompressString().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String S = "abbccd";
         System.out.println(compressString(S));
     }

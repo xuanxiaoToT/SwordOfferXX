@@ -38,14 +38,14 @@ import java.util.Map;
 public class CombinationOfTelephoneNumber implements Answer {
 
     public static void main(String[] args) {
-        new CombinationOfTelephoneNumber().answerOne();
+        new CombinationOfTelephoneNumber().answer();
     }
 
     /**
      * 解1：回溯法简单做
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String inputData = initData();
         Map<Character, String> phoneMap = initNumMap();
         ArrayList<String> result = new ArrayList<>();

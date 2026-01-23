@@ -60,7 +60,7 @@ import com.xx.Answer;
 public class MinTimeForCollectGarbage implements Answer {
 
     public static void main(String[] args) {
-        new MinTimeForCollectGarbage().answerOne();
+        new MinTimeForCollectGarbage().answer();
     }
 
     /**
@@ -70,7 +70,7 @@ public class MinTimeForCollectGarbage implements Answer {
      * 知识点：String.indexOf:存在返回第一个字符索引位置,不存才返回-1，效率要比contains高
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //String[] garbage = {"G", "P", "GP", "GG"};
         //int[] travel = {2, 4, 3};
 

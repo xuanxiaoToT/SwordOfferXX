@@ -48,11 +48,11 @@ import com.xx.Answer;
 public class StatisticsOfTestedEquipment implements Answer {
 
     public static void main(String[] args) {
-        new StatisticsOfTestedEquipment().answerOne();
+        new StatisticsOfTestedEquipment().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] batteryPercent = {1,1,2,1,3};
         int[] batteryPercent = {0, 1, 2};
         System.out.println(countTestedEquipment(batteryPercent));

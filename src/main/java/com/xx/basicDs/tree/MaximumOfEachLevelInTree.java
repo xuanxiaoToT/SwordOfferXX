@@ -17,14 +17,14 @@ import java.util.Queue;
  */
 public class MaximumOfEachLevelInTree implements Answer {
     public static void main(String[] args) {
-        new MaximumOfEachLevelInTree().answerOne();
+        new MaximumOfEachLevelInTree().answer();
     }
 
     /**
      * 计算每层的最大值，则用双循环。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         Queue<TreeNode> outQueue = new LinkedList<>();
         if (root != null) {

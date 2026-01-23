@@ -24,7 +24,7 @@ import com.xx.Answer;
 public class FindDuplicates implements Answer {
 
     public static void main(String[] args) {
-        new FindDuplicates().answerOne();
+        new FindDuplicates().answer();
     }
 
     /**
@@ -36,7 +36,7 @@ public class FindDuplicates implements Answer {
      * 找到环后呢？-> 快慢指针~！
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         //利用循环检测.
         //因为不能修改数组,所以桶排序无法实现,但仍旧可以利用桶排序的原理.

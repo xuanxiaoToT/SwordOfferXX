@@ -24,14 +24,14 @@ import com.xx.Answer;
 public class SearchRotationSortArray implements Answer {
 
     public static void main(String[] args) {
-        new SearchRotationSortArray().answerOne();
+        new SearchRotationSortArray().answer();
     }
 
     /**
      * 解1：使用经典二分法来实现
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         int target = 7;
         int left = 0;

@@ -41,11 +41,11 @@ import java.util.List;
  */
 public class FindTheDifferencesBetweenTwoArrays implements Answer {
     public static void main(String[] args) {
-        new FindTheDifferencesBetweenTwoArrays().answerOne();
+        new FindTheDifferencesBetweenTwoArrays().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums1 = {1, 2, 3};
         int[] nums2 = {2, 4, 6};
         System.out.println(findTheDifferences(nums1, nums2));

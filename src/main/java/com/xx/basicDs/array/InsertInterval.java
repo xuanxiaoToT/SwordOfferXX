@@ -46,14 +46,14 @@ import java.util.Arrays;
 public class InsertInterval implements Answer {
 
     public static void main(String[] args) {
-        new InsertInterval().answerOne();
+        new InsertInterval().answer();
     }
 
     /**
      * 此题同合并区间
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] newInterval = new int[]{7, 11};
         int[][] data = initData();
         int[][] result = new int[data.length + 1][2];

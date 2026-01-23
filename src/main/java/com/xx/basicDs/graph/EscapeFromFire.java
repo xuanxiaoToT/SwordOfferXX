@@ -14,11 +14,11 @@ import java.util.*;
 public class EscapeFromFire implements Answer {
 
     public static void main(String[] args) {
-        new EscapeFromFire().answerOne();
+        new EscapeFromFire().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] grid = initData();
         System.out.println(maximumMinutes(grid));
     }

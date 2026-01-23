@@ -38,7 +38,7 @@ public class StackMin implements Answer {
 
     public static void main(String[] args) {
         StackMin stackMin = new StackMin();
-        stackMin.answerOne();
+        stackMin.answer();
     }
 
 
@@ -50,7 +50,7 @@ public class StackMin implements Answer {
      * ·在任意一个时刻，栈内元素的最小值就存储在辅助栈的栈顶元素中。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         mainStack = new Stack<>();
         minStack = new Stack<>();
     }

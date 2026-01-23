@@ -34,11 +34,11 @@ public class BiNode implements Answer {
     TreeNode lastP = null;
 
     public static void main(String[] args) {
-        new BiNode().answerOne();
+        new BiNode().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = DataFactory.generateTreeNode();
         TreeNode res = convertBiNode(treeNode);
         System.out.println(res.val);

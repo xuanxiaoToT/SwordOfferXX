@@ -34,11 +34,11 @@ import java.util.Arrays;
 public class SortByDiagonally implements Answer {
 
     public static void main(String[] args) {
-        new SortByDiagonally().answerOne();
+        new SortByDiagonally().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] mat = {{3, 3, 1, 1}, {2, 2, 1, 2}, {1, 1, 1, 2}};
         mat = diagonalSort(mat);
         System.out.println(Arrays.deepToString(mat));

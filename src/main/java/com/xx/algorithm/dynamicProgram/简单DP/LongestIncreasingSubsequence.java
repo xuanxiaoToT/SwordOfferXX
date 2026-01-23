@@ -33,14 +33,14 @@ import java.util.Arrays;
 public class LongestIncreasingSubsequence implements Answer {
 
     public static void main(String[] args) {
-        new LongestIncreasingSubsequence().answerOne();
+        new LongestIncreasingSubsequence().answer();
     }
 
     /**
      * 解1：简单DP试试
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         System.out.println(lengthOfLIS(data));
     }

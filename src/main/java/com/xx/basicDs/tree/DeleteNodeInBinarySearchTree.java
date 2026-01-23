@@ -45,11 +45,11 @@ import com.xx.util.DataFactory;
  */
 public class DeleteNodeInBinarySearchTree implements Answer {
     public static void main(String[] args) {
-        new DeleteNodeInBinarySearchTree().answerOne();
+        new DeleteNodeInBinarySearchTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = DataFactory.generateTreeNode();
         System.out.println(deleteNode(treeNode, 13));
     }

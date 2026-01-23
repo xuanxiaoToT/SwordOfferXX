@@ -46,14 +46,14 @@ import com.xx.Answer;
 public class AlternatelyMergeStrings implements Answer {
 
     public static void main(String[] args) {
-        new AlternatelyMergeStrings().answerOne();
+        new AlternatelyMergeStrings().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

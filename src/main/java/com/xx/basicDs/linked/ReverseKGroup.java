@@ -31,11 +31,11 @@ import com.xx.util.DataFactory;
 public class ReverseKGroup implements Answer {
 
     public static void main(String[] args) {
-        new ReverseKGroup().answerOne();
+        new ReverseKGroup().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode head = initData();
         ListNode right = head;
         ListNode left = head;

@@ -45,7 +45,7 @@ public class BestTimeToBuyAndSellStocksIV implements Answer {
      * 对于买入时，不可能存在时(前值)，表示本次第一次买入，应该按0处理。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 2;
         int[] prices = initData();
         Integer[][][] dp = new Integer[prices.length][2][k + 1];

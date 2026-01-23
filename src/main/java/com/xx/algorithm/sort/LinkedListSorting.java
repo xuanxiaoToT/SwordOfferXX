@@ -41,7 +41,7 @@ public class LinkedListSorting implements Answer {
      * 2.选择排序，每次选个最小的放前面即可。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 略
     }
 

@@ -36,14 +36,14 @@ import com.xx.basicDs.array.数组的遍历.TheThirdLargestNumber;
 public class IncrementalTernarySubsequence implements Answer {
 
     public static void main(String[] args) {
-        new IncrementalTernarySubsequence().answerOne();
+        new IncrementalTernarySubsequence().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {2, 1, 5, 0, 4, 6};
         System.out.println(increasingTriplet(nums));
     }

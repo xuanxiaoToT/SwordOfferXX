@@ -25,7 +25,7 @@ import java.util.Map;
 public class AnamorphicPhrase implements Answer {
 
     public static void main(String[] args) {
-        new AnamorphicPhrase().answerOne();
+        new AnamorphicPhrase().answer();
     }
 
     /**
@@ -35,7 +35,7 @@ public class AnamorphicPhrase implements Answer {
      * 2.先按照子母顺序给每个排序，然后再对整体排序，最后再分组。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Map<Map<Character, Integer>, List<String>> mapIntegerMap = new HashMap<>();
         String[] data = initData();
         for (String datum : data) {

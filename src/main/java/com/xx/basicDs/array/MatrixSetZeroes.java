@@ -37,14 +37,14 @@ import java.util.HashSet;
  */
 public class MatrixSetZeroes implements Answer {
     public static void main(String[] args) {
-        new MatrixSetZeroes().answerOne();
+        new MatrixSetZeroes().answer();
     }
 
     /**
      * 解1：简单做
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] matrix = initData();
         setZeroes(matrix);
         System.out.println(Arrays.deepToString(matrix));

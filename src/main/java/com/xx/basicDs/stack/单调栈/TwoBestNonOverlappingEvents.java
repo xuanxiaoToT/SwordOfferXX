@@ -45,7 +45,7 @@ import java.util.TreeSet;
 public class TwoBestNonOverlappingEvents implements Answer {
 
     public static void main(String[] args) {
-        new TwoBestNonOverlappingEvents().answerOne();
+        new TwoBestNonOverlappingEvents().answer();
     }
 
     /**
@@ -134,7 +134,7 @@ public class TwoBestNonOverlappingEvents implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] events = new int[][]{{1,3,2},{4,5,2},{2,4,3}};
         int[][] events = new int[][]{{1, 1, 1}, {2, 2, 2}, {1, 1, 2}};
         System.out.println(maxTwoEvents(events));

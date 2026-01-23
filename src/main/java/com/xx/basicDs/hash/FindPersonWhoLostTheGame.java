@@ -53,11 +53,11 @@ import java.util.TreeMap;
 public class FindPersonWhoLostTheGame implements Answer {
 
     public static void main(String[] args) {
-        new FindPersonWhoLostTheGame().answerOne();
+        new FindPersonWhoLostTheGame().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] matches = new int[][]{{1, 3}, {2, 3}, {3, 6}, {5, 6}, {5, 7}, {4, 5}, {4, 8}, {4, 9}, {10, 4}, {10, 9}};
         int[][] matches = new int[][]{{2, 3}, {1, 3}, {5, 4}, {6, 4}};
         System.out.println(findWinners(matches));

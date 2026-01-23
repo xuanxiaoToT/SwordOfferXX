@@ -45,14 +45,14 @@ import java.util.List;
 public class TheChildWithTheMostCandies implements Answer {
 
     public static void main(String[] args) {
-        new TheChildWithTheMostCandies().answerOne();
+        new TheChildWithTheMostCandies().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] candies = {2, 3, 5, 1, 3};
         System.out.println(kidsWithCandies(candies, 3));
     }

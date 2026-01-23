@@ -25,7 +25,7 @@ import java.util.LinkedList;
 public class DailyTemperature implements Answer {
 
     public static void main(String[] args) {
-        new DailyTemperature().answerOne();
+        new DailyTemperature().answer();
     }
 
     /**
@@ -33,7 +33,7 @@ public class DailyTemperature implements Answer {
      * 解法略
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

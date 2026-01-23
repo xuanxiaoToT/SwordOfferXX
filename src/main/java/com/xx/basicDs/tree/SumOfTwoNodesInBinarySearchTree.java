@@ -20,7 +20,7 @@ import com.xx.util.DataFactory;
 public class SumOfTwoNodesInBinarySearchTree implements Answer {
 
     public static void main(String[] args) {
-        new SumOfTwoNodesInBinarySearchTree().answerOne();
+        new SumOfTwoNodesInBinarySearchTree().answer();
     }
 
     /**
@@ -30,7 +30,7 @@ public class SumOfTwoNodesInBinarySearchTree implements Answer {
      * 方法4：按照BinarySearchTreeIterator的方式，采用双指针遍历。一个小向大，一个大向小。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = initData();
         boolean node = findNode(treeNode, 9, treeNode.right);
         System.out.println(node);

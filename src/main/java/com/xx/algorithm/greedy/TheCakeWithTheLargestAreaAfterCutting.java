@@ -43,14 +43,14 @@ import java.util.Arrays;
 public class TheCakeWithTheLargestAreaAfterCutting implements Answer {
 
     public static void main(String[] args) {
-        new TheCakeWithTheLargestAreaAfterCutting().answerOne();
+        new TheCakeWithTheLargestAreaAfterCutting().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int h = 5;
         int w = 4;
         int[] hor = new int[]{1, 2, 4};

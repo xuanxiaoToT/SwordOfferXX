@@ -27,14 +27,14 @@ import java.util.Arrays;
 public class SpiralMatrixTwo implements Answer {
 
     public static void main(String[] args) {
-        new SpiralMatrixTwo().answerOne();
+        new SpiralMatrixTwo().answer();
     }
 
     /**
      * 解1：每轮循环完毕后,最外层便螺旋填充完毕,其内层剩余的仍旧是一个需要螺旋填充的空白,继续填充即可.
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = initData();
         int l = 0, r = n - 1, t = 0, b = n - 1;
         int[][] mat = new int[n][n];

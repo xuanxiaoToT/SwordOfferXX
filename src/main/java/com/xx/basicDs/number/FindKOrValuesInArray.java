@@ -43,14 +43,14 @@ import com.xx.Answer;
 public class FindKOrValuesInArray implements Answer {
 
     public static void main(String[] args) {
-        new FindKOrValuesInArray().answerOne();
+        new FindKOrValuesInArray().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{1};
         int k = 1;
         System.out.println(findKOr(nums, k));

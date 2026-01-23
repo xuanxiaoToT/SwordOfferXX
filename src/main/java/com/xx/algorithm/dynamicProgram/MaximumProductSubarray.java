@@ -34,7 +34,7 @@ import java.util.Arrays;
 public class MaximumProductSubarray implements Answer {
 
     public static void main(String[] args) {
-        new MaximumProductSubarray().answerOne();
+        new MaximumProductSubarray().answer();
     }
 
     /**
@@ -46,7 +46,7 @@ public class MaximumProductSubarray implements Answer {
      * 例如[2, 3, -2, 1, -4]
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int[] dpMax = new int[data.length];
         int[] dpMin = new int[data.length];

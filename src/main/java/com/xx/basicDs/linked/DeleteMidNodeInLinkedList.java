@@ -47,11 +47,11 @@ import com.xx.util.DataFactory;
 public class DeleteMidNodeInLinkedList implements Answer {
 
     public static void main(String[] args) {
-        new DeleteMidNodeInLinkedList().answerOne();
+        new DeleteMidNodeInLinkedList().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         ListNode root = initData();
         System.out.println(removeMidNode(root));
     }

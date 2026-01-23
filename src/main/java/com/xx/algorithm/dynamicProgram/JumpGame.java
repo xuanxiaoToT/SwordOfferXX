@@ -29,14 +29,14 @@ import java.util.Arrays;
 public class JumpGame implements Answer {
 
     public static void main(String[] args) {
-        new JumpGame().answerOne();
+        new JumpGame().answer();
     }
 
     /**
      * 解1：普通遍历法来做
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int[] dp = new int[data.length];
         dp[0] = 1;

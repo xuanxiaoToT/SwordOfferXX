@@ -38,11 +38,11 @@ import com.xx.Answer;
  */
 public class MaxDotProductOfTwoSubsequences implements Answer {
     public static void main(String[] args) {
-        new MaxDotProductOfTwoSubsequences().answerOne();
+        new MaxDotProductOfTwoSubsequences().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] nums1 = new int[]{2,1,-2,5};
         // int[] nums2 = new int[]{3,0,-6};
 

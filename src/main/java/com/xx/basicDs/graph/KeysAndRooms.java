@@ -42,11 +42,11 @@ import java.util.*;
  */
 public class KeysAndRooms implements Answer {
     public static void main(String[] args) {
-        new KeysAndRooms().answerOne();
+        new KeysAndRooms().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[][] rooms = {{1}, {2}, {3}, {}};
         int[][] rooms = {{1, 3}, {3, 0, 1}, {2}, {0}};
         //System.out.println(whetherOpen(rooms));

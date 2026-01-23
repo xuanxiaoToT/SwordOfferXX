@@ -49,14 +49,14 @@ import com.xx.Answer;
 public class FindAllPossibleStableBinaryArraysI implements Answer {
 
     public static void main(String[] args) {
-        new FindAllPossibleStableBinaryArraysI().answerOne();
+        new FindAllPossibleStableBinaryArraysI().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

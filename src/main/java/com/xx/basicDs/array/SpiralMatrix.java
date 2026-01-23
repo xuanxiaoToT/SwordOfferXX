@@ -25,14 +25,14 @@ import java.util.List;
 public class SpiralMatrix implements Answer {
 
     public static void main(String[] args) {
-        new SpiralMatrix().answerOne();
+        new SpiralMatrix().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] matrix = initData();
         List<Integer> res = new ArrayList<>();
         if (matrix == null || matrix.length == 0)

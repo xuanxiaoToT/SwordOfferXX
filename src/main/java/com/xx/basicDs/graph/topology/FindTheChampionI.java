@@ -45,14 +45,14 @@ import java.util.Set;
 public class FindTheChampionI implements Answer {
 
     public static void main(String[] args) {
-        new FindTheChampionI().answerOne();
+        new FindTheChampionI().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] grid = initData();
         System.out.println(answerTwo(grid));
     }

@@ -42,7 +42,7 @@ import java.util.Arrays;
 public class LongestCommonSubsequence implements Answer {
 
     public static void main(String[] args) {
-        new LongestCommonSubsequence().answerOne();
+        new LongestCommonSubsequence().answer();
     }
 
     /**
@@ -55,7 +55,7 @@ public class LongestCommonSubsequence implements Answer {
      * todo:可以只用两行来存储，优化存储效率
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] strings = initData();
         String strA = strings[0];
         String strB = strings[1];

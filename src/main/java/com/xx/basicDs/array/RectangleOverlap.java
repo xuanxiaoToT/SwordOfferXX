@@ -29,14 +29,14 @@ import com.xx.Answer;
 public class RectangleOverlap implements Answer {
 
     public static void main(String[] args) {
-        new RectangleOverlap().answerOne();
+        new RectangleOverlap().answer();
     }
 
     /**
      * 解1：略
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] rec1 = new int[]{0, 0, 2, 2}, rec2 = new int[]{1, 1, 3, 3};
         System.out.println(isRectangleOverlap(rec1, rec2));
     }

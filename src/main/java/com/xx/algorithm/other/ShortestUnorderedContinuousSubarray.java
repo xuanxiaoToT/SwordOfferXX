@@ -29,7 +29,7 @@ import com.xx.Answer;
 public class ShortestUnorderedContinuousSubarray implements Answer {
 
     public static void main(String[] args) {
-        new ShortestUnorderedContinuousSubarray().answerOne();
+        new ShortestUnorderedContinuousSubarray().answer();
     }
 
     /**
@@ -37,7 +37,7 @@ public class ShortestUnorderedContinuousSubarray implements Answer {
      * 终点：如果之前的数有比我大，则我是终点。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int[] assist = new int[data.length];
         int max = Integer.MIN_VALUE;

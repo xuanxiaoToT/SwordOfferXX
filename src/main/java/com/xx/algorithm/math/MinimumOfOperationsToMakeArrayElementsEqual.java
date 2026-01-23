@@ -35,14 +35,14 @@ import com.xx.Answer;
 public class MinimumOfOperationsToMakeArrayElementsEqual implements Answer {
 
     public static void main(String[] args) {
-        new MinimumOfOperationsToMakeArrayElementsEqual().answerOne();
+        new MinimumOfOperationsToMakeArrayElementsEqual().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{1, 2, 3};
         System.out.println(minMoves(nums));
     }

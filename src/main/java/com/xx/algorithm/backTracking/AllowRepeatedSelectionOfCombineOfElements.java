@@ -20,7 +20,7 @@ import java.util.List;
 public class AllowRepeatedSelectionOfCombineOfElements implements Answer {
 
     public static void main(String[] args) {
-        new AllowRepeatedSelectionOfCombineOfElements().answerOne();
+        new AllowRepeatedSelectionOfCombineOfElements().answer();
     }
 
     private List<List<Integer>> result = new ArrayList<>();
@@ -29,7 +29,7 @@ public class AllowRepeatedSelectionOfCombineOfElements implements Answer {
      * something
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int target = 4;
         int[] data = {1,2,3};
         diGui(target, data, 0, new ArrayList<>(), 0);

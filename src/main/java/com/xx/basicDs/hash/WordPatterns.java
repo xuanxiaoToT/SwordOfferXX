@@ -37,11 +37,11 @@ import java.util.HashMap;
 public class WordPatterns implements Answer {
 
     public static void main(String[] args) {
-        new WordPatterns().answerOne();
+        new WordPatterns().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String pattern = "abba";
         String s = "dog cat dog cat";
         System.out.println(patternWord(pattern, s));

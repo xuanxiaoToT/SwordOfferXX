@@ -19,7 +19,7 @@ import com.xx.Answer;
 public class ThreeNumbersWithZeroInArray implements Answer {
 
     public static void main(String[] args) {
-        new ThreeNumbersWithZeroInArray().answerOne();
+        new ThreeNumbersWithZeroInArray().answer();
     }
 
     /**
@@ -27,7 +27,7 @@ public class ThreeNumbersWithZeroInArray implements Answer {
      * 即：TwoNumbersOfS
      */
     @Override
-    public void answerOne() {
+    public void answer() {
 
     }
 

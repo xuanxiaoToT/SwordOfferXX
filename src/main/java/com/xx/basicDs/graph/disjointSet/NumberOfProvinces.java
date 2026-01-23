@@ -37,11 +37,11 @@ import java.util.Arrays;
  */
 public class NumberOfProvinces implements Answer {
     public static void main(String[] args) {
-        new NumberOfProvinces().answerOne();
+        new NumberOfProvinces().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
         System.out.println(findCircleNum2(data));
     }

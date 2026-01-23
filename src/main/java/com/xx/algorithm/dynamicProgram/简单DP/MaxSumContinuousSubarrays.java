@@ -31,12 +31,12 @@ import java.util.List;
 public class MaxSumContinuousSubarrays implements Answer {
 
     public static void main(String[] args) {
-        new MaxSumContinuousSubarrays().answerOne();
+        new MaxSumContinuousSubarrays().answer();
     }
 
     // dp策略
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(maxSubArray(nums));
     }

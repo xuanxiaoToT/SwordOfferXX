@@ -44,11 +44,11 @@ import com.xx.Answer;
  */
 public class FindCentralIndexOfArray implements Answer {
     public static void main(String[] args) {
-        new FindCentralIndexOfArray().answerOne();
+        new FindCentralIndexOfArray().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {1, 7, 3, 6, 5, 6};
         System.out.println(computeCentralIndex(nums));
     }

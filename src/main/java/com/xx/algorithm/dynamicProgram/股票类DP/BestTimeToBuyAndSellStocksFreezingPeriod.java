@@ -37,7 +37,7 @@ public class BestTimeToBuyAndSellStocksFreezingPeriod implements Answer {
      * 1：持有
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] prices = initData();
         int[][] dp = new int[prices.length][3];
         dp[0][0] = 0;

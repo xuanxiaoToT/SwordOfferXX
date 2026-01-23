@@ -22,14 +22,14 @@ import com.xx.Answer;
 public class ReversePairsInArray implements Answer {
 
     public static void main(String[] args) {
-        new ReversePairsInArray().answerOne();
+        new ReversePairsInArray().answer();
     }
 
     /**
      * 时间复杂度O(N2) 实现简单，不会破坏原有数组，不需要额外空间
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int result = 0;
         int[] oriData = initData();
 

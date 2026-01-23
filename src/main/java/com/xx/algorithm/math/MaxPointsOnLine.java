@@ -35,14 +35,14 @@ import java.util.Set;
 public class MaxPointsOnLine implements Answer {
 
     public static void main(String[] args) {
-        new MaxPointsOnLine().answerOne();
+        new MaxPointsOnLine().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] points = new int[][]{{0, 1}, {0, 0}, {0, 4}, {0, -2}, {0, -1}, {0, 3}, {0, -4}};
         System.out.println(maxPoints(points));
     }

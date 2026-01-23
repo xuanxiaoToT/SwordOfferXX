@@ -36,11 +36,11 @@ import java.util.Map;
 public class ConstructBinaryTreeByMidAndAfter implements Answer {
 
     public static void main(String[] args) {
-        new ConstructBinaryTreeByMidAndAfter().answerOne();
+        new ConstructBinaryTreeByMidAndAfter().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         int[] midOrder = data[0];
         int[] afterOrder = data[1];

@@ -38,7 +38,7 @@ public class WordEvolution implements Answer {
      * 距离即为层数，类似用层序遍历求解树的高度。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String beginWord = "hit";
         String endWord = "cog";
         HashSet<String> hashSet = new HashSet<>();

@@ -31,14 +31,14 @@ import com.xx.Answer;
  */
 public class RansomLetter implements Answer {
     public static void main(String[] args) {
-        new RansomLetter().answerOne();
+        new RansomLetter().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String ransomNote = "aa";
         String magazine = "aavb";
         boolean result = canConstruct(ransomNote, magazine);

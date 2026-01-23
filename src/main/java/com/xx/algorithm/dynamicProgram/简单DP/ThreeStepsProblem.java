@@ -26,7 +26,7 @@ import com.xx.Answer;
  */
 public class ThreeStepsProblem implements Answer {
     public static void main(String[] args) {
-        new ThreeStepsProblem().answerOne();
+        new ThreeStepsProblem().answer();
     }
 
     public int waysToStep(int n) {
@@ -52,7 +52,7 @@ public class ThreeStepsProblem implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = 76;
         System.out.println(waysToStep(n));
     }

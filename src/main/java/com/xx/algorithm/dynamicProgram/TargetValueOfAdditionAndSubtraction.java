@@ -39,7 +39,7 @@ public class TargetValueOfAdditionAndSubtraction implements Answer {
      * 则其解法同《DividingEqualSumSubsets》
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int s = 2;
         int[] data = initData();
         int sum = Arrays.stream(data).sum();

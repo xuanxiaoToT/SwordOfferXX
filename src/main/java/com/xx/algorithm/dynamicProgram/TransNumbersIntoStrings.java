@@ -29,7 +29,7 @@ public class TransNumbersIntoStrings implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String ori = initData();
         stringSize = ori.length();
         int point = 0;

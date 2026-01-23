@@ -34,7 +34,7 @@ import com.xx.Answer;
  */
 public class LargestMatrixInMatrix implements Answer {
     public static void main(String[] args) {
-        new LargestMatrixInMatrix().answerOne();
+        new LargestMatrixInMatrix().answer();
     }
 
     /**
@@ -44,7 +44,7 @@ public class LargestMatrixInMatrix implements Answer {
      * ！！似乎不太可行！！
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // char[][] matrix = new char[][]{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}};
         char[][] matrix = new char[][]{{'1', '1', '0', '1'}, {'1', '1', '0', '1'}, {'1', '1', '1', '1'}};
         System.out.println(maximalRectangle(matrix));

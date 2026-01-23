@@ -42,11 +42,11 @@ import com.xx.util.DataFactory;
 public class CountOfGoodNodesInTree implements Answer {
 
     public static void main(String[] args) {
-        new CountOfGoodNodesInTree().answerOne();
+        new CountOfGoodNodesInTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = DataFactory.generateTreeNode();
         System.out.println(numOfGoodNodes(root));
     }

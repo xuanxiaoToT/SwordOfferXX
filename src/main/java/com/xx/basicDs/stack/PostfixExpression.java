@@ -48,7 +48,7 @@ import java.util.Stack;
 public class PostfixExpression implements Answer {
 
     public static void main(String[] args) {
-        new PostfixExpression().answerOne();
+        new PostfixExpression().answer();
     }
 
     /**
@@ -56,7 +56,7 @@ public class PostfixExpression implements Answer {
      * 那么栈就是理所应当的选择。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Stack<Integer> stack = new Stack<>();
         String[] date = initData();
         for (String s : date) {

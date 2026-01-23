@@ -44,11 +44,11 @@ import com.xx.util.DataFactory;
 public class LongestInterleavedPathInTree implements Answer {
 
     public static void main(String[] args) {
-        new LongestInterleavedPathInTree().answerOne();
+        new LongestInterleavedPathInTree().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode treeNode = DataFactory.generateTreeNode();
         longestInterleavedPath(treeNode, 0, 0);
         System.out.println(max);

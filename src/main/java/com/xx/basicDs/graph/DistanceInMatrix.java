@@ -36,7 +36,7 @@ public class DistanceInMatrix implements Answer {
      * 深度优先错误解法
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         int[][] result = new int[data.length][data[0].length];
         for (int i = 0; i < data.length; i++) {

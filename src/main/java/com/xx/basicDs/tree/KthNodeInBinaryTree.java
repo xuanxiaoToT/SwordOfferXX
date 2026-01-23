@@ -17,14 +17,14 @@ public class KthNodeInBinaryTree implements Answer {
     private int k;
 
     public static void main(String[] args) {
-        new KthNodeInBinaryTree().answerOne();
+        new KthNodeInBinaryTree().answer();
     }
 
     /**
      * 第K大，即 右中左 遍历，第K个便是.
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         k = 3;
         TreeNode root = initData();
         traversalTree(root);

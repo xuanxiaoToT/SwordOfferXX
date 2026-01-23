@@ -40,11 +40,11 @@ import com.xx.Answer;
 public class EmployeesWhoMeetTargetWorkingHours implements Answer {
 
     public static void main(String[] args) {
-        new EmployeesWhoMeetTargetWorkingHours().answerOne();
+        new EmployeesWhoMeetTargetWorkingHours().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] hours = {0, 1, 2, 3, 4};
         int target = 5;
         System.out.println(employees(hours, target));

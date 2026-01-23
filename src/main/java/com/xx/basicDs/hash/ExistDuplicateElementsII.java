@@ -43,7 +43,7 @@ public class ExistDuplicateElementsII implements Answer {
      * 不用额外内存的
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int k = 2;
         int[] data = initData();
         for (int i = 0; i < data.length; i++) {

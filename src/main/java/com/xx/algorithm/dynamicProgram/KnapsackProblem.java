@@ -19,14 +19,14 @@ import java.util.Arrays;
 public class KnapsackProblem implements Answer {
 
     public static void main(String[] args) {
-        new KnapsackProblem().answerOne();
+        new KnapsackProblem().answer();
     }
 
     /**
      * 解:result[n] = C>W[n] ? max(result[n-1]+W[n],result[n-1]) : result[n-1];
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[][] data = initData();
         int[] weight = data[0];
         int[] value = data[1];

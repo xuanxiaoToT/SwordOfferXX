@@ -54,11 +54,11 @@ import java.util.Arrays;
 public class DetermineWhetherTwoStringsAreClose implements Answer {
 
     public static void main(String[] args) {
-        new DetermineWhetherTwoStringsAreClose().answerOne();
+        new DetermineWhetherTwoStringsAreClose().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String str1 = "cabbba";
         String str2 = "abbccc";
         System.out.println(whetherTwoStringsAreClose(str1, str2));

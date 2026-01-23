@@ -42,7 +42,7 @@ public class SumOfDownwardPathBodeValue implements Answer {
      * 遍历树，然后每个树又作为一个新树去判断。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //略
     }
 

@@ -44,14 +44,14 @@ import java.util.Arrays;
 public class TakeGiftsFromTheLargestPile implements Answer {
 
     public static void main(String[] args) {
-        new TakeGiftsFromTheLargestPile().answerOne();
+        new TakeGiftsFromTheLargestPile().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] gifts = initData();
         int k = 4;
         System.out.println(pickGifts(gifts, k));

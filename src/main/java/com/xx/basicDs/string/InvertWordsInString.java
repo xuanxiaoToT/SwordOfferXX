@@ -37,14 +37,14 @@ import com.xx.Answer;
 public class InvertWordsInString implements Answer {
 
     public static void main(String[] args) {
-        new InvertWordsInString().answerOne();
+        new InvertWordsInString().answer();
     }
 
     /**
      * 解1：尾部遍历，遇到空格就处理当前的单词。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String data = initData();
         System.out.println(reverseWords(data));
     }

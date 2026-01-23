@@ -19,12 +19,12 @@ import java.util.Stack;
 public class NextNodeOfBinarySearchTree implements Answer {
 
     public static void main(String[] args) {
-        new NextNodeOfBinarySearchTree().answerOne();
+        new NextNodeOfBinarySearchTree().answer();
     }
 
 
     @Override
-    public void answerOne() {
+    public void answer() {
 
 
     }

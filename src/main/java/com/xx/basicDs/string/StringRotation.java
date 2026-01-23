@@ -28,14 +28,14 @@ import com.xx.Answer;
 public class StringRotation implements Answer {
 
     public static void main(String[] args) {
-        new StringRotation().answerOne();
+        new StringRotation().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String s1 = "", s2 = "";
         System.out.println(isFlipedString(s1, s2));
     }

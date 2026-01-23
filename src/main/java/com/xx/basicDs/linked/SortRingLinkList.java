@@ -20,7 +20,7 @@ public class SortRingLinkList implements Answer {
      * 可以遍历两次：第一次找到交接点，也就是头结点(最小值)。第二次遍历再正式插入
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 解法略
     }
 

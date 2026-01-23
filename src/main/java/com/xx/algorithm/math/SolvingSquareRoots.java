@@ -30,14 +30,14 @@ import com.xx.Answer;
 public class SolvingSquareRoots implements Answer {
 
     public static void main(String[] args) {
-        new SolvingSquareRoots().answerOne();
+        new SolvingSquareRoots().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         System.out.println((int) Math.sqrt(56));
     }
 

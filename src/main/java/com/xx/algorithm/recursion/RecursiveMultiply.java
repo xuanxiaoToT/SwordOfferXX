@@ -24,11 +24,11 @@ import com.xx.Answer;
  */
 public class RecursiveMultiply implements Answer {
     public static void main(String[] args) {
-        new RecursiveMultiply().answerOne();
+        new RecursiveMultiply().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         int A = 5;
         int B = 10;
         System.out.println(multiply(A, B));

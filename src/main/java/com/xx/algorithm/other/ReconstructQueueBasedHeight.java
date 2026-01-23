@@ -35,14 +35,14 @@ import java.util.*;
 public class ReconstructQueueBasedHeight implements Answer {
 
     public static void main(String[] args) {
-        new ReconstructQueueBasedHeight().answerOne();
+        new ReconstructQueueBasedHeight().answer();
     }
 
     /**
      * 解1：最简单的O(N2)，即先找出0号位置的放入列表，然后依次判断剩下的该插在哪
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         Integer[][] data = initData();
         int length = data.length;
         Set<Integer> hasHandled = new HashSet<>(length);

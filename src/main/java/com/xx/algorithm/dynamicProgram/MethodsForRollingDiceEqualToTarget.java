@@ -39,7 +39,7 @@ import java.util.Arrays;
 public class MethodsForRollingDiceEqualToTarget implements Answer {
 
     public static void main(String[] args) {
-        new MethodsForRollingDiceEqualToTarget().answerOne();
+        new MethodsForRollingDiceEqualToTarget().answer();
     }
 
     /**
@@ -51,7 +51,7 @@ public class MethodsForRollingDiceEqualToTarget implements Answer {
      * fixme：可以优化，减少循环次数
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] data = initData();
         int n = data[0];
         int k = data[1];

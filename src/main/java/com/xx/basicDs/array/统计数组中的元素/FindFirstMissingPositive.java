@@ -29,7 +29,7 @@ import com.xx.Answer;
 public class FindFirstMissingPositive implements Answer {
 
     public static void main(String[] args) {
-        new FindFirstMissingPositive().answerOne();
+        new FindFirstMissingPositive().answer();
     }
 
     /**
@@ -38,7 +38,7 @@ public class FindFirstMissingPositive implements Answer {
      * 如果数组中包含 x∈[1,N]，那么恢复后，数组的第 x−1个元素为 x。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = {3, 4, -1, 1};
         System.out.println(firstMissingPositive(nums));
     }

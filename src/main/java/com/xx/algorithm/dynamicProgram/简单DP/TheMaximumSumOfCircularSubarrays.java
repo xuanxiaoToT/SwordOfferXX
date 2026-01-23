@@ -39,14 +39,14 @@ import com.xx.Answer;
 public class TheMaximumSumOfCircularSubarrays implements Answer {
 
     public static void main(String[] args) {
-        new TheMaximumSumOfCircularSubarrays().answerOne();
+        new TheMaximumSumOfCircularSubarrays().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         //int[] nums = new int[]{1, -2, 3, -2};
         //int[] nums = new int[]{5, -3, 5};
         //int[] nums = new int[]{9, -4, -7, 9};

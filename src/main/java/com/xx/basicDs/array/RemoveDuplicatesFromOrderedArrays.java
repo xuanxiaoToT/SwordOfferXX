@@ -44,14 +44,14 @@ import com.xx.Answer;
 public class RemoveDuplicatesFromOrderedArrays implements Answer {
 
     public static void main(String[] args) {
-        new RemoveDuplicatesFromOrderedArrays().answerOne();
+        new RemoveDuplicatesFromOrderedArrays().answer();
     }
 
     /**
      * 解1：最简单的。每次都移动队列
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         if (nums.length <= 1) {
             System.out.println(nums.length);

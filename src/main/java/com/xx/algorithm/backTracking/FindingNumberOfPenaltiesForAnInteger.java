@@ -39,14 +39,14 @@ import com.xx.Answer;
 public class FindingNumberOfPenaltiesForAnInteger implements Answer {
 
     public static void main(String[] args) {
-        new FindingNumberOfPenaltiesForAnInteger().answerOne();
+        new FindingNumberOfPenaltiesForAnInteger().answer();
     }
 
     /**
      * 解1：关键在于如何找到所有满足要求的数字 i
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = initData();
         int result = 0;
         for (int i = 1; i <= n; i++) {

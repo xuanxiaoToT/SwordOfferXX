@@ -46,11 +46,11 @@ import java.util.Set;
  */
 public class VowelConsonantScore implements Answer {
     public static void main(String[] args) {
-        new VowelConsonantScore().answerOne();
+        new VowelConsonantScore().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String s = "au 123";
         System.out.println(vowelConsonantScore(s));
     }

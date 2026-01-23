@@ -54,14 +54,14 @@ import java.util.Map;
 public class TheCityWithTheLeastNeighborsWithinThresholdDistance implements Answer {
 
     public static void main(String[] args) {
-        new TheCityWithTheLeastNeighborsWithinThresholdDistance().answerOne();
+        new TheCityWithTheLeastNeighborsWithinThresholdDistance().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int n = 4;
         int[][] edges = initData();
         int distanceThreshold = 4;

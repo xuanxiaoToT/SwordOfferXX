@@ -67,7 +67,7 @@ public class CloningOfGraphs implements Answer {
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         Node oriRoot = initData();
         if (oriRoot == null) {
             return;

@@ -40,7 +40,7 @@ public class H_Index implements Answer {
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] citations = initData();
         Arrays.sort(citations);
         int count = 1;

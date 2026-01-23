@@ -27,14 +27,14 @@ import com.xx.Answer;
 public class OneTimeEditing implements Answer {
 
     public static void main(String[] args) {
-        new OneTimeEditing().answerOne();
+        new OneTimeEditing().answer();
     }
 
     /**
      * 解1：
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         String first = "a";
         String second = "ab";
         System.out.println(oneEditAway(first, second));

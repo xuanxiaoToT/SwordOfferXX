@@ -32,7 +32,7 @@ import java.util.Arrays;
 public class BeatAndRobHouseThree implements Answer {
 
     public static void main(String[] args) {
-        new BeatAndRobHouseThree().answerOne();
+        new BeatAndRobHouseThree().answer();
     }
 
     /**
@@ -40,7 +40,7 @@ public class BeatAndRobHouseThree implements Answer {
      * 关键是要考虑两种情况：选了自己，没选自己。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         TreeNode root = initData();
         int[] maxNode = getMaxNode(root);
         System.out.println(Arrays.toString(maxNode));

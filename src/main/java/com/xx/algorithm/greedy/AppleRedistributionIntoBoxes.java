@@ -36,11 +36,11 @@ import java.util.PriorityQueue;
  */
 public class AppleRedistributionIntoBoxes implements Answer {
     public static void main(String[] args) {
-        new AppleRedistributionIntoBoxes().answerOne();
+        new AppleRedistributionIntoBoxes().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         // int[] apple = new int[]{1,3,2};
         // int[] capacity = new int[]{4,3,1,5,2};
 

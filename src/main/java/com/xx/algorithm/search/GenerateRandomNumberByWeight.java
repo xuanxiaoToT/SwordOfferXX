@@ -20,7 +20,7 @@ import java.util.Random;
 public class GenerateRandomNumberByWeight implements Answer {
 
     public static void main(String[] args) {
-        new GenerateRandomNumberByWeight().answerOne();
+        new GenerateRandomNumberByWeight().answer();
     }
 
     /**
@@ -28,7 +28,7 @@ public class GenerateRandomNumberByWeight implements Answer {
      * 产生一个100内的随机整数：需要10%的概率，就判断此数字是否在1-10期间。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         int[] nums = initData();
         // 现根据权重计算全部的比例
         int sum = 0;

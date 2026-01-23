@@ -40,7 +40,7 @@ import java.util.*;
 public class CourseSequence implements Answer {
 
     public static void main(String[] args) {
-        new CourseSequence().answerOne();
+        new CourseSequence().answer();
     }
 
     /**
@@ -50,7 +50,7 @@ public class CourseSequence implements Answer {
      * 接下来用广度优先搜索算法实现拓扑排序。
      */
     @Override
-    public void answerOne() {
+    public void answer() {
         // 初始化数据
         int[][] data = initData();
         int numCourses = 2;

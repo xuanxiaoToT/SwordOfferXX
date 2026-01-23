@@ -46,11 +46,11 @@ import java.util.HashSet;
 public class NumberOfVowelStrWithinTheStatisticalRange implements Answer {
 
     public static void main(String[] args) {
-        new NumberOfVowelStrWithinTheStatisticalRange().answerOne();
+        new NumberOfVowelStrWithinTheStatisticalRange().answer();
     }
 
     @Override
-    public void answerOne() {
+    public void answer() {
         String[] data = initData();
         System.out.println(vowelStrings(data, 1, 4));
     }
