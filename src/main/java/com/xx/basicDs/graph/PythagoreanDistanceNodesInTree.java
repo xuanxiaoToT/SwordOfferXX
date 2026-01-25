@@ -114,9 +114,9 @@ public class PythagoreanDistanceNodesInTree implements Answer {
             }
         }
         // 计算每个点到x，y，z的距离
-        Map<Integer, Integer> xMap = computeDistance(x, graph);
-        Map<Integer, Integer> yMap = computeDistance(y, graph);
-        Map<Integer, Integer> zMap = computeDistance(z, graph);
+        Map<Integer, Integer> xMap = computeDistanceByBfs(x, graph);
+        Map<Integer, Integer> yMap = computeDistanceByBfs(y, graph);
+        Map<Integer, Integer> zMap = computeDistanceByBfs(z, graph);
         int count = 0;
         // 判断是否是勾股
         for (int i = 0; i < n; i++) {
@@ -147,8 +147,9 @@ public class PythagoreanDistanceNodesInTree implements Answer {
 
     /**
      * 广度有优先遍历求距离
+     * 也可以用dfs来算
      */
-    public Map<Integer, Integer> computeDistance(int startPoint, Map<Integer, Set<Integer>> graph) {
+    public Map<Integer, Integer> computeDistanceByBfs(int startPoint, Map<Integer, Set<Integer>> graph) {
         // 起点到每个点的距离，但是key采用目标点。同时担任visited标记
         Map<Integer, Integer> result = new HashMap<>();
         Queue<Integer> queue = new LinkedList<>();
