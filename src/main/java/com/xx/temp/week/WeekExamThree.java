@@ -13,6 +13,7 @@ public class WeekExamThree implements Answer {
 
     }
 
+
     @Override
     public Object initData() {
         return null;
