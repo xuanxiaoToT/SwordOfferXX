@@ -6,6 +6,9 @@ package com.xx.util;
  */
 public class MathUtil {
 
+    /**
+     * 求三个以上数字的最大值
+     */
     public static Integer intMaxByNull(Integer data1, Integer... data2) {
         Integer max = data1;
         for (Integer i : data2) {
@@ -19,6 +22,7 @@ public class MathUtil {
         return max;
     }
 
+    // 非空求值
     public static Integer nvl(Integer num, Integer value) {
         if (num == null) {
             return value;
@@ -32,12 +36,22 @@ public class MathUtil {
     public static int unRecursion(int num) {
         int result = 1;
         if (num == 0) {
-            //0的阶乘为1
+            // 0的阶乘为1
             return 1;
         }
         for (int i = 2; i <= num; i++) {
             result *= i;
         }
         return result;
+    }
+
+    /**
+     * C(n, k) = n! / (k! * (n - k)!)
+     */
+    public static int computeCombineCount(int n, int k) {
+        if (k == 0) {
+            return 1;
+        }
+        return unRecursion(n) / (unRecursion(k) * unRecursion(n - k));
     }
 }
