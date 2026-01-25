@@ -91,6 +91,11 @@ public class PythagoreanDistanceNodesInTree implements Answer {
         System.out.println(specialNodes(4, edges, x, y, z));
     }
 
+    /**
+     * 三次bfs，计算出x,y,z到所有点的距离
+     * 然后枚举所有点
+     * tag：map可以换长度为n的数组。
+     */
     public int specialNodes(int n, int[][] edges, int x, int y, int z) {
         // 构造图，由于是无向图，所以两侧都得加。
         Map<Integer, Set<Integer>> graph = new HashMap<>();
