@@ -136,6 +136,7 @@ public class PythagoreanDistanceNodesInTree implements Answer {
 
     /**
      * 懒得判断谁大谁小了，直接算三次
+     * 注意计算平方很容易溢出，这里转为long
      */
     private boolean computeGouGu(Integer xDis, Integer yDis, Integer zDis) {
         boolean z = ((long) xDis * xDis) + ((long) yDis * yDis) == ((long) zDis * zDis);
