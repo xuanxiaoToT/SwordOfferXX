@@ -11,6 +11,7 @@ import java.util.List;
  * @CreateDate 2022/11/22
  * <p>
  * 有重复元素集合的全排列
+ * LeetCode Medium
  * <p>
  * 给定一个包含重复数字的集合，请找出它的所有全排列。
  * <p>
@@ -18,11 +19,11 @@ import java.util.List;
  */
 public class FullArrangementWithDuplicateElementSet implements Answer {
 
+    private List<List<Integer>> result = new ArrayList<>();
+
     public static void main(String[] args) {
         new FullArrangementWithDuplicateElementSet().answer();
     }
-
-    private List<List<Integer>> result = new ArrayList<>();
 
     /**
      * something
@@ -52,12 +53,12 @@ public class FullArrangementWithDuplicateElementSet implements Answer {
                 if (i > 0 && flag[i - 1] == 0 && data[i] == data[i - 1]) {
                     continue;
                 }
-                //选这个,并且后续的可以继续选
+                // 选这个,并且后续的可以继续选
                 temp.add(data[i]);
                 flag[i] = 1;
                 diGui(data, flag, temp, index + 1);
 
-                //不选这个,并且后续的这个值都不选
+                // 不选这个,并且后续的这个值都不选
                 temp.remove(temp.size() - 1);
                 flag[i] = 0;
                 // diGui(data, flag, temp, index + 1);
