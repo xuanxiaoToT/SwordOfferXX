@@ -39,6 +39,7 @@ import com.xx.Answer;
  */
 public class FindNthSmallestIntegerWithKOneBits implements Answer {
     private static final int MX = 50;
+    // 因为k最大会取50，所以j初始化为MX+1。i为什么不取51呢？因为答案严格小于2^50，所以第50位为0即可。
     private static final long[][] comb = new long[MX][MX + 1];
     private static boolean initialized = false;
 
@@ -50,7 +51,7 @@ public class FindNthSmallestIntegerWithKOneBits implements Answer {
         initialized = true;
 
         // 预处理组合数
-        // comb[i][0] 表示i位为0，且i-1位有j个1的组合数
+        // comb[i][j] 表示i位为0，且i-1位有j个1的组合数
         for (int i = 0; i < MX; i++) {
             comb[i][0] = 1;
             for (int j = 1; j <= i; j++) {
