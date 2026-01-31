@@ -69,6 +69,9 @@ public class MinimumCostToConvertStringI implements Answer {
         System.out.println(minimumCost(source, target, original, changed, cost));
     }
 
+    /**
+     * todo：也可以用26次弗洛伊德算法
+     */
     public long minimumCost(String source, String target, char[] original, char[] changed, int[] cost) {
         int[][] dp = new int[26][26];
 
