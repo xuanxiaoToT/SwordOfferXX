@@ -71,6 +71,13 @@ public class MinimumCostToConvertStringI implements Answer {
 
     /**
      * todo：也可以用26次弗洛伊德算法
+     * <p>
+     * 问：为什么一定要在最外层枚举 k？
+     * <p>
+     * 答：仔细看上面的状态转移方程，要正确地算出 f[k+1][i][j]，必须先把 f[k][i][j]、f[k][i][k] 和 f[k][k][j] 算出来。
+     * 由于我们不知道 k 和 i,j 的大小关系，只有把 k 放在最外层枚举，才能保证先把 f[k][i][j]、f[k][i][k] 和 f[k][k][j] 算出来。顺带一提，对于 i 和 j 来说，
+     * 由于在计算 f[k+1][i][j] 的时候，f[k][⋅][⋅] 已经全部计算完毕，所以 i 和 j 按照正序/逆序枚举都可以。
+     * <p>
      */
     public long minimumCost(String source, String target, char[] original, char[] changed, int[] cost) {
         int[][] dp = new int[26][26];
