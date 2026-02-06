@@ -56,6 +56,7 @@ public class AngryBookstoreOwner implements Answer {
         for (int i = 0; i < minutes; i++) {
             result += customers[i];
         }
+        // 这些时间点，本身就不生气，无论如何都会满意
         for (int i = minutes; i < customers.length; i++) {
             if (grumpy[i] == 0) {
                 result += customers[i];
@@ -64,9 +65,11 @@ public class AngryBookstoreOwner implements Answer {
         int max = result;
         for (int right = minutes; right < customers.length; right++) {
             int left = right - minutes;
+            // 原来生气的，现在变为不生气了
             if (grumpy[right] == 1) {
                 result += customers[right];
             }
+            // 左侧原来就是生气的，踢出这个窗口后，需要减去
             if (grumpy[left] == 1) {
                 result -= customers[left];
             }

@@ -49,6 +49,7 @@ public class LongestSubArrayWithAllOneAfterDelAnElement implements Answer {
     /**
      * 思路同：
      * {@link MaximumCountOfConsecutiveOneIII}
+     * 滑动窗口，固定左，然后枚举右。直到不符合条件后，再动左
      */
     public int computeLongestSubArray(int[] nums) {
         int max = 0;

@@ -27,13 +27,15 @@ import com.xx.Answer;
  * 1 <= nums.length <= 10^5
  * nums[i] 不是 0 就是 1
  * 0 <= k <= nums.length
+ * <p>
+ * Tag:滑动窗口
  */
 public class MaximumCountOfConsecutiveOneIII implements Answer {
     public static void main(String[] args) {
         new MaximumCountOfConsecutiveOneIII().answer();
     }
 
-    //如果可以翻转最多K个0
+    // 如果可以翻转最多K个0
     @Override
     public void answer() {
         int[] nums = {0, 0, 1, 1, 1, 0, 0};
