@@ -9,7 +9,9 @@ import com.xx.util.DataFactory;
  * @CreateDate 2022/7/19
  * <p>
  * 检查平衡性
- * LeetCode Easy
+ * 平衡二叉树
+ * LeetCode 110 Easy
+ * <p>
  * 给定一个二叉树，判断它是否是高度平衡的二叉树。
  * <p>
  * 一棵高度平衡二叉树定义为：
@@ -35,7 +37,7 @@ import com.xx.util.DataFactory;
  * 4   4
  * 返回 false 。
  * <p>
- * Tag:平衡二叉树
+ * Tag:平衡二叉树  二叉樹的高度
  */
 public class WhetherBalancedBinaryTree implements Answer {
 
