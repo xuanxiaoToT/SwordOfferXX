@@ -1,4 +1,4 @@
-package com.xx.basicDs.tree;
+package com.xx.basicDs.tree.constructTree;
 
 import com.xx.Answer;
 import com.xx.domain.TreeNode;
