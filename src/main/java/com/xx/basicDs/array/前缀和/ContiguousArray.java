@@ -54,7 +54,6 @@ public class ContiguousArray implements Answer {
      * 同理，当sum为0时，则本身就是最长结果。sum为-1时，则-1+0=0，找-1的最左前缀。
      */
     public int findMaxLength(int[] nums) {
-        // map还可以继续优化，本质上只需要记录1的最左和-1的最左即可。
         Map<Integer, Integer> map = new HashMap<>();
         // 这里求前缀和的时候，可以共用一次遍历
         int sum = 0;
