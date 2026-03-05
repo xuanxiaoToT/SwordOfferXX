@@ -45,13 +45,13 @@ import java.util.*;
  * <p>
  * 提示
  * 在第一个样例中，一种最优的跳法：0 => 3 -> 5 -> 7 -> ... -> 999999999 -> 1000000001，其中=>表示长跳跃，->表示短跳跃.
- *
+ * <p>
  * 类似题目：
  * 动态规划类
  * {@link JumpGameII}
  * {@link ClimbStairsProblem}
  * {@link MinimumNumberOfCoins}
- *
+ * <p>
  * bfs类：
  *
  */
@@ -218,6 +218,7 @@ public class FrogGoesHome implements Answer {
         // 起点状态：第0个区间（最左侧）、奇偶性0（偶数，因为起点是0）
         State startState = new State(0, 0);
         dist[0][0] = 0;  // 起点步数为0
+
         queue.offer(startState);
 
         // 目标：最后一个区间（最右侧）、奇偶性1（奇数，因为终点是1e9+1）
@@ -238,6 +239,9 @@ public class FrogGoesHome implements Answer {
 
             // 遍历所有可能的目标区间，尝试转移
             for (int nextIdx = 0; nextIdx < pointSize; nextIdx++) {
+                // if (nextIdx == currIdx) {
+                //     continue;
+                // }
                 int nextP = currP ^ 1;  // 长跳翻转奇偶性
                 // 检查：当前区间 -> 目标区间 是否可通过一次长跳到达
                 if (canJump(allowed.get(currIdx), allowed.get(nextIdx), k, currP, nextP)) {

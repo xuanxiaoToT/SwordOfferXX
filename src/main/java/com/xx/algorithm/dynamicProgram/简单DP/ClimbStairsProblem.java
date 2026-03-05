@@ -52,6 +52,7 @@ public class ClimbStairsProblem implements Answer {
         if (n == 2)
             return 2;
         int[] dp = new int[n];
+
         dp[0] = 1;
         dp[1] = 2;
         for (int i = 2; i < n; i++) {

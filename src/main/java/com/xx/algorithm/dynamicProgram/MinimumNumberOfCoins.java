@@ -58,6 +58,7 @@ public class MinimumNumberOfCoins implements Answer {
         Arrays.parallelSetAll(dp, i -> max);
         dp[0] = 0;
         for (int i = 0; i < dp.length; i++) {
+            // i代表是现在要求的金额
             for (int coin : coins) {
                 if (i >= coin) {
                     dp[i] = Math.min(dp[i - coin] + 1, dp[i]);
@@ -65,7 +66,7 @@ public class MinimumNumberOfCoins implements Answer {
             }
         }
         System.out.println(Arrays.toString(dp));
-        return dp[amount] == max ? -1 : dp[amount];
+        return dp[amount] <= max ? -1 : dp[amount];
     }
 
     /**

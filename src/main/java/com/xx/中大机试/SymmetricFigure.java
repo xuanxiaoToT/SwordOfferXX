@@ -5,6 +5,7 @@ import com.xx.algorithm.other.RotateImage;
 import com.xx.basicDs.array.MatrixSetZeroes;
 import com.xx.basicDs.array.SpiralMatrix;
 
+
 /**
  * 对称图形
  * <p>
@@ -27,6 +28,7 @@ import com.xx.basicDs.array.SpiralMatrix;
  * 旋转矩阵: {@link RotateImage}
  * 螺旋矩阵: {@link SpiralMatrix}
  * 矩阵置零：{@link MatrixSetZeroes}
+ *
  */
 public class SymmetricFigure implements Answer {
 
@@ -54,8 +56,10 @@ public class SymmetricFigure implements Answer {
         System.out.println(computeSymmetricFigure(m, n, input));
     }
 
-    public String computeSymmetricFigure(int m, int n, char[][] input) {
+    String computeSymmetricFigure(int m, int n, char[][] input) {
+        // 判断他是否 水平对称  布尔值
         boolean horizontally = computeHorizontally(input);
+        // 判断他是否 垂直对称
         boolean vertically = computeVertically(input);
         if (horizontally && vertically) {
             return "Both";
@@ -96,6 +100,7 @@ public class SymmetricFigure implements Answer {
         if (left == right) {
             return true;
         }
+
         while (left < right) {
             for (int i = 0; i < input.length; i++) {
                 if (input[i][left] != input[i][right]) {
