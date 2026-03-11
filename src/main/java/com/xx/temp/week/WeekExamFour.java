@@ -9,7 +9,7 @@ public class WeekExamFour implements Answer {
 
     @Override
     public void answer() {
-
+        Thread thread;
     }
 
     @Override

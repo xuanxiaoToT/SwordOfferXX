@@ -75,6 +75,11 @@ public class FindUniqueBinaryString implements Answer {
         return sb.toString();
     }
 
+    public String findDifferentBinaryString(String[] nums, int asd) {
+
+        return "";
+    }
+
 
     @Override
     public Object initData() {

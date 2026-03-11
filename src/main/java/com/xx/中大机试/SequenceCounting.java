@@ -6,8 +6,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SequenceCounting implements Answer {
+   public int name;
     public static void main(String[] args) {
-        new SequenceCounting().answer();
+
+        SequenceCounting counting = new SequenceCounting();
+        SequenceCounting counting2 = new SequenceCounting();
+        counting2.name = counting.name;
+        counting.answer();
     }
 
     @Override
