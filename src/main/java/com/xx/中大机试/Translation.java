@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 翻译
- *
+ * <p>
  * 主要考察输入、输出
  */
 public class Translation {
@@ -17,6 +17,7 @@ public class Translation {
     }
 
     public String getTranslationResult(String word) {
+
         if (map.containsKey(word)) {
             return map.get(word);
         }

@@ -36,6 +36,7 @@ public class NestedQueue {
         }
         Arrays.sort(record, Comparator.comparing(dto -> dto[0]));
         for (int i = 0; i < record.length; i++) {
+
             Integer[] point = record[i];
             int left = point[0];
             int right = point[1];
